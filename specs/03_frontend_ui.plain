@@ -1,0 +1,242 @@
+---
+import:
+  - "00_product_overview"
+  - "01_architecture"
+  - "04_circuit_block_schema"
+  - "05_component_recipes"
+  - "08_mock_solvimon_pricing"
+  - "10_acceptance_criteria"
+description: PCBStream Electron React frontend, chat-first UI, preview, export, and mock bridge.
+---
+
+***definitions***
+
+- :AppShell: is the outer desktop layout for :DesktopApp:.
+
+- :Header: shows app identity, project status, and settings.
+
+- :ProgressBar: shows the MVP workflow phases.
+
+- :ChatView: shows user and assistant messages.
+
+- :ChatBubble: is one chat message in :ChatView:.
+
+- :PromptInput: is the bottom input for new user prompts.
+
+- :OptionChipGroup: lets the user answer missing questions with selectable chips.
+
+- :SchematicPreviewCard: shows the reviewable block diagram.
+
+- :ComponentListCard: shows generated components and assignment confidence.
+
+- :NextStepsChecklist: shows locally toggleable next steps.
+
+- :WarningsCard: shows validation warnings.
+
+- :UsagePricingCard: shows mock plan and usage data.
+
+- :ExportResultCard: shows generated file paths and the mocked insert result.
+
+- :GlassCard: is a reusable dark glass panel.
+
+- :StatusPill: shows compact connection and workflow status.
+
+- :FrontendProjectScaffold: is the runnable Node project for :DesktopApp:.
+  - It lives under `apps/desktop` in the generated monorepo.
+
+***implementation reqs***
+
+- :DesktopApp: should use Electron for the desktop shell.
+
+- :DesktopApp: should use React, TypeScript, Tailwind CSS, and Vite if useful.
+
+- :FrontendProjectScaffold: must include a package.json file under `apps/desktop`.
+  - The package manifest must include dev, build, and test scripts.
+  - The test script must run Vitest in non-interactive mode.
+  - Dependencies must include React and React DOM.
+  - Development dependencies must include TypeScript, Vite, Vitest, and Electron.
+  - Development dependencies must include React Testing Library and jsdom.
+
+- :FrontendProjectScaffold: must include source entry files required by Vite.
+  - It must include index.html or an equivalent Vite HTML entry.
+  - It must include a React application entry file.
+  - It must include a test setup when required by React Testing Library.
+
+- :DesktopApp: should use a dark premium visual style.
+  - Use Liquid Glass or glassmorphism panels.
+  - Use rounded panels and rounded chat bubbles.
+  - Use neutral dark colors as the main palette.
+  - Use subtle gradients.
+  - Use orange and purple sparingly for highlights and selected chips.
+
+- :DesktopApp: must avoid an overly colorful dashboard look.
+
+- :DesktopApp: should feel like a chat assistant combined with an engineering tool.
+
+- :DesktopApp: must call :BackendApiContract: endpoints for backend state.
+
+- :DesktopApp: must not write KiCad files directly.
+
+- :DesktopApp: should keep checklist toggles in local UI state.
+
+- :DesktopApp: should use generated or SVG UI only for schematic preview.
+  - The preview is not a real KiCad render.
+
+- :UnitTests: should use Vitest and React Testing Library.
+
+- :UnitTests: should use `test_scripts/run_unittests_frontend_node.sh`.
+
+- :UnitTests: should cover health calls, prompt submission, option chips, preview, and export state.
+
+- :UnitTests: must use stable accessible selectors for repeated brand text.
+  - App identity tests should query the header landmark or `data-testid="app-title"`.
+  - Unit tests must not use broad partial text regexes such as `/PCB/i`.
+  - Repeated text like PCBStream in welcome copy must not make app identity tests fail.
+
+***test reqs***
+
+- :ConformanceTests: should use Vitest with mocked backend responses.
+
+- :ConformanceTests: should use `test_scripts/run_conformance_tests_frontend_node.sh`.
+
+- :ConformanceTests: should verify wide and narrow responsive layouts.
+
+- :ConformanceTests: must not require a real KiCad process, internet access, or real billing.
+
+***functional specs***
+
+- :DesktopApp: should provide :FrontendProjectScaffold:.
+  - The scaffold is a runnable Node project under `apps/desktop`.
+  - The scaffold has package.json with dev, build, and test scripts.
+  - The scaffold has React, TypeScript, Vite, Vitest, and Electron dependencies.
+  - Running the test script from `apps/desktop` must succeed after dependencies install.
+
+- :DesktopApp: should launch to :AppShell:.
+  - The first screen shows :Header:, :ProgressBar:, :ChatView:, and :PromptInput:.
+  - Wide layout shows chat on the left and review panels on the right.
+  - Narrow layout uses one column and keeps the input sticky at the bottom.
+
+  ***acceptance tests***
+  - Launching the app should show PCBStream in the header.
+  - The prompt input should be visible on first load.
+
+- :Header: should show the mocked project connection.
+  - It shows app name PCBStream.
+  - The app name is exposed with `data-testid="app-title"` for stable tests.
+  - It shows project name weather_station.kicad_pro.
+  - It shows a connected status dot.
+  - It includes a settings button.
+
+- :ProgressBar: should show the MVP workflow phases.
+  - The phases are Identify, Source, Configure, Preview, Insert, and Verify.
+  - The active phase updates as the BME280 flow advances.
+  - Completed phases remain visually distinct from upcoming phases.
+
+- :DesktopApp: should check backend health after startup.
+  - It calls `GET /health`.
+  - A successful response marks the local backend as connected.
+  - A failed response marks the backend as offline and shows a retry action.
+
+- :ChatView: should show the welcome state before the first request.
+  - It shows an empty assistant welcome message for PCBStream.
+  - :PromptInput: placeholder is "Ask PCBStream to add a part...".
+  - It shows an example prompt button labelled "Add a BME280 temperature sensor".
+  - It shows the connected project mock weather_station.kicad_pro.
+
+- :PromptInput: should submit the BME280 prompt.
+  - Typing or clicking the example prompt sends "Can you add a BME280 temperature sensor?".
+  - Empty prompts cannot be submitted.
+  - The submitted user message appears as a right-aligned :ChatBubble:.
+  - The app calls `POST /chat` with the user message.
+
+  ***acceptance tests***
+  - Submitting the BME280 prompt should show the user message in chat.
+  - Empty submission should not call the backend.
+
+- :ChatView: should render the BME280 assistant response.
+  - Assistant messages appear as left-aligned :ChatBubble: items.
+  - The assistant explains that it found the Bosch BME280 environmental sensor.
+  - The assistant says it can add an I2C block using +3V3, I2C1_SDA, and I2C1_SCL.
+  - The assistant asks the user to confirm the displayed options.
+
+- :OptionChipGroup: should render missing BME280 choices.
+  - Interface choices are I2C and SPI.
+  - I2C address choices are 0x76 and 0x77.
+  - Pull-up choices are Add 4.7k and Already present.
+  - Logic rail choices are +3V3 and 1.8V.
+  - Default selections are I2C, 0x76, Add 4.7k, and +3V3.
+
+- :OptionChipGroup: should finalise the BME280 block through the backend.
+  - Selecting or confirming all required chips calls `POST /answer-questions`.
+  - The happy path sends 3.3V, I2C, 0x76, and Add 4.7k pull-ups.
+  - The UI shows a loading state while waiting for the final block.
+  - Backend validation errors remain visible in the chat.
+
+- :SchematicPreviewCard: should show the generated BME280 preview.
+  - It shows a BME280 block.
+  - It shows +3V3, GND, SDA, and SCL connections.
+  - It shows pull-up resistors when the selected option adds pull-ups.
+  - It shows decoupling capacitors for VDD and VDDIO.
+  - It clearly states that the preview is not a final KiCad render.
+
+  ***acceptance tests***
+  - The preview should show BME280, +3V3, GND, SDA, and SCL after finalisation.
+
+- :ComponentListCard: should show generated component rows.
+  - It shows U? BME280 as an environmental sensor with footprint needs review.
+  - It shows C? 100 nF for VDD decoupling with Device:C and 0603.
+  - It shows C? 100 nF for VDDIO decoupling with Device:C and 0603.
+  - It shows R? 4.7 kOhm SDA pull-up with Device:R and 0603 when selected.
+  - It shows R? 4.7 kOhm SCL pull-up with Device:R and 0603 when selected.
+  - It shows optional address strap or selection information when present.
+
+- :DesktopApp: should show assumptions and validation warnings.
+  - Assumptions include default +3V3 rail, default 0603 passives, and I2C mode.
+  - Warnings include footprint review, pull-up review, datasheet review, and ERC.
+  - Warning styling is visible but restrained.
+  - Empty groups use explicit empty states instead of disappearing silently.
+
+- :NextStepsChecklist: should show local toggleable checklist items.
+  - The checklist includes Verify BME280 footprint.
+  - The checklist includes Connect SDA and SCL to MCU GPIO pins.
+  - The checklist includes Check duplicate I2C pull-ups.
+  - The checklist includes Run ERC.
+  - The checklist includes Place decoupling capacitors close to the sensor.
+  - The checklist includes Add firmware driver with selected I2C address.
+
+- :UsagePricingCard: should show mock pricing and usage.
+  - It calls `GET /pricing-preview` when the app starts.
+  - It refreshes after block generation and export.
+  - It shows Maker plan by default.
+  - It shows one circuit block generated after finalisation.
+  - It shows one KiCad export prepared after export.
+  - It shows 49 included blocks remaining after one generated block.
+  - It shows estimated bill impact GBP 0.00.
+
+- :DesktopApp: should show full review panels after finalisation.
+  - The visible panels are Schematic Preview, Component List, Next Steps, Warnings, and Usage & Cost.
+  - Wide layout places these cards in the right review panel.
+  - Narrow layout stacks these cards below chat as collapsible or compact cards.
+
+- :DesktopApp: should provide edit, export, and mocked insert actions.
+  - Edit values returns the user to the option chips without losing the prompt.
+  - Export files calls `POST /export` with the final :CircuitBlock:.
+  - Mock Insert into KiCad may call export when files are not already exported.
+  - The mocked insert result says the bridge insertion is mocked in this MVP.
+
+- :ExportResultCard: should show generated file paths.
+  - It shows block.json.
+  - It shows notes.md.
+  - It shows bme280_i2c.kicad_sch.
+  - It shows pricing_usage.json.
+  - It reminds the user to review the result and run ERC in KiCad.
+
+  ***acceptance tests***
+  - A successful export should show all four generated file names.
+  - The mocked insert message should mention that KiCad bridge insertion is mocked.
+
+- :DesktopApp: should support both full-screen and split-screen use.
+  - Full-screen layout keeps chat, preview, and prompt visible without overlap.
+  - Split-screen layout uses a compact header and compact progress bar.
+  - Split-screen layout has stacked chat bubbles, stacked review cards, and sticky actions.
+  - Text must wrap or truncate cleanly without clipping controls.

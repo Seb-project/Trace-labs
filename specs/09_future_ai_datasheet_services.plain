@@ -1,0 +1,52 @@
+---
+import:
+  - "00_product_overview"
+  - "04_circuit_block_schema"
+description: PCBStream future AI and datasheet service placeholders.
+---
+
+***definitions***
+
+- :PartSearchService: is the future service for finding requested parts.
+
+- :DatasheetFetchService: is the future service for loading manufacturer documentation.
+
+- :DatasheetExtractionService: is the future service for extracting application circuits.
+
+- :CircuitReasoningService: is the future service for reasoning over circuit choices.
+
+- :SourceCitationService: is the future service for citing documentation sources.
+
+- :MockAiServiceResult: is placeholder data returned by future service stubs.
+
+***implementation reqs***
+
+- :PartSearchService: should exist only as a TODO or mock placeholder in the MVP.
+
+- :PartSearchService: must return local supported part matches only.
+
+- :DatasheetFetchService: should exist only as a TODO or mock placeholder in the MVP.
+
+- :DatasheetFetchService: must not fetch internet content in the MVP.
+
+- :DatasheetExtractionService: should exist only as a TODO or mock placeholder in the MVP.
+
+- :DatasheetExtractionService: must not call an AI model in the MVP.
+
+- :CircuitReasoningService: should exist only as a TODO or mock placeholder in the MVP.
+
+- :CircuitReasoningService: should explain when a block came from a local verified recipe.
+
+- :SourceCitationService: should exist only as a TODO or mock placeholder in the MVP.
+
+- :SourceCitationService: should return local_recipe_verified source confidence for BME280.
+
+- Future services must be isolated behind service interfaces.
+
+- Future services must not be required for the BME280 local recipe happy path.
+
+***test reqs***
+
+- :ConformanceTests: should verify future service stubs do not perform network calls.
+
+- :ConformanceTests: should verify BME280 generation works when all future services are mocked.

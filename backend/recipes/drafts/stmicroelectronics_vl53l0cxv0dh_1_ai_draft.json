@@ -1,0 +1,287 @@
+{
+  "id": "draft_stmicroelectronics_vl53l0cxv0dh_1_ai_draft",
+  "block_name": "STMicroelectronics VL53L0CXV0DH/1 Extracted Draft",
+  "block_slug": "stmicroelectronics_vl53l0cxv0dh_1_ai_draft",
+  "summary": "Datasheet-derived draft for STMicroelectronics VL53L0CXV0DH/1. Interface: I\u00b2C control/data interface on SDA/SCL, up to 400 kHz, default device address 0x52; XSHUT reset/shutdown input; GPIO1 open-drain interrupt output. Package: Optical LGA12, 12 pads, 4.4 x 2.4 x 1 mm.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "VL53L0CXV0DH/1",
+    "mpn": "VL53L0CXV0DH/1",
+    "manufacturer": "STMicroelectronics",
+    "supplier": "JLCPCB",
+    "supplier_part_number": "C91199",
+    "supplier_url": "https://jlcpcb.com/partdetail/STMicroelectronics-VL53L0CXV0DH1/C91199",
+    "symbol": "PCBStream_VL53L0CXV0DH_1:VL53L0CXV0DH_1",
+    "footprint": "PCBStream_VL53L0CXV0DH_1:PCBStream_VL53L0CXV0DH_1_PLACEHOLDER",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for VL53L0CXV0DH/1.",
+    "connects": [
+      "AVDD",
+      "GND",
+      "VPU",
+      "SDA",
+      "SCL",
+      "XSHUT",
+      "GPIO1",
+      "NC_DNC_FLOAT"
+    ],
+    "footprint_confidence": "needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Symbol pin map is generated from cited datasheet/reference-design extraction.",
+    "status": "draft"
+  },
+  "support_components": [
+    {
+      "reference": "C_AVDD_100N?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "AVDD external supply decoupling for VL53L0X.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "AVDD",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P5C1",
+      "source_citations": [
+        "S2P5C1"
+      ]
+    },
+    {
+      "reference": "C_AVDD_4U7?",
+      "type": "capacitor",
+      "value": "4.7 \u00b5F",
+      "purpose": "AVDD external supply bulk/decoupling capacitor for VL53L0X.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "AVDD",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P5C1",
+      "source_citations": [
+        "S2P5C1"
+      ]
+    },
+    {
+      "reference": "R_SDA?",
+      "type": "resistor",
+      "value": "1.5 kOhm to 2 kOhm",
+      "purpose": "I\u00b2C SDA pull-up for AVDD = 2.8 V and 400 kHz I\u00b2C clock; pull-ups are typically fitted only once per bus, near the host.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SDA",
+        "VPU"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P5C1, S2P15C1",
+      "source_citations": [
+        "S2P5C1",
+        "S2P15C1"
+      ]
+    },
+    {
+      "reference": "R_SCL?",
+      "type": "resistor",
+      "value": "1.5 kOhm to 2 kOhm",
+      "purpose": "I\u00b2C SCL pull-up for AVDD = 2.8 V and 400 kHz I\u00b2C clock; pull-ups are typically fitted only once per bus, near the host.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SCL",
+        "VPU"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P5C1, S2P15C1",
+      "source_citations": [
+        "S2P5C1",
+        "S2P15C1"
+      ]
+    },
+    {
+      "reference": "R_XSHUT?",
+      "type": "resistor",
+      "value": "10 kOhm",
+      "purpose": "XSHUT pull-up when host state is not known or when host does not control XSHUT; XSHUT must always be driven.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "XSHUT",
+        "AVDD"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P5C1, S2P13C1, S2P19C1",
+      "source_citations": [
+        "S2P5C1",
+        "S2P13C1",
+        "S2P19C1"
+      ]
+    },
+    {
+      "reference": "R_GPIO1?",
+      "type": "resistor",
+      "value": "10 kOhm",
+      "purpose": "GPIO1 interrupt open-drain pull-up when the interrupt output is used.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "GPIO1",
+        "VPU"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P4C1, S2P5C1, S2P12C1",
+      "source_citations": [
+        "S2P4C1",
+        "S2P5C1",
+        "S2P12C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "AVDD",
+    "GND",
+    "VPU",
+    "SDA",
+    "SCL",
+    "XSHUT",
+    "GPIO1"
+  ],
+  "internal_nets": [
+    "NC_DNC_FLOAT"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "DNC pin 8 must be left floating; do not route it.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "XSHUT must always be driven to avoid leakage current; XSHUT should be high only when AVDD is on.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "I\u00b2C pull-ups are normally fitted only once per bus near the host; do not duplicate them if the host board already provides them.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The 1.5 kOhm to 2 kOhm I\u00b2C pull-up recommendation is specifically stated for AVDD = 2.8 V and 400 kHz operation.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "GPIO1 should be left unconnected if not used.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "AVDD capacitors should be placed as close as possible to AVDDVCSEL and AVSSVCSEL module pins.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "VL53L0X datasheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/vl53l0x.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from VL53L0X product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/etc/designs/st-search-cx/search.min.721107fd235b8929aa6d3078bbc38e01.css",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "AN4846 Using multiple VL53L0X in a single design",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/resource/en/application_note/an4846-using-multiple-vl53l0x-in-a-single-design-stmicroelectronics.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from VL53L0X product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/content/st_com/en/stm32-mpu-developer-zone/boards-and-hardware-tools.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from VL53L0X product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/en/mobile-applications.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "VL53L0X product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ]
+}

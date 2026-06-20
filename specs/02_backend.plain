@@ -1,0 +1,227 @@
+---
+import:
+  - "00_product_overview"
+  - "01_architecture"
+  - "04_circuit_block_schema"
+  - "05_component_recipes"
+  - "06_passive_defaults"
+  - "07_kicad_export"
+  - "08_mock_solvimon_pricing"
+  - "09_future_ai_datasheet_services"
+  - "10_acceptance_criteria"
+description: PCBStream FastAPI backend, local recipes, generation, export, and mock metering.
+---
+
+***definitions***
+
+- :RecipeLoader: is the backend service that loads local recipe JSON data.
+
+- :CircuitGenerator: creates draft and final circuit block data from recipes and answers.
+
+- :ChatRequest: is the request body accepted by `POST /chat`.
+
+- :ChatResponse: is the assistant-style response returned by `POST /chat`.
+
+- :GenerateRequest: is the request body accepted by `POST /generate`.
+
+- :AnswerQuestionsRequest: contains selected answers for missing questions.
+
+- :ExportRequest: contains a final circuit block to export.
+
+- :UsageEventRequest: contains one mock usage event to record.
+
+- :BridgeLinkRequest: contains KiCad project context sent by the bridge add-on.
+
+- :BridgeLinkRecord: is the stored link between PCBStream and a KiCad project.
+
+- :BridgeImportRequest: contains generated block files selected by the bridge add-on.
+
+- :LocalJsonStore: is local JSON file storage for usage, drafts, and export metadata.
+
+- :BackendErrorResponse: is a structured error with message, warnings, and next steps.
+
+***implementation reqs***
+
+- :BackendService: should be implemented in Python 3.12.
+
+- :BackendService: should use FastAPI for the local HTTP API.
+
+- :BackendService: should use Pydantic models for requests, responses, and file validation.
+
+- :BackendService: should use local JSON file storage for the MVP.
+
+- :BackendService: may use SQLite only if it stays simple and local.
+
+- :RecipeLoader: should load recipes from `packages/component-recipes`.
+
+- :CircuitGenerator: should create data that conforms to :CircuitBlock:.
+
+- :KiCadWriter: should live behind a deterministic backend service boundary.
+
+- :BackendService: should expose OpenAPI docs through FastAPI defaults.
+
+- :UnitTests: should use pytest.
+
+- :UnitTests: should use `test_scripts/run_unittests_backend_python.sh`.
+
+- :UnitTests: should cover API handlers, recipe loading, generation, export, and pricing.
+
+***test reqs***
+
+- :ConformanceTests: should use pytest and FastAPI in-process test clients.
+
+- :ConformanceTests: should use `test_scripts/run_conformance_tests_backend_python.sh`.
+
+- :ConformanceTests: must write exports to temporary folders unless a test checks the default path.
+
+- :ConformanceTests: must not require a live KiCad process, internet access, or real billing.
+
+***functional specs***
+
+- :BackendService: should expose `GET /health`.
+  - The response returns backend status as ok when the service is ready.
+  - The response includes app_name with value PCBStream.
+  - The response includes project_name with value weather_station.kicad_pro.
+  - The response includes kicad_bridge_status with value mocked.
+
+  ***acceptance tests***
+  - Calling `GET /health` should return a successful response.
+  - The response should include app_name PCBStream.
+
+- :ProjectContextService: should return the MVP mocked project context.
+  - The context includes project_name weather_station.kicad_pro.
+  - The context includes connected true.
+  - The context includes +3V3, GND, I2C1_SDA, and I2C1_SCL nets.
+  - The context includes detected_mcu STM32L072.
+
+- :RecipeLoader: should load available local recipes at startup.
+  - The required startup recipe is :BME280I2CRecipe: from `bme280_i2c.json`.
+  - The optional startup recipe is SHT31 I2C from `sht31_i2c.json` when present.
+  - Invalid recipe files must be skipped with a validation warning.
+
+- :BackendService: should expose `GET /recipes`.
+  - The endpoint returns available local recipe summaries.
+  - Each summary includes recipe id, display name, manufacturer, mpn, and interface.
+  - The response includes BME280 over I2C when the required recipe is loaded.
+
+- :BackendService: should expose `POST /chat`.
+  - :ChatRequest: accepts a user message string.
+  - The backend recognises BME280 from "BME280", "temperature sensor", or "environmental sensor".
+  - A recognised BME280 request loads :BME280I2CRecipe:.
+  - :ChatResponse: includes an assistant message explaining the found Bosch BME280.
+  - :ChatResponse: includes draft block info and missing questions.
+  - Unknown part requests return :BackendErrorResponse: with supported examples.
+
+  ***acceptance tests***
+  - Posting "Can you add a BME280 temperature sensor?" should produce a BME280 draft response.
+  - The response should include missing questions for the required configuration values.
+
+- :BackendService: should expose `POST /generate`.
+  - :GenerateRequest: accepts prompt text and optional known values.
+  - The backend loads the matching local recipe for a supported prompt.
+  - The response returns a draft :CircuitBlock:.
+  - The response includes :MissingQuestion: entries for unknown required values.
+  - Critical electrical values must remain unanswered instead of guessed.
+
+- :CircuitGenerator: should ask the BME280 missing questions.
+  - The logic voltage question offers 1.8V and 3.3V with 3.3V as default.
+  - The interface question offers I2C and SPI with I2C as default.
+  - The I2C address question offers 0x76 and 0x77 with 0x76 as default.
+  - The pull-up question offers Add 4.7k pull-ups and Board already has pull-ups.
+  - The pull-up question defaults to Add 4.7k pull-ups.
+
+- :BackendService: should expose `POST /answer-questions`.
+  - :AnswerQuestionsRequest: accepts answers for a draft block.
+  - The endpoint finalises :CircuitBlock: only when required answers are present.
+  - The MVP happy path accepts 3.3V, I2C, 0x76, and Add 4.7k pull-ups.
+  - Invalid option values return :BackendErrorResponse: and do not finalise the block.
+
+  ***acceptance tests***
+  - Answering the four BME280 questions should return a final CircuitBlock.
+  - The final block should contain selected logic rail +3V3 and address 0x76.
+
+- :CircuitGenerator: should create the final BME280 :CircuitBlock:.
+  - The main component is BME280 by Bosch Sensortec.
+  - The final block includes VDD, GND, I2C1_SDA, and I2C1_SCL as external nets.
+  - The final block includes support parts from :BME280I2CRecipe:.
+  - Pull-up resistors are included only when the user selects Add 4.7k pull-ups.
+  - The block includes assumptions, validation warnings, and next steps.
+  - The block includes a compact ASCII or structured schematic preview.
+
+- :PassiveAssignmentService: should assign passive symbols and footprints.
+  - Resistors use Device:R and Resistor_SMD:R_0603_1608Metric.
+  - Small capacitors use Device:C and Capacitor_SMD:C_0603_1608Metric.
+  - Passive symbol_confidence is default_selected.
+  - Passive footprint_confidence is default_selected.
+  - Each assignment includes a short assignment_reason.
+
+- :CircuitGenerator: should label main IC assignments conservatively.
+  - BME280 symbol is Sensor:BME280 if available, otherwise placeholder U.
+  - BME280 footprint is Package_LGA:LGA-8_2.5x2.5mm or a placeholder.
+  - BME280 symbol_confidence is recipe_suggested or needs_review.
+  - BME280 footprint_confidence is needs_review unless verified.
+  - The 3D model is missing or needs_review for the MVP.
+
+- :MockSolvimonService: should record mock usage events.
+  - It records circuit_block.generated when a final block is created.
+  - It records kicad_export.created when export files are written.
+  - It may record datasheet_page.processed, ai_token.used, and footprint_lookup.performed.
+  - Usage events are stored locally in JSON.
+
+- :BackendService: should expose `POST /usage-event`.
+  - :UsageEventRequest: accepts event_type, quantity, metadata, and optional timestamp.
+  - The endpoint stores the event in :LocalJsonStore:.
+  - The response includes the stored event and current pricing preview.
+
+- :BackendService: should expose `GET /pricing-preview`.
+  - The response uses the Maker plan by default.
+  - The response includes included blocks, used blocks, remaining blocks, and overage.
+  - The response includes estimated monthly bill and recent usage events.
+  - The response states that no real charge is made in the MVP.
+
+- :BackendService: should expose `POST /export`.
+  - :ExportRequest: accepts a final :CircuitBlock:.
+  - The endpoint writes files through :KiCadWriter:.
+  - The export folder is `generated_blocks/bme280_i2c`.
+  - The endpoint writes block.json, notes.md, bme280_i2c.kicad_sch, and pricing_usage.json.
+  - The response returns generated file paths and a mocked KiCad insertion note.
+
+  ***acceptance tests***
+  - Exporting a final BME280 block should write all four MVP files.
+  - The export response should include file paths for all four files.
+
+- :BackendService: should expose `POST /bridge/link`.
+  - :BridgeLinkRequest: accepts project_name, project_path, schematic_path, and bridge_mode.
+  - The request may include available_nets, detected_mcu, and kicad_version.
+  - The endpoint stores :BridgeLinkRecord: in :LocalJsonStore:.
+  - The response returns connected true, project_name, link_id, and next steps.
+  - The MVP accepts project_name weather_station.kicad_pro in mock bridge mode.
+
+  ***acceptance tests***
+  - Posting a mock weather_station.kicad_pro link should return connected true.
+  - The response should include a link identifier and project_name weather_station.kicad_pro.
+
+- :BackendService: should expose `GET /bridge/status`.
+  - The endpoint returns the latest :BridgeLinkRecord: when one exists.
+  - The endpoint returns connected false and next steps when no project is linked.
+  - The response includes kicad_bridge_status with value mocked for the MVP.
+
+- :BackendService: should expose `POST /bridge/import`.
+  - :BridgeImportRequest: accepts link_id and generated file paths.
+  - The request must include block.json, notes.md, bme280_i2c.kicad_sch, and pricing_usage.json.
+  - The endpoint validates that all referenced files exist when local paths are accessible.
+  - The endpoint records a mock import event and returns import_status ready_for_review.
+  - The endpoint must not rewrite an existing user schematic in the MVP.
+  - The response includes the mocked KiCad insertion message and ERC next step.
+
+- :BackendService: should keep future AI and datasheet services mocked.
+  - :PartSearchService: returns local TODO data only.
+  - :DatasheetFetchService: does not perform network requests.
+  - :DatasheetExtractionService: does not call an AI model.
+  - :CircuitReasoningService: explains that local recipe data was used.
+  - :SourceCitationService: returns the local recipe source confidence.
+
+- :BackendService: should return structured errors for unsupported or unsafe requests.
+  - :BackendErrorResponse: includes message, validation warnings when relevant, and next steps.
+  - Failed generation must not write KiCad files.
+  - Failed export must not mark the block as exported.

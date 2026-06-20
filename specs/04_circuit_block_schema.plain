@@ -1,0 +1,84 @@
+---
+import:
+  - "00_product_overview"
+description: PCBStream shared CircuitBlock and usage schema contract.
+---
+
+***definitions***
+
+- :CircuitBlock: is the structured JSON object produced before export.
+  - It has id, block_name, block_slug, summary, and status.
+  - It has main_component, support_components, external_nets, and internal_nets.
+  - It has assumptions, missing_questions, validation_warnings, and next_steps.
+  - It has datasheet_sources, schematic_preview, and usage_events.
+
+- :Component: is the main generated part in a circuit block.
+  - It has reference, type, value, mpn, manufacturer, symbol, and footprint.
+  - It has model_3d, purpose, connects, footprint_confidence, and symbol_confidence.
+  - It has assignment_reason and status.
+
+- :SupportComponent: is a passive or support item in a circuit block.
+  - It has reference, type, value, purpose, symbol, and footprint.
+  - It has footprint_confidence, connects, and assignment_reason.
+  - It should include symbol_confidence when the implementation supports it.
+
+- :MissingQuestion: is a required user choice before final generation.
+  - It has id, question, type, options, required, and default.
+
+- :NextStep: is a review task shown to the user.
+  - It has id, category, task, required, status, and reason.
+
+- :ValidationWarning: is a warning shown before production use.
+  - It has severity, message, related_component, and fix_hint.
+
+- :DatasheetSource: is a recipe or documentation source record.
+  - It has title, source_type, url, confidence, and notes.
+  - MVP recipe sources may leave url empty or mark it as local recipe only.
+
+- :UsageEvent: is one mock metering event.
+  - It has event_type, quantity, metadata, and timestamp.
+
+- :PricingPreview: is the current mock plan and usage summary.
+  - It has plan_name, monthly_price, included_blocks, used_blocks, and remaining_blocks.
+  - It has overage_rate, estimated_overage, estimated_monthly_bill, and recent_events.
+
+- :SchematicPreview: is a compact preview for review inside the UI.
+  - It has title, description, ascii_preview, connections, and notes.
+
+- :ExternalNet: is a named project-level net required by a generated block.
+
+- :InternalNet: is a named net used only inside a generated block.
+
+***implementation reqs***
+
+- :SchemasPackage: should contain shared schema definitions or mirrored schema docs.
+
+- :BackendService: should implement these models as Pydantic models.
+
+- :DesktopApp: should mirror or consume equivalent TypeScript shapes.
+
+- :CircuitBlock: status values should include draft, awaiting_answers, final, exported, and error.
+
+- :MissingQuestion: options should preserve display labels and submitted values.
+
+- :ValidationWarning: severity values should include info, warning, and critical.
+
+- :NextStep: status values should include todo, done, and blocked.
+
+- :UsageEvent: event_type should accept the mock event names from :MockSolvimonService:.
+
+- :PricingPreview: monetary values should be stored as decimal numbers or strings.
+
+- :Component: and :SupportComponent: must include symbol and footprint assignment metadata.
+
+- :Component: must include confidence labels for symbol and footprint.
+
+- :CircuitBlock: must include :ReviewMetadata: before it can be exported.
+
+- :CircuitBlock: must not contain raw AI prose as executable KiCad content.
+
+***test reqs***
+
+- :ConformanceTests: should verify schema-valid final BME280 CircuitBlock JSON.
+
+- :ConformanceTests: should verify required fields are present before export succeeds.

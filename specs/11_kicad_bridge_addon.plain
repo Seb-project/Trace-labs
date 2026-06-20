@@ -1,0 +1,141 @@
+---
+import:
+  - "00_product_overview"
+  - "01_architecture"
+  - "04_circuit_block_schema"
+  - "07_kicad_export"
+  - "08_mock_solvimon_pricing"
+  - "10_acceptance_criteria"
+description: PCBStream lightweight KiCad bridge add-on and mocked project linking.
+---
+
+***definitions***
+
+- :BridgeConnectionTester: checks whether :BackendService: is reachable.
+
+- :BridgeProjectContext: is the project and schematic context detected by the bridge.
+
+- :BridgeProjectLinker: sends :BridgeProjectContext: to :BackendService:.
+
+- :BridgeGeneratedBlockImporter: validates exported PCBStream block files.
+
+- :BridgeImportManifest: is a deterministic record of a bridge import attempt.
+
+- :BridgeActionResult: is the user-visible result of a bridge action.
+
+- :BridgeMockMode: is the MVP mode that works without a real KiCad process.
+
+- :BridgeCli: is a local command interface for testing bridge actions outside KiCad.
+
+***implementation reqs***
+
+- :KiCadBridgeAddon: should be implemented in Python 3.12.
+
+- :KiCadBridgeAddon: should be lightweight and local-only.
+
+- :KiCadBridgeAddon: should support :BridgeMockMode: for all MVP tests.
+
+- :KiCadBridgeAddon: should attempt live KiCad context detection only when KiCad APIs are available.
+
+- :KiCadBridgeAddon: must not call an AI model.
+
+- :KiCadBridgeAddon: must not fetch internet content.
+
+- :KiCadBridgeAddon: must not directly rewrite an existing schematic in the MVP.
+
+- :KiCadBridgeAddon: should communicate with :BackendService: over local HTTP.
+
+- :KiCadBridgeAddon: should use localhost port 8765 as the default backend port.
+
+- :KiCadBridgeAddon: should store pending link attempts locally when the backend is offline.
+
+- :BridgeImportManifest: should be written as JSON.
+
+- :UnitTests: should use pytest.
+
+- :UnitTests: should use `test_scripts/run_unittests_bridge_python.sh`.
+
+- :UnitTests: should cover connection tests, project linking, file validation, and manifests.
+
+***test reqs***
+
+- :ConformanceTests: should use pytest.
+
+- :ConformanceTests: should use `test_scripts/run_conformance_tests_bridge_python.sh`.
+
+- :ConformanceTests: must run without a real KiCad installation.
+
+- :ConformanceTests: should use temporary project folders and generated block folders.
+
+- :ConformanceTests: should use a mocked backend server for link and import endpoints.
+
+***functional specs***
+
+- :KiCadBridgeAddon: should expose three user actions.
+  - The actions are Test PCBStream Connection, Link Current KiCad Project, and Insert Generated Block.
+  - In :BridgeMockMode:, the actions are available through :BridgeCli:.
+  - Each action returns :BridgeActionResult: with status, message, warnings, and next steps.
+
+  ***acceptance tests***
+  - The bridge should expose a test connection action in mock mode.
+  - The bridge should expose a link project action in mock mode.
+
+- :BridgeConnectionTester: should test the backend connection.
+  - It calls `GET /health` on the configured backend.
+  - A successful PCBStream health response returns status connected.
+  - A failed or timed-out health response returns status offline.
+  - The offline result includes a next step to start the PCBStream backend.
+
+- :BridgeProjectContext: should be detected or mocked.
+  - In live mode, the bridge should try to read the open KiCad project and schematic.
+  - In :BridgeMockMode:, project_name is weather_station.kicad_pro.
+  - In :BridgeMockMode:, available nets are +3V3, GND, I2C1_SDA, and I2C1_SCL.
+  - In :BridgeMockMode:, detected_mcu is STM32L072.
+  - Missing live KiCad APIs should automatically fall back to :BridgeMockMode:.
+
+- :BridgeProjectLinker: should link the current project to PCBStream.
+  - It sends :BridgeProjectContext: to `POST /bridge/link`.
+  - A successful response stores link_id and project_name locally.
+  - A successful result shows project_name weather_station.kicad_pro.
+  - If the backend is offline, the linker stores a pending link record locally.
+  - Pending links are retried the next time Test PCBStream Connection succeeds.
+
+  ***acceptance tests***
+  - Linking weather_station.kicad_pro against a mocked backend should store a link id.
+  - Linking while the backend is offline should create a pending link record.
+
+- :BridgeGeneratedBlockImporter: should validate generated BME280 files before import.
+  - It requires block.json.
+  - It requires notes.md.
+  - It requires bme280_i2c.kicad_sch.
+  - It requires pricing_usage.json.
+  - Missing files prevent import and return a failed :BridgeActionResult:.
+
+  ***acceptance tests***
+  - A generated block folder with all four files should pass bridge validation.
+  - A generated block folder missing block.json should fail bridge validation.
+
+- :BridgeGeneratedBlockImporter: should request a mocked backend import.
+  - It sends link_id and generated file paths to `POST /bridge/import`.
+  - The backend response is shown as :BridgeActionResult:.
+  - The result states that the block is ready for review in KiCad.
+  - The result includes a next step to run ERC in KiCad.
+
+- :BridgeImportManifest: should be written for every import attempt.
+  - The manifest records timestamp, project_name, link_id, action, and status.
+  - The manifest records generated file paths and validation warnings.
+  - The manifest records whether the import was mocked or live.
+  - Failed validation attempts also write a manifest.
+
+- :KiCadBridgeAddon: should keep MVP insertion safe and reviewable.
+  - The MVP may copy or reference the generated schematic file in a project-local block folder.
+  - The MVP must not mutate the user's active schematic automatically.
+  - The user-visible result must say that insertion is mocked in this MVP.
+  - The result must tell the user to review the block and run ERC.
+
+- :BridgeCli: should support local smoke testing.
+  - The `status` command runs :BridgeConnectionTester:.
+  - The `link` command runs :BridgeProjectLinker: in :BridgeMockMode: by default.
+  - The `import-block` command validates a generated block folder.
+  - The `import-block` command calls `POST /bridge/import` after validation succeeds.
+  - Each command prints a concise human-readable result and exits non-zero on failure.

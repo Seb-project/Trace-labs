@@ -1,0 +1,69 @@
+---
+import:
+  - "00_product_overview"
+  - "01_architecture"
+  - "04_circuit_block_schema"
+description: PCBStream full MVP acceptance criteria shared by backend and frontend specs.
+---
+
+***definitions***
+
+- :MVPCompletionChecklist: is the final end-to-end completion criteria for PCBStream.
+
+- :BME280HappyPath: is the required manual and automated acceptance flow.
+
+***implementation reqs***
+
+- :MVPCompletionChecklist: should be treated as the final readiness checklist for the render.
+
+- :BME280HappyPath: should remain the first scenario demonstrated by the MVP.
+
+- Acceptance work must keep services modular and easy to extend.
+
+- Acceptance work must not add real auth, real billing, internet search, or live KiCad editing.
+
+***test reqs***
+
+- :ConformanceTests: should consider the MVP complete when the app runs locally.
+
+- :ConformanceTests: should consider the MVP complete when the backend runs locally.
+
+- :ConformanceTests: should verify the frontend can call `GET /health`.
+
+- :ConformanceTests: should verify the user can type or click the BME280 prompt.
+
+- :ConformanceTests: should verify the backend returns a BME280 draft.
+
+- :ConformanceTests: should verify the UI shows assistant text and option chips.
+
+- :ConformanceTests: should verify the user can choose BME280 options.
+
+- :ConformanceTests: should verify the backend returns a final :CircuitBlock:.
+
+- :ConformanceTests: should verify the UI shows schematic preview and component list.
+
+- :ConformanceTests: should verify the UI shows warnings, next steps, and usage pricing.
+
+- :ConformanceTests: should verify checklist items can be toggled locally.
+
+- :ConformanceTests: should verify the user can export generated files.
+
+- :ConformanceTests: should verify export writes block.json and notes.md.
+
+- :ConformanceTests: should verify export writes bme280_i2c.kicad_sch.
+
+- :ConformanceTests: should verify export writes pricing_usage.json.
+
+- :ConformanceTests: should verify the UI shows generated file paths.
+
+- :ConformanceTests: should verify mock pricing updates after generation and export.
+
+- :ConformanceTests: should verify the KiCad bridge can test backend connection in mock mode.
+
+- :ConformanceTests: should verify the KiCad bridge can link weather_station.kicad_pro.
+
+- :ConformanceTests: should verify the KiCad bridge validates exported BME280 block files.
+
+- :ConformanceTests: should verify wide and narrow responsive layouts.
+
+- :ConformanceTests: should verify no real AI, internet, billing, or live KiCad edit is required.

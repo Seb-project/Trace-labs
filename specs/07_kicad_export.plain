@@ -1,0 +1,81 @@
+---
+import:
+  - "00_product_overview"
+  - "01_architecture"
+  - "04_circuit_block_schema"
+  - "06_passive_defaults"
+description: PCBStream deterministic KiCad export and mocked insertion contract.
+---
+
+***definitions***
+
+- :KiCadWriter: is the deterministic writer that creates exported block files.
+
+- :GeneratedBlockFolder: is the output folder for one exported circuit block.
+
+- :BlockJsonFile: is the exported full CircuitBlock JSON file.
+
+- :NotesMarkdownFile: is the exported human-readable notes file.
+
+- :PlaceholderKiCadSchematicFile: is the MVP generated schematic placeholder.
+
+- :PricingUsageFile: is the exported pricing and usage JSON file.
+
+***implementation reqs***
+
+- :KiCadGeneratorPackage: should contain deterministic generator utilities.
+
+- :KiCadWriter: must never call an AI model.
+
+- :KiCadWriter: must never copy raw assistant prose into KiCad syntax.
+
+- :KiCadWriter: must accept only structured :CircuitBlock: input.
+
+- :KiCadWriter: must validate required :CircuitBlock: fields before writing files.
+
+- :GeneratedBlockFolder: for the BME280 MVP is `generated_blocks/bme280_i2c`.
+
+- :KiCadWriter: must create :BlockJsonFile: named block.json.
+
+- :KiCadWriter: must create :NotesMarkdownFile: named notes.md.
+
+- :KiCadWriter: must create :PlaceholderKiCadSchematicFile: named bme280_i2c.kicad_sch.
+
+- :KiCadWriter: must create :PricingUsageFile: named pricing_usage.json.
+
+- :BlockJsonFile: must contain the full final :CircuitBlock: JSON.
+
+- :NotesMarkdownFile: must include a human-readable summary.
+
+- :NotesMarkdownFile: must include generated components and selected options.
+
+- :NotesMarkdownFile: must include assumptions and validation warnings.
+
+- :NotesMarkdownFile: must include next steps and documentation sources.
+
+- :NotesMarkdownFile: must include a usage and pricing summary.
+
+- :NotesMarkdownFile: must warn when the KiCad schematic output is prototype placeholder syntax.
+
+- :PlaceholderKiCadSchematicFile: may use simple placeholder or partial KiCad schematic text.
+
+- :PlaceholderKiCadSchematicFile: must include clear metadata for block name and slug.
+
+- :PlaceholderKiCadSchematicFile: must include enough text to show intended nets and components.
+
+- :PricingUsageFile: must include exported usage events and pricing preview.
+
+- :MockBridgeAction: must show that generated files are ready for review.
+
+- :MockBridgeAction: must show this MVP message after export:
+  - Generated block exported. KiCad bridge insertion is mocked in this MVP.
+
+***test reqs***
+
+- :ConformanceTests: should verify export writes all four BME280 files.
+
+- :ConformanceTests: should verify block.json is valid JSON.
+
+- :ConformanceTests: should verify notes.md contains warnings and next steps.
+
+- :ConformanceTests: should verify the KiCad file name is bme280_i2c.kicad_sch.

@@ -1,0 +1,64 @@
+---
+import:
+  - "00_product_overview"
+  - "04_circuit_block_schema"
+description: PCBStream passive component symbol, footprint, and confidence defaults.
+---
+
+***definitions***
+
+- :PassiveAssignmentService: assigns default KiCad symbols and footprints to passive parts.
+
+- :PassiveDefaultRule: maps a passive type and purpose to symbol and footprint defaults.
+
+- :FootprintConfidence: is the confidence label for a selected footprint.
+
+- :SymbolConfidence: is the confidence label for a selected symbol.
+
+***implementation reqs***
+
+- :PassiveAssignmentService: should apply defaults automatically to generated passives.
+
+- :PassiveAssignmentService: should preserve explicit recipe assignments when present.
+
+- Resistor symbols should default to Device:R.
+
+- Capacitor symbols should default to Device:C.
+
+- Polarised capacitor symbols should default to Device:CP.
+
+- Inductor symbols should default to Device:L.
+
+- Ferrite bead symbols should default to Device:Ferrite_Bead.
+
+- LED symbols should default to Device:LED.
+
+- Test point symbols should default to TestPoint:TestPoint.
+
+- Resistor footprints should default to Resistor_SMD:R_0603_1608Metric.
+
+- Pull-up resistor footprints should default to Resistor_SMD:R_0603_1608Metric.
+
+- Address strap resistor footprints should default to Resistor_SMD:R_0603_1608Metric.
+
+- Capacitor footprints under 1uF should default to Capacitor_SMD:C_0603_1608Metric.
+
+- Capacitor footprints from 1uF through 10uF should default to Capacitor_SMD:C_0805_2012Metric.
+
+- Test point footprints should default to TestPoint:TestPoint_Pad_D1.0mm.
+
+- Each generated passive component should include symbol, footprint, and assignment_reason.
+
+- Each generated passive component should include :FootprintConfidence: default_selected.
+
+- Each generated passive component should include :SymbolConfidence: default_selected.
+
+- Main IC components should not inherit passive confidence defaults.
+
+- Main IC footprints should remain needs_review unless a recipe explicitly verifies them.
+
+***test reqs***
+
+- :ConformanceTests: should verify BME280 passives receive symbol and footprint defaults.
+
+- :ConformanceTests: should verify passive confidence labels are default_selected.

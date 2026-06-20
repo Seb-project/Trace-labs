@@ -1,0 +1,20 @@
+{
+  "id": "recipe_bme280_i2c",
+  "block_name": "Bosch BME280 I2C Environmental Sensor",
+  "block_slug": "bme280_i2c",
+  "summary": "Environmental sensor for temperature, pressure and humidity using I2C.",
+  "main_component": {
+    "mpn": "BME280",
+    "manufacturer": "Bosch Sensortec",
+    "purpose": "temperature, pressure and humidity environmental sensor",
+    "symbol": "PCBStream_BME280:BME280",
+    "footprint": "PCBStream_BME280:PCBStream_BME280_LGA8_2.5x2.5mm_P0.65mm"
+  },
+  "assumptions": [
+    "Default logic rail is +3V3.",
+    "Default passive footprint is 0603.",
+    "Pull-up value is 4.7 kOhm unless the user changes it.",
+    "Generated main IC footprint must be reviewed before fabrication.",
+    "I2C mode is used unless the user chooses SPI."
+  ]
+}

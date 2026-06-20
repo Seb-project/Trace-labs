@@ -1,0 +1,64 @@
+---
+import:
+  - "00_product_overview"
+  - "04_circuit_block_schema"
+description: PCBStream mock Solvimon-style usage metering and pricing.
+---
+
+***definitions***
+
+- :MockSolvimonService: records local usage events and calculates mock pricing previews.
+
+- :UsagePlan: is a mock plan definition for usage-based pricing.
+
+- :UsageStore: is local JSON storage for mock usage events.
+
+- :PricingMessage: is a user-visible usage and bill-impact summary.
+
+***implementation reqs***
+
+- :MockSolvimonService: must be clearly named as mock.
+
+- :MockSolvimonService: must not call any real billing provider.
+
+- :UsageStore: should store usage locally in JSON.
+
+- Supported usage event types are:
+  - circuit_block.generated.
+  - kicad_export.created.
+  - datasheet_page.processed.
+  - ai_token.used.
+  - footprint_lookup.performed.
+
+- The Free :UsagePlan: has GBP 0 monthly price.
+  - It includes 5 generated blocks per month.
+  - It has no overage and requires upgrade after included usage.
+
+- The Maker :UsagePlan: has GBP 12 monthly price.
+  - It includes 50 generated blocks per month.
+  - It charges GBP 0.20 per extra generated block.
+
+- The Pro :UsagePlan: has GBP 29 monthly price.
+  - It includes 200 generated blocks per month.
+  - It charges GBP 0.10 per extra generated block.
+
+- The default MVP user should be on the Maker plan.
+
+- :PricingPreview: should show current plan, included blocks, used blocks, and remaining blocks.
+
+- :PricingPreview: should show estimated overage and estimated monthly bill.
+
+- :PricingPreview: should show recent usage events.
+
+- :PricingMessage: for one generation and export should say:
+  - This generation recorded 1 circuit block and 1 KiCad export.
+  - On the Maker plan, 49 included blocks remain.
+  - Estimated bill impact: GBP 0.00.
+
+***test reqs***
+
+- :ConformanceTests: should verify Maker is the default plan.
+
+- :ConformanceTests: should verify one generated block leaves 49 included blocks remaining.
+
+- :ConformanceTests: should verify usage events are persisted in local JSON.

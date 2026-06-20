@@ -1,0 +1,70 @@
+---
+import:
+  - "00_product_overview"
+description: PCBStream monorepo architecture and module boundaries.
+---
+
+***definitions***
+
+- :PCBStreamMonorepo: is the generated project workspace for the MVP.
+
+- :DesktopApp: is the Electron and React frontend for :PCBStreamApp:.
+
+- :BackendService: is the local FastAPI service used by :DesktopApp:.
+
+- :KiCadBridgeAddon: is the lightweight KiCad add-on used to link projects to PCBStream.
+
+- :SchemasPackage: is the shared schema package or mirrored schema documentation.
+
+- :ComponentRecipesPackage: stores local component recipe JSON files.
+
+- :KiCadGeneratorPackage: contains deterministic generator utilities.
+
+- :GeneratedBlocksWorkspace: stores exported block files.
+
+- :ProjectContextService: returns the mocked KiCad project context for the MVP.
+
+- :BackendApiContract: is the local HTTP contract between :DesktopApp: and :BackendService:.
+
+- :MockBridgeAction: is the fake "Insert into KiCad" action shown after export.
+
+***implementation reqs***
+
+- :PCBStreamMonorepo: should use this intended structure:
+  - `apps/desktop` for :DesktopApp:.
+  - `apps/backend` for :BackendService:.
+  - `apps/kicad-bridge` for :KiCadBridgeAddon:.
+  - `packages/schemas` for :SchemasPackage:.
+  - `packages/component-recipes` for :ComponentRecipesPackage:.
+  - `packages/kicad-generator` for :KiCadGeneratorPackage:.
+  - `generated_blocks/bme280_i2c` for :GeneratedBlocksWorkspace: output.
+
+- :DesktopApp: and :BackendService: must be independent render targets.
+  - The frontend must not require Python source code at render time.
+  - The backend must not require Electron source code at render time.
+
+- :KiCadBridgeAddon: must be an independent render target.
+  - The bridge must not require Electron source code at render time.
+  - The bridge must communicate with the backend through local HTTP calls.
+
+- :BackendApiContract: must use unversioned MVP endpoint paths.
+  - The backend endpoints are `GET /health`, `GET /recipes`, and `POST /chat`.
+  - The backend endpoints are `POST /generate` and `POST /answer-questions`.
+  - The backend endpoints are `POST /export`, `POST /usage-event`, and `GET /pricing-preview`.
+  - The bridge endpoints are `POST /bridge/link`, `GET /bridge/status`, and `POST /bridge/import`.
+
+- :BackendService: should listen on localhost port 8765 by default.
+
+- :DesktopApp: should use localhost port 8765 as the default backend URL.
+
+- :ProjectContextService: must return this mocked context:
+  - project_name is weather_station.kicad_pro.
+  - connected is true.
+  - available nets include +3V3, GND, I2C1_SDA, and I2C1_SCL.
+  - detected_mcu is STM32L072.
+  - kicad_bridge_status is mocked.
+
+- :MockBridgeAction: must never rewrite a user schematic.
+  - In the MVP it may call export and show a mocked insertion message.
+
+- :GeneratedBlocksWorkspace: must use stable file names for exported BME280 files.

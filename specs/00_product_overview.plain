@@ -1,0 +1,68 @@
+---
+description: PCBStream product overview and MVP boundaries shared by renderable specs.
+---
+
+***definitions***
+
+- :PCBStreamApp: is the standalone desktop-style app for electronics designers.
+  - The visible app name is exactly PCBStream.
+  - The app helps create reviewable schematic blocks for KiCad projects.
+
+- :PCBStreamUser: is an electronics designer using the app to add a part to a schematic.
+
+- :KiCadProjectMock: is the mocked open KiCad project used by the MVP.
+  - The project name is exactly weather_station.kicad_pro.
+
+- :PartRequest: is user text asking PCBStream to add an electronic part.
+  - The MVP happy-path request is "Can you add a BME280 temperature sensor?".
+
+- :LocalVerifiedRecipe: is trusted local recipe data bundled with the MVP.
+  - Local recipes are used before any future internet or AI extraction path.
+
+- :BME280I2CBlock: is the first supported schematic block in the MVP.
+  - It represents Bosch BME280 over I2C with support parts and review notes.
+
+- :ReviewMetadata: is the set of assumptions, warnings, confidence labels, and next steps.
+  - PCBStream must show this metadata before export.
+
+- :MockKiCadBridge: is the MVP stand-in for live KiCad insertion.
+  - It can show a fake insert action after files are exported.
+
+- :MVPNonGoal: is functionality intentionally excluded from the first rendered MVP.
+
+***implementation reqs***
+
+- :Implementation: must use the app name PCBStream in new user-visible text.
+
+- :Implementation: must not use the previous product name in the new specs or generated UI.
+
+- :PCBStreamApp: is not a full PCB designer.
+  - It only prepares reviewable schematic blocks and export files.
+
+- :Implementation: must use :LocalVerifiedRecipe: data for the MVP BME280 flow.
+
+- :Implementation: must not implement real AI calls in the MVP.
+
+- :Implementation: must not implement real internet datasheet search in the MVP.
+
+- :Implementation: must not directly edit a live KiCad project in the MVP.
+
+- :Implementation: must keep all future AI, datasheet, and bridge services clearly mocked.
+
+- :Implementation: must not let generated or AI-written prose directly write KiCad files.
+
+- :Implementation: must use strict structured data for circuit generation.
+
+- :Implementation: must always show :ReviewMetadata: when a block is drafted or generated.
+
+- :Implementation: must not silently guess critical electrical values.
+
+- :Implementation: must mark main IC footprints as needs_review unless locally verified.
+
+- :Implementation: may use default passive symbols and footprints with default confidence labels.
+
+***test reqs***
+
+- :ConformanceTests: should treat the BME280 I2C happy path as the primary MVP scenario.
+
+- :ConformanceTests: must not require real KiCad, internet access, real AI, or real billing.

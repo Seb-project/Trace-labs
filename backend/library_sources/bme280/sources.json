@@ -1,0 +1,14 @@
+{
+  "symbol": {
+    "source_name": "KiCad Sensor.kicad_sym BME280 symbol",
+    "source_url": "https://gitlab.com/kicad/libraries/kicad-symbols",
+    "cached_from": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/Sensor.kicad_sym",
+    "license": "KiCad library license; preserve upstream attribution when distributing generated libraries."
+  },
+  "footprint": {
+    "source_name": "KiCad Package_LGA Bosch LGA-8 2.5x2.5mm footprint",
+    "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/master/Package_LGA.pretty/Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering.kicad_mod",
+    "cached_from": "downloaded",
+    "license": "KiCad library license; preserve upstream attribution when distributing generated libraries."
+  }
+}

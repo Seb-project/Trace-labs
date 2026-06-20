@@ -1,0 +1,94 @@
+---
+import:
+  - "00_product_overview"
+  - "04_circuit_block_schema"
+description: PCBStream local component recipe requirements for BME280 and optional SHT31.
+---
+
+***definitions***
+
+- :ComponentRecipe: is a local JSON recipe for a supported electronic component.
+
+- :BME280I2CRecipe: is the local recipe for Bosch BME280 over I2C.
+
+- :SHT31I2CRecipe: is an optional local recipe for Sensirion SHT31 over I2C.
+
+- :RecipeQuestion: is a missing question described by a component recipe.
+
+- :RecipeSupportPart: is a support component described by a component recipe.
+
+***implementation reqs***
+
+- :ComponentRecipesPackage: should contain `bme280_i2c.json`.
+
+- :ComponentRecipesPackage: may contain `sht31_i2c.json` if time allows.
+
+- `bme280_i2c.json` must represent a reviewable schematic block for Bosch BME280 over I2C.
+
+- :BME280I2CRecipe: main component requirements are:
+  - MPN is BME280.
+  - Manufacturer is Bosch Sensortec.
+  - Purpose is temperature, pressure, and humidity environmental sensor.
+  - Symbol is Sensor:BME280 if available, otherwise placeholder U.
+  - Footprint is Package_LGA:LGA-8_2.5x2.5mm or placeholder.
+  - Footprint confidence is needs_review.
+  - 3D model is missing or needs_review.
+
+- :BME280I2CRecipe: support component requirements are:
+  - C? 100 nF capacitor from VDD to GND for decoupling.
+  - C? 100 nF capacitor from VDDIO to GND for decoupling.
+  - R? 4.7 kOhm pull-up resistor from SDA to selected logic voltage.
+  - R? 4.7 kOhm pull-up resistor from SCL to selected logic voltage.
+  - CSB strap or pull-up for I2C mode.
+  - SDO address selection strap for 0x76 or 0x77.
+
+- :BME280I2CRecipe: external net requirements are:
+  - The selected logic rail defaults to +3V3.
+  - GND is required.
+  - I2C1_SDA is preferred when project context contains it.
+  - I2C1_SCL is preferred when project context contains it.
+  - I2C_SDA and I2C_SCL may be fallback names.
+
+- :BME280I2CRecipe: must define four required :RecipeQuestion: entries.
+  - Logic voltage options are 1.8V and 3.3V with 3.3V as default.
+  - Interface options are I2C and SPI with I2C as default.
+  - I2C address options are 0x76 and 0x77 with 0x76 as default.
+  - Pull-up options are Add 4.7k pull-ups and Board already has pull-ups.
+  - Pull-up default is Add 4.7k pull-ups.
+
+- :BME280I2CRecipe: assumptions are:
+  - Default logic rail is +3V3.
+  - Default passive footprint is 0603.
+  - Pull-up value is 4.7 kOhm unless the user changes it.
+  - Generated main IC footprint must be reviewed before fabrication.
+  - I2C mode is used unless the user chooses SPI.
+
+- :BME280I2CRecipe: validation warnings are:
+  - Verify exact BME280 package and footprint before ordering the PCB.
+  - Pull-up value depends on bus capacitance and I2C speed.
+  - Avoid duplicate I2C pull-ups if the bus already has them.
+  - Place decoupling capacitors close to VDD and VDDIO.
+  - Run ERC in KiCad after insertion.
+
+- :BME280I2CRecipe: next steps are:
+  - Connect SDA and SCL to MCU I2C-capable GPIO pins.
+  - Confirm the selected logic rail exists in the project.
+  - Confirm whether existing board-level I2C pull-ups already exist.
+  - Assign or verify the BME280 footprint.
+  - Assign or verify passive footprints if project defaults are different.
+  - Run ERC.
+  - During PCB layout, place decoupling capacitors close to the sensor.
+  - Add firmware driver configuration for the selected I2C address.
+
+- :BME280I2CRecipe: documentation sources are local and mocked for the MVP.
+  - Source title should identify the Bosch BME280 datasheet or local recipe.
+  - Source confidence should be local_recipe_verified.
+  - The implementation must not fetch the internet for this source.
+
+***test reqs***
+
+- :ConformanceTests: should verify the required BME280 recipe exists after render.
+
+- :ConformanceTests: should verify the BME280 recipe contains four missing questions.
+
+- :ConformanceTests: should verify BME280 support parts include decoupling and pull-ups.
