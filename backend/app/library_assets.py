@@ -7,13 +7,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .library_acquisition import DownloadedLibraryAssets, OnlineLibraryAcquisitionService
+from .library_acquisition import DownloadedLibraryAssets, DownloadedSource, OnlineLibraryAcquisitionService
+from .models import FootprintAsset
 
 
-BME280_LIBRARY_NAME = "PCBStream_BME280"
+BME280_LIBRARY_NAME = "TraceLabs_BME280"
 BME280_SYMBOL_NAME = "BME280"
 BME280_SYMBOL_ID = f"{BME280_LIBRARY_NAME}:{BME280_SYMBOL_NAME}"
-BME280_FOOTPRINT_NAME = "PCBStream_BME280_LGA8_2.5x2.5mm_P0.65mm"
+BME280_FOOTPRINT_NAME = "TraceLabs_BME280_LGA8_2.5x2.5mm_P0.65mm"
 BME280_FOOTPRINT_ID = f"{BME280_LIBRARY_NAME}:{BME280_FOOTPRINT_NAME}"
 
 
@@ -37,13 +38,30 @@ class BME280LibraryAssets:
         self.sources_source = self.source_dir / "sources.json"
 
     def write_export_libraries(self, export_dir: Path) -> InstalledLibraryPaths:
-        library_root = export_dir / "pcbstream_libs"
+        library_root = export_dir / "tracelabs_libs"
         paths = self._target_paths(library_root)
         self._write_libraries(paths)
         return paths
 
+    def attach_footprint_asset(self, block: Any) -> FootprintAsset:
+        footprint_text = self._project_footprint()
+        asset = FootprintAsset(
+            name=BME280_FOOTPRINT_NAME,
+            footprint_id=BME280_FOOTPRINT_ID,
+            source_kind="bundled_footprint",
+            source_project="Trace Labs bundled KiCad library",
+            source_path=self.footprint_source.name,
+            source_url="",
+            confidence="local_recipe_verified",
+            kicad_mod=footprint_text,
+            warnings=[],
+        )
+        block.main_component.footprint = BME280_FOOTPRINT_ID
+        block.main_component.footprint_asset = asset
+        return asset
+
     def install_project_libraries(self, project_path: Path, exported_library_root: Path) -> InstalledLibraryPaths:
-        project_library_root = project_path / "pcbstream_libs"
+        project_library_root = project_path / "tracelabs_libs"
         project_library_root.mkdir(parents=True, exist_ok=True)
         if exported_library_root.exists():
             shutil.copytree(exported_library_root, project_library_root, dirs_exist_ok=True)
@@ -59,15 +77,15 @@ class BME280LibraryAssets:
             project_path / "sym-lib-table",
             "sym_lib_table",
             f'(lib (name "{BME280_LIBRARY_NAME}") (type "KiCad") '
-            f'(uri "${{KIPRJMOD}}/pcbstream_libs/{BME280_LIBRARY_NAME}.kicad_sym") '
-            f'(options "") (descr "PCBStream downloaded BME280 symbol"))',
+            f'(uri "${{KIPRJMOD}}/tracelabs_libs/{BME280_LIBRARY_NAME}.kicad_sym") '
+            f'(options "") (descr "Trace Labs downloaded BME280 symbol"))',
         )
         self._ensure_table_entry(
             project_path / "fp-lib-table",
             "fp_lib_table",
             f'(lib (name "{BME280_LIBRARY_NAME}") (type "KiCad") '
-            f'(uri "${{KIPRJMOD}}/pcbstream_libs/{BME280_LIBRARY_NAME}.pretty") '
-            f'(options "") (descr "PCBStream downloaded BME280 footprint"))',
+            f'(uri "${{KIPRJMOD}}/tracelabs_libs/{BME280_LIBRARY_NAME}.pretty") '
+            f'(options "") (descr "Trace Labs downloaded BME280 footprint"))',
         )
 
     def schematic_cached_symbol(self) -> str:
@@ -84,7 +102,7 @@ class BME280LibraryAssets:
         paths.symbol_library.write_text(
             "(kicad_symbol_lib\n"
             "\t(version 20240114)\n"
-            "\t(generator \"PCBStream\")\n"
+            "\t(generator \"Trace Labs\")\n"
             "\t(generator_version \"0.1\")\n"
             f"{self.project_symbol()}\n"
             ")\n",
@@ -103,7 +121,7 @@ class BME280LibraryAssets:
             symbol_library=library_root / f"{BME280_LIBRARY_NAME}.kicad_sym",
             footprint_library=footprint_library,
             footprint_file=footprint_library / f"{BME280_FOOTPRINT_NAME}.kicad_mod",
-            sources_file=library_root / "pcbstream_library_sources.json",
+            sources_file=library_root / "tracelabs_library_sources.json",
         )
 
     def _project_footprint(self) -> str:
@@ -162,16 +180,60 @@ class BME280LibraryAssets:
 
         text = self._normalise_library_table(text, table_name)
 
-        if f'(name "{BME280_LIBRARY_NAME}")' in text:
+        existing_span = self._library_entry_span(text, BME280_LIBRARY_NAME)
+        if existing_span is not None:
+            start, end = existing_span
+            text = f"{text[:start].rstrip()}\n  {entry}\n{text[end:].lstrip()}"
             table_path.write_text(text, encoding="utf-8")
             return
 
         stripped = text.rstrip()
         if stripped.endswith(")"):
-            text = f"{stripped[:-1]}  {entry}\n)\n"
+            text = f"{stripped[:-1].rstrip()}\n  {entry}\n)\n"
         else:
             text = f"({table_name}\n  {entry}\n)\n"
         table_path.write_text(text, encoding="utf-8")
+
+    def _library_entry_span(self, text: str, library_name: str) -> tuple[int, int] | None:
+        pattern = re.compile(rf'\(name\s+(?:"{re.escape(library_name)}"|{re.escape(library_name)})\)')
+        index = 0
+        while True:
+            start = text.find("(lib", index)
+            if start == -1:
+                return None
+            try:
+                _, end = self._balanced_span(text, start)
+            except ValueError:
+                return None
+            if pattern.search(text[start:end]):
+                return start, end
+            index = end
+
+    def _balanced_span(self, text: str, start: int) -> tuple[int, int]:
+        depth = 0
+        in_string = False
+        escaped = False
+        for index in range(start, len(text)):
+            char = text[index]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == '"':
+                    in_string = False
+                continue
+
+            if char == '"':
+                in_string = True
+            elif char == "(":
+                depth += 1
+            elif char == ")":
+                depth -= 1
+                if depth == 0:
+                    return start, index + 1
+
+        raise ValueError("Library table S-expression is not balanced.")
 
     def _normalise_library_table(self, text: str, table_name: str) -> str:
         stripped = text.strip()
@@ -199,17 +261,19 @@ class DraftLibraryAssets:
         *,
         require_downloaded_footprint: bool = False,
     ) -> InstalledLibraryPaths:
-        library_root = export_dir / "pcbstream_libs"
+        library_root = export_dir / "tracelabs_libs"
         library_name, symbol_name = self._symbol_parts(block.main_component.symbol, block.main_component.value)
         footprint_name = self._footprint_name(block.main_component.footprint, library_name)
         footprint_id = f"{library_name}:{footprint_name}"
-        downloaded = self.acquisition_service.acquire_for_block(
-            block,
-            library_name=library_name,
-            symbol_name=symbol_name,
-            footprint_name=footprint_name,
-            footprint_id=footprint_id,
-        )
+        downloaded = self._downloaded_from_existing_asset(block, footprint_name)
+        if downloaded is None:
+            downloaded = self.acquisition_service.acquire_for_block(
+                block,
+                library_name=library_name,
+                symbol_name=symbol_name,
+                footprint_name=footprint_name,
+                footprint_id=footprint_id,
+            )
         if downloaded and downloaded.footprint_name:
             footprint_name = self._safe_name(downloaded.footprint_name)
             footprint_id = f"{library_name}:{footprint_name}"
@@ -221,13 +285,26 @@ class DraftLibraryAssets:
         paths = self._target_paths(library_root, library_name, footprint_name)
         symbol_text = self._symbol_text(symbol_name, block, footprint_id, downloaded)
         footprint_text = self._footprint_text(footprint_name, block, downloaded)
+        if downloaded and downloaded.footprint_text:
+            source = self._footprint_source(downloaded)
+            block.main_component.footprint_asset = FootprintAsset(
+                name=footprint_name,
+                footprint_id=footprint_id,
+                source_kind=source.kind if source else "footprint",
+                source_project=source.project if source else "",
+                source_path=source.path if source else "",
+                source_url=source.url if source else "",
+                confidence=source.confidence if source else "downloaded_needs_review",
+                kicad_mod=footprint_text,
+                warnings=list(downloaded.warnings),
+            )
 
         paths.library_root.mkdir(parents=True, exist_ok=True)
         paths.footprint_library.mkdir(parents=True, exist_ok=True)
         paths.symbol_library.write_text(
             "(kicad_symbol_lib\n"
             "\t(version 20240114)\n"
-            "\t(generator \"PCBStream\")\n"
+            "\t(generator \"Trace Labs\")\n"
             "\t(generator_version \"0.1\")\n"
             f"{symbol_text}\n"
             ")\n",
@@ -241,6 +318,41 @@ class DraftLibraryAssets:
             1,
         )
         return paths
+
+    def attach_preview_footprint(self, block: Any) -> FootprintAsset | None:
+        library_name, symbol_name = self._symbol_parts(block.main_component.symbol, block.main_component.value)
+        footprint_name = self._footprint_name(block.main_component.footprint, library_name)
+        footprint_id = f"{library_name}:{footprint_name}"
+        downloaded = self.acquisition_service.acquire_for_block(
+            block,
+            library_name=library_name,
+            symbol_name=symbol_name,
+            footprint_name=footprint_name,
+            footprint_id=footprint_id,
+        )
+        if not downloaded or not downloaded.footprint_text:
+            return None
+
+        if downloaded.footprint_name:
+            footprint_name = self._safe_name(downloaded.footprint_name)
+            footprint_id = f"{library_name}:{footprint_name}"
+            block.main_component.footprint = footprint_id
+        self._apply_supplier_source_metadata(block, downloaded)
+        footprint_text = self._footprint_text(footprint_name, block, downloaded)
+        source = self._footprint_source(downloaded)
+        asset = FootprintAsset(
+            name=footprint_name,
+            footprint_id=footprint_id,
+            source_kind=source.kind if source else "footprint",
+            source_project=source.project if source else "",
+            source_path=source.path if source else "",
+            source_url=source.url if source else "",
+            confidence=source.confidence if source else "downloaded_needs_review",
+            kicad_mod=footprint_text,
+            warnings=list(downloaded.warnings),
+        )
+        block.main_component.footprint_asset = asset
+        return asset
 
     def schematic_cached_symbol(self, block: Any) -> str:
         cached = self._cached_symbols.get(block.main_component.symbol)
@@ -260,6 +372,20 @@ class DraftLibraryAssets:
         footprint_id: str,
         downloaded: DownloadedLibraryAssets | None,
     ) -> str:
+        if getattr(block, "reference_extraction", None) and block.reference_extraction.pins:
+            block.main_component.symbol_confidence = "datasheet_extracted_needs_review"
+            if downloaded and downloaded.footprint_text:
+                block.main_component.footprint_confidence = "downloaded_needs_review"
+                block.main_component.assignment_reason = (
+                    "Trace Labs generated a project-local symbol from extracted datasheet pin definitions so "
+                    "schematic wiring is deterministic, and downloaded a candidate footprint from an online "
+                    "KiCad library source; review symbol pins, package, pads, and pin-1 orientation before fabrication."
+                )
+            else:
+                block.main_component.assignment_reason = (
+                    "Trace Labs generated a project-local symbol from extracted datasheet pin definitions; review before fabrication."
+                )
+            return self._project_symbol_from_extraction(symbol_name, block, footprint_id)
         if downloaded and downloaded.symbol_text:
             symbol_text = re.sub(
                 r'\(property "Footprint" "[^"]*"',
@@ -271,16 +397,10 @@ class DraftLibraryAssets:
             if downloaded.footprint_text:
                 block.main_component.footprint_confidence = "downloaded_needs_review"
             block.main_component.assignment_reason = (
-                "PCBStream downloaded candidate KiCad library assets from an online KiCad library source; "
+                "Trace Labs downloaded candidate KiCad library assets from an online KiCad library source; "
                 "review symbol pins and footprint land pattern before fabrication."
             )
             return symbol_text
-        if getattr(block, "reference_extraction", None) and block.reference_extraction.pins:
-            block.main_component.symbol_confidence = "datasheet_extracted_needs_review"
-            block.main_component.assignment_reason = (
-                "PCBStream generated a project-local symbol from extracted datasheet pin definitions; review before fabrication."
-            )
-            return self._project_symbol_from_extraction(symbol_name, block, footprint_id)
         return self._project_symbol(symbol_name, block.main_component.value, footprint_id)
 
     def _footprint_text(
@@ -292,7 +412,7 @@ class DraftLibraryAssets:
         if downloaded and downloaded.footprint_text:
             block.main_component.footprint_confidence = "downloaded_needs_review"
             block.main_component.assignment_reason = (
-                "PCBStream downloaded a candidate KiCad footprint from an online KiCad library source; "
+                "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; "
                 "review package, pads, and pin-1 orientation before fabrication."
             )
             text = re.sub(
@@ -310,13 +430,13 @@ class DraftLibraryAssets:
         if sources:
             library_type = "online_download_needs_review"
             warning = (
-                "PCBStream downloaded one or more candidate KiCad library assets from online KiCad libraries. "
-                "They are not manufacturer-certified by PCBStream and must be reviewed before fabrication."
+                "Trace Labs downloaded one or more candidate KiCad library assets from online KiCad libraries. "
+                "They are not manufacturer-certified by Trace Labs and must be reviewed before fabrication."
             )
         else:
             library_type = "ai_proposed_placeholder"
             warning = (
-                "PCBStream generated this placeholder library deterministically for review. "
+                "Trace Labs generated this placeholder library deterministically for review. "
                 "It is not a verified manufacturer footprint."
             )
         return {
@@ -334,6 +454,33 @@ class DraftLibraryAssets:
             "datasheet_sources": [source.model_dump() for source in block.datasheet_sources],
         }
 
+    def _downloaded_from_existing_asset(
+        self,
+        block: Any,
+        default_footprint_name: str,
+    ) -> DownloadedLibraryAssets | None:
+        asset = getattr(block.main_component, "footprint_asset", None)
+        if asset is None or not getattr(asset, "kicad_mod", ""):
+            return None
+        source = DownloadedSource(
+            kind=asset.source_kind or "footprint_preview",
+            project=asset.source_project or "cached preview asset",
+            path=asset.source_path or asset.name or default_footprint_name,
+            url=asset.source_url or "",
+            confidence=asset.confidence or "downloaded_needs_review",
+        )
+        return DownloadedLibraryAssets(
+            footprint_text=asset.kicad_mod,
+            footprint_name=asset.name or default_footprint_name,
+            sources=[source],
+            warnings=list(asset.warnings),
+        )
+
+    def _footprint_source(self, downloaded: DownloadedLibraryAssets) -> DownloadedSource | None:
+        return next((source for source in downloaded.sources if "footprint" in source.kind), None) or (
+            downloaded.sources[0] if downloaded.sources else None
+        )
+
     def _apply_supplier_source_metadata(self, block: Any, downloaded: DownloadedLibraryAssets | None) -> None:
         if not downloaded:
             return
@@ -349,7 +496,7 @@ class DraftLibraryAssets:
             library_name, symbol_name = symbol_id.split(":", 1)
         else:
             symbol_name = self._safe_name(value)
-            library_name = f"PCBStream_{symbol_name}"
+            library_name = f"TraceLabs_{symbol_name}"
         return self._safe_name(library_name), self._safe_name(symbol_name)
 
     def _footprint_name(self, footprint_id: str, library_name: str) -> str:
@@ -364,7 +511,7 @@ class DraftLibraryAssets:
             symbol_library=library_root / f"{library_name}.kicad_sym",
             footprint_library=footprint_library,
             footprint_file=footprint_library / f"{footprint_name}.kicad_mod",
-            sources_file=library_root / "pcbstream_library_sources.json",
+            sources_file=library_root / "tracelabs_library_sources.json",
         )
 
     def _project_symbol(self, symbol_name: str, value: str, footprint_id: str) -> str:
@@ -373,7 +520,7 @@ class DraftLibraryAssets:
       (property "Value" "{value}" (at -5.08 13.97 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "{footprint_id}" (at 0 16.51 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 19.05 0) (effects (font (size 1.27 1.27)) hide))
-      (property "Description" "PCBStream AI-proposed draft symbol; review before fabrication" (at 0 21.59 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Trace Labs AI-proposed draft symbol; review before fabrication" (at 0 21.59 0) (effects (font (size 1.27 1.27)) hide))
       (symbol "{symbol_name}_0_1"
         (rectangle (start -10.16 -10.16) (end 10.16 10.16) (stroke (width 0.254) (type default)) (fill (type background)))
         (text "REVIEW" (at 0 0 0) (effects (font (size 1.27 1.27))))
@@ -403,7 +550,7 @@ class DraftLibraryAssets:
       (property "Reference" "U" (at -5.08 {self._fmt(bottom - 3.81)} 0) (effects (font (size 1.27 1.27))))
       (property "Value" "{self._escape(block.main_component.value)}" (at -5.08 {self._fmt(top + 3.81)} 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "{self._escape(footprint_id)}" (at 0 {self._fmt(top + 6.35)} 0) (effects (font (size 1.27 1.27)) hide))
-      (property "Description" "PCBStream symbol generated from cited datasheet extraction; review before fabrication" (at 0 {self._fmt(top + 8.89)} 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Description" "Trace Labs symbol generated from cited datasheet extraction; review before fabrication" (at 0 {self._fmt(top + 8.89)} 0) (effects (font (size 1.27 1.27)) hide))
       (symbol "{symbol_name}_0_1"
         (rectangle (start -10.16 {self._fmt(top)}) (end 10.16 {self._fmt(bottom)}) (stroke (width 0.254) (type default)) (fill (type background)))
       )
@@ -415,7 +562,10 @@ class DraftLibraryAssets:
     def _pin_side(self, pin: Any) -> str:
         role = (pin.electrical_type or "").lower()
         name = (pin.name or "").upper()
-        if any(token in name for token in ["GND", "VSS", "VDD", "VCC", "AVDD", "DVDD", "AVSS", "DVSS"]):
+        net = (pin.net_name or "").upper()
+        if net == "GND" or net.startswith("+") or any(
+            token in name for token in ["GND", "VSS", "VDD", "VCC", "AVDD", "DVDD", "AVSS", "DVSS"]
+        ):
             return "left"
         if role in {"output", "bidirectional", "tri_state", "open_collector", "open_emitter"}:
             return "right"
@@ -458,9 +608,9 @@ class DraftLibraryAssets:
     def _placeholder_footprint(self, footprint_name: str, value: str) -> str:
         return f"""(footprint "{footprint_name}"
   (version 20240108)
-  (generator "PCBStream")
-  (descr "PCBStream AI-proposed placeholder footprint for {value}; replace with verified footprint before fabrication")
-  (tags "PCBStream placeholder needs_review")
+  (generator "Trace Labs")
+  (descr "Trace Labs AI-proposed placeholder footprint for {value}; replace with verified footprint before fabrication")
+  (tags "Trace Labs placeholder needs_review")
   (layer "F.Cu")
   (property "Reference" "U?" (at 0 -4.2 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
   (property "Value" "{value}" (at 0 4.2 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
@@ -479,4 +629,4 @@ class DraftLibraryAssets:
 
     def _safe_name(self, value: str) -> str:
         safe = re.sub(r"[^A-Za-z0-9_]+", "_", value.strip()).strip("_")
-        return safe or "PCBStream_Draft"
+        return safe or "TraceLabs_Draft"

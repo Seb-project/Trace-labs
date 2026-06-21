@@ -1,0 +1,1069 @@
+{
+  "id": "draft_u_blox_neo_m8n_0_ai_draft",
+  "block_name": "u-blox NEO-M8N-0 Extracted Draft",
+  "block_slug": "u_blox_neo_m8n_0_ai_draft",
+  "summary": "Datasheet-derived draft for u-blox NEO-M8N-0. Interface: UART, USB 2.0 Full Speed, SPI slave, DDC/I2C-compatible slave, TIMEPULSE, EXTINT, RF_IN antenna input. Package: NEO form factor GNSS module, 24-pin module pinout.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "NEO-M8N-0",
+    "mpn": "NEO-M8N-0",
+    "manufacturer": "u-blox",
+    "supplier": "u-blox authorized distribution",
+    "supplier_part_number": "C6330769",
+    "supplier_url": "https://www.u-blox.com/en/product/neo-m8-series",
+    "symbol": "TraceLabs_NEO_M8N_0:NEO_M8N_0",
+    "footprint": "TraceLabs_NEO_M8N_0:TraceLabs_NEO_M8N_0_LCSC_C6330769",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for NEO-M8N-0.",
+    "connects": [
+      "VCC_3V0",
+      "VDD_USB_3V3",
+      "V_BCKP",
+      "GND",
+      "RF_IN",
+      "VCC_RF",
+      "ANT_ON",
+      "D_SEL",
+      "UART_TX_OR_SPI_MISO",
+      "UART_RX_OR_SPI_MOSI",
+      "DDC_SDA_OR_SPI_CS_N",
+      "DDC_SCL_OR_SPI_CLK",
+      "USB_D-_MODULE",
+      "USB_D+_MODULE",
+      "USB_D-",
+      "USB_D+",
+      "RESET_N",
+      "TIMEPULSE",
+      "EXTINT",
+      "NC_SAFEBOOT_N_ACCESS",
+      "NC_RESERVED_15",
+      "NC_RESERVED_16",
+      "NC_RESERVED_17"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_NEO_M8N_0_LCSC_C6330769",
+      "footprint_id": "TraceLabs_NEO_M8N_0:TraceLabs_NEO_M8N_0_LCSC_C6330769",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C6330769",
+      "source_url": "https://www.u-blox.com/en/product/neo-m8-series",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_NEO_M8N_0_LCSC_C6330769\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -11.000) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value GPSM-SMD_NEO-M8N (at 0.000 11.000) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C6330769\")\n\t(fp_line (start 6.10 -7.63) (end 6.10 -8.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.10 -8.00) (end -6.10 -8.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.10 -0.23) (end 6.10 -1.97) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.10 7.63) (end -6.10 8.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.10 8.00) (end 6.10 8.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.10 8.00) (end 6.10 7.63) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.10 -1.97) (end -6.10 -0.23) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.10 -8.00) (end -6.10 -7.63) (layer F.SilkS) (width 0.25))\n\t(pad 1 smd rect (at 6.10 7.00 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 17 smd rect (at -6.10 -2.60 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 20 smd rect (at -6.10 2.60 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 23 smd rect (at -6.10 5.90 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 16 smd rect (at -6.10 -3.70 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 13 smd rect (at -6.10 -7.00 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 14 smd rect (at -6.10 -5.90 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 15 smd rect (at -6.10 -4.80 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 18 smd rect (at -6.10 0.40 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 19 smd rect (at -6.10 1.50 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 21 smd rect (at -6.10 3.70 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 22 smd rect (at -6.10 4.80 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 24 smd rect (at -6.10 7.00 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd rect (at 6.10 5.90 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 3 smd rect (at 6.10 4.80 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd rect (at 6.10 3.70 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd rect (at 6.10 2.60 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd rect (at 6.10 1.50 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 7 smd rect (at 6.10 0.40 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 8 smd rect (at 6.10 -2.60 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 9 smd rect (at 6.10 -3.70 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 10 smd rect (at 6.10 -4.80 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 11 smd rect (at 6.10 -5.90 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 12 smd rect (at 6.10 -7.00 90.00) (size 0.800 1.800) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center 6.10 8.00) (end 6.13 8.00) (layer F.SilkS) (width 0.06))\n\t(fp_circle (center 6.73 6.99) (end 6.93 6.99) (layer Cmts.User) (width 0.40))\n\t(fp_circle (center 6.60 8.00) (end 6.78 8.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.10 8.00) (end -6.10 -8.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -6.10 -8.00) (end 6.10 -8.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 6.10 -8.00) (end 6.10 8.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 6.10 8.00) (end -6.10 8.00) (layer F.CrtYd) (width 0.05))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_8zyhprow/TraceLabs_C6330769.3dshapes/GPSM-SMD_NEO-M8N.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 0))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "R_USB_DM?",
+      "type": "series resistor",
+      "value": "27 Ohm",
+      "purpose": "USB data-line series resistance for USB_DM, per electrical condition stating USB_DM/USB_DP are compatible with USB with 27 ohm series resistance.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "USB_D-_MODULE",
+        "USB_D-"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P16C1",
+      "source_citations": [
+        "S2P16C1"
+      ]
+    },
+    {
+      "reference": "R_USB_DP?",
+      "type": "series resistor",
+      "value": "27 Ohm",
+      "purpose": "USB data-line series resistance for USB_DP, per electrical condition stating USB_DM/USB_DP are compatible with USB with 27 ohm series resistance. External USB_DP pull-up is not needed because the pull-up resistor on USB_DP is integrated.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "USB_D+_MODULE",
+        "USB_D+"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P16C1, S2P10C1",
+      "source_citations": [
+        "S2P16C1",
+        "S2P10C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "VCC_3V0",
+    "VDD_USB_3V3",
+    "V_BCKP",
+    "GND",
+    "RF_IN",
+    "ANT_ON",
+    "D_SEL",
+    "UART_TX_OR_SPI_MISO",
+    "UART_RX_OR_SPI_MOSI",
+    "DDC_SDA_OR_SPI_CS_N",
+    "DDC_SCL_OR_SPI_CLK",
+    "USB_D-",
+    "USB_D+",
+    "RESET_N",
+    "TIMEPULSE",
+    "EXTINT",
+    "NC_SAFEBOOT_N_ACCESS"
+  ],
+  "internal_nets": [
+    "VCC_RF",
+    "USB_D-_MODULE",
+    "USB_D+_MODULE",
+    "NC_RESERVED_15",
+    "NC_RESERVED_16",
+    "NC_RESERVED_17"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "Pins 15, 16, and 17 are reserved and should not be used.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Pin 1 SAFEBOOT_N is listed as reserved/service and should be left open, while designs must allow access to SAFEBOOT_N and UART for future service, updates, and reconfiguration.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The product is not protected against overvoltage or reversed voltages; voltage spikes exceeding supply specifications must be limited within specified boundaries using appropriate protection diodes if necessary.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "GNSS receivers are ESD-sensitive; RF input/antenna handling requires ESD precautions, and proper ESD protection measures should be implemented if exposed antenna areas may be touched outside ESD-protected areas.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "SPI is not available in the default configuration; it is enabled by connecting D_SEL pin 2 to GND.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "NEO-M8 Data Sheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "NEO-M8N-0 | LCSC",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.lcsc.com/product-detail/C6330769.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "NEO-M8N-0 Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 SAFEBOOT_N -> NC_SAFEBOOT_N_ACCESS\n2 D_SEL -> D_SEL\n3 TIMEPULSE -> TIMEPULSE\n4 EXTINT -> EXTINT\n5 USB_DM -> USB_D-_MODULE\n6 USB_DP -> USB_D+_MODULE\n7 VDD_USB -> VDD_USB_3V3\n8 RESET_N -> RESET_N\n9 VCC_RF -> VCC_RF\n10 GND -> GND\n11 RF_IN -> RF_IN\n12 GND -> GND",
+    "connections": [
+      "VCC_3V0",
+      "VDD_USB_3V3",
+      "V_BCKP",
+      "GND",
+      "RF_IN",
+      "VCC_RF",
+      "ANT_ON",
+      "D_SEL",
+      "UART_TX_OR_SPI_MISO",
+      "UART_RX_OR_SPI_MOSI",
+      "DDC_SDA_OR_SPI_CS_N",
+      "DDC_SCL_OR_SPI_CLK",
+      "USB_D-_MODULE",
+      "USB_D+_MODULE",
+      "USB_D-",
+      "USB_D+",
+      "RESET_N",
+      "TIMEPULSE",
+      "EXTINT",
+      "NC_SAFEBOOT_N_ACCESS",
+      "NC_RESERVED_15",
+      "NC_RESERVED_16",
+      "NC_RESERVED_17"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "NEO-M8N-0",
+    "manufacturer": "u-blox",
+    "package": "NEO form factor GNSS module, 24-pin module pinout",
+    "supply_range": "For NEO-M8N/Q: VCC 2.7 V to 3.6 V, typical 3.0 V; VDD_USB 3.0 V to 3.6 V, typical 3.3 V; V_BCKP 1.4 V to 3.6 V.",
+    "interface": "UART, USB 2.0 Full Speed, SPI slave, DDC/I2C-compatible slave, TIMEPULSE, EXTINT, RF_IN antenna input",
+    "pins": [
+      {
+        "number": "1",
+        "name": "SAFEBOOT_N",
+        "electrical_type": "Input",
+        "net_name": "NC_SAFEBOOT_N_ACCESS",
+        "required": false,
+        "notes": "Reserved / SAFEBOOT_N for future service, updates and reconfiguration; leave OPEN. Datasheet also says designs must allow access to UART and SAFEBOOT_N for future service, updates and reconfiguration.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P10C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "D_SEL",
+        "electrical_type": "Input",
+        "net_name": "D_SEL",
+        "required": true,
+        "notes": "Interface select. At startup, high or left open selects UART + DDC; low/connected to GND selects SPI.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P14C1",
+          "S2P10C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "TIMEPULSE",
+        "electrical_type": "Output",
+        "net_name": "TIMEPULSE",
+        "required": false,
+        "notes": "Configurable time pulse output; default is 1 pulse per second. Default TIMEPULSE is 1 Hz navigation pulse, rising-edge synchronized, 100 ms pulse length.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P10C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "EXTINT",
+        "electrical_type": "Input",
+        "net_name": "EXTINT",
+        "required": false,
+        "notes": "External interrupt pin. Can be used for receiver control, time/frequency aiding, or Power Save Mode control/force-off functions.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P9C1",
+          "S2P10C1",
+          "S2P9C2"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "USB_DM",
+        "electrical_type": "I/O",
+        "net_name": "USB_D-_MODULE",
+        "required": false,
+        "notes": "USB data. USB interface is USB 2.0 FS compatible; use with VDD_USB supply. Electrical table notes USB_DM/USB_DP are compatible with USB with 27 ohm series resistance.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P10C1",
+          "S2P16C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "USB_DP",
+        "electrical_type": "I/O",
+        "net_name": "USB_D+_MODULE",
+        "required": false,
+        "notes": "USB data. USB full-speed pull-up on USB_DP is integrated. Electrical table notes USB_DM/USB_DP are compatible with USB with 27 ohm series resistance.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P10C1",
+          "S2P16C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "VDD_USB",
+        "electrical_type": "Power input",
+        "net_name": "VDD_USB_3V3",
+        "required": false,
+        "notes": "USB supply. Operating range 3.0 V to 3.6 V, typical 3.3 V. Required when USB interface is used.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P10C1",
+          "S2P16C1"
+        ]
+      },
+      {
+        "number": "8",
+        "name": "RESET_N",
+        "electrical_type": "Input",
+        "net_name": "RESET_N",
+        "required": false,
+        "notes": "Active-low reset input. Internal pull-up resistor for RESET_N is specified as 11 kOhm.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P16C1"
+        ]
+      },
+      {
+        "number": "9",
+        "name": "VCC_RF",
+        "electrical_type": "Power output",
+        "net_name": "VCC_RF",
+        "required": false,
+        "notes": "Output voltage RF section. Operating condition: VCC_RF voltage is VCC - 0.1 V; output current 50 mA. Absolute maximum output current 100 mA.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P16C1",
+          "S2P15C1"
+        ]
+      },
+      {
+        "number": "10",
+        "name": "GND",
+        "electrical_type": "Ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "11",
+        "name": "RF_IN",
+        "electrical_type": "RF input",
+        "net_name": "RF_IN",
+        "required": true,
+        "notes": "GNSS signal input. NEO-M8 modules are designed for passive and active antennas. Absolute maximum RF input power is 15 dBm with 50 ohm source impedance, continuous wave.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P12C1",
+          "S2P15C1"
+        ]
+      },
+      {
+        "number": "12",
+        "name": "GND",
+        "electrical_type": "Ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "13",
+        "name": "GND",
+        "electrical_type": "Ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "14",
+        "name": "ANT_ON",
+        "electrical_type": "Output",
+        "net_name": "ANT_ON",
+        "required": false,
+        "notes": "NEO-M8N antenna control output.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "15",
+        "name": "Reserved",
+        "electrical_type": "Reserved",
+        "net_name": "NC_RESERVED_15",
+        "required": false,
+        "notes": "Reserved; pins designated Reserved should not be used.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "16",
+        "name": "Reserved",
+        "electrical_type": "Reserved",
+        "net_name": "NC_RESERVED_16",
+        "required": false,
+        "notes": "Reserved; pins designated Reserved should not be used.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "17",
+        "name": "Reserved",
+        "electrical_type": "Reserved",
+        "net_name": "NC_RESERVED_17",
+        "required": false,
+        "notes": "Reserved; pins designated Reserved should not be used.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "18",
+        "name": "SDA / SPI CS_N",
+        "electrical_type": "I/O",
+        "net_name": "DDC_SDA_OR_SPI_CS_N",
+        "required": true,
+        "notes": "DDC data if D_SEL=1 or left open; SPI chip select if D_SEL=0. DDC is I2C Fast-Mode compatible, slave only, maximum 400 kb/s. SPI is slave only and not available in default configuration unless D_SEL is grounded.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P14C1",
+          "S2P11C1",
+          "S2P10C1",
+          "S2P18C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "SCL / SPI CLK",
+        "electrical_type": "I/O",
+        "net_name": "DDC_SCL_OR_SPI_CLK",
+        "required": true,
+        "notes": "DDC clock if D_SEL=1 or left open; SPI clock if D_SEL=0. DDC maximum SCL frequency / bit rate 400 kHz / 400 kb/s. SPI maximum clock frequency 5.5 MHz; timing recommendation lists 1 Mb/s bit rate.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P14C1",
+          "S2P11C1",
+          "S2P10C1",
+          "S2P18C1"
+        ]
+      },
+      {
+        "number": "20",
+        "name": "TxD / SPI MISO",
+        "electrical_type": "Output",
+        "net_name": "UART_TX_OR_SPI_MISO",
+        "required": true,
+        "notes": "UART TxD if D_SEL=1 or left open; SPI MISO if D_SEL=0. Default UART setting is 9600 baud, 8 bits, no parity, 1 stop bit.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P14C1",
+          "S2P10C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "21",
+        "name": "RxD / SPI MOSI",
+        "electrical_type": "Input",
+        "net_name": "UART_RX_OR_SPI_MOSI",
+        "required": true,
+        "notes": "UART RxD if D_SEL=1 or left open; SPI MOSI if D_SEL=0. Default UART input is 9600 baud, 8 bits, no parity, 1 stop bit, autobauding disabled.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P14C1",
+          "S2P10C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "22",
+        "name": "V_BCKP",
+        "electrical_type": "Power input",
+        "net_name": "V_BCKP",
+        "required": false,
+        "notes": "Backup voltage supply. Operating range 1.4 V to 3.6 V. If main supply fails and a battery is connected to V_BCKP, RTC can keep running in Hardware Backup Mode and relevant data can be saved in backup RAM.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P16C1",
+          "S2P11C1"
+        ]
+      },
+      {
+        "number": "23",
+        "name": "VCC",
+        "electrical_type": "Power input",
+        "net_name": "VCC_3V0",
+        "required": true,
+        "notes": "Main supply voltage. For NEO-M8N/Q, operating range is 2.7 V to 3.6 V, typical 3.0 V. Indicative maximum supply current example is 67 mA; dimension maximum current capability from this figure.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P16C1",
+          "S2P17C1"
+        ]
+      },
+      {
+        "number": "24",
+        "name": "GND",
+        "electrical_type": "Ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S2P13C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "R_USB_DM",
+        "type": "series resistor",
+        "value": "27 Ohm",
+        "purpose": "USB data-line series resistance for USB_DM, per electrical condition stating USB_DM/USB_DP are compatible with USB with 27 ohm series resistance.",
+        "connects": [
+          "USB_D-_MODULE",
+          "USB_D-"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Place in series on USB_DM path when USB is used.",
+        "source_citations": [
+          "S2P16C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R_USB_DP",
+        "type": "series resistor",
+        "value": "27 Ohm",
+        "purpose": "USB data-line series resistance for USB_DP, per electrical condition stating USB_DM/USB_DP are compatible with USB with 27 ohm series resistance. External USB_DP pull-up is not needed because the pull-up resistor on USB_DP is integrated.",
+        "connects": [
+          "USB_D+_MODULE",
+          "USB_D+"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Place in series on USB_DP path when USB is used.",
+        "source_citations": [
+          "S2P16C1",
+          "S2P10C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "VCC_3V0",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "U1.23 VCC"
+        ],
+        "notes": "Main supply for NEO-M8N: 2.7 V to 3.6 V, typical 3.0 V."
+      },
+      {
+        "name": "VDD_USB_3V3",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "U1.7 VDD_USB"
+        ],
+        "notes": "USB supply: 3.0 V to 3.6 V, typical 3.3 V; needed for USB interface."
+      },
+      {
+        "name": "V_BCKP",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "U1.22 V_BCKP"
+        ],
+        "notes": "Backup supply 1.4 V to 3.6 V; optional if backup/RTC retention is required."
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "U1.10 GND",
+          "U1.12 GND",
+          "U1.13 GND",
+          "U1.24 GND"
+        ],
+        "notes": "Module ground pins."
+      },
+      {
+        "name": "RF_IN",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.11 RF_IN"
+        ],
+        "notes": "GNSS RF antenna input; designed for passive or active antennas."
+      },
+      {
+        "name": "VCC_RF",
+        "role": "power",
+        "external": false,
+        "connected_pins": [
+          "U1.9 VCC_RF"
+        ],
+        "notes": "RF-section voltage output; VCC - 0.1 V, 50 mA operating output current."
+      },
+      {
+        "name": "ANT_ON",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.14 ANT_ON"
+        ],
+        "notes": "NEO-M8N antenna control output."
+      },
+      {
+        "name": "D_SEL",
+        "role": "configuration",
+        "external": true,
+        "connected_pins": [
+          "U1.2 D_SEL"
+        ],
+        "notes": "Leave open/high for UART + DDC; connect to GND for SPI."
+      },
+      {
+        "name": "UART_TX_OR_SPI_MISO",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.20 TxD/SPI MISO"
+        ],
+        "notes": "Function depends on D_SEL."
+      },
+      {
+        "name": "UART_RX_OR_SPI_MOSI",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.21 RxD/SPI MOSI"
+        ],
+        "notes": "Function depends on D_SEL."
+      },
+      {
+        "name": "DDC_SDA_OR_SPI_CS_N",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.18 SDA/SPI CS_N"
+        ],
+        "notes": "Function depends on D_SEL."
+      },
+      {
+        "name": "DDC_SCL_OR_SPI_CLK",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.19 SCL/SPI CLK"
+        ],
+        "notes": "Function depends on D_SEL."
+      },
+      {
+        "name": "USB_D-_MODULE",
+        "role": "interface",
+        "external": false,
+        "connected_pins": [
+          "U1.5 USB_DM",
+          "R_USB_DM.1"
+        ],
+        "notes": "Module side of USB_DM series resistor."
+      },
+      {
+        "name": "USB_D+_MODULE",
+        "role": "interface",
+        "external": false,
+        "connected_pins": [
+          "U1.6 USB_DP",
+          "R_USB_DP.1"
+        ],
+        "notes": "Module side of USB_DP series resistor."
+      },
+      {
+        "name": "USB_D-",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "R_USB_DM.2"
+        ],
+        "notes": "External USB D- after 27 ohm series resistor."
+      },
+      {
+        "name": "USB_D+",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "R_USB_DP.2"
+        ],
+        "notes": "External USB D+ after 27 ohm series resistor."
+      },
+      {
+        "name": "RESET_N",
+        "role": "reset",
+        "external": true,
+        "connected_pins": [
+          "U1.8 RESET_N"
+        ],
+        "notes": "Reset input with internal 11 kOhm pull-up."
+      },
+      {
+        "name": "TIMEPULSE",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "U1.3 TIMEPULSE"
+        ],
+        "notes": "Default 1 PPS output."
+      },
+      {
+        "name": "EXTINT",
+        "role": "interrupt",
+        "external": true,
+        "connected_pins": [
+          "U1.4 EXTINT"
+        ],
+        "notes": "External interrupt/aiding/control input."
+      },
+      {
+        "name": "NC_SAFEBOOT_N_ACCESS",
+        "role": "configuration",
+        "external": true,
+        "connected_pins": [
+          "U1.1 SAFEBOOT_N"
+        ],
+        "notes": "Leave open but allow access for service/update/reconfiguration."
+      },
+      {
+        "name": "NC_RESERVED_15",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "U1.15 Reserved"
+        ],
+        "notes": "Do not use."
+      },
+      {
+        "name": "NC_RESERVED_16",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "U1.16 Reserved"
+        ],
+        "notes": "Do not use."
+      },
+      {
+        "name": "NC_RESERVED_17",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "U1.17 Reserved"
+        ],
+        "notes": "Do not use."
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S2P13C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 13,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Pin Definit ion Page 13 of 26 2 Pin Definition 2.1 Pin assignment Figure 2: Pin Assignment No Module Name I/O Description 1 All Reserved I SAFEBOOT_N ( for future service, updates and reconfiguration , leave OPEN) 2 All D_SEL I Interface select 3 All TIMEPULSE O Time pulse (1PPS) 4 All EXTINT I External Interrupt Pin 5 All USB_DM I/O USB Data 6 All USB_DP I/O USB Data 7 All VDD_USB I USB Supply 8 All RESET_N I RESET_N 9 All VCC_RF O Output Voltage RF section 10 All GND I Ground 11 All RF_IN I GNSS signal input 12 All GND I Ground 13 All GND I Ground 14 NEO-M8N ANT_ON O Antenna control NEO-M8M Reserved - Reserved NEO-M8Q ANT_ON O Antenna control 15 All Reserved - Reserved 16 All Reserved - Reserved 17 All Reserved - Reserved 18 All SDA SPI CS_N I/O DDC Data if D_SEL =1 (or open) SPI Chip Select if D_SEL = 0 19 All SCL SPI CLK I/O DDC Clock if D_SEL =1(or ope n) SPI Clock if D_SEL = 0 20 All TxD SPI MISO O Serial Port if D_SEL =1(or open) SPI MISO if D_SEL = 0 21 All RxD SPI MOSI I Serial Port if D_SEL =1(or open) SPI MOSI if D_SEL = 0 22 All V_BCKP I Backup voltage supply 23 All VCC I Supply voltage 24 All GND I Ground Table 5: Pinout Pins designated Reserved should not be used. For more information about Pinouts see the NEO-M8 Hardware Integration Manual [1]."
+      },
+      {
+        "chunk_id": "S2P10C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 10,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 10 of 26 1.10.2 Aiding The EXTINT pin can be used to supply time or frequency aiding data to the receiver. For time aiding , hardware time synchronization can be a chieved by connecting an accurate time pulse to the EXTINT pin. Frequency aiding can be implemented by connecting a periodic rectangular signal with a frequency up to 500 kHz and arbitrary duty cycle (low/high phase duration must not be shorter than 50 ns ) to the EXTINT pin . Provide the applied frequency value to the receiver using UBX messages. 1.11 TIMEPULSE A configurable t ime pulse signal is available with all u-blox M8 modules. The TIMEPULSE output generate s pulse trains synchronized with GPS or UTC time grid with intervals configurable over a wide frequency range. Thus it may be used as a low frequency time synchronization pulse or as a high frequency reference signal . By default the time pulse signal is configured to 1 pulse per second. For more informat ion see the u-blox M8 Receiver Description including Protocol Specification [2]. 1.12 Protocols and interfaces Protocol Type NMEA 0183, version 4.0 (V2.3 or V4.1 configurable) Input/output, ASCII UBX Input/output, binary, u -blox proprietary RTCM Input message , 1, 2, 3, 9 Table 3: Available Protocols All protocols are available on UART, USB, DDC (I2C compliant) and SPI. For specification of the various protocols see the u-blox M8 Receiver De scription Including Protocol Specification [2]. 1.13 Interfaces A number of interfaces are provided either for data communication or memory access . The embedded firmware uses these interfaces according to their respe ctive protocol specifications. 1.13.1 UART The NEO-M8 series modules include one UART interface , which can be used for communication to a host. It support s configurable baud rates. For supported baud rates see the u-blox M8 Receiver Description Including Protoco l Specification [2]. Designs must allow access to the UART and the SAFEBOOT_N function pin for future service, updates and reconfiguration. 1.13.2 USB A USB version 2.0 FS compatible interface can be used for communic ation as an alternative to the UART. The pull-up resistor on pin USB_ DP is integrated to signal a full -speed device to the host. The VDD_USB pin supplies the USB interface. u-blox USB (CDC -ACM) driver supports Windows Vista and Windows 7 and Windows 8 operating systems. 1.13.3 SPI The SPI interface is designed to allow communication to a host CPU. The interface can be operated in slave mode only. The maximum transfer rate using SPI is 1 Mb/s and the maximum SPI clock frequency is 5.5 MHz. Note that SPI is not avai lable in the default configuration , because its pins are shared with the UART and DDC interfaces. The SPI interface can be enabled by connecting D_SEL (Pin 2) to ground (see section 3.1)."
+      },
+      {
+        "chunk_id": "S4P0C6",
+        "source_url": "https://www.lcsc.com/product-detail/C6330769.html",
+        "title": "NEO-M8N-0 | LCSC",
+        "page": null,
+        "text": "Receivers Fiber Optic Switches, Multiplexers, Demultiplexers Fiber Optic Transceiver Modules Fiber Optic Transmitters - Discrete Fiber Optic Transmitters - Drive Circuitry Integrated Incandescent, Neon Lamps Laser Diodes, Modules LCD, OLED Character and Numeric LCD, OLED, Graphic LED Addressable, Specialty LED Character and Numeric LED COBs, Engines, Modules, Strips LED Color Lighting LED Dot Matrix and Cluster LED Emitters - Infrared, UV, Visible LED Indication - Discrete LED White Lighting Lenses Light Pipes Optic Spacers, Standoffs Optoelectronics Accessories Reflectors Vacuum Fluorescent (VFD) Xenon Lighting View All Passives Capacitors Aluminum - Polymer Capacitors Aluminum Electrolytic Capacitors Capacitor Networks, Arrays Ceramic Capacitors Electric Double Layer Capacitors (EDLC), Supercapacitors Film Capacitors Mica and PTFE Capacitors Motor Start, Motor Run Capacitors (AC) Niobium Oxide Capacitors Silicon Capacitors Tantalum - Polymer Capacitors Tantalum Capacitors Thin Film Capacitors Trimmers, Variable Capacitors View All Crystals, Oscillators, Resonators Crystal, Oscillator, Resonator Accessories Crystals Oscillators Pin Configurable/Selectable Oscillators Programmable Oscillators Resonators Stand Alone Programmers VCOs (Voltage Controlled Oscillators) View All Filters Cable Ferrites Ceramic Filters Common Mode Chokes EMI/RFI Filters (LC, RC Networks) Feed Through Capacitors Ferrite Beads and Chips Filter Accessories Monolithic Crystals Power Line Filter Modules RF Filters SAW Filters View All Inductors, Coils, Chokes Adjustable Inductors Arrays, Signal Transformers Delay Lines Fixed Inductors Wireless Charging Coils View All Magnetics - Transformer, Inductor Components Bobbins (Coil Formers), Mounts, Hardware Ferrite Cores Magnet Wire View All Potentiometers, Variable Resistors Adjustable Power Resistor Rotary Potentiometers, Rheostats Scale Dials Slide Potentiometers Thumbwheel Potentiometers Trimmer Potentiometers Value Display Potentiometers View All Resistors Chassis Mount Resistors Chip Resistor - Surface Mount Current Sense Resistors Resistor Kits Resistor Networks, Arrays Resistors Accessories Specialized Resistors Through Hole Resistors View All View All Power Supplies Power Suppliers - Board Mount AC DC Converters Board Mount Power Supply Accessorie DC DC Converters LED Drivers View All Power Supplies - External/Internal (Off-Board) AC AC Wall Power Adapters AC DC Configurable Power Supplies (Factory Assembled) AC DC Configurable Power Supply Chassis AC DC Configurable Power Supply Modules AC DC Converters (Off-Board) AC DC Desktop, Wall Power Adapters Computer Power Supply Units DC AC Inverters DC DC Converters (Off-Board) DC Power Supplies External/Internal Power Supply Accessories Industrial, DIN Rail Power Supplies LED Drivers (Off-Board) Power over Ethernet (PoE) View All View All Relays Automotive Relays Contactors (Electromechanical) Contactors (Solid State) High Frequency (RF) Relays Industrial Relays Power Relays Re"
+      },
+      {
+        "chunk_id": "S2P14C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 14,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Configuration management Page 14 of 26 3 Configuratio n ma nagement Configuration settings can be modified with UBX configuration messages. The modified settings remain effective until power -down or reset. If these settings have been stored in battery -backup RAM, then the modified configuration will be retained, as long as t he backup battery supply is not interrupted. With the NEO-M8N , configuration settings modified with UBX configuration messages can be saved permanently. In this case , the modified settings remain effective even after power -down and do not require backup ba ttery supply. 3.1 Interface Selection (D_SEL) At startup Pin 2 (D_SEL) determines which data interface s are used for communication. If D_SEL is set high or left open , UART and DDC become available. If D_SEL is set low, i.e. connected to ground , the NEO-M8 ser ies module can communicate to a host via SPI. PIN # D_SEL =\u201d1\u201d (left open) D_SEL =\u201d0\u201d (connected to GND) 20 UART TX SPI MISO 21 UART RX SPI MOSI 19 DDC SCL SPI CLK 18 DDC SDA SPI CS_N Table 6: Data i nterface selection by D_SEL"
+      },
+      {
+        "chunk_id": "S2P9C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 9,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 9 of 26 1.7 Augmentation Systems 1.7.1 Satellite -Based Augmentation System (SBAS) The u -blox M8 positioning modules support SBAS. These systems supplement GPS data with additional regional or wide area GPS augmentation data. The system broadcasts augmentation data via satellite and this information can be used by GNSS receivers to improve the resulting precision. SBAS satellites can be used as additional satellites for ranging (navigation), further enhancing precision and availability. The following SBAS types are supported with u -blox M8: WAAS, EGNOS and MSAS. For more details see the u-blox M8 Receiver Description Including Protocol Specification [2]. 1.7.2 Differential GPS (D -GPS) u-blox M8 receivers support Di fferential -GPS data according RTCM 10402.3: \u201cRECOMMENDED STANDARDS FOR DIFFERENTIAL GNSS \u201d. The use of Differential -GPS data improves GPS position accuracy. RTCM cannot be used together with SBAS. The RTCM implementation supports the following RTCM 2.3 mess ages: Message Type Description 1 Differential GPS Corrections 2 Delta Differential GPS Corrections 3 GPS Reference Station Parameters 9 GPS Partial Correction Set Table 2: Supported RTCM 2.3 messages For more details see the u-blox M8 Receiver Description Including Protocol Specification [2]. 1.8 Odometer The odometer provides information on travelled ground distance (in meter) using solely the position and Doppler -based velocity of the navigation solution. For each computed travelled distance since the last odometer reset, the odometer estimates a 1 -sigma accuracy value. The total cumulative ground distance is maintained and saved in the BBR memory. The odometer feature is disabled by de fault. For more details see the u-blox M8 Receiver Description Including Protocol Specification [2]. 1.9 Data logging (NEO-M8N ) The u -blox NEO -M8N receiver can be used in data logging applications. The data logging feature enables continuous storage of position, velocity and time information to an onboard SQI flash memory (at least 16 M bit). It can also log the distance from the odometer . The information can be downloaded from the receiver later for further analysis or for conversion to a mapping tool. For more information see the u-blox M8 Receiver Description Including Protocol Specification [2]. 1.10 EXTINT: External interrupt EXTINT is an external interrupt pin with fixed input voltage thresholds with respect to VCC. It can be used for control of the receiver or for aiding. For more information about how to implement and configure these features , see the u-blox M8 Receiver Description including Protocol Specification [2] and the NEO-M8 Hardware Integration Manual [1]. 1.10.1 Pin Control The pin control feature allows overriding the automatic active/inactive cycle of Power Save Mode. The state of the rece iver can be controlled through the EXTINT pin. The receiver can also be forced OFF using E"
+      },
+      {
+        "chunk_id": "S2P16C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 16,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Electrical specification Page 16 of 26 4.2 Operating conditions All specifications are at an ambient temperature of 25\u00b0C. Extreme operating temperatu res can significantly impact specification values. Applications operating near the temperature limits should be tested to ensure the specification. Parameter Symbol Module Min Typical Max Unit s Condition Power supply voltage VCC NEO-M8M 1.65 3.6 V NEO-M8N /Q 2.7 3.0 3.6 V Supply voltage USB VDDUSB All 3.0 3.3 3.6 V Backup battery voltage V_BCKP All 1.4 3.6 V Backup battery current I_BCKP All 15 \u00b5A V_BCKP = 1.8 V, VCC = 0 V SW backup current I_SWBCKP NEO-M8M 22 \u00b5A VCC = 3 V NEO-M8N/Q 30 \u00b5A VCC = 3 V Input pin voltage range Vin All 0 VCC V Digital IO Pin Low level input voltage Vil All 0 0.2*VCC V Digital IO Pin High level input voltage Vih All 0.7*VCC VCC V Digital IO Pin Low level output voltage Vol All 0.4 V Iol = 4mA Digital IO Pin High level output voltage Voh All VCC\u20130.4 V Ioh = 4mA Pull-up resistor for RESET_N (internal) Rpu All 11 k\uf057 USB_DM, USB_DP VinU All Compatible with USB with 27 \u2126 series resistance VCC_RF voltage VCC_RF All VCC\u20130.1 V VCC_RF output current ICC_RF All 50 mA Receiver Chain Noise Figure14 NFtot NEO-M8M 3.5 dB NEO-M8N /Q 2.0 dB Operating temperatu re Topr All \u201340 85 \u00b0C Table 8: Operating conditions Operation beyond the specified operating conditions can affect device reliability. 14 Only valid for the GPS band"
+      },
+      {
+        "chunk_id": "S2P15C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 15,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Electrical specification Page 15 of 26 4 Electrica l specification The l imiting values given are in accordance with the Absolute Maximum Rating System (IEC 134). Stress above one or more of the limiting values may cause permanent damage to the device. These are stress ratings only and ope ration of the device at these or at any other conditions above those given in the characteristics sections of the specification is not implied. Exposure to these limits for extended periods may affect device reliability. Where application information is gi ven, it is advisory only and does not form part of the specification. For more information see the NEO-M8 Hardware Integration Manual [1]. 4.1 Absolute maximum r ating Parameter Symbol Module Condition Min Max Units Power supply voltage VCC All \u20130.5 3.6 V Backup battery voltage V_BCKP All \u20130.5 3.6 V USB supply voltage VDD_USB All \u20130.5 3.6 V Input pin voltage Vin All \u20130.5 3.6 V Vin_usb All \u20130.5 VDD_USB V DC current trough any digital I/O pin (except suppl ies) Ipin 10 mA VCC_RF output current ICC_RF All 100 mA Input power at RF_IN Prfin All source impedance = 50 \uf057, continuous wave 15 dBm Storage temperature Tstg NEO-M8M NEO-M8N/M8 Q \u201340 \u201340 105 85 \u00b0C \u00b0C Table 7: Absolute maximum rati ngs Stressing the device beyond the \u201cAbsolute Maximum Ratings\u201d may cause permanent damage. These are stress ratings only. The product is not protected against overvoltage or reversed voltages. If necessary, voltage spikes exceeding the power su pply voltage specification, given in table above, must be limited to values within the specified boundaries by using appropriate protection diodes."
+      },
+      {
+        "chunk_id": "S2P17C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 17,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Electrical specification Page 17 of 26 4.3 Indicative current requirements Table 9 lists examples of the total system supply current for a possible application. Values in Table 9 are provided for customer information only as an example of typical power requirements. Values are characterized on samples, actual power require ments can vary depending on FW version used, external circuitry, number of SVs tracked, signal strength, type of start as well as time, duration and conditions of test. Parameter Symbol Module Typ GPS & GLONASS Typ GPS / QZSS / SBAS Max Units Condition Max. supply current 15 Iccp All 67 mA Average supply current 16, 17 Icc Acquisition18 NEO-M8N 34 27 mA Estimated at 3 V NEO-M8M 24.5 19.5 mA NEO-M8Q 29.5 26 mA Icc Tracking (Continuous mode ) NEO-M8N 34 26.5 mA Estimated at 3 V NEO-M8M 23.5 17.5 mA NEO-M8Q 28.5 24 mA Icc Tracking (Power Save mode / 1 Hz) NEO-M8N n.a.19 10.5 mA Estimated at 3 V NEO-M8M n.a.19 5 mA NEO-M8Q n.a.19 10 mA Table 9: Indicative power requirements at 3.0 V For more informa tion about power requirements, see the NEO-M8 Hardware Integration Manual [1]. For more information on how to noticeably reduce current consumption , see the Power Management Application N ote [4]. 4.4 SPI timing diagrams In order to avoid incorrect operation of the SPI, the user needs to comply with ce rtain timing conditions. The following signals need to be considered for t iming constraints : Symbol Description SPI CS_N ( SS_N ) Slave select signal SPI CLK (SCK) Slave clock signal Table 10: Symbol description 15 Use this figure to dimension maximum current capability of power supp ly. Measurement of this parameter with 1 Hz bandwidth. 16 Use this figure to determine required battery capacity. 17 Simulated GNSS constellation using power levels of -130 dBm. VCC = 3.0 V 18 Average current from start -up until the first fix. 19 Not applicab le"
+      },
+      {
+        "chunk_id": "S2P22C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 22,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Product handling & soldering Page 22 of 26 7.2 Shipment, storage and handling For important information regarding shipment, storage and handling see the u-blox Package Information Guide [3]. 7.2.1 Moisture Sensitivity Levels The Moisture Sensitivity Level (MSL) relates to the packa ging and handling precautions required. The NEO-M8 modules are rated at MSL level 4. For MSL standard see IPC/JEDEC J -STD-020, which can be downloaded from www.jedec.org . For more information regarding MSL see the u-blox Package Information Guide [3]. 7.2.2 Reflow soldering Reflow profiles are to be selected according u -blox recommendations (see the NEO-M8 Hardware Integration Manual [1]). 7.2.3 ESD handling precautions NEO-M8 series modules are Electrostatic Sensitive Devices (ESD). Observe precautions for handling! Failure to observe these precautions can r esult in severe damage to the GNS S receiver! GNSS receivers are Electrostatic Sensiti ve Devices (ESD) and require special precautions when handling. Particular care must be exercised when handling patch antennas, due to the risk of electrostatic charges. In addition to standard ESD safety practices, the following measures should be taken i nto account whenever handling the receiver: \uf0b7 Unless there is a galvanic coupling between the local GND (i.e. the work table) and the PCB GND, then the first point of contact when handling the PCB must always be between the local GND and PCB GND. \uf0b7 Before moun ting an antenna patch, connect ground of the device \uf0b7 When handling the RF pin, do not come into contact with any charged capacitors and be careful when contacting materials that can develop charges (e.g. patch antenna ~10 pF, coa x cable ~50 -80 pF/m, soldering iron, \u2026) \uf0b7 To prevent electrostatic discharge through the RF input, do not touch any exposed antenna area. If there is any risk that such exposed antenna area is touched in non ESD protected work are a, implement proper ESD protection measures in the design. \uf0b7 When soldering RF connectors and patch antennas to the receiver\u2019s RF pin, make sure to use an ESD safe soldering iron (tip)."
+      },
+      {
+        "chunk_id": "S2P25C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 25,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Related documents Page 25 of 26 Relate d do cuments [1] NEO-M8 Hardware Integration Manual , Docu. No . UBX-1300 3557 [2] u-blox M8 Receiver Description Including Protocol Specification (Public version) , Docu. No . UBX-13003221 [3] u-blox P ackage Information Guide , Docu. No. UBX-14001652 [4] Power Management Application N ote, Docu. No. UBX -13005162 For regular updates to u-blox documentation and to receive product change notifications , register on our homepage ( http://www.u -blox.com ). Revision histo ry Revision Date Name Status / Comments 1 28-Aug-2013 svin Objective Specification. R02 17-Dec-2013 julu Updated ROM/Flash version s. Added NEO -M8Q product variant in relevant section s. Updated section s 1.1 and 1.2 (Product features). Updated performance figures in Table 1. Updated section 1.4 (removed \u201coptional\u201d from RTC crystal), section 1.6.3 (Assis tNow Autonomous) and section 1.9 (Added SQI flash memory size info ). Added section 1.8 Odometer. Updated Table 3, Table 7 (e.g. Storage temperature ) and Tab le 8. Updated power consumption figures in Table 9. Added Power Management Application Note reference in section 4.3. Added DDC and SPI interface s in Table 12. R03 28-Jan-2014 smos Revised section Indicative current requirements . R04 06-Feb-2014 julu Removed I/O supply from Figure 1 (Block Diagram). R05 26-Feb-2014 julu Advance I nformation. Updated Table 1 (added GPS & BeiDou concurrent and GPS o nly modes) and Table 9 (Indicative current requirements) . R06 07-Apr-2014 julu Updated section 1.2 (product selector table); u pdated Table 1 (improved trackin g sensitivities of GPS and GPS & BeiDou for NEO -M8M , horizontal position accuracy) : added recommendation for using passive antenna (footnote in Table 4); added software backup current values in Table 8. R07 27-Aug-2014 julu Early Production Information . Added SAFEBOOT_N description in section 1.13. 1 and Table 5 (PIN 1). R08 17-Nov-2014 julu Updated section 1.2 (added prod uct grade information to selector table) R09 01-Dec-2014 julu Production Information. R10 21-Oct-2015 julu Updated product type number for NEO -M8M/Q and added relevant PCN reference s"
+      },
+      {
+        "chunk_id": "S2P18C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 18,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Electrical specification Page 18 of 26 Figure 3: SPI timing diagram 4.4.1 Timing recommendations The recommendations below are based on a f irmware running from Flash memory. Parameter Description Recommendation tINIT Initialization Time 500 \uf06ds tDES Deselect Time 1 ms. Bit rate 1 Mb/s Table 11: SPI timing r ecommendations The values in the above table result from the requirement of an error -free tra nsmission. By allowing just a few errors and disabling the glitch filter , the b it rate c an be increased considerably. 4.5 DDC timing diagrams The DDC interface is I2C Fast Mode compliant. For timing parameters consult the I2C standard. The maximum bit rate is 400 kb/s. The interface stretches t he clock when slowed down when serving interrupts , so real bit rates may be slightly lower."
+      },
+      {
+        "chunk_id": "S2P5C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 5,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Infor mation Functional description Page 5 of 26 1 Functional description 1.1 Overview The NEO -M8 series of standalone concurrent GNSS module s is built on the exceptional performance of the u-blox M8 GNSS (GPS, GLONASS, BeiDou, QZSS , SBAS and Galileo -ready1) engine in the industry proven NEO form factor. The NEO-M8 series provides high sensitivity and minimal acquisition times while maintainin g low system power. The NEO-M8M is optimized for cost sensitive applications, while NEO-M8N/M8Q provides best performance and easier RF integration. The NEO form factor allows easy migration from previous NEO generations. Sophisticated RF-architecture and interference suppression ensure maxi mum performance even in G NSS-hostile environments. The NEO-M8 series combines a high level of robustness and integration capability with flexible connectivity options . The future -proof NEO -M8N includes an internal Flash that allows simple firmware upgrades for supporting additional GNSS systems. This makes NEO -M8 perfectly suited to industrial and automotive applications. The DDC ( I2C compatible ) interface provides connectivity and enables synergies with most u-blox cellular modules. For RF optimization the NEO -M8N/M8Q features an additional front -end LNA for easier antenna integration and a front -end SAW filter for increased jamming immunity. u-blox M8 modules use GNSS chips qualified according to AEC -Q100 , are manufactu red in ISO/TS 16949 certified sites , and fully tested on a system level . Qualification tests are performed as stipulated in the ISO16750 standard: \u201cRoad vehicles \u2013 Environmental conditions and testing for electrical and electronic equipment\u201d. u-blox\u2019 Assis tNow Assistance supply aiding information, such as ephemeris, almanac, rough last position and time, reduce the time to first fix significantly and improve the acquisition sensitivity. AssistNow data are with u-blox M8 supporting both GPS and GLONASS const ellation for faster acquisition than a GPS -only assistance. The extended validity of AssistNow Offline data (up to 35 days) and AssistNow Autonomous data (up to 6 days) provide faster acquisition after long off time. See section Error! Reference source not found. for more information concerning the NEO-M8 series related AssistNow Assistance. 1.2 Product features 1 with future flash firmware update"
+      },
+      {
+        "chunk_id": "S2P11C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 11,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 11 of 26 1.13.4 Display Data Channel (DDC) An I2C compl iant DDC interface is available for communication with an external host CPU or u-blox cellular modules . The interface can be operated in slave mode only. The DDC protocol and electrical interface are fully compatible with Fast -Mode of the I2C industry stan dard. Since t he maximum SCL clock frequency is 400 kHz, the maximum transfer rate is 400 kb /s. 1.14 Clock generation 1.14.1 Oscillators NEO-M8 GNSS modules are available in TCXO and c rystal version s. The TCXO allows accelerated weak signal acquisition, enabling faster start and reacquisition times. Oscillators used on NEO -M8 module are carefully selected and screened for stability and against frequency perturbations across the full operating range ( \u201340\u00b0 to +85\u00b0C). The careful selection and qualification of critical pa rts, such as GNSS oscillators, has resulted in u -blox modules being the most reliable positioning modules in the industry, particularly in challenging conditions. 1.14.2 Real-Time Clock (RTC) The RTC is driven by a 32 kHz oscillator using an RTC crystal . If the main supply voltage fails , and a battery is connected to V_BCKP , part s of the receiver switch off, but the RTC still runs providing a timing reference for the receiver . This operating mode is called Hardware Backup Mode , which enables all relevant data to b e saved in the backup RAM to allow a hot or warm start later. 1.15 Power management u-blox M8 technology offers a power -optimized architecture with built -in autonomous power saving functions to minimize power consumption at any given time. Furthermore, the rece iver can be used in two operating modes: Continuous mode for best performance or Power Save Mode for optimized power consumption respectively. In addition, a high efficiency DC/DC converter is integrated to allow low power consumption even for higher main supply voltages. 1.15.1 DC/DC converter NEO-M8 series m odules integrate a DC/DC converter, allowing reduced power consumption especially when using a main supply voltage above 2.5 V. For more information see the NEO-M8 Hardware Integration Manual [1] 1.15.2 Operating modes u-blox M8 modules have two operating modes: \uf0b7 Continuous Mode for best GNSS performance \uf0b7 Power Save Mode to optimize power consumption 1.15.2.1 Continuous Mode Continuous Mode uses the acquisition engine at full perf ormance resulting in the shortest possible TTFF and the highest sensitivity. It searches for all possible satellites until the Almanac is completely downloaded. The receiver then switches to the tracking engine to lower power consumption. Thus, a lower tr acking current consumption level will be achieved when: \uf0b7 A valid GNSS position is obtained \uf0b7 The entire Almanac has been downloaded \uf0b7 The Ephemeris for each satellite in view is valid"
+      },
+      {
+        "chunk_id": "S2P3C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 3,
+        "text": ".......... 9 1.7.1 Satellite -Based Augmentation System (SBAS) ................................ ................................ ................. 9 1.7.2 Differential GPS (D -GPS) ................................ ................................ ................................ ................ 9 1.8 Odometer ................................ ................................ ................................ ................................ ............. 9 1.9 Data logging (NEO -M8N) ................................ ................................ ................................ ...................... 9 1.10 EXTINT: External interrupt ................................ ................................ ................................ ................. 9 1.10.1 Pin Control ................................ ................................ ................................ ................................ .... 9 1.10.2 Aiding ................................ ................................ ................................ ................................ ......... 10 1.11 TIMEPULSE ................................ ................................ ................................ ................................ ...... 10 1.12 Protocols and interfaces ................................ ................................ ................................ .................. 10 1.13 Interfaces ................................ ................................ ................................ ................................ ........ 10 1.13.1 UART ................................ ................................ ................................ ................................ ........... 10 1.13.2 USB ................................ ................................ ................................ ................................ ............. 10 1.13.3 SPI ................................ ................................ ................................ ................................ ............... 10 1.13.4 Display Data Channel (DDC) ................................ ................................ ................................ ........ 11 1.14 Clock generation ................................ ................................ ................................ ............................ 11 1.14.1 Oscillators ................................ ................................ ................................ ................................ .... 11 1.14.2 Real-Time Clock (RTC) ................................ ................................ ................................ ................. 11 1.15 Power management ................................ ................................ ................................ ........................ 11 1.15.1 DC/DC converter ................................ ................................ ................................ ......................... 11 1.15.2 Operating modes ................................ ........."
+      },
+      {
+        "chunk_id": "S2P9C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 9,
+        "text": "ocol Specification [2] and the NEO-M8 Hardware Integration Manual [1]. 1.10.1 Pin Control The pin control feature allows overriding the automatic active/inactive cycle of Power Save Mode. The state of the rece iver can be controlled through the EXTINT pin. The receiver can also be forced OFF using EXTINT when Power Save Mode is not active."
+      },
+      {
+        "chunk_id": "S2P10C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 10,
+        "text": "i lable in the default configuration , because its pins are shared with the UART and DDC interfaces. The SPI interface can be enabled by connecting D_SEL (Pin 2) to ground (see section 3.1)."
+      },
+      {
+        "chunk_id": "S2P23C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 23,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Default messages Page 23 of 26 8 Defaul t messages Interface Settings UART Output 9600 Baud, 8 bits, no parity bit, 1 stop bit Configured to transmit both NMEA and UBX protocols, but only the following NMEA (and no UBX ) messages have been activated at start -up: GGA, GLL, GSA, GSV, RMC, VTG, TXT USB Out put Configured to transmit both NMEA and UBX protocols, but only the following NMEA (and no UBX ) messages have been activated at start -up: GGA, GLL, GSA, GSV, RMC, VTG, TXT USB Power Mode: Bus Powered UART Input 9600 Baud, 8 bits, no parity bit, 1 stop b it, Autobauding disabled Automatically accepts following protocols without need of explicit configuration: UBX, NMEA , RTCM The GNS S receiver supports interleaved UBX and NMEA messages. USB Input Automatically accepts following protocols without need of ex plicit configuration: UBX, NMEA The GPS receiver supports interleaved UBX and NMEA messages. USB Power Mode: Bus Powered DDC Fully compatible with the I2C industry standard , available for communication with an external host CPU or u-blox cellular modules, operated in slave mode only. Default messages activated. NMEA and UBX are enabled as input messages, only NMEA as output messages . Maximum bit rate 400 kb/s. SPI Allow communication to a host CPU , operated in slave mode only. Default messages activated . SPI is not available in the default configuration . TIMEPULSE (1 Hz Nav) 1 pulse per second, synchronized at rising edge, pulse length 100ms Table 12: Default messages Refer to the u-blox M8 Receiver Description Including Protocol Specification [2] for information about further settings."
+      },
+      {
+        "chunk_id": "S2P2C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 2,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Page 2 of 26 Document Information Title NEO-M8 Subtitle u-blox M8 concurrent GNSS modules Document type Data Sheet Document number UBX-13003366 Revision and D ate R10 21-Oct-2015 Document status Production Information Document status explanation Objective Specification Document contains target values. Revised an d supplementary data will be published later. Advance Information Document contains data based on early testing. Revised and supplementary data will be published later. Early Production Information Document contains data from product verification. Revise d and supplementary data may be published later. Production Information Document contains the final product specification. This document applies to the following products: Product n ame Type number ROM/FLASH version PCN reference NEO-M8N NEO-M8N -0-01 ROM 2.01/ Flash FW 2.01 N/A NEO-M8M NEO-M8M -0-01 ROM 2.01 UBX-15015253 NEO-M8Q NEO-M8Q -0-01 ROM 2.01 UBX-15015253 u-blox reserves all rights to this document and the information contained herein. Products, names, logos and designs descri bed herein may in whole or in part be subject to intellectual property rights. Reproduction, use, modification or disclosure to third pa rties of this document or any part thereof without the express permission of u -blox is strictly prohibited. The informat ion contained herein is provided \u201cas is\u201d and u -blox assumes no liability for the use of the information. No warranty, either express or implied, is given, including but not limited, with respect to the accuracy, correctness, reliability and fitness f or a p articular purpose of the information. This document may be revised by u -blox at any time. For most recent documents, visit www.u -blox.com. Copyright \u00a9 2016 , u-blox AG. u-blox\u00ae is a registered trademark of u -blox Holdin g AG in the EU and other countries. ARM\u00ae is the registered trademark of ARM Limited in the EU and other countries."
+      },
+      {
+        "chunk_id": "S2P4C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 4,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Contents Page 4 of 26 2.1 Pin assignment ................................ ................................ ................................ ................................ ... 13 3 Configuration management ................................ ................................ ...................... 14 3.1 Interface Selection (D_SEL) ................................ ................................ ................................ .................. 14 4 Electrical specification ................................ ................................ ................................ 15 4.1 Absolute maximum rating ................................ ................................ ................................ .................. 15 4.2 Operating conditions ................................ ................................ ................................ .......................... 16 4.3 Indicative current requirements ................................ ................................ ................................ ........... 17 4.4 SPI timin g diagrams ................................ ................................ ................................ ............................ 17 4.4.1 Timing recommendations ................................ ................................ ................................ ............ 18 4.5 DDC timing diagrams ................................ ................................ ................................ ......................... 18 5 Mechanical specifications ................................ ................................ .......................... 19 6 Reliability tests and approvals ................................ ................................ .................. 20 6.1 Reliability tests ................................ ................................ ................................ ................................ .... 20 6.2 Approvals ................................ ................................ ................................ ................................ ........... 20 7 Product handling & soldering ................................ ................................ .................... 21 7.1 Packaging ................................ ................................ ................................ ................................ ........... 21 7.1.1 Reels ................................ ................................ ................................ ................................ ........... 21 7.1.2 Tapes ................................ ................................ ................................ ................................ .......... 21 7.2 Shipment, storage and handling ................................ ................................ ................................ ......... 22 7.2.1 Moisture Sensitivity Levels ................................ ................................ ................................ ...."
+      },
+      {
+        "chunk_id": "S2P12C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 12,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 12 of 26 1.15.2.2 Power Save Mode For power sensitive applications , u-blox M8 receivers provid e a Power Save Mode for reduced power consumption. Power Save Mode provides two dedicated methods, ON/OFF and Cyclic tracking, that reduce average current consumption in different ways to match the needs of the specific application. These operations can be set by using a specific UBX message. For more information about power management strategies, see the u-blox M8 Receiver Description Including Protocol Specification [2]. Power Save Mode is only available in GP S mode . 1.16 Antenna NEO-M8 series modules are designed for use with passive10 and active11 antennas. Parameter Specification Antenna Type Passive and active antenna Active Antenna Recommendations Minimum gain Maximum gain Maximum noise figure 15 dB (to comp ensate signal loss in RF cable) 50 12 dB / 30 13 dB 1.5 dB Table 4: Antenna Specifications for all NEO-M8 modules 10 For integration NEO-M8 modules with Cellular products, see the NEO-M8 Hardware Integration Manual [1]. 11 For information on using active antennas with NEO -M8 modules, see the NEO-M8 Hardware Integration Manual [1]. 12 NEO-M8M 13 NEO-M8N /M8Q"
+      },
+      {
+        "chunk_id": "S2P3C3",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 3,
+        "text": "...................... ................................ ........................ 11 1.15.1 DC/DC converter ................................ ................................ ................................ ......................... 11 1.15.2 Operating modes ................................ ................................ ................................ ........................ 11 1.16 Antenna ................................ ................................ ................................ ................................ .......... 12 2 Pin Definition ................................ ................................ ................................ .............. 13"
+      },
+      {
+        "chunk_id": "S2P8C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 8,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 8 of 26 1.5.4 Galileo The NEO-M8N positioning module is ready to receive and track GPS and Galileo signals concurrent ly, enhancing accuracy and coverage. When Galileo E1B/C signals become available, u -blox NEO-M8N receiver equipped with an SQI flash memory device will be capable of receiving and processing them via a firmware update. 1.5.5 QZSS The Quasi -Zenith Satellite System (QZSS) is a regional navigation satellite system that transmits additional GPS L1C/A signals for the Pacific reg ion covering Japan and Australia . NEO-M8 series positioning modules are able to receive and track these signals concurrent ly with GPS signals , resulting in better availability especially under bad signal conditions , e.g. in urban canyons. The L1 -SAIF signa l provided by QZSS is not supported. 1.6 Assisted GNSS (A-GNSS ) Supply of aiding information, such as ephemeris, almanac, rough last position and time, will reduce the time to first fix significantly and improve the acquisitio n sensitivity. All u -blox M8 product s support the u -blox AssistNow Online and AssistNow Offline A -GNSS services, support AssistNow Autonomous, and are OMA SUPL compliant. 1.6.1 AssistNowTM Online With AssistNow Online, an internet -connected GNSS device downloads assistance data from u -blox\u2019 AssistNow Online Service at system start -up. AssistNow Online is network -operator independent and globally available. u-blox only sends ephemeris data for those satellites currently visible to the device requesting the data, thus minimizing the amount of data transferred. Supply of aiding information, such as ephemeris, almanac, rough last position and time, will reduce the time to first fix significantly and improve the acquisition sensitivity. 1.6.2 AssistNowTM Offline With Assist Now Offline, users download u -blox\u2019 long -term orbit data from the Internet at their convenience. The orbit data can be stored in the GNSS receiver\u2019s SQI flash memory (NEO-M8N ) or must be stored in the memory of the application processor (NEO -M8M/M8Q) . Thus the service requires no connectivity at system start -up, enabl ing a position fix within seconds , even when no network is available. AssistNow Offline offers augmentation for up to 35 days. 1.6.3 AssistNowTM Autonomous AssistNow Autonomous provides aiding inform ation without the need for a host or external network connection. Based on previous broadcast satellite ephemeris data downloaded to and stored by the GNSS receiver, AssistNow Autonomous automatically generates accurate satellite orbital data (\u201cAssistNow Autonomous data\u201d) that is usable for future GNSS position fixes. The concept capitalizes on the periodic nature of GNSS satellites: their position in the sky is basically repeated every 24 hours. By capturing strategic ephemeris data at specific times of th e day, the receiver can predict accurate sa tellite ephemeris for up to six days after initial "
+      },
+      {
+        "chunk_id": "S2P8C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 8,
+        "text": "tion fixes. The concept capitalizes on the periodic nature of GNSS satellites: their position in the sky is basically repeated every 24 hours. By capturing strategic ephemeris data at specific times of th e day, the receiver can predict accurate sa tellite ephemeris for up to six days after initial reception. If using AssistNow Autonomous, the use of NEO -M8N ( with SQI flash memory) is highly recommended. u-blox\u2019 AssistNow Autonomous benefits are: \uf0b7 Faster fix in situations where GNSS satellite signals are weak \uf0b7 No connectivity required \uf0b7 Compatible with AssistNow Online and Offline (can work stand -alone, or in tandem with these services) \uf0b7 No integration effort ; calculations are done in the background, transpare nt to the user. For ROM -based NEO-M8M/M8Q receivers, AssistNow Autonomous can calculate GPS only orbit predictions for up to 6 days (3 days by defaults). For more details see the u-blox M8 Receiver Description Including Protocol Specification [2]."
+      },
+      {
+        "chunk_id": "S2P1C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 1,
+        "text": "NEO-M8 u-blox M8 concurrent GNSS modules Data Sheet Highlights: \uf0b7 Concurrent reception of GPS/QZSS , GLONASS, BeiDou \uf0b7 Industry leading \u2013167 dBm navigation sensitivity \uf0b7 Product variants to meet performance and cost requirements \uf0b7 Combines low power consumption and high sensitivity \uf0b7 Backward compatible with N EO-7, NEO -6 and NEO -5 families www.u -blox.com UBX-13003366 - R10"
+      },
+      {
+        "chunk_id": "S2P3C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 3,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Contents Page 3 of 26 Contents Contents ................................ ................................ ................................ .............................. 3 1 Functional description ................................ ................................ ................................ .. 5 1.1 Overview ................................ ................................ ................................ ................................ .............. 5 1.2 Product features ................................ ................................ ................................ ................................ ... 5 1.3 Perform ance ................................ ................................ ................................ ................................ ......... 6 1.4 Block diagram ................................ ................................ ................................ ................................ ....... 7 1.5 GNSS ................................ ................................ ................................ ................................ .................... 7 1.5.1 GPS ................................ ................................ ................................ ................................ ............... 7 1.5.2 GLONASS ................................ ................................ ................................ ................................ ...... 7 1.5.3 BeiDou ................................ ................................ ................................ ................................ .......... 7 1.5.4 Galileo ................................ ................................ ................................ ................................ ........... 8 1.5.5 QZSS ................................ ................................ ................................ ................................ ............. 8 1.6 Assisted GNSS (A -GNSS) ................................ ................................ ................................ ....................... 8 1.6.1 AssistNowTM Online ................................ ................................ ................................ ........................ 8 1.6.2 AssistNowTM Offline ................................ ................................ ................................ ....................... 8 1.6.3 AssistNowTM Autonomous ................................ ................................ ................................ .............. 8 1.7 Augmentation Systems ................................ ................................ ................................ ......................... 9 1.7.1 Satellite -Based Augmentation System (SBAS) ................................ ................................ ................. 9 1.7.2 Differential GPS (D -GPS) ................................ ................................ ................................ ................ 9 1"
+      },
+      {
+        "chunk_id": "S2P4C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 4,
+        "text": ". .......... 21 7.2 Shipment, storage and handling ................................ ................................ ................................ ......... 22 7.2.1 Moisture Sensitivity Levels ................................ ................................ ................................ ........... 22 7.2.2 Reflow soldering ................................ ................................ ................................ ......................... 22 7.2.3 ESD handling precautions ................................ ................................ ................................ ............ 22 8 Default messages ................................ ................................ ................................ ....... 23 9 Labeling and ordering information ................................ ................................ ........... 24 9.1 Product labeling ................................ ................................ ................................ ................................ .. 24 9.2 Explanation of codes ................................ ................................ ................................ .......................... 24 9.3 Ordering codes ................................ ................................ ................................ ................................ ... 24 Related documents ................................ ................................ ................................ .......... 25 Revision history ................................ ................................ ................................ ................ 25 Contact ................................ ................................ ................................ .............................. 26"
+      },
+      {
+        "chunk_id": "S2P6C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 6,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 6 of 26 1.3 Performance Parameter Specification Receiver type 72-channel u -blox M8 engine GPS L1C/A SBAS L1C/A QZSS L1C/A GLONASS L1OF BeiDou B1 Galileo E1B/C2 NEO-M8N/Q GNSS GPS & GLONASS GPS & BeiDou GPS Time-To-First-Fix 3 Cold start 26 s 27 s 29 s Hot start 1 s 1 s 1 s Aided starts 4 2 s 3 s 5 2 s Sensitivity 6 Tracking & Navigation \u2013167 dBm \u2013165 dBm \u2013166 dBm Reacquisit ion \u2013160 dBm \u2013160 dBm \u2013160 dBm Cold start \u2013148 dBm \u2013148 dBm \u2013148 dBm Hot start \u2013156 dBm \u2013156 dBm \u2013156 dBm NEO-M8M GNSS GPS & GLONASS GPS & BeiDou GPS Time-To-First-Fix 3 Cold start 27 s 28 s 30 s Hot start 1 s 1 s 1 s Aided starts 4 4 s 6 s 5 3 s Sensitivity 6 Tracking & Navigation \u2013164 dBm \u2013162 dBm \u2013163 dBm Reacquisition \u2013159 dBm \u2013159 dBm \u2013159 dBm Cold start \u2013147 dBm \u2013147 dBm \u2013147 dBm Hot start \u2013156 dBm \u2013156 dBm \u2013156 dBm TCXO or Crystal GNSS GPS & GLONASS GPS & BeiDou GPS Max navigatio n update rate NEO-M8N NEO-M8M/Q 5 Hz 10 Hz 5 Hz 10 Hz 10 Hz 18 Hz Velocity accuracy 7 0.05 m/s Heading accuracy 7 0.3 degrees Horizontal position accuracy 8 Autonomous SBAS 2.5 m 2.0 m Accuracy of time pulse signal RMS 30 ns 60 ns 99% Frequency of time pulse signal 0.25 Hz\u202610 MHz (configurable) Operational limits 9 Dynamics \uf0a3 4 g Altitude 50,000 m Velocity 500 m/s Table 1: NEO-M8 performanc e in different GNSS modes (default: concurrent reception of GPS and GLONASS) 2 Ready to support Galileo E1B/C when available (NEO -M8N) 3 All satellites at -130 dBm 4 Dependent on aiding data connection speed and latency 5 BeiDou assisted acquisition is not available with FW 2.01 6 Demonstrated with a good external LNA 7 50% @ 30 m/s 8 CEP, 50%, 24 hours static, -130 dBm, > 6 SVs 9 Assuming Airborne < 4 g platform"
+      },
+      {
+        "chunk_id": "S2P7C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+        "title": "NEO-M8 Data Sheet",
+        "page": 7,
+        "text": "NEO-M8 - Data Sheet UBX-13003366 - R10 Production Information Functional description Page 7 of 26 1.4 Block diagram Figure 1: NEO-M8 block diagram 1.5 GNSS The NEO-M8 GNSS modules are concurrent GNSS receivers and can receive and track multiple GNSS system s (e.g. GPS, GLONASS, Galileo -ready , BeiDou and QZSS signals). Because of the dual -frequency RF front -end architecture, two of the three signals (GPS L1C/A, GLONASS L1OF and BeiDou B1) can be received and processed concurrently . By default the M8 receivers are configured for concurrent GPS (includes SBAS an d QZSS ) and GLONASS reception. If power consumption is a key factor, then the receiver should be configured for single GNSS operation using either GPS or GLONASS or BeiDou and disabling QZSS and SBAS. Galileo, QZSS and SBAS share the same frequency band as GPS and can always be processed in conjunction with GPS. 1.5.1 GPS The NEO -M8 positioning modules are designed to receive and track the L1C/A signals provided at 1575.42 MHz by the Global Positioning System (GPS). The NEO -M8 series can receive and process GPS concurrently with GLONASS or BeiDou. 1.5.2 GLONASS The NEO -M8 modules can receive and process GLONASS concurrently with GPS or BeiDou. The Russian GLONASS satellite system is an alternative system to the US -based Global Positioning System (GPS). u-blox NEO-M8 po sitioning modules are designed to receive and track the L1OF signals GLONASS provide s at 1602 MHz + k*562.5 kHz , where k is the satellite\u2019s freq uency channel number (k = \u20137,..., 5, 6) . The ability to receive and track GLONASS L1OF satellite signals allows design of GLONASS receivers where required by regulations . To take advantage of GPS and GLONASS, dedicated hardware preparation must be made during the design -in phase . See the NEO-M8 Hardware Integration Manual [1] for u-blox design recommendations. 1.5.3 BeiDou The NEO -M8 modules can receive and process BeiDou concurrently with GPS or GLONASS. u-blox NEO-M8 positioning modules are designed to receive and track the B1 signals provided at 1561.098 MHz by the BeiDou Navigation Satelli te System. The ability to receive and track BeiDou B1 satellite signals in conjunction with GPS results in higher coverage, improved reliability and better accuracy. By the end of 2013 BeiDou is not fully operational and provides regional coverage only. Gl obal coverage is scheduled for 2020 ."
+      }
+    ],
+    "source_urls": [
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://www.lcsc.com/product-detail/C6330769.html",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf"
+    ],
+    "unanswered_questions": [
+      "No reference/typical application circuit chunks were supplied with VCC or VDD_USB decoupling capacitor values, footprints, or placement; add only after consulting the NEO-M8 Hardware Integration Manual or a supplied reference circuit chunk.",
+      "No supplied chunk specifies DDC/I2C pull-up resistor values or whether they are internal/external; do not add pull-ups from this evidence alone.",
+      "No supplied chunk specifies RF matching/filter/ESD/bias component values for RF_IN or active antenna supply routing; antenna network depends on passive vs active antenna and board design.",
+      "No supplied chunk provides a complete mechanical footprint/land pattern dimensions for the NEO form-factor module.",
+      "Confirm whether the design will use UART+DDC default mode with D_SEL open/high, or SPI mode with D_SEL connected to GND.",
+      "Confirm whether USB is used; VDD_USB and the 27 ohm USB series resistors are relevant only for USB designs."
+    ],
+    "validation_warnings": [
+      "Pins 15, 16, and 17 are reserved and should not be used.",
+      "Pin 1 SAFEBOOT_N is listed as reserved/service and should be left open, while designs must allow access to SAFEBOOT_N and UART for future service, updates, and reconfiguration.",
+      "The product is not protected against overvoltage or reversed voltages; voltage spikes exceeding supply specifications must be limited within specified boundaries using appropriate protection diodes if necessary.",
+      "GNSS receivers are ESD-sensitive; RF input/antenna handling requires ESD precautions, and proper ESD protection measures should be implemented if exposed antenna areas may be touched outside ESD-protected areas.",
+      "SPI is not available in the default configuration; it is enabled by connecting D_SEL pin 2 to GND."
+    ],
+    "extraction_notes": [
+      "No generic decoupling capacitors, antenna bias parts, RF matching parts, reset pull-up, or I2C pull-ups were invented because the supplied chunks do not give reference-circuit values for them.",
+      "RESET_N has an internal 11 kOhm pull-up per the operating conditions, so no external reset pull-up was added from the supplied evidence.",
+      "USB_DP full-speed pull-up is integrated, so no external USB pull-up was added.",
+      "Default UART settings are 9600 baud, 8N1; default DDC is I2C-standard compatible and slave-only; default SPI is slave-only but not available unless D_SEL selects SPI.",
+      "Supplier CAD lookup will prefer LCSC C6330769."
+    ],
+    "confidence": "medium"
+  }
+}

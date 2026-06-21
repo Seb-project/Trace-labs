@@ -1,0 +1,22 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v1",
+  "name": "Trace Labs Bridge",
+  "description": "Link KiCad projects to the local Trace Labs desktop app.",
+  "description_full": "Trace Labs Bridge links the current KiCad project to the Trace Labs desktop app running on the local machine, then lets Trace Labs import generated schematic blocks into that project. Install and run the Trace Labs desktop app before using this plugin.",
+  "identifier": "com-tracelabs-bridge",
+  "type": "plugin",
+  "author": {
+    "name": "Trace Labs"
+  },
+  "maintainer": {
+    "name": "Trace Labs"
+  },
+  "license": "unrestricted",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "status": "testing",
+      "kicad_version": "7.0"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""PCBStream KiCad bridge helpers."""
+"""Trace Labs KiCad bridge helpers."""
 
 from .client import BridgeClient
 from .core import KicadProjectContext, detect_project_context

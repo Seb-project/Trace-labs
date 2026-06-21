@@ -1,0 +1,74 @@
+name: Desktop Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mac:
+    name: Build macOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r backend/requirements.txt -r packaging/requirements.txt
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+      - name: Build macOS desktop app
+        working-directory: frontend
+        env:
+          TRACELABS_DEMO_OPENAI_API_KEY: ${{ secrets.TRACELABS_DEMO_OPENAI_API_KEY }}
+        run: npm run dist:judge:mac
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trace-labs-macos
+          path: |
+            frontend/release/*.dmg
+            frontend/release/*.zip
+            frontend/release/*.blockmap
+
+  windows:
+    name: Build Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        shell: pwsh
+        run: |
+          python -m venv .venv
+          .venv\Scripts\python -m pip install --upgrade pip
+          .venv\Scripts\python -m pip install -r backend\requirements.txt -r packaging\requirements.txt
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+      - name: Build Windows desktop app
+        working-directory: frontend
+        env:
+          TRACELABS_DEMO_OPENAI_API_KEY: ${{ secrets.TRACELABS_DEMO_OPENAI_API_KEY }}
+        run: npm run dist:judge:win
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trace-labs-windows
+          path: |
+            frontend/release/*.exe
+            frontend/release/*.zip
+            frontend/release/*.blockmap

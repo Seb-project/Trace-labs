@@ -7,9 +7,12 @@ __pycache__/
 *.pyc
 node_modules/
 frontend/dist/
+frontend/release/
+build/
 dist/
 .tmp/
-.pcbstream/
+packaging/private/
+.tracelabs/
 generated_blocks/
 demo_kicad_project/
 npm-debug.log*

@@ -1,0 +1,716 @@
+{
+  "id": "draft_microchip_technology_mcp9808_e_ms_ai_draft",
+  "block_name": "Microchip Technology MCP9808-E/MS Extracted Draft",
+  "block_slug": "microchip_technology_mcp9808_e_ms_ai_draft",
+  "summary": "Datasheet-derived draft for Microchip Technology MCP9808-E/MS. Interface: 2-wire SMBus/I2C compatible serial interface, up to 400 kHz. Package: 8-Pin MSOP.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "MCP9808-E/MS",
+    "mpn": "MCP9808-E/MS",
+    "manufacturer": "Microchip Technology",
+    "supplier": "LCSC",
+    "supplier_part_number": "C94847",
+    "supplier_url": "https://www.lcsc.com/product-detail/temperature-sensors_microchip-mcp9808-e-ms_C94847.html",
+    "symbol": "TraceLabs_MCP9808_E_MS:MCP9808_E_MS",
+    "footprint": "TraceLabs_MCP9808_E_MS:TraceLabs_MCP9808_E_MS_LCSC_C94847",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for MCP9808-E/MS.",
+    "connects": [
+      "+3V3",
+      "EP",
+      "GND",
+      "I2C_SCL",
+      "I2C_SDA",
+      "SCL",
+      "SDA",
+      "TEMP_ALERT",
+      "VDD"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_MCP9808_E_MS_LCSC_C94847",
+      "footprint_id": "TraceLabs_MCP9808_E_MS:TraceLabs_MCP9808_E_MS_LCSC_C94847",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C94847",
+      "source_url": "https://www.lcsc.com/product-detail/temperature-sensors_microchip-mcp9808-e-ms_C94847.html",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_MCP9808_E_MS_LCSC_C94847\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -6.300) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL (at 0.000 6.300) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C94847\")\n\t(fp_line (start -1.48 0.65) (end -1.48 1.30) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.48 1.30) (end 1.50 1.30) (layer F.SilkS) (width 0.15))\n\t(fp_line (start 1.50 1.30) (end 1.50 -1.30) (layer F.SilkS) (width 0.15))\n\t(fp_line (start 1.50 -1.30) (end -1.48 -1.30) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.48 -1.30) (end -1.48 -0.65) (layer F.SilkS) (width 0.15))\n\t(pad 1 smd rect (at -0.98 2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd rect (at -0.33 2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 3 smd rect (at 0.33 2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd rect (at 0.98 2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd rect (at 0.98 -2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd rect (at 0.33 -2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 7 smd rect (at -0.33 -2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(pad 8 smd rect (at -0.98 -2.30 0.00) (size 0.406 1.397) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center -1.50 2.45) (end -1.45 2.45) (layer F.SilkS) (width 0.10))\n\t(fp_circle (center -0.97 2.72) (end -0.87 2.72) (layer Cmts.User) (width 0.20))\n\t(fp_circle (center -1.65 2.20) (end -1.53 2.20) (layer F.SilkS) (width 0.24))\n\t(fp_arc (start -1.48 0.00) (end -1.48 0.65) (angle -180.00) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.50 -1.50) (end 1.50 -1.50) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 1.50 -1.50) (end 1.50 1.50) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 1.50 1.50) (end -1.50 1.50) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -1.50 1.50) (end -1.50 -1.50) (layer F.CrtYd) (width 0.05))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_1am5n6dy/TraceLabs_C94847.3dshapes/MSOP-8_L3.0-W3.0-H1.1-LS4.9-P0.65.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 0))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "0.1 \u00b5F to 1 \u00b5F",
+      "purpose": "Supply decoupling / noise protection for MCP9808 power pin.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VDD",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P35C1",
+      "source_citations": [
+        "S2P35C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "4.7 kOhm",
+      "purpose": "I2C SDA pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SDA",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P11C1",
+      "source_citations": [
+        "S2P11C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "4.7 kOhm",
+      "purpose": "I2C SCL pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SCL",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P11C1",
+      "source_citations": [
+        "S2P11C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "+3V3",
+    "GND",
+    "I2C_SCL",
+    "I2C_SDA",
+    "SCL",
+    "SDA",
+    "VDD"
+  ],
+  "internal_nets": [
+    "EP",
+    "TEMP_ALERT"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "Only the decoupling capacitor has a value specified in the supplied chunks. I2C and Alert pull-up resistor values were not invented and are therefore not included as valued support components.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "This extraction targets the MCP9808 MSOP-8 package. The DFN exposed pad pin is not included because the MSOP column in the pin table has no EP pin.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "MCP9808 demo content",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://onlinedocs.microchip.com/pr/GUID-E22726BA-F321-4F22-9A99-2F3CADEC9AAB-en-US-1/index.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from Microchip MCP9808 product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.microchip.com/en-us/products/data-converters/voltage-references",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "MCP9808-E/MS Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 SDA -> I2C_SDA\n2 SCL -> I2C_SCL\n3 Alert -> TEMP_ALERT\n4 GND -> GND\n5 A2 -> GND\n6 A1 -> GND\n7 A0 -> GND\n8 VDD -> VDD\n9 EP -> EP",
+    "connections": [
+      "+3V3",
+      "EP",
+      "GND",
+      "I2C_SCL",
+      "I2C_SDA",
+      "SCL",
+      "SDA",
+      "TEMP_ALERT",
+      "VDD"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "MCP9808-E/MS",
+    "manufacturer": "Microchip Technology",
+    "package": "8-Pin MSOP",
+    "supply_range": "2.7 V to 5.5 V",
+    "interface": "2-wire SMBus/I2C compatible serial interface, up to 400 kHz",
+    "pins": [
+      {
+        "number": "1",
+        "name": "SDA",
+        "electrical_type": "bidirectional I/O",
+        "net_name": "I2C_SDA",
+        "required": true,
+        "notes": "Serial Data Line; bidirectional input/output used to transmit data to/from the host controller. Requires a pull-up resistor; value is not specified in supplied chunks.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "SCL",
+        "electrical_type": "input",
+        "net_name": "I2C_SCL",
+        "required": true,
+        "notes": "Serial Clock Line; clock input generated by the host/master controller. SCL and SDA form the 2-wire I2C-compatible communication port.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "Alert",
+        "electrical_type": "open-drain output",
+        "net_name": "TEMP_ALERT",
+        "required": false,
+        "notes": "Temperature alert output; open-drain output asserted when ambient temperature exceeds user-programmed limits. External pull-up required when Alert output is used; value is not specified in supplied chunks.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P3C1",
+          "S2P19C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "GND",
+        "electrical_type": "power input",
+        "net_name": "GND",
+        "required": true,
+        "notes": "System ground pin.",
+        "source_citations": [
+          "S2P11C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "A2",
+        "electrical_type": "input",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Slave-address input pin. In this extracted fixed-address reference, tied to GND to set A2=0. Address bits A2/A1/A0 may instead be connected to VDD or GND externally and must match the selected I2C address.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P14C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "A1",
+        "electrical_type": "input",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Slave-address input pin. In this extracted fixed-address reference, tied to GND to set A1=0. Address bits A2/A1/A0 may instead be connected to VDD or GND externally and must match the selected I2C address.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P14C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "A0",
+        "electrical_type": "input",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Slave-address input pin. In this extracted fixed-address reference, tied to GND to set A0=0. With A2/A1/A0 = 000, the 7-bit address code is 0011000b, based on the documented 0011,A2,A1,A0 address format.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P14C1"
+        ]
+      },
+      {
+        "number": "8",
+        "name": "VDD",
+        "electrical_type": "power input",
+        "net_name": "VDD",
+        "required": true,
+        "notes": "Power pin; apply the operating voltage range specified in the DC electrical table.",
+        "source_citations": [
+          "S2P11C1",
+          "S2P3C1"
+        ]
+      },
+      {
+        "number": "9",
+        "name": "EP",
+        "electrical_type": "passive",
+        "net_name": "EP",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P1C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "0.1 \u00b5F to 1 \u00b5F",
+        "purpose": "Supply decoupling / noise protection for MCP9808 power pin.",
+        "connects": [
+          "VDD",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Use a high-frequency ceramic capacitor located as close as possible to the VDD and GND pins.",
+        "source_citations": [
+          "S2P35C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "4.7 kOhm",
+        "purpose": "I2C SDA pull-up",
+        "connects": [
+          "SDA",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected because the source required I2C pull-ups but did not give a value; verify against bus capacitance and I2C speed.",
+        "source_citations": [
+          "S2P11C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "4.7 kOhm",
+        "purpose": "I2C SCL pull-up",
+        "connects": [
+          "SCL",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected because the source required I2C pull-ups but did not give a value; verify against bus capacitance and I2C speed.",
+        "source_citations": [
+          "S2P11C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "+3V3",
+        "role": "power",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "EP",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "EP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "GND",
+          "A2",
+          "A1",
+          "A0"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "I2C_SCL",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "I2C_SDA",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SCL",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "SDA",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "TEMP_ALERT",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "Alert"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VDD",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VDD"
+        ],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S2P11C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 11,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 11MCP9808 3.0 PIN DESCRIPTION The descriptions of the pins are listed in Table 3-1 . 3.1 Serial Data Line (SDA) SDA is a bidirectional input/output pin, used to serially transmit data to/from the host controller. This pinrequires a pull-up resistor. (See Section 4.0 \u201cSerial Communication\u201d .) 3.2 Serial Clock Line (SCL) The SCL is a clock input pin. All communication and timing is relative to the signal on this pin. The clock isgenerated by the host or master controller on the bus.(See Section 4.0 \u201cSerial Communication\u201d .) 3.3 Temperature Alert, Open-Drain Output (Alert) The MCP9808 temperature Alert output pin is an open-drain output. The device outputs a signal when theambient temperature goes beyond the user-programmedtemperature limit. (See Section 5.2.3 \u201cAlert Output Configuration\u201d ). 3.4 Ground Pin (GND) The GND pin is the system ground pin.3.5 Address Pins (A0, A1, A2) These pins are device address input pins. The address pins correspond to the Least Significant bits (LSbs) of the address bits and the Most Significantbits (MSbs): A6, A5, A4, A3. This is illustrated inTable 3-2 . 3.6 Power Pin (VDD) VDD is the power pin. The operating voltage range, as specified in the DC electrical specification table, isapplied on this pin. 3.7 Exposed Thermal Pad (EP) There is an internal electrical connection between the Exposed Thermal Pad (EP) and the GND pin. The EPmay be connected to the system ground on the PrintedCircuit Board (PCB).TABLE 3-1: PIN FUNCTION TABLE DFN MSOP Symbol Pin Function 1 1 SDA Serial Data Line 2 2 SCL Serial Clock Line3 3 Alert Temperature Alert Output4 4 GND Ground5 5 A2 Slave Address6 6 A1 Slave Address7 7 A0 Slave Address88 V DD Power Pin 9 \u2014 EP Exposed Thermal Pad (EP); must be connected to GND TABLE 3-2: MCP9808 ADDRESS BYTE Device Address Code Slave Address A6 A5 A4 A3 A2 A1 A0 MCP9808 0011 x(1)xx MCP9808(2)1001xxx Note 1: User-selectable address is shown by \u2018 x\u2019. A2, A1 and A0 must match the corresponding device pin configuration. 2:Contact factory for this address code."
+      },
+      {
+        "chunk_id": "S2P35C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 35,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 35MCP9808 6.0 APPLICATIONS INFORMATION 6.1 Layout Considerations The MCP9808 does not require any additional components besides the master controller in order tomeasure temperature. However, it is recommendedthat a decoupling capacitor of 0.1 \u03bcF to 1 \u03bcF be used between the V DD and GND pins. A high-frequency ceramic capacitor is recommended. It is necessary forthe capacitor to be located as close as possible to thepower and ground pins of the device in order to provideeffective noise protection. In addition, good PCB layout is key for better thermal conduction from the PCB temperature to the sensordie. For good temperature sensitivity, add a groundlayer under the device pins, as shown in Figure 6-1 . 6.2 Thermal Considerations A potential for self-heating errors can exist if the MCP9808 SDA, SCL and Event lines are heavilyloaded with pull-ups (high current). Typically, theself-heating error is negligible because of the relativelysmall current consumption of the MCP9808. A tem-perature accuracy error of approximately +0.5\u00b0C could result from self-heating if the communication pinssink/source the maximum current specified. For example, if the event output is loaded to maximum I OL, Equation 6-1 can be used to determine the effect of self-heating. EQUATION 6-1: EFFECT OF SELF-HEATING At room temperature (TA = +25\u00b0C) with maximum IDD = 500 \u03bcA and VDD = 3.6V, the self-heating due to power dissipation T\uf044 is +0.2\u00b0C for the DFN-8 package and +0.5\u00b0C for the TSSOP-8 package. FIGURE 6-1: DFN Package Layout (Top View).T\uf044\uf071JAVDDIDDVOL_AlertIOL_AlertVOL_SDAIOL_SDA\uf0b7 + \uf0b7 +\uf0b7\uf028\uf029 = Where: T\uf044=TJ \u2013 TA TJ= Junction Temperature TA= Ambient Temperature \uf071JA= Package Thermal Resistance VOL_Alert, SDA = Alert and SDA Output VOL (0.4 Vmax) IOL_Alert, SDA = Alert and SDA Output IOL (3 mAmax) SDA SCL Alert GNDVDD A0 A1 A2EP9"
+      },
+      {
+        "chunk_id": "S2P3C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 3,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 3MCP9808 1.0 ELECTRICAL CHARACTERISTICS Absolute Maximum Ratings \u2020 VDD.................................................................................. 6.0V Voltage at All Input/Output Pins .............. GND \u2013 0.3V to 6.0VStorage Temperature ...................................\u201365\u00b0C to +150\u00b0C Ambient Temperature with Power Applied....\u201340\u00b0C to +125\u00b0C Junction Temperature (T J)...........................................+150\u00b0C ESD Protection on All Pins (HBM:MM) ................ (4 kV:400V)Latch-up Current at Each Pin (+25\u00b0C) ..................... \u00b1200 mA\u2020Notice: Stresses above those listed under \u201cMaximum ratings\u201d may cause permanent damage to the device. This is a stress rating only and functional operation of the device at those or any other conditions above thoseindicated in the operational listings of this specificationis not implied. Exposure to maximum rating conditionsfor extended periods may affect device reliability. TEMPERATURE SENSOR DC CHARACTERISTICS Electrical Specifications: Unless otherwise indicated, VDD = 2.7V to 5.5V, GND = Ground and TA = \u201340\u00b0C to +125 \u00b0C. Parameters Sym. Min. Typ. Max. Unit Conditions Temperature Sensor Accuracy \u201320\u00b0C < TA \uf0a3 +100 \u00b0C TACY \u20130.5 \u00b10.25 +0.5 \u00b0C VDD = 3.3V ( Note 1 ) \u201340\u00b0C < TA \uf0a3 +125 \u00b0C \u20131.0 \u00b10.25 +1.0 \u00b0C Accuracy Drift TDRIFT \u2014 +0.05 \u2014 \u00b0C VDD = 3.3V ( Note 2 ) Accuracy Repeatability TREPEAT \u2014 \u00b10.0625 \u2014 \u00b0C 48 hours at +55\u00b0C, VDD = 3.3V Temperature Conversion Time0.5\u00b0C/bit t CONV \u2014 30 \u2014 ms 33s/sec (typical) 0.25\u00b0C/bit \u2014 65 \u2014 ms 15s/sec (typical)0.125\u00b0C/bit \u2014 130 \u2014 ms 7s/sec (typical)0.0625\u00b0C/bit \u2014 250 \u2014 ms 4s/sec (typical) Power SupplyOperating Voltage Range V DD 2.7 \u2014 5.5 V Operating Current IDD \u2014 200 400 \u03bcA Shutdown Current ISHDN \u2014 0.1 2 \u03bcA Power-on Reset (POR) VPOR \u2014 2.2 \u2014 V Threshold for falling VDD Power Supply Rejection \uf044\u00b0C/\uf044VDD \u2014 \u20130.1 \u2014 \u00b0C/V VDD = 2.7V to 5.5V, TA = +25\u00b0C Alert Output (open-drain output, external pull-up resistor required), see Section 5.2.3, Alert Output Configuration High-Level Current (leakage) IOH \u2014\u2014 1 \u03bcAVOH = VDD (Active-Low, Pull-up Resistor) Low-Level Voltage VOL \u2014 \u2014 0.4 V IOL= 3 mA (Active-Low, Pull-up Resistor) Thermal Response, from +25\u00b0C (air) to +125\u00b0C (oil bath)8L-DFN t RES \u2014 0.7 \u2014 s Time to 63% (+89\u00b0C) 8L-MSOP \u2014 1.4 \u2014 s Note 1: Accuracy specification includes life time drift. 2:Using Accelerated Life Cycle, equivalent of 12 years of operation at +55\u00b0C."
+      },
+      {
+        "chunk_id": "S2P45C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 45,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 45MCP9808 /******************************************************************** * Function Name: i2c_write * Return Value: Status byte for WCOL detection. * Parameters: Single data byte for I2C2 bus. * Description: This routine writes a single byte to the * I2C2 bus. ********************************************************************/unsigned char i2c_write( unsigned char i2cWriteData ) { PIR1bits.SSPIF = 0; // clear interrupt while ( SSPSTATbits.BF ) ; // wait for idle condition SSPBUF = i2cWriteData; // Load SSPBUF with i2cWriteData (the value to be transmit- ted) while (!PIR1bits.SSPIF) ; // wait for a flag to be set PIR1bits.SSPIF = 0; // clear flag return ( !SSPCON2bits.ACKSTAT ); // function returns '1' if transmission is acknowledged} /******************************************************************** * Function Name: i2c_read* Return Value: contents of SSP2BUF register * Parameters: ack = 1 and nak = 0 * Description: Read a byte from I2C bus and ACK/NAK device********************************************************************/unsigned char i2c_read( unsigned char ack ) { unsigned char i2cReadData; PIR1bits.SSPIF = 0;// clear interrupt while ( SSPSTATbits.BF ) ; // wait for idle condition SSPCON2bits.RCEN = 1; // enable receive mode while (!PIR1bits.SSPIF) ; // wait for a flag to be set PIR1bits.SSPIF = 0;// clear flag i2cReadData = SSPBUF; // Read SSPBUF and put it in i2cReadData if ( ack ) { // if ack=1 SSPCON2bits.ACKDT = 0; // then transmit an Acknowledge } else { SSPCON2bits.ACKDT = 1; // otherwise transmit a Not Acknowledge } SSPCON2bits.ACKEN = 1; // send acknowledge sequence while (!PIR1bits.SSPIF) ; // wait for a flag to be set PIR1bits.SSPIF = 0;// clear flag return( i2cReadData ); // return the value read from SSPBUF}"
+      },
+      {
+        "chunk_id": "S3P0C1",
+        "source_url": "https://onlinedocs.microchip.com/pr/GUID-E22726BA-F321-4F22-9A99-2F3CADEC9AAB-en-US-1/index.html",
+        "title": "MCP9808 demo content",
+        "page": null,
+        "text": "\u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor MCP9808 DEMO CONTENT Jump to main content \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor MCP9808 DEMO CONTENT Search Introduction Functional Block Diagram 1 Electrical Characteristics 2 Typical Performance Curves 3 Pin Description 3.1 Serial Data Line (SDA) 3.2 Serial Clock Line (SCL) 3.3 Temperature Alert, Open-Drain Output (Alert) 3.4 Ground Pin (GND) 3.5 Address Pins (A0, A1, A2) 3.6 Power Pin (V DD ) 3.7 Exposed Thermal Pad (EP) 4 Serial Communication 4.1 2-Wire Standard Mode I 2 C Protocol Compatible Interface 4.2 Data Transfer 4.3 Master/Slave 4.4 Start/Stop Condition 4.5 Address Byte 4.6 Data Valid 4.7 Acknowledge (ACK/NAK) 4.8 Time-out 5 Functional Description 5.1 Registers 5.2 Sensor Configuration Register (CONFIG) 5.3 Upper/Lower/Critical Temperature Limit Registers (T UPPER /T LOWER /T CRIT ) 5.4 Ambient Temperature Register (T A ) 5.5 Manufacturer ID Register 5.6 Device ID And Revision Register 5.7 Resolution Register 5.8 Sensor Feature Description 5.9 Summary of Power-on Default 6 Applications Information 6.1 Layout Considerations 6.2 Thermal Considerations 7 Packaging Information 7.1 Package Marking Information 8 Appendix A Source Code 9 Appendix B Revision History The online versions of the documents are provided as a courtesy. Verify all content and data in the device\u2019s PDF documentation found on the device product page. About Company Careers Contact Us Media Center Investor Relations Corporate Responsibility Support Microchip Forums AVR Freaks Design Help Technical Support Export Control Data PCNs Quick Links microchipDIRECT.com Microchip University myMicrochip Blogs Reference Designs Parametric Search Microchip Technology Inc. 2355 West Chandler Blvd. Chandler, Arizona, USA \u00a9 Copyright 1998- 2024 Microchip Technology Inc. All rights reserved. Shanghai ICP Recordal No.09049794 Terms Of Use Privacy Notice Legal Your Privacy Choices"
+      },
+      {
+        "chunk_id": "S2P1C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 1,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 1 MCP9808 Features \u2022 Accuracy: - \u00b10.25 (typical) from \u201340\u00b0C to +125\u00b0C- \u00b10.5\u00b0C (maximum) from \u201320\u00b0C to 100\u00b0C- \u00b11\u00b0C (maximum) from \u201340\u00b0C to +125\u00b0C- \u00b10.0625\u00b0C or \u00b11 LSb (typical) repeatability \u2022 User-Selectable Measurement Resolution: - +0.5\u00b0C, +0.25\u00b0C, +0.125\u00b0C, +0.0625\u00b0C \u2022 User-Programmable Temperature Limits: - Temperature Window Limit- Critical Temperature Limit \u2022 User-Programmable Temperature Alert Output\u2022 Operating Voltage Range: 2.7V-5.5V\u2022 Operating Current: 200 \u03bcA (typical) \u2022 Shutdown Current: 0.1 \u03bcA (typical) \u2022 2-wire Interface: I 2C/SMBus Compatible \u2022 Available Packages: 2x3 DFN-8, MSOP-8 Typical Applications \u2022 General Purpose \u2022 Industrial Applications\u2022 Industrial Freezers and Refrigerators\u2022 Food Processing \u2022 Personal Computers and Servers\u2022 PC Peripherals\u2022 Consumer Electronics\u2022 Handheld/Portable Devices Temperature Accuracy General Description Microchip Technology Inc.\u2019s MCP9808 digital temperature sensor converts temperatures between \u201320\u00b0C and+100\u00b0C to a digital word with \u00b10.25\u00b0C/\u00b10.5\u00b0C (typi-cal/maximum) accuracy. The MCP9808 comes with user-programmable registers that provide flexibility for temperature sensingapplications. The registers allow user-selectablesettings such as Shutdown or Low-Power modes andthe specification of temperature Alert window limits andcritical output limits. When the temperature changesbeyond the specified boundary limits, the MCP9808outputs an Alert signal. The user has the option of settingthe Alert output signal polarity as an active-low or active-high comparator output for thermostat operation, or as atemperature Alert interrupt output for microprocessor-based systems. The Alert output can also be configured as a critical temperature output only. This sensor has an industry standard 400 kHz, 2-wire, SMBus/I 2C compatible serial interface, allowing up to eight or sixteen sensors to be controlled with a singleserial bus (see Table 3-2 for available Address codes). These features make the MCP9808 ideal for sophisticated, multi-zone, temperature-monitoringapplications. Package Types 0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= -20 \u00b0C, 25 \u00b0C, 85 \u00b0C, 100 \u00b0C VDD= 3.3V 854 units8-Pin 2x3 DFN* 1 2 3 48-Pin MSOP 8 7 6 5 * Includes Exposed Thermal Pad (EP); see Table 3-1 .A1A0 A2SCL Alert1 2 3 48 7 6 5 GNDSDA VDD EP 9SCL Alert GNDSDA A1A0 A2VDD\u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor"
+      },
+      {
+        "chunk_id": "S2P4C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 4,
+        "text": "MCP9808 DS20005095B-page 4 \uf0e3 2011-2018 Microchip Technology Inc.GRAPHICAL SYMBOL DESCRIPTION DIGITAL INPUT/OUTPUT PIN CHARACTERISTICS Electrical Specifications: Unless otherwise indicated, VDD = 2.7V to 5.5V, GND = Ground and TA = \u201340\u00b0C to +125 \u00b0C. Parameters Sym Min Typ Max Units Conditions Serial Input/Output (SCL, SDA, A0, A1, A2) Input High-Level Voltage VIH 0.7 VDD \u2014VDD V Low-Level Voltage VIL GND \u2014 0.3 VDD V Input Current IIN \u2014\u2014 \u00b1 5 \u03bcA Output (SDA) Low-Level Voltage VOL \u2014 \u2014 0.4 V IOL= 3 mA High-Level Current (leakage) IOH \u2014\u2014 1 \u03bcAVOH = 5.5V Low-Level Current IOL 6\u2014 \u2014 m A VOL = 0.6V SDA and SCL InputsHysteresis V HYST \u2014 0.05 VDD \u2014V Spike Suppression tSP \u2014 \u2014 50 ns Capacitance CIN \u20145 \u2014 p F VDDVIH VIL IINVoltage Current timeVDD IOHVoltage Current timeINPUTOUTPUT VOL IOL TEMPERATURE CHARACTERISTICS Electrical Specifications: Unless otherwise indicated, VDD = 2.7V to 5.5V and GND = Ground. Parameters Sym Min Typ Max Units Conditions Temperature Ranges Specified Temperature Range TA \u201340 \u2014 +125 \u00b0C (Note 1 ) Operating Temperature Range TA \u201340 \u2014 +125 \u00b0C Storage Temperature Range TA -65 \u2014 +150 \u00b0C Thermal Package Resistances Thermal Resistance, 8L-DFN \uf071JA \u2014 68 \u2014 \u00b0C/W Thermal Resistance, 8L-MSOP \uf071JA \u2014 211 \u2014 \u00b0C/W Note 1: Operation in this range must not cause TJ to exceed Maximum Junction Temperature (+150\u00b0C)."
+      },
+      {
+        "chunk_id": "S2P44C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 44,
+        "text": "MCP9808 DS20005095B-page 44 \uf0e3 2011-2018 Microchip Technology Inc./******************************************************************** * Function Name: i2c_start* Return Value: void * Parameters: void * Description: Send I2C Start Command********************************************************************/void i2c_start(void) { PIR1bits.SSPIF = 0; //clear flag while (SSPSTATbits.BF ); // wait for idle condition SSPCON2bits.SEN = 1; // initiate START condition while (!PIR1bits.SSPIF) ; // wait for a flag to be set PIR1bits.SSPIF = 0; // clear flag} /********************************************************************* Function Name: i2c_repStart* Return Value: void * Parameters: void * Description: Resend I2C Start Command*********************************************************************/void i2c_repStart(void) { PIR1bits.SSPIF = 0; // clear flag while ( SSPSTATbits.BF ) ; // wait for idle condition SSPCON2bits.RSEN = 1; // initiate Repeated START condition while (!PIR1bits.SSPIF) ; // wait for a flag to be set PIR1bits.SSPIF = 0; // clear flag }/******************************************************************** * Function Name: i2c_stop* Return Value: void * Parameters: void * Description: Send I2C Stop command*********************************************************************/void i2c_stop(void) { PIR1bits.SSPIF = 0; // clear flag while ( SSPSTATbits.BF ) ; // wait for idle condition SSPCON2bits.PEN = 1; // Initiate STOP condition while (!PIR1bits.SSPIF) ; // wait for a flag to be set PIR1bits.SSPIF = 0; // clear flag }"
+      },
+      {
+        "chunk_id": "S2P13C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 13,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 13MCP9808 4.0 SERIAL COMMUNICATION 4.1 2-Wire Standard Mode I2C Protocol Compatible Interface The MCP9808 Serial Clock (SCL) input and the bidirectional Serial Data (SDA) line form a 2-wirebidirectional, Standard mode, I 2C compatible communication port (refer to the Digital Input/Output Pin Characteristics and Sensor Serial Interface Timing Specifications tables). The following bus protocol has been defined:4.1.1 DATA TRANSFER Data transfers are initiated by a Start condition (START), followed by a 7-bit device address and aread/write bit. An Acknowledge (ACK) from the slaveconfirms the reception of each byte. Each access mustbe terminated by a Stop condition (STOP). Repeated communication is initiated after t B-FREE . This device does not support sequential register read/write. Each register needs to be addressed usingthe Register Pointer. This device supports the receive protocol. The register can be specified using the pointer for the initial read.Each repeated read or receive begins with a Startcondition and address byte. The MCP9808 retains thepreviously selected register. Therefore, it outputs datafrom the previously specified register (repeated pointerspecification is not necessary). 4.1.2 MASTER/SLAVE The bus is controlled by a master device (typically a microcontroller) that controls the bus access andgenerates the Start and Stop conditions. The MCP9808is a slave device and does not control other devices inthe bus. Both master and slave devices can operate aseither transmitter or receiver. However, the masterdevice determines which mode is activated. 4.1.3 START/STOP CONDITION A high-to-low transition of the SDA line (while SCL is high) is the Start condition. All data transfers must bepreceded by a Start condition from the master. Alow-to-high transition of the SDA line (while SCL ishigh) signifies a Stop condition. If a Start or Stop condition is introduced during data transmission, the MCP9808 releases the bus. All datatransfers are ended by a Stop condition from themaster.TABLE 4-1: MCP9808 SERIAL BUS PROTOCOL DESCRIPTIONS Term Description Master The device that controls the serial bus, typically a microcontroller. Slave The device addressed by the master, such as the MCP9808. Transmitter Device sending data to the bus. Receiver Device receiving data from the bus.START A unique signal from the master to initiate serial interface with a slave. STOP A unique signal from the master to terminate serial interface from a slave. Read/Write A read or write to the MCP9808 registers. ACK A receiver Acknowledges (ACK) the reception of each byte by polling the bus. NAK A receiver Not-Acknowledges (NAK) or releases the bus to show End-of-Data (EOD). Busy Communication is not possible because the bus is in use. Not Busy The bus is in the Idle state; both SDA and SCL remain high. Data Valid SDA must remain stable before SCL becomes high in order for a data bit to be considered valid. During no"
+      },
+      {
+        "chunk_id": "S2P5C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 5,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 5MCP9808 TIMING DIAGRAMSENSOR SERIAL INTERFACE TIMING SPECIFICATIONS Electrical Specifications: Unless otherwise indicated, VDD = 2.7V to 5.5V, TA = -40\u00b0C to +125\u00b0C, GND = Ground and CL = 80 pF. ( Note 1 ) Parameters Sym Min Max Units Conditions 2-Wire SMBus/I2C Interface ( Note 1 ) Serial Port Clock Frequency fSC 0 400 kHz (Note 2 , 4) Low Clock tLOW 1300 \u2014 ns (Note 2 ) High Clock tHIGH 600 \u2014 ns (Note 2 ) Rise Time tR 20 300 ns Fall Time tF 20 300 ns Data in Setup Time tSU-DI 100 \u2014 ns (Note 3 ) Data In Hold Time tHD-DI 0\u2014 n s (Note 5 ) Data Out Hold Time tHD-DO 200 900 ns (Note 4 ) Start Condition Setup Time tSU-START 600 \u2014 ns Start Condition Hold Time tHD-START 600 \u2014 ns Stop Condition Setup Time tSU-STOP 600 \u2014 ns Bus Free tB-FREE 1300 \u2014 ns Time-out tOUT 25 35 ms Bus Capacitive Load Cb \u2014 400 pf Note 1: All values referred to VIL MAX and VIH MIN levels. 2:If tLOW > tOUT or tHIGH > tOUT, the temperature sensor I2C interface will time-out. A Repeat Start command is required for communication. 3:This device can be used in a Standard mode I2C bus system, but the requirement, tSU-DI \u2265 100 ns, must be met. This device does not stretch the SCL Low time. 4:As a transmitter, the device provides internal minimum delay time, tHD-DO MIN , to bridge the undefined region (min. 200 ns) of the falling edge of SCL, tF MAX , to avoid unintended generation of Start or Stop conditions. 5:As a receiver, SDA should not be sampled at the falling edge of SCL. SDA can transition tHD-DI after SCL toggles Low. tSU-STARTtHD-START tSU-DItSU-STOPtB-FREE SCL SDA tHD-DI/ tHD-DOtHIGH tLOW tOUTtR, tF START Condition Data Transmission STOP Condition"
+      },
+      {
+        "chunk_id": "S2P7C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 7,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 7MCP9808 2.0 TYPICAL PERFORMANCE CURVES Note: Unless otherwise indicated, VDD = 2.7V to 5.5V, GND = Ground, SDA/SCL pulled-up to VDD and TA = \u201340\u00b0C to +125 \u00b0C. FIGURE 2-1: Temperature Accuracy. FIGURE 2-2: Temperature Accuracy Histogram, TA = \u201320\u00b0C. FIGURE 2-3: Temperature Accuracy Histogram, TA = +25\u00b0C.FIGURE 2-4: Temperature Accuracy Histogram. FIGURE 2-5: Temperature Accuracy Histogram, TA = +85\u00b0C. FIGURE 2-6: Temperature Accuracy Histogram, TA = +100\u00b0C.Note: The graphs and tables provided following this note are a statistical summary based on a limited number of samples and are provided for informational purposes only. The performance characteristics listed hereinare not tested or guaranteed. In some graphs or tables, the data presented may be outside the specifiedoperating range (e.g., outside specified power supply range) and therefore outside the warranted range. -1.0-0.50.00.51.0 -40 -20 0 20 40 60 80 100 120Temperature Accuracy (\u00b0C) TA(\u00b0C)VDD = 3.3V 854 units at -20 \u00b0C, 25 \u00b0C, 85 \u00b0C, 100 \u00b0C 240 units at -40 \u00b0C, 125 \u00b0C +Std. Dev. Average -Std. Dev.+3 * Std. Dev. -3 * Std. Dev. 0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= -20 \u00b0C VDD= 3.3V 827 units 0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= 25\u00b0C VDD= 3.3V 875 units0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= -20 \u00b0C, 25 \u00b0C, 85 \u00b0C, 100 \u00b0C VDD= 3.3V 854 units 0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= 85\u00b0C VDD= 3.3V 859 units 0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= 100 \u00b0C VDD= 3.3V 856 units"
+      },
+      {
+        "chunk_id": "S2P43C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 43,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 43MCP9808 Software License Agreement The software supplied herewith by Microchip Technology Incorporated (the \u201cCompany\u201d) is intended and supplied to you, the Company\u2019s customer, for use solely and exclusively with products manufactured by the Company. The software is owned by the Company and/or its supplier, and is protected under applicable copyright laws. All rights are rese rved. Any use in violation of the foregoing restrictions may subject the user to criminal sanctions under applicable laws, as well as to civil liability for the breach of the terms and conditions of this license. THIS SOFTWARE IS PROVIDED IN AN \u201cAS IS\u201d CONDITION. NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATU- TORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICU- LAR PURPOSE APPLY TO THIS SOFTWARE. THE COMPANY SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FORSPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER. APPENDIX A: SOURCE CODE /******************************************************************** FileName: I2C.c Processor: PIC18 Microcontrollers Complier: Microchip C18 (for PIC18) or C30 (for PIC24) Company: Microchip Technology, Inc. #include <p18cxxx.h> // This code is developed for PIC18F2550 //It can be modified to be used with any PICmicro with MSSP module /** PRIVATE PROTOTYPES *********************************************/ void i2c_init(void);void i2c_start(void);void i2c_repStart(void);void i2c_stop(void);unsigned char i2c_write( unsigned char i2cWriteData );unsigned char i2c_read( unsigned char ack ); /******************************************************************** * Function Name: i2c_init* Return Value: void * Parameters: Enable SSP* Description: This function sets up the SSP1 module on a * PIC18CXXX device for use with a Microchip I2C ********************************************************************/void i2c_init(void) { TRISBbits.TRISB0 = 1; // Digital Output (make it input only when reading data) TRISBbits.TRISB1 = 1; // Digital Output SSPCON1 = 0x28; // enable I2C Master mode SSPCON2 = 0x00; // clear control bits SSPSTAT = 0x80; // disable slew rate control; disable SMBus SSPADD = 19; // set baud rate to 100 kHz (Fosc = 48 MHz) PIR1bits.SSPIF = 0; PIR2bits.BCLIF = 0; SSPCON2bits.SEN = 0; // force idle condition}"
+      },
+      {
+        "chunk_id": "S2P14C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 14,
+        "text": "MCP9808 DS20005095B-page 14 \uf0e3 2011-2018 Microchip Technology Inc.4.1.4 ADDRESS BYTE Following the Start condition, the host must transmit an 8-bit address byte to the MCP9808. The address for theMCP9808 temperature sensor is \u2018 0011,A2,A1,A0 \u2019 in binary, where the A2, A1 and A0 bits are set externallyby connecting the corresponding pins to V DD \u20181\u2019 or GND \u20180\u2019. The 7-bit address, transmitted in the serial bit stream, must match the selected address for the MCP9808 torespond with an ACK. Bit 8 in the address byte is aread/write bit. Setting this bit to \u2018 1\u2019 commands a read operation, while \u2018 0\u2019 commands a write operation (see Figure 4-1 ). FIGURE 4-1: Device Addressing.4.1.5 DATA VALID After the Start condition, each bit of data in the transmission needs to be settled for a time specified byt SU-DATA before SCL toggles from low-to-high (see the Sensor Serial Interface Timing Specifications section). 4.1.6 ACKNOWLEDGE (ACK/NAK) Each receiving device, when addressed, must generate an ACK bit after the reception of each byte. The master device must generate an extra clock pulse for ACK to be recognized. The Acknowledging device pulls down the SDA line for tSU-DATA before the low-to-high transition of SCL from the master. SDA also needs to remain pulled down fort H-DATA after a high-to-low transition of SCL. During read, the master must signal an End-of-Data (EOD) to the slave, by not generating an ACK bit(NAK), once the last bit has been clocked out of theslave. In this case, the slave will leave the data linereleased to enable the master to generate the Stopcondition. 4.1.7 TIME-OUT If the SCL stays low or high for the time specified byt OUT, the MCP9808 temperature sensor resets the serial interface. This dictates the minimum clock speedas outlined in the specification. 123456789 SCL SDA 01 1 A 2 A 1 A 0 StartAddress Byte Slave Address R/W MCP9808 ResponseCode AddressACK 0 See Table 3-2 ."
+      },
+      {
+        "chunk_id": "S2P21C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 21,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 21MCP9808 FIGURE 5-3: Timing Diagram for Reading from the Configuration Register (see Section 4.0 \u201cSerial Communication\u201d ).SDAA C K0011A Configuration Pointer0000A C KS2A 1A 012345678 12345678 SCL 0 Address Byte A CK 0011A MSB DataA CKN A KS P2A 1A 012345678 12345678 12345678 Address Byte LSB DataRMCP9808 MCP9808 MCP9808Master MasterW SDASCL00 1 00000 00 0 0000 1 00 0Reading the CONFIG Register: Note: It is not necessary to select the RegisterPointer if it was setfrom the previousread/write. Note: This is an example routine (see Appendix A: \u201cSource Code\u201d ). i2c_start(); // send START command i2c_write(AddressByte & 0xFE); //WRITE Command (see Section 4.1.4 \u201cAddress Byte\u201d ) //also, make sure bit 0 is cleared \u20180\u2019 i2c_write(0x01); // Write CONFIG Registeri2c_start(); // send Repeat START commandi2c_write(AddressByte | 0x01); //READ Command //also, make sure bit 0 is set \u20181\u2019 UpperByte = i2c_read(ACK); // READ 8 bits //and Send ACK bit LowerByte = i2c_read(NAK); // READ 8 bits //and Send NAK bit i2c_stop(); // send STOP command"
+      },
+      {
+        "chunk_id": "S2P20C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 20,
+        "text": "MCP9808 DS20005095B-page 20 \uf0e3 2011-2018 Microchip Technology Inc. FIGURE 5-2: Timing Diagram for Writing to the Configuration Register (see Section 4.0 \u201cSerial Communication\u201d ).Writing to the CONFIG Register to Enable the Event Output Pin <0000 0000 0000 1000>b: SDAA CK 0011A0000A CK S2A 1A 012345678 12345678 SCL 0 Address ByteW MCP9808 MCP9808 MSB DataA CKA CKP12345678 12345678 LSB DataConfiguration Pointer MCP9808 MCP9808001 00000 00 0 0000 1 00 0 Note: This is an example routine (see Appendix A: \u201cSource Code\u201d ). i2c_start(); // send START command i2c_write(AddressByte & 0xFE); //WRITE Command (see Section 4.1.4 \u201cAddress Byte\u201d ) //also, make sure bit 0 is cleared \u20180\u2019 i2c_write(0x01); // Write CONFIG Registeri2c_write(0x00); // Write datai2c_write(0x08); // Write datai2c_stop(); // send STOP command"
+      },
+      {
+        "chunk_id": "S2P25C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 25,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 25MCP9808 5.1.3.1 TA Bits to Temperature Conversion To convert the TA bits to decimal temperature, the upper three boundary bits (TA<15:13>) must be masked out. Then, determine the SIGN bit (bit 12) tocheck positive or negative temperature, shift the bitsaccordingly, and combine the upper and lower bytes ofthe 16-bit register. The upper byte contains data fortemperatures greater than +32\u00b0C while the lower bytecontains data for temperature less than +32\u00b0C, includ-ing fractional data. When combining the upper andlower bytes, the upper byte must be right-shifted by4 bits (or multiply by 2 4) and the lower byte must be left- shifted by 4 bits (or multiply by 2-4). Adding the results of the shifted values provides the temperature data indecimal format (see Equation 5-1 ). The temperature bits are in two\u2019s compliment format, therefore, positive temperature data and negative tem-perature data are computed differently. Equation 5-1 shows the temperature computation. The exampleinstruction code, outlined in Example 5-1 , shows the communication flow; also see Figure 5-5 for the timing diagram. EQUATION 5-1: BYTES TO TEMPERATURE CONVERSION EXAMPLE 5-1: SAMPLE INSTRUCTION CODEWhere: TA= Ambient Temperature (\u00b0C) UpperByte = TA bit 15 to bit 8 LowerByte = TA bit 7 to bit 0Temperature TA \uf0b3 0\u00b0C Temperature \uf03c 0\u00b0CTAUpperByte 24LowerByte 24\u2013\uf0b4 +\uf0b4\uf0e8\uf0f8\uf0e6\uf0f6= TA256 UpperByte 24LowerByte 24\u2013\uf0b4 +\uf0b4\uf0e8\uf0f8\uf0e6\uf0f6\u2013 = i2c_start(); // send START command i2c_write (AddressByte & 0xFE); //WRITE Command (see Section 4.1.4 \u201cAddress Byte\u201d ) //also, make sure bit 0 is cleared \u20180\u2019 i2c_write(0x05); // Write TA Register Address i2c_start(); //Repeat STARTi2c_write(AddressByte | 0x01); // READ Command (see Section 4.1.4 \u201cAddress Byte\u201d ) //also, make sure bit 0 is Set \u20181\u2019 UpperByte = i2c_read(ACK); // READ 8 bits //and Send ACK bit LowerByte = i2c_read(NAK); // READ 8 bits //and Send NAK bit i2c_stop(); // send STOP command//Convert the temperature data//First Check flag bitsif ((UpperByte & 0x80) == 0x80){ //T A \u2265 TCRIT } if ((UpperByte & 0x40) == 0x40){ //TA > TUPPER }if ((UpperByte & 0x20) == 0x20){ //T A < TLOWER }UpperByte = UpperByte & 0x1F; //Clear flag bitsif ((UpperByte & 0x10) == 0x10){ //T A < 0\u00b0C UpperByte = UpperByte & 0x0F;//Clear SIGNTemperature = 256 - (UpperByte x 16 + LowerByte / 16); }else //T A \u2265 0\u00b0C Temperature = (UpperByte x 16 + LowerByte / 16); //Temperature = Ambient Temperature (\u00b0C)This example routine assumes the variables and I2C communication subroutines are predefined (see Appendix A: \u201cSource Code\u201d ):"
+      },
+      {
+        "chunk_id": "S2P51C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 51,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 51MCP9808 Information contained in this publication regarding device applications and the like is provided only for your convenienceand may be superseded by updates. It is your responsibility toensure that your application meets with your specifications.MICROCHIP MAKES NO REPRESENTATIONS ORWARRANTIES OF ANY KIND WHETHER EXPRESS ORIMPLIED, WRITTEN OR ORAL, STATUTORY OROTHERWISE, RELATED TO THE INFORMATION,INCLUD ING BUT NOT LIMITED TO ITS CONDITION, QUALITY, PERFORMANCE, MERCHANTABILITY ORFITNESS FOR PURPOSE . Microchip disclaims all liability arising from this information and its use. Use of Microchipdevices in life support and/or safety applications is entirely atthe buyer\u2019s risk, and the buyer agrees to defend, indemnify andhold harmless Microchip from any and all damages, claims,suits, or expenses resulting from such use. No licenses areconveyed, implicitly or otherwise, under any Microchipintellectual property rights unless otherwise stated.Trademarks The Microchip name and logo, the Microchip logo, AnyRate, AVR, AVR logo, AVR Freaks, BeaconThings, BitCloud, CryptoMemory, CryptoRF, dsPIC, FlashFlex, flexPWR, Heldo, JukeBlox, K EELOQ, KEELOQ logo, Kleer, LANCheck, LINK MD, maXStylus, maXTouch, MediaLB, megaAVR, MOST, MOST logo, MPLAB, OptoLyzer, PIC, picoPower, PICSTART, PIC32 logo, Prochip Designer, QTouch, RightTouch, SAM-BA, SpyNIC, SST, SST Logo, SuperFlash, tinyAVR, UNI/O, and XMEGA are registered trademarks of Microchip Technology Incorporated in the U.S.A. and other countries. ClockWorks, The Embedded Control Solutions Company, EtherSynch, Hyper Speed Control, HyperLight Load, IntelliMOS, mTouch, Precision Edge, and Quiet-Wire are registered trademarks of Microchip Technology Incorporated in the U.S.A. Adjacent Key Suppression, AKS, Analog-for-the-Digital Age, Any Capacitor, AnyIn, AnyOut, BodyCom, chipKIT, chipKIT logo, CodeGuard, CryptoAuthentication, CryptoCompanion, CryptoController, dsPICDEM, dsPICDEM.net, Dynamic Average Matching, DAM, ECAN, EtherGREEN, In-Circuit Serial Programming, ICSP, Inter-Chip Connectivity, JitterBlocker, KleerNet, KleerNet logo, Mindi, MiWi, motorBench, MPASM, MPF, MPLAB Certified logo, MPLIB, MPLINK, MultiTRAK, NetDetach, Omniscient Code Generation, PICDEM, PICDEM.net, PICkit, PICtail, PureSilicon, QMatrix, RightTouch logo, REAL ICE, Ripple Blocker, SAM-ICE, Serial Quad I/O, SMART-I.S., SQI, SuperSwitcher, SuperSwitcher II, Total Endurance, TSHARC, USBCheck, VariSense, ViewSpan, WiperLock, Wireless DNA, and ZENA are trademarks of Microchip Technology Incorporated in the U.S.A. and other countries. SQTP is a service mark of Microchip Technology Incorporated in the U.S.A. Silicon Storage Technology is a registered trademark of Microchip Technology Inc. in other countries. GestIC is a registered trademark of Microchip Technology Germany II GmbH & Co. KG, a subsidiary of Microchip Technology Inc., in other countries. All other trademarks mentioned herein "
+      },
+      {
+        "chunk_id": "S2P8C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 8,
+        "text": "MCP9808 DS20005095B-page 8 \uf0e3 2011-2018 Microchip Technology Inc.Note: Unless otherwise indicated, VDD = 2.7V to 5.5V, GND = Ground, SDA/SCL pulled-up to VDD and TA = -40\u00b0C to +125 \u00b0C. FIGURE 2-7: Temperature Accuracy Histogram, TA = \u201340\u00b0C. FIGURE 2-8: Supply Current vs. Temperature. FIGURE 2-9: Power-on Reset Threshold Voltage vs. Temperature. FIGURE 2-10: Temperature Accuracy Histogram, TA = +125\u00b0C. FIGURE 2-11: Temperature Accuracy vs. Supply Voltage. FIGURE 2-12: Temperature Conversion Time vs. Temperature.0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= -40 \u00b0C VDD= 3.3V 240 units 0%10%20%30%40% -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5Occurrences Temperature Accuracy (\u00b0C)TA= 125 \u00b0C VDD= 3.3V 240 units"
+      },
+      {
+        "chunk_id": "S2P9C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 9,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 9MCP9808 Note: Unless otherwise indicated, VDD = 2.7V to 5.5V, GND = Ground, SDA/SCL pulled-up to VDD and TA = -40\u00b0C to +125 \u00b0C. FIGURE 2-13: SDA and Alert Output VOL vs. Temperature. FIGURE 2-14: SDA IOL vs. Temperature. FIGURE 2-15: Package Thermal Response. FIGURE 2-16: SMBus Time-out vs. Temperature. FIGURE 2-17: Shutdown Current vs. Temperature. FIGURE 2-18: Power Supply Rejection vs. Frequency."
+      },
+      {
+        "chunk_id": "S2P19C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 19,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 19MCP9808 bit 7 Crit. Lock: TCRIT Lock bit 0 = Unlocked. TCRIT register can be written (power-up default) 1 = Locked. TCRIT register can not be written When enabled, this bit remains set to \u2018 1\u2019 or locked until cleared by an internal Reset ( Section 5.3 \u201cSummary of Power-on Default\u201d ). This bit can be programmed in Shutdown mode. bit 6 Win. Lock: TUPPER and TLOWER Window Lock bit 0 = Unlocked; TUPPER and TLOWER registers can be written (power-up default) 1 = Locked; TUPPER and TLOWER registers can not be written When enabled, this bit remains set to \u2018 1\u2019 or locked until cleared by a Power-on Reset ( Section 5.3 \u201cSummary of Power-on Default\u201d ). This bit can be programmed in Shutdown mode. bit 5 Int. Clear: Interrupt Clear bit 0 = No effect (power-up default) 1 = Clear interrupt output; when read, this bit returns to \u2018 0\u2019 This bit can not be set to \u2018 1\u2019 in Shutdown mode, but it can be cleared after the device enters Shutdown mode. bit 4 Alert Stat.: Alert Output Status bit 0 = Alert output is not asserted by the device (power-up default) 1 = Alert output is asserted as a comparator/Interrupt or critical temperature output This bit can not be set to \u2018 1\u2019 or cleared to \u2018 0\u2019 in Shutdown mode. However, if the Alert output is config- ured as Interrupt mode, and if the host controller clears to \u2018 0\u2019, the interrupt, using bit 5 while the device is in Shutdown mode, then this bit will also be cleared \u2018 0\u2019. bit 3 Alert Cnt.: Alert Output Control bit 0 = Disabled (power-up default) 1 = Enabled This bit can not be altered when either of the Lock bits are set (bit 6 and bit 7).This bit can be programmed in Shutdown mode, but the Alert output will not assert or deassert. bit 2 Alert Sel.: Alert Output Select bit 0 = Alert output for T UPPER , TLOWER and TCRIT (power-up default) 1 =TA > TCRIT only (TUPPER and TLOWER temperature boundaries are disabled) When the Alarm Window Lock bit is set, this bit cannot be altered until unlocked (bit 6). This bit can be programmed in Shutdown mode, but the Alert output will not assert or deassert. bit 1 Alert Pol.: Alert Output Polarity bit 0 = Active-low (power-up default; pull-up resistor required) 1 = Active-high This bit cannot be altered when either of the Lock bits are set (bit 6 and bit 7).This bit can be programmed in Shutdown mode, but the Alert output will not assert or deassert. bit 0 Alert Mod.: Alert Output Mode bit 0 = Comparator output (power-up default) 1 = Interrupt output This bit cannot be altered when either of the Lock bits are set (bit 6 and bit 7).This bit can be programmed in Shutdown mode, but the Alert output will not assert or deassert.REGISTER 5-2: CONFIG: CONFIGURATION REGISTER ( \uf0ae ADDRESS \u20180000 0001\u2019b )"
+      },
+      {
+        "chunk_id": "S2P31C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 31,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 31MCP9808 5.2.3.2 Interrupt Mode In Interrupt mode, the Alert output is asserted as active- high or active-low (depending on the polarity configuration) when TA drifts above or below TUPPER and TLOWER limits. The output is deasserted by setting bit 5 (Interrupt Clear bit) of CONFIG. Shutting down thedevice will not reset or deassert the Alert output. This mode can not be selected when the Alert output is used as a critical temperature output only, using bit 2 ofCONFIG. This mode is designed for interrupt driven microcontroller-based systems. The microcontrollerreceiving the interrupt will have to Acknowledge theinterrupt by setting bit 5 of the CONFIG register from theMCP9808. 5.2.4 TEMPERATURE RESOLUTION The MCP9808 is capable of providing temperature data with +0.5\u00b0C to +0.0625\u00b0C resolution. The resolu-tion can be selected using the Resolution register(Register 5-7 ). It is located at address, \u2018 00001000\u2019b , and it provides measurement flexibility. A +0.0625\u00b0Cresolution is set as a POR default by the factory. TABLE 5-2: TEMPERATURE CONVERSION TIME ResolutiontCONV (ms)Samples/sec (typical) +0.5\u00b0C 30 33 +0.25\u00b0C 65 15 +0.125\u00b0C 130 7 +0.0625\u00b0C (Power-up Default) 250 4"
+      },
+      {
+        "chunk_id": "S2P13C2",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 13,
+        "text": " (NAK) or releases the bus to show End-of-Data (EOD). Busy Communication is not possible because the bus is in use. Not Busy The bus is in the Idle state; both SDA and SCL remain high. Data Valid SDA must remain stable before SCL becomes high in order for a data bit to be considered valid. During normal data transfers, SDA only changes state while SCL is low."
+      },
+      {
+        "chunk_id": "S2P23C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 23,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 23MCP9808 FIGURE 5-4: Timing Diagram for Writing and Reading from the TUPPER Register (see Section 4.0 \u201cSerial Communication\u201d ).SDAA CK 0011A TUPPER Pointer0000A CK S2A 1A 012345678 12345678 SCL 0 Address Byte A C K0011A MSB DataA C KN A KS P2A 1A 012345678 12345678 12345678 Address Byte LSB DataRMCP9808 MCP9808 MCP9808Master MasterW SDASCL01 0 0000 010 1 1010 0 00 0Reading from the TUPPER Register:Writing +90\u00b0C to the TUPPER Register <0000 0101 1010 0000>b : SDAA CK 0011A0000A CK S2A 1A 012345678 12345678 SCL 0 Address ByteW MCP9808 MCP9808 MSB DataA CKA C KP12345678 12345678 LSB DataTUPPER Pointer MCP9808 MCP9808010 00000 10 1 10100 00 0 Note: It is not necessary to select the RegisterPointer if it was setfrom the previousread/write."
+      },
+      {
+        "chunk_id": "S2P29C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 29,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 29MCP9808 5.1.6 RESOLUTION REGISTER This register allows the user to change the sensor resolution (see Section 5.2.4 \u201cTemperature Resolution\u201d ). The POR default resolution is +0.0625\u00b0C. The selected resolution is also reflected inthe Capability register (see Register 5-2 ). FIGURE 5-8: Timing Diagram for Changing TA Resolution to +0.0625\u00b0C <0000 0011>b (see Section 4.0 \u201cSerial Communication\u201d ).REGISTER 5-7: RESOLUTION REGISTER ( \uf0ae ADDRESS \u20180000 1000\u2019b ) U-0 U-0 U-0 U-0 U-0 U-0 R/W-1 R/W-1 \u2014 \u2014 \u2014 \u2014 \u2014 \u2014 Resolution bit 7 bit 0 Legend: R = Readable bit W = Writable bit U = Unimplemented bit, read as \u20180\u2019-n = Value at POR \u20181\u2019 = Bit is set \u20180\u2019 = Bit is cleared x = Bit is unknown bit 7-2 Unimplemented: Read as \u20180\u2019 bit 1-0 Resolution bits 00 = +0.5\u00b0C (t CONV = 30 ms typical) 01 = +0.25\u00b0C (tCONV = 65 ms typical) 10 = +0.125\u00b0C (tCONV = 130 ms typical) 11 = +0.0625\u00b0C (power-up default, tCONV = 250 ms typical) SDAA C K0011AA C KS2A 1A 012345678 12345678 SCL Address ByteW MCP9808 MCP9808A CKP12345678 Data Resolution Pointer MCP980800001 00 0 0000 0 01 1"
+      },
+      {
+        "chunk_id": "S2P32C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 32,
+        "text": "MCP9808 DS20005095B-page 32 \uf0e3 2011-2018 Microchip Technology Inc. FIGURE 5-10: Alert Output Conditions.TUPPER TLOWERAlert OutputTCRIT TATUPPER \u2013 THYST(Active-Low)Comparator Interrupt S/w Int. Clear Critical OnlyTCRIT \u2013 THYST 12 3 4 5 7 NotesAlert Output Boundary ConditionsComparator Interrupt Critical TA Bits Alert Output (Active-Low/High) 15 14 13 1 TA \uf020\uf0b3 TLOWER High/Low Low/High High/Low 000 2 TA \uf03c TLOWER \u2013 THYST Low/High Low/High High/Low 001 3 TA \uf020\uf03e TUPPER Low/High Low/High High/Low 010 4 TA \uf0a3 TUPPER \u2013 THYST High/Low Low/High High/Low 000 5 TA \uf0b3 TCRIT Low/High Low/High Low/High 110 6 When TA \uf0b3 TCRIT, the Alert output is forced to Comparator mode and the CONFIG<0> (Alert Output Mode bit) is ignored until TA \uf03c TCRIT \u2013 THYST. In the Interrupt mode, if the interrupt is not cleared (bit 5 of CONFIG), as shown in the diagram at Note 6 , then Alert will remain asserted at Note 7 until the interrupt is cleared by the controller. 7 TA \uf03c TCRIT \u2013 THYST Low/High High/Low High/Low 010TLOWER \u2013 THYST TLOWER \u2013 THYSTTUPPER \u2013 THYST 13 42 Notes: 6Alert Output (Active-High)Comparator Interrupt S/w Int. Clear Critical Only"
+      },
+      {
+        "chunk_id": "S8P0C11",
+        "source_url": "https://www.microchip.com/en-us/products/data-converters/voltage-references",
+        "title": "Linked reference from Microchip MCP9808 product page",
+        "page": null,
+        "text": "uipment, battery management systems, consumer electronics, portable instrumentation and automotive systems and as companions to sensors and data converters. Our cost-efficient and high-reliability voltage reference ICs come with high accuracy and mid-range, low temperature coefficients and reliability that improve the performance of your application. Voltage Reference Products Low-Cost Voltage References High-Accuracy Voltage References High-Reliability Voltage References Show More Featured Voltage References MCP1501 Series voltage reference with VOUT: fixed 1.024V to 5V Initial accuracy: 0.10% Temperature coefficient: 50 ppm/\u00b0C max Explore MCP1501 MCP1502 Series voltage reference wuth VOUT: fixed 1.024V to 5V Initial accuracy: 0.10% Temperature coefficient: 7 ppm/\u00b0C max Explore MCP1502 LM4041 Shunt voltage reference with VOUT: fixed 1.225V or adjustable from 1.24V to 10V Capacitive load tolerant Explore LM4041 Companion Products Digital-to-Analog Converters (DACs) Looking for a complete digital-to-analog solution for your precision-controlled conversion application? Check out our wide selection of DACs. Explore DACs Analog-to-Digital Converters (ADCs) Looking for a complete analog-to-digital solution for your data conversion application? Check out our wide selection of ADCs. Explore ADCs Automotive-Qualified Mixed-Signal Products Our innovative automotive-grade mixed-signal products are designed to fit small footprints, consume very little power and operate in high-temperature and electromagnetic environments. Explore Automotive-Qualified Products Signal-to-Noise Calculator Tool Need help calculating your signal chain noise budget? The signal chain signal-to-noise calculator tool within MPLAB \u00ae Analog Designer provides a simple, intuitive and flexible full-noise analysis of your signal chain. Try It Now Load More Featured BMS Applications: ADCs, Voltage References and Temperature Sensors Learn how our automotive-qualified (AEC-Q100) Analog-to-Digital Converters (ADCs), voltage references and thermistor ICs deliver high reliability and high precision to automotive or industrial battery management/monitoring systems. To view this video, please click manage cookies below and accept functional cookies. Manage Cookies Support at Every Step We are committed to partnering with you and making sure you have what you need to succeed. Learn About Support About Company Careers Contact Us Media Center Investor Relations Corporate Responsibility Support Microchip Forums AVR Freaks Design Help Technical Support Export Control Data PCNs Quick Links microchipDIRECT.com Microchip University myMicrochip Blogs Reference Designs Parametric Search Microchip Technology Inc. 2355 West Chandler Blvd. Chandler, Arizona, USA \u00a9 Copyright 1998-2026 Microchip Technology Inc. All rights reserved. Shanghai ICP Recordal No.09049794 Terms Of Use Privacy Notice Legal Your Privacy Choices Live Chat Need Help? Privacy Policy Live Chat Schedule a call {\"SalesForceSecurePath\":\"https:"
+      },
+      {
+        "chunk_id": "S2P2C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 2,
+        "text": "MCP9808 DS20005095B-page 2 \uf0e3 2011-2018 Microchip Technology Inc.Functional Block Diagram Clear Alert +0.5\u00b0C +0.25\u00b0C +0.125\u00b0C +0.0625\u00b0CTemperature TLOWER Limit Configuration \uf044\uf053 ADCBand Gap Temperature SensorAlert Status Output Control Critical Alert only Alert Polarity Alert Comp./Int. TCRITICAL Limit Register PointerCritical Trip Lock Alarm Window LockShutdownHysteresis Manufacturer ID ResolutionDevice ID/Rev SMBus/Standard I2C Interface A0 A1 A2 Alert SDA SCL VDD GNDTUPPER Limit"
+      },
+      {
+        "chunk_id": "S2P15C1",
+        "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+        "title": "MCP9808 \u00b10.5\u00b0C Maximum Accuracy Digital Temperature Sensor datasheet",
+        "page": 15,
+        "text": "\uf0e3 2011-2018 Microchip Technology Inc. DS20005095B-page 15MCP9808 5.0 FUNCTIONAL DESCRIPTION The MCP9808 temperature sensors consist of a band- gap-type temperature sensor, a Delta-Sigma Analog-to-Digital Converter ( \uf044\uf053\uf020 ADC), user-programmable registers and a 2-wire SMBus/I 2C protocol compatible serial interface. Figure 5-1 shows a block diagram of the register structure. FIGURE 5-1: Functional Block Diagram.Clear Alert +0.5\u00b0C +0.25\u00b0C +0.125\u00b0C +0.0625\u00b0CTemperature TLOWER Limit Configuration \uf044\uf053 ADCBand Gap Temperature SensorAlert Status Output Control Critical Alert Only Alert Polarity Alert Comp/Int TCRITICAL Limit Register PointerCritical Trip Lock Alarm Win. LockShutdownHysteresis Manufacturer ID ResolutionDevice ID/Rev SMBus/Standard I2C Interface A0 A1 A2 Alert SDA SCL VDD GNDTUPPER Limit"
+      }
+    ],
+    "source_urls": [
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://onlinedocs.microchip.com/pr/GUID-E22726BA-F321-4F22-9A99-2F3CADEC9AAB-en-US-1/index.html",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://www.microchip.com/en-us/products/data-converters/voltage-references",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf",
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MCP9808-0.5C-Maximum-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20005095B.pdf"
+    ],
+    "unanswered_questions": [
+      "What I2C pull-up resistor values should be used for SDA and SCL for the target bus voltage, speed, and capacitance? The supplied chunks state SDA requires a pull-up and show SDA/SCL pulled up to VDD, but do not provide resistor values.",
+      "If the Alert output is used, what pull-up resistor value and pull-up rail should be used? The supplied chunks state Alert is open-drain and requires an external pull-up in active-low configuration, but do not provide a resistor value.",
+      "Should A0, A1, and A2 remain tied to GND for fixed address 0011000b, or should the schematic expose configurable address options? The supplied chunks allow each address pin to be connected to VDD or GND."
+    ],
+    "validation_warnings": [
+      "Only the decoupling capacitor has a value specified in the supplied chunks. I2C and Alert pull-up resistor values were not invented and are therefore not included as valued support components.",
+      "This extraction targets the MCP9808 MSOP-8 package. The DFN exposed pad pin is not included because the MSOP column in the pin table has no EP pin."
+    ],
+    "extraction_notes": [
+      "The MCP9808 does not require additional components besides the master controller to measure temperature, but a 0.1 \u00b5F to 1 \u00b5F VDD-GND decoupling capacitor is recommended close to the device (S2P35C1).",
+      "The documented address byte format is 0011,A2,A1,A0, with A2/A1/A0 set externally by connecting the corresponding pins to VDD or GND (S2P14C1).",
+      "The serial interface timing supports up to 400 kHz and bus capacitive load up to 400 pF under the stated timing conditions (S2P5C1).",
+      "Deterministic schematic-label extraction supplemented the AI extraction with 1 pin(s) and 2 support component(s).",
+      "Supplier CAD lookup will prefer LCSC C94847."
+    ],
+    "confidence": "medium"
+  }
+}

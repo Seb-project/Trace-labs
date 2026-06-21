@@ -1,0 +1,1397 @@
+{
+  "id": "draft_u_blox_neo_m9n_00b_ai_draft",
+  "block_name": "u-blox NEO-M9N-00B Extracted Draft",
+  "block_slug": "u_blox_neo_m9n_00b_ai_draft",
+  "summary": "Datasheet-derived draft for u-blox NEO-M9N-00B. Interface: SPI peripheral mode selected by D_SEL = GND; CPOL=0, CPHA=0 default; max SPI clock 5.5 MHz; PIO voltage levels relate to VCC. Package: 12.2 mm x 16.0 mm LCC module.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "NEO-M9N-00B",
+    "mpn": "NEO-M9N-00B",
+    "manufacturer": "u-blox",
+    "supplier": "LCSC",
+    "supplier_part_number": "C5119087",
+    "supplier_url": "https://www.lcsc.com/product-detail/gnss-modules_u-blox-neo-m9n-00b_C5119087.html",
+    "symbol": "TraceLabs_NEO_M9N_00B:NEO_M9N_00B",
+    "footprint": "TraceLabs_NEO_M9N_00B:TraceLabs_NEO_M9N_00B_LCSC_C5119087",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for NEO-M9N-00B.",
+    "connects": [
+      "+3V3",
+      "+3V3_GNSS",
+      "ANT_BIAS_SUPPLY",
+      "EXTINT",
+      "GND",
+      "LNA_EN",
+      "NC_RESERVED_15",
+      "NC_RESERVED_16",
+      "NC_RESERVED_17",
+      "NC_USB_DM",
+      "NC_USB_DP",
+      "RESET_N",
+      "RF_ANT_50OHM",
+      "SAFEBOOT_N",
+      "SCL",
+      "SDA",
+      "SPI_CLK",
+      "SPI_CS_N",
+      "SPI_MISO_GNSS_SDO",
+      "SPI_MOSI_GNSS_SDI",
+      "TIMEPULSE",
+      "VCC_RF",
+      "V_BCKP",
+      "V_USB_UNUSED"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_NEO_M9N_00B_LCSC_C5119087",
+      "footprint_id": "TraceLabs_NEO_M9N_00B:TraceLabs_NEO_M9N_00B_LCSC_C5119087",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C5119087",
+      "source_url": "https://www.lcsc.com/product-detail/gnss-modules_u-blox-neo-m9n-00b_C5119087.html",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_NEO_M9N_00B_LCSC_C5119087\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -11.000) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value GPSM-SMD_24P-L16.0-W12.2-P1.10-BL (at 0.000 11.000) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C5119087\")\n\t(fp_line (start -6.32 -7.63) (end -6.32 -8.20) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.32 -8.20) (end 6.20 -8.20) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.20 -8.20) (end 6.20 -7.63) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.36 -0.23) (end -6.36 -1.97) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.20 7.63) (end 6.20 8.20) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.20 8.20) (end -6.36 8.20) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -6.36 8.20) (end -6.36 7.63) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 6.20 -1.97) (end 6.20 -0.23) (layer F.SilkS) (width 0.25))\n\t(pad 24 smd rect (at -6.10 7.00 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 23 smd rect (at -6.10 5.90 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 22 smd rect (at -6.10 4.80 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 21 smd rect (at -6.10 3.70 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 20 smd rect (at -6.10 2.60 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 19 smd rect (at -6.10 1.50 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 18 smd rect (at -6.10 0.40 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 17 smd rect (at -6.10 -2.60 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 16 smd rect (at -6.10 -3.70 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 15 smd rect (at -6.10 -4.80 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 14 smd rect (at -6.10 -5.90 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 13 smd rect (at -6.10 -7.00 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 12 smd rect (at 6.10 -7.00 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 11 smd rect (at 6.10 -5.90 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 10 smd rect (at 6.10 -4.80 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 9 smd rect (at 6.10 -3.70 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 8 smd rect (at 6.10 -2.60 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 7 smd rect (at 6.10 0.40 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd rect (at 6.10 1.50 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd rect (at 6.10 2.60 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd rect (at 6.10 3.70 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 3 smd rect (at 6.10 4.80 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd rect (at 6.10 5.90 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(pad 1 smd rect (at 6.10 7.00 90.00) (size 0.800 2.000) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center 6.10 8.00) (end 6.13 8.00) (layer F.SilkS) (width 0.06))\n\t(fp_circle (center 6.84 7.96) (end 7.11 7.96) (layer F.SilkS) (width 0.25))\n\t(fp_circle (center 7.00 6.96) (end 7.20 6.96) (layer Cmts.User) (width 0.40))\n\t(fp_line (start -6.10 8.00) (end -6.10 -8.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -6.10 -8.00) (end 6.10 -8.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 6.10 -8.00) (end 6.10 8.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 6.10 8.00) (end -6.10 8.00) (layer F.CrtYd) (width 0.05))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_ikxk84kh/TraceLabs_C5119087.3dshapes/GPSM-SMD_24P-L16.0-W12.2-P1.10-BL.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 0))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "R_USB_PD?",
+      "type": "resistor",
+      "value": "100 kOhm",
+      "purpose": "Pull-down for V_USB when USB interface is not used.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "V_USB_UNUSED",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P31C1, S3P83C1",
+      "source_citations": [
+        "S3P31C1",
+        "S3P83C1"
+      ]
+    },
+    {
+      "reference": "D_RF_ESD?",
+      "type": "ESD protection diode",
+      "value": "ESD protection diode",
+      "purpose": "Mandatory RF input ESD protection to avoid device destruction and improve RF input robustness.",
+      "symbol": "Device:D",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "RF_ANT_50OHM",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P83C1",
+      "source_citations": [
+        "S3P83C1"
+      ]
+    },
+    {
+      "reference": "R_ANT_CUR?",
+      "type": "resistor",
+      "value": "10 Ohm 10% 0.25 W",
+      "purpose": "Active-antenna bias-T current limiter series resistor in event of short circuit.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VCC_RF",
+        "ANT_BIAS_SUPPLY"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P74C1",
+      "source_citations": [
+        "S3P74C1"
+      ]
+    },
+    {
+      "reference": "C_ANT_BIAS?",
+      "type": "capacitor",
+      "value": "100 nF X7R 10% 16 V",
+      "purpose": "Active-antenna bias-T capacitor to remove high-frequency noise from the DC supply.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "ANT_BIAS_SUPPLY",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P74C1",
+      "source_citations": [
+        "S3P74C1"
+      ]
+    },
+    {
+      "reference": "L_ANT_BIAS?",
+      "type": "inductor",
+      "value": "27 nH, impedance >500 Ohm at GNSS frequency, rated current >300 mA",
+      "purpose": "Active-antenna bias-T inductor to isolate RF from the DC path.",
+      "symbol": "Device:L",
+      "footprint": "Inductor_SMD:L_4.0x4.0mm",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "ANT_BIAS_SUPPLY",
+        "RF_ANT_50OHM"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P74C1, S3P83C1",
+      "source_citations": [
+        "S3P74C1",
+        "S3P83C1"
+      ]
+    },
+    {
+      "reference": "TP_SAFEBOOT?",
+      "type": "test point",
+      "value": "test point",
+      "purpose": "Provides recommended ability to pull SAFEBOOT_N low for recovery/safeboot mode.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SAFEBOOT_N"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P32C1",
+      "source_citations": [
+        "S3P32C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "4.7 kOhm",
+      "purpose": "I2C SDA pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SDA",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P31C1",
+      "source_citations": [
+        "S3P31C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "4.7 kOhm",
+      "purpose": "I2C SCL pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SCL",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P31C1",
+      "source_citations": [
+        "S3P31C1"
+      ]
+    },
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "supply decoupling",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "+3V3",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S3P74C1",
+      "source_citations": [
+        "S3P74C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "+3V3",
+    "+3V3_GNSS",
+    "EXTINT",
+    "GND",
+    "RESET_N",
+    "SCL",
+    "SDA",
+    "SPI_CLK",
+    "SPI_CS_N",
+    "SPI_MISO_GNSS_SDO",
+    "SPI_MOSI_GNSS_SDI",
+    "VCC_RF",
+    "V_BCKP",
+    "V_USB_UNUSED"
+  ],
+  "internal_nets": [
+    "ANT_BIAS_SUPPLY",
+    "LNA_EN",
+    "NC_RESERVED_15",
+    "NC_RESERVED_16",
+    "NC_RESERVED_17",
+    "NC_USB_DM",
+    "NC_USB_DP",
+    "RF_ANT_50OHM",
+    "SAFEBOOT_N",
+    "TIMEPULSE"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "SPI is not available unless D_SEL is set low/GND; selecting SPI makes the shared UART1/I2C functions unavailable on pins 18\u201321.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "PIO voltage levels are related to VCC, so host SPI logic must be compatible with the selected VCC rail.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Peak current is listed as 100 mA; integration guidance says the supply must provide clean/stable voltage and not add series resistance greater than 0.2 Ohm in the VCC supply path.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "RF input requires 50 Ohm layout and mandatory ESD protection; antenna/RF layout is application-sensitive.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "For unused USB, one chunk states V_USB should be connected to ground while another gives a 100 kOhm pull-down for USB-not-used. This extraction includes the cited 100 kOhm pull-down and flags the difference for review.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "NEO-M9N Integration manual UBX-19014286",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "NEO-M9N-00B Data sheet UBX-19014285",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "LCSC NEO-M9N-00B C5119087",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.lcsc.com/product-detail/gnss-modules_u-blox-neo-m9n-00b_C5119087.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "NEO-M9N-00B Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 SAFEBOOT_N -> SAFEBOOT_N\n2 D_SEL -> GND\n3 TIMEPULSE -> TIMEPULSE\n4 EXTINT -> EXTINT\n5 USB_DM -> NC_USB_DM\n6 USB_DP -> NC_USB_DP\n7 V_USB -> V_USB_UNUSED\n8 RESET_N -> RESET_N\n9 VCC_RF -> VCC_RF\n10 GND -> GND\n11 RF_IN -> RF_ANT_50OHM\n12 GND -> GND",
+    "connections": [
+      "+3V3",
+      "+3V3_GNSS",
+      "ANT_BIAS_SUPPLY",
+      "EXTINT",
+      "GND",
+      "LNA_EN",
+      "NC_RESERVED_15",
+      "NC_RESERVED_16",
+      "NC_RESERVED_17",
+      "NC_USB_DM",
+      "NC_USB_DP",
+      "RESET_N",
+      "RF_ANT_50OHM",
+      "SAFEBOOT_N",
+      "SCL",
+      "SDA",
+      "SPI_CLK",
+      "SPI_CS_N",
+      "SPI_MISO_GNSS_SDO",
+      "SPI_MOSI_GNSS_SDI",
+      "TIMEPULSE",
+      "VCC_RF",
+      "V_BCKP",
+      "V_USB_UNUSED"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "NEO-M9N-00B",
+    "manufacturer": "u-blox",
+    "package": "12.2 mm x 16.0 mm LCC module",
+    "supply_range": "VCC 2.7\u20133.6 V; V_BCKP 1.65\u20133.6 V; V_USB 3.0\u20133.6 V when USB is used",
+    "interface": "SPI peripheral mode selected by D_SEL = GND; CPOL=0, CPHA=0 default; max SPI clock 5.5 MHz; PIO voltage levels relate to VCC",
+    "pins": [
+      {
+        "number": "1",
+        "name": "SAFEBOOT_N",
+        "electrical_type": "input",
+        "net_name": "SAFEBOOT_N",
+        "required": false,
+        "notes": "Used for firmware updates/reconfiguration; datasheet says leave open. Integration manual recommends the application have a way to pull it low, e.g. test point or host I/O.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P32C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "D_SEL",
+        "electrical_type": "input",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Interface select. Tie low/GND to select SPI. Open or VCC selects UART + I2C instead.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P31C1",
+          "S2P12C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "TIMEPULSE",
+        "electrical_type": "output",
+        "net_name": "TIMEPULSE",
+        "required": false,
+        "notes": "TIMEPULSE / 1 PPS output; configurable time pulse feature.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P32C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "EXTINT",
+        "electrical_type": "input",
+        "net_name": "EXTINT",
+        "required": false,
+        "notes": "EXTINT / PIO 7 input.",
+        "source_citations": [
+          "S2P8C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "USB_DM",
+        "electrical_type": "bidirectional",
+        "net_name": "NC_USB_DM",
+        "required": false,
+        "notes": "USB data DM. Not used in this SPI reference extraction.",
+        "source_citations": [
+          "S2P8C1",
+          "S2P15C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "USB_DP",
+        "electrical_type": "bidirectional",
+        "net_name": "NC_USB_DP",
+        "required": false,
+        "notes": "USB data DP. Not used in this SPI reference extraction.",
+        "source_citations": [
+          "S2P8C1",
+          "S2P15C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "V_USB",
+        "electrical_type": "power input",
+        "net_name": "V_USB_UNUSED",
+        "required": true,
+        "notes": "USB supply. For non-USB design, chunks state V_USB should be connected to ground; another chunk gives a 100 kOhm pull-down when USB is not used.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P83C1",
+          "S3P31C1"
+        ]
+      },
+      {
+        "number": "8",
+        "name": "RESET_N",
+        "electrical_type": "input",
+        "net_name": "RESET_N",
+        "required": false,
+        "notes": "Active-low reset input with internal pull-up. Driving low for at least 100 ms triggers cold start; use only as recovery option.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P31C1"
+        ]
+      },
+      {
+        "number": "9",
+        "name": "VCC_RF",
+        "electrical_type": "output",
+        "net_name": "VCC_RF",
+        "required": false,
+        "notes": "Voltage output for external LNA / active antenna bias. Can supply active antenna or external LNA; output current operating condition 50 mA.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P70C1",
+          "S2P11C1"
+        ]
+      },
+      {
+        "number": "10",
+        "name": "GND",
+        "electrical_type": "ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground pin; all ground pins should have optimal ground connection.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P83C1"
+        ]
+      },
+      {
+        "number": "11",
+        "name": "RF_IN",
+        "electrical_type": "input",
+        "net_name": "RF_ANT_50OHM",
+        "required": true,
+        "notes": "GNSS RF signal input. RF input impedance is 50 Ohm; RF trace should be tuned for 50 Ohm and RF ESD protection is mandatory.",
+        "source_citations": [
+          "S2P8C1",
+          "S2P11C1",
+          "S3P83C1"
+        ]
+      },
+      {
+        "number": "12",
+        "name": "GND",
+        "electrical_type": "ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground pin; all ground pins should have optimal ground connection.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P83C1"
+        ]
+      },
+      {
+        "number": "13",
+        "name": "GND",
+        "electrical_type": "ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground pin; all ground pins should have optimal ground connection.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P83C1"
+        ]
+      },
+      {
+        "number": "14",
+        "name": "LNA_EN",
+        "electrical_type": "output",
+        "net_name": "LNA_EN",
+        "required": false,
+        "notes": "Antenna/LNA control output.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P90C1"
+        ]
+      },
+      {
+        "number": "15",
+        "name": "Reserved",
+        "electrical_type": "reserved",
+        "net_name": "NC_RESERVED_15",
+        "required": false,
+        "notes": "Reserved; no external circuit specified in supplied chunks.",
+        "source_citations": [
+          "S2P8C1"
+        ]
+      },
+      {
+        "number": "16",
+        "name": "Reserved",
+        "electrical_type": "reserved",
+        "net_name": "NC_RESERVED_16",
+        "required": false,
+        "notes": "Reserved; no external circuit specified in supplied chunks.",
+        "source_citations": [
+          "S2P8C1",
+          "S3P70C1"
+        ]
+      },
+      {
+        "number": "17",
+        "name": "Reserved",
+        "electrical_type": "reserved",
+        "net_name": "NC_RESERVED_17",
+        "required": false,
+        "notes": "Reserved; no external circuit specified in supplied chunks.",
+        "source_citations": [
+          "S2P9C1",
+          "S3P70C1"
+        ]
+      },
+      {
+        "number": "18",
+        "name": "SDA / SPI CS_N",
+        "electrical_type": "bidirectional",
+        "net_name": "SPI_CS_N",
+        "required": true,
+        "notes": "SPI chip select when D_SEL = GND. Shared with I2C SDA when D_SEL is VCC/open.",
+        "source_citations": [
+          "S2P9C1",
+          "S3P31C1",
+          "S3P29C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "SCL / SPI SLK",
+        "electrical_type": "bidirectional",
+        "net_name": "SPI_CLK",
+        "required": true,
+        "notes": "SPI clock when D_SEL = GND. Shared with I2C SCL when D_SEL is VCC/open. Integration manual names this SPI_CLK.",
+        "source_citations": [
+          "S2P9C1",
+          "S3P31C1",
+          "S3P29C1"
+        ]
+      },
+      {
+        "number": "20",
+        "name": "TXD / SPI SDO",
+        "electrical_type": "output",
+        "net_name": "SPI_MISO_GNSS_SDO",
+        "required": true,
+        "notes": "SPI SDO output from NEO-M9N peripheral when D_SEL = GND; connect to host/controller MISO.",
+        "source_citations": [
+          "S2P9C1",
+          "S3P31C1",
+          "S3P29C1"
+        ]
+      },
+      {
+        "number": "21",
+        "name": "RXD / SPI SDI",
+        "electrical_type": "input",
+        "net_name": "SPI_MOSI_GNSS_SDI",
+        "required": true,
+        "notes": "SPI SDI input to NEO-M9N peripheral when D_SEL = GND; connect to host/controller MOSI.",
+        "source_citations": [
+          "S2P9C1",
+          "S3P31C1",
+          "S3P29C1"
+        ]
+      },
+      {
+        "number": "22",
+        "name": "V_BCKP",
+        "electrical_type": "power input",
+        "net_name": "V_BCKP",
+        "required": true,
+        "notes": "Backup supply input. Can maintain RTC and BBR when VCC is removed; if not provided, module performs cold start at power-up. Minimal design guidance says connect power supply to VCC and V_BCKP.",
+        "source_citations": [
+          "S2P9C1",
+          "S2P10C1",
+          "S3P70C1",
+          "S3P83C1"
+        ]
+      },
+      {
+        "number": "23",
+        "name": "VCC",
+        "electrical_type": "power input",
+        "net_name": "+3V3_GNSS",
+        "required": true,
+        "notes": "Main supply input. Operating supply range 2.7\u20133.6 V; ensure supply supports peak current demand.",
+        "source_citations": [
+          "S2P9C1",
+          "S2P10C1",
+          "S3P70C1"
+        ]
+      },
+      {
+        "number": "24",
+        "name": "GND",
+        "electrical_type": "ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground pin; all ground pins should have optimal ground connection.",
+        "source_citations": [
+          "S2P9C1",
+          "S3P83C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "SDA",
+        "electrical_type": "bidirectional",
+        "net_name": "SDA",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S3P31C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "SCL",
+        "electrical_type": "input",
+        "net_name": "SCL",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P9C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P9C1"
+        ]
+      },
+      {
+        "number": "21",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P9C1"
+        ]
+      },
+      {
+        "number": "1",
+        "name": "VCC",
+        "electrical_type": "power_in",
+        "net_name": "+3V3",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S3P70C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "R_USB_PD",
+        "type": "resistor",
+        "value": "100 kOhm",
+        "purpose": "Pull-down for V_USB when USB interface is not used.",
+        "connects": [
+          "V_USB_UNUSED",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Use for SPI/no-USB configuration; note separate design checklist also says to connect V_USB to ground if USB is not used.",
+        "source_citations": [
+          "S3P31C1",
+          "S3P83C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "D_RF_ESD",
+        "type": "ESD protection diode",
+        "value": "ESD protection diode",
+        "purpose": "Mandatory RF input ESD protection to avoid device destruction and improve RF input robustness.",
+        "connects": [
+          "RF_ANT_50OHM",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place at antenna RF connector/input to GND; keep RF path 50 Ohm.",
+        "source_citations": [
+          "S3P83C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R_ANT_CUR",
+        "type": "resistor",
+        "value": "10 Ohm 10% 0.25 W",
+        "purpose": "Active-antenna bias-T current limiter series resistor in event of short circuit.",
+        "connects": [
+          "VCC_RF",
+          "ANT_BIAS_SUPPLY"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Only for active antenna / external LNA bias using VCC_RF; series current limiting resistor is required for bias-T short-circuit protection.",
+        "source_citations": [
+          "S3P74C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "C_ANT_BIAS",
+        "type": "capacitor",
+        "value": "100 nF X7R 10% 16 V",
+        "purpose": "Active-antenna bias-T capacitor to remove high-frequency noise from the DC supply.",
+        "connects": [
+          "ANT_BIAS_SUPPLY",
+          "GND"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Only for active antenna bias-T circuit.",
+        "source_citations": [
+          "S3P74C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "L_ANT_BIAS",
+        "type": "inductor",
+        "value": "27 nH, impedance >500 Ohm at GNSS frequency, rated current >300 mA",
+        "purpose": "Active-antenna bias-T inductor to isolate RF from the DC path.",
+        "connects": [
+          "ANT_BIAS_SUPPLY",
+          "RF_ANT_50OHM"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Only for active antenna bias-T circuit; select L-band/GNSS-frequency suitable inductor.",
+        "source_citations": [
+          "S3P74C1",
+          "S3P83C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "TP_SAFEBOOT",
+        "type": "test point",
+        "value": "test point",
+        "purpose": "Provides recommended ability to pull SAFEBOOT_N low for recovery/safeboot mode.",
+        "connects": [
+          "SAFEBOOT_N"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Application may instead use a host I/O port to pull SAFEBOOT_N low.",
+        "source_citations": [
+          "S3P32C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "4.7 kOhm",
+        "purpose": "I2C SDA pull-up",
+        "connects": [
+          "SDA",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected because the source required I2C pull-ups but did not give a value; verify against bus capacitance and I2C speed.",
+        "source_citations": [
+          "S3P31C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "4.7 kOhm",
+        "purpose": "I2C SCL pull-up",
+        "connects": [
+          "SCL",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected because the source required I2C pull-ups but did not give a value; verify against bus capacitance and I2C speed.",
+        "source_citations": [
+          "S3P31C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "100 nF",
+        "purpose": "supply decoupling",
+        "connects": [
+          "+3V3",
+          "GND"
+        ],
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "required": true,
+        "placement_note": "Place close to the IC supply pins.",
+        "source_citations": [
+          "S3P74C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "+3V3",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VCC"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "+3V3_GNSS",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VCC"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "ANT_BIAS_SUPPLY",
+        "role": "other",
+        "external": false,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "EXTINT",
+        "role": "interrupt",
+        "external": true,
+        "connected_pins": [
+          "EXTINT"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "D_SEL",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "LNA_EN",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "LNA_EN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_RESERVED_15",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "Reserved"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_RESERVED_16",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "Reserved"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_RESERVED_17",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "Reserved"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_USB_DM",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "USB_DM"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_USB_DP",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "USB_DP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "RESET_N",
+        "role": "reset",
+        "external": true,
+        "connected_pins": [
+          "RESET_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "RF_ANT_50OHM",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "RF_IN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SAFEBOOT_N",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "SAFEBOOT_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SCL",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SDA",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_CLK",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL / SPI SLK"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_CS_N",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA / SPI CS_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_MISO_GNSS_SDO",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "TXD / SPI SDO"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_MOSI_GNSS_SDI",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "RXD / SPI SDI"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "TIMEPULSE",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "TIMEPULSE"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VCC_RF",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VCC_RF"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_BCKP",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "V_BCKP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_USB_UNUSED",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "V_USB"
+        ],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S3P90C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 90,
+        "text": "NEO-M9N - Integration manual Appendix A Migration u-blox is committed to ensuring that products in the same form factor are backwards compatible over several technology generations. This section describes important di\ufb00erences to consider when migrating from NEO-7, NEO-8Q, and NEO-M8 modules to the NEO-M9N module. A design review with a u-blox support team is recommended to verify proper use of the product features. Table 29 presents the key hardware-related changes between NEO-M9N and NEO-7/8Q/M8 modules. Feature Change Action needed / Remarks VCC supply rangeNEO-M9N: 2.7 V - 3.6 V NEO-7M/M8M: 1.65 V - 3.6 VA HW change is required when migrating from a NEO-7M/M8M design that uses less than 2.7 V VCC supply. Refer to the min and max VCC ramp requirements in the NEO- M9N Data sheet [1]. V_BCKP supply rangeNEO-M9N: 1.65 V - 3.6 V NEO-7/8Q/M8: 1.4 V - 3.6 VA HW change is required when migrating from a NEO-7 or NEO-8Q/M8 design that uses less than 1.65 V V_BCKP supply. Backup currentNEO-M9N: I_BCKP = 45 \u00b5A NEO-7/8Q/M8: I_BCKP = 15 \u00b5AThe hardware backup current into V_BCKP in NEO-M9N is higher than in NEO-7 and NEO-8Q/M8 modules. Check that the backup battery capacity is still suitable for the target design/application requirements. Software backup currentNEO-M9N: I_SWBCKP = 0.36 mA NEO-M8N/Q/J/M: I_SWBCKP = 30 \u00b5A NEO-8Q: I_SWBCKP = 22, 30 \u00b5A NEO-7N: I_SWBCKP = 35 \u00b5A NEO-7M: I_SWBCKP = 20 \u00b5AThe software backup current into VCC in NEO-M9N is higher than in NEO-7 and NEO-8Q/M8 modules. Power consumptionNEO-M9N peak current: 100 mA NEO-7/8Q/M8 peak current: 67 mAI_VCC is slightly higher in u-blox M9 than in u-blox 7/8/M8 which applies also to acquisition and tracking currents. Ensure that the power supply is still able to provide clean and stable voltage with the higher current demand in NEO-M9N. Pin-out 1:1 pin-out mapping with NEO-7N/8Q/ M8N/Q/J/M modules.NEO-7M/M8M (pin 14) is reserved and NEO-M9N (pin 14) is LNA_EN. NEO-7M/M8M designs can be updated to use pin 14 on NEO-M9N for external LNA and antenna control. ANT_ON (pin 14) name in NEO-7N changed to LNA_EN in NEO-8Q/M8 and NEO-M9N modules. VDD_USB (pin 7) name changed to V_USB in NEO-M9N to agree with a common naming convention across u-blox modules. USB interface Due to the hardware implementation, it may not be possible to certify the USB interface on NEO-M9N.Consider using other available interfaces (UART, I2C, SPI) if possible. SAW-LNA RF front-endNEO-M9N includes a Band 13 notch \ufb01lter, a SAW \ufb01lter, and LNA on the RF path, which allows the use of a passive antenna. NEO-M9N noise \ufb01gure: 3.5 dB NEO-7N/8Q/M8 noise \ufb01gure: 2 dBThe Band 13 notch \ufb01lter and the SAW \ufb01lter used in NEO-M9N provide improved out-of-band immunity compared to NEO-7 and NEO-8Q/M8 modules. Antenna, External RF pathNEO-M9N supports simultaneous use of GPS, GLONASS, Galileo, BeiDou, and various SBAS constellations.Check that the RF path (antenna and \ufb01ltering) is suitable for all of the GNSS signals in use. Absolute max RF input p"
+      },
+      {
+        "chunk_id": "S3P31C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 31,
+        "text": "NEO-M9N - Integration manual Figure 16: NEO-M9N example circuit for USB interface Part Recommended part Description U1 Seiko Instruments Inc. S-1206B33-I6T2G LDO which provides 3.3 V to the V_USB pin. C1, C2 Depends on USB LDO (U1) speci\ufb01cation U1 LDO decoupling capacitor. D1 ST Microelectronics USBLC6-2 Low capacitance ESD protection diodes to avoid cross supply. R1 100 k\u03a9 Pull-down resistor in case USB interface is not used. Not needed it if USB is used. R2, R3 27 \u03a9 5% 0.1W Serial termination resistor for USB. Table 15: Recommended components for USB interface 3.8 Prede\ufb01ned PIOs In addition to the communication ports, there are some prede\ufb01ned PIOs provided by NEO-M9N to interact with the receiver. These PIOs are described in this section. If hardware backup mode is used a proper isolation of the interfaces is needed. 3.8.1 D_SEL The D_SEL pin can be used to con\ufb01gure the functionality of the combined UART1, I2C, and SPI pins. It is possible to con\ufb01gure the pins as UART1 + I2C, or as SPI. SPI is not available unless D_SEL pin is set to low. See Table 16 below. Pin no. D_SEL == 0 D_SEL == 1 20 SPI_SDO UART1 TXD 21 SPI_SDI UART1 RXD 18 SPI_CS_N I2C SDA 19 SPI_CLK I2C SCL Table 16: D_SEL con\ufb01guration 3.8.2 RESET_N The NEO-M9N provides the ability to reset the receiver. The RESET_N pin is an input-only pin with an internal pull-up resistor. Driving RESET_N low for at least 100 ms will trigger a cold start. The RESET_N pin will delete all information and trigger a cold start. It should only be used as a recovery option. 3.8.3 SAFEBOOT_N The NEO-M9N provides a SAFEBOOT_N pin that is used to command the receiver safeboot mode. If this pin is low at power up, the receiver starts in safeboot mode and GNSS operation is disabled. UBX-19014286 - R10 3 Receiver functionality Page 31 of 95 C1-Public"
+      },
+      {
+        "chunk_id": "S2P9C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 9,
+        "text": "NEO-M9N-00B - Data sheet Pin no. Name I/ODescription 17Reserved -Reserved 18SDA / SPI CS_N I/OI2C data if D_SEL = VCC (or open); SPI chip select if D_SEL = GND 19 SCL / SPI SLK I/OI2C clock if D_SEL = VCC (or open); SPI clock if D_SEL = GND 20TXD / SPI SDO OUART output if D_SEL = VCC (or open); SPI SDO if D_SEL = GND 21 RXD / SPI SDI IUART input if D_SEL = VCC (or open); SPI SDI if D_SEL = GND 22V_BCKP IBackup voltage supply 23VCC ISupply voltage 24 GND IGround Table 9: NEO-M9N-00B pin assignment For detailed information on the pin functions and characteristics see the Integration manual [3]. UBX-19014285 - R08 3 Pin de\ufb01nition Page 9 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P26C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 26,
+        "text": "NEO-M9N - Integration manual Allow a short time delay of typically 100 ms between sending a baud rate change message and providing input data at the new rate. Otherwise some input characters may be ignored or the port could be disabled until the interface is able to process the new baud rate. Note that for protocols such as NMEA or UBX, it does not make sense to change the default word length values (data bits) since these properties are de\ufb01ned by the protocol and not by the electrical interface. If the amount of data con\ufb01gured is too much for a certain port's bandwidth (e.g. all UBX messages output on a UART port with a baud rate of 9600), the bu\ufb00er will \ufb01ll up. Once the bu\ufb00er space is exceeded, new messages to be sent will be dropped. To prevent message loss, the baud rate and communication speed or the number of enabled messages should be carefully selected so that the expected number of bytes can be transmitted in less than one second. 3.7.2 I2C interface An I2C interface is available for communication with an external host CPU or u-blox cellular modules in peripheral mode only. The I2C protocol and electrical interface supports the Fast-mode of the I2C industry standard with a maximum SCL clock frequency of 400 kHz. Backwards compatibility with Standard-mode I2C bus operation is not supported. The SCL and SDA pins have internal pull-up resistors which should be su\ufb03cient for most applications. However, depending on the speed of the host and the load on the I2C lines additional external pull-up resistors may be necessary. To use the I2C interface D_SEL pin must be left open. In designs where the host uses the same I2C bus to communicate with more than one u-blox receiver, the I2C peripheral address for each receiver must be con\ufb01gured to a di\ufb00erent value. Typically most u-blox receivers are con\ufb01gured to the same default I2C peripheral address value. To poll or set the I2C peripheral address, use the CFG-I2C-ADDRESS con\ufb01guration item (see the applicable interface description [2]). The CFG-I2C-ADDRESS con\ufb01guration item is an 8-bit value that includes the I2C peripheral address in the 7 most signi\ufb01cant bits and the read/write \ufb02ag in the least signi\ufb01cant bit. 3.7.2.1 I2C register layout The I2C interface allows 256 registers to be addressed. As shown in Figure 11, only three of these are currently implemented. The data registers 0 to 252 at addresses 0x00 to 0xFC contain reserved information, the result from their reading is currently unde\ufb01ned. The data registers 0 to 252 are 1 byte wide. At addresses 0xFD and 0xFE it is possible to read the currently available number of bytes. The register at address 0xFF allows the data stream to be read. If there is no data awaiting transmission from the receiver, then this register delivers value 0xFF, which cannot be the \ufb01rst byte of a valid message. If the message data is ready for transmission, the successive reads of register 0xFF will deliver the waiting message data. Do not use registers 0x00 to 0xFC. The"
+      },
+      {
+        "chunk_id": "S2P12C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 12,
+        "text": "NEO-M9N-00B - Data sheet 5 Communications interfaces NEO-M9N-00B has several communications interfaces16, including UART, SPI, I2C and USB. All the inputs have internal pull-up resistors in normal operation and can be left open if not used. All the PIOs are supplied by VCC, therefore all the voltage levels of the PIO pins are related to VCC supply voltage. 5.1 UART NEO-M9N-00B has one UART interface which supports con\ufb01gurable baud rates. See the Integration manual [ 3]. Hardware \ufb02ow control is not supported. The UART1 is enabled if D_SEL pin of the module is left open or \"high\". Symbol Parameter Min Max Unit Ru Baud rate 4800 921600 bit/s \u0394Tx Tx baud rate accuracy -1% +1% - \u0394Rx Rx baud rate tolerance -2.5% +2.5% - Table 13: NEO-M9N-00B UART speci\ufb01cations 5.2 SPI The SPI interface is disabled by default. The SPI interface shares pins with UART and I2C and can be selected by setting D_SEL = 0. The SPI interface can be operated in peripheral mode only. The maximum transfer rate using SPI is 125 kB/s and the maximum SPI clock frequency is 5.5 MHz. The SPI timing parameters for peripheral operation are de\ufb01ned in Figure 3. Default SPI con\ufb01guration is CPOL = 0 and CPHA = 0. Figure 3: NEO-M9N-00B SPI speci\ufb01cation mode 1: CPHA=0 SCK = 5.33 MHz 16 The signal names and related terms have been replaced with new terminology in this document. UBX-19014285 - R08 5 Communications interfaces Page 12 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P70C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 70,
+        "text": "NEO-M9N - Integration manual Pin no. Name I/ODescription 16Reserved -Reserved 17Reserved -Reserved 18SDA / SPI CS_N I/OI2C data if D_SEL = VCC (or open); SPI chip select if D_SEL = GND 19 SCL / SPI SLK I/OI2C clock if D_SEL = VCC (or open); SPI clock if D_SEL = GND 20TXD / SPI SDO OUART output if D_SEL = VCC (or open); SPI SDO if D_SEL = GND 21 RXD / SPI SDI IUART input if D_SEL = VCC (or open); SPI SDI if D_SEL = GND 22V_BCKP IBackup voltage supply 23VCC ISupply voltage 24 GND IGround Table 25: NEO-M9N pin assignment 4.2 Power supply The u-blox NEO-M9N module has three power supply pins: VCC, V_BCKP and V_USB. (The VCC_RF pin is an output pin that can supply an active antenna or external LNA.) 4.2.1 VCC: Main supply voltage The VCC pin is connected to the main supply voltage. During operation, the current drawn by the module can vary by some orders of magnitude. For this reason, it is important that the supply circuitry be able to support the peak power for a short time (see the applicable data sheet [1] for speci\ufb01cation). The module integrates a DC/DC converter, which allows reduced power consumption. When switching from backup mode to normal operation or at startup, u-blox NEO-M9N modules must charge the internal capacitors in the core domain. In certain situations, this can result in a signi\ufb01cant current draw. For low-power applications using backup mode, it is important that the power supply or low ESR capacitors at the module input can deliver this current/charge. To reduce peak current during power on, users can employ an LDO that has a built-in current limiter. Do not add any series resistance greater than 0.2 \u2126 to the VCC supply as it will generate input voltage noise due to dynamic current conditions. For the NEO-M9N module the equipment must be supplied by an external limited power source in compliance with the clause 2.5 of the standard IEC 60950-1. 4.2.2 V_BCKP: Backup supply voltage The V_BCKP pin can be used to provide power to maintain the real-time clock (RTC) and battery- backed RAM (BBR) when VCC is removed. Maintaining time and GNSS orbit data improves the receiver performance at startup. Especially if the RTC and BBR contents are still current, i.e. after a short VCC outage. If V_BCKP is not provided, the module performs a cold start at power up. If a host is connected to NEO-M9N, V_BCKP can be partially emulated by using UBX-UPD-SOS functionality. BBR data can saved to the host and restored at startup. See the applicable Interface description for more information. UBX-19014286 - R10 4 Design Page 70 of 95 C1-Public"
+      },
+      {
+        "chunk_id": "S2P14C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 14,
+        "text": "NEO-M9N-00B - Data sheet Figure 4: NEO-M9N-00B I2C peripheral speci\ufb01cation I2C Fast-mode Symbol Parameter Min Max Unit fSCL SCL clock frequency 0 400 kHz tHD;STA Hold time (repeated) START condition 0.6 - \u00b5s tLOW Low period of the SCL clock 1.3 - \u00b5s tHIGH High period of the SCL clock 0.6 - \u00b5s tSU;STA Setup time for a repeated START condition 0.6 - \u00b5s tHD;DAT Data hold time0 17- 18 \u00b5s tSU;DAT Data setup time100 19 ns tr Rise time of both SDA and SCL signals - 300 (for C = 400pF) ns tf Fall time of both SDA and SCL signals - 300 (for C = 400pF) ns tSU;STO Setup time for STOP condition 0.6 - \u00b5s tBUF Bus-free time between a STOP and START condition1.3 - \u00b5s tVD;DAT Data valid time -0.9 18 \u00b5s tVD;ACK Data valid acknowledge time -0.9 18 \u00b5s VnL Noise margin at the low level 0.1 VCC - V 17 External device must provide a hold time of at least one transition time (max 300 ns) for the SDA signal (with respect to the min Vih of the SCL signal) to bridge the unde\ufb01ned region of the falling edge of SCL. 18The maximum t HD;DAT must be less than the maximum tVD;DAT or t VD;ACK with a maximum of 0.9 \u00b5s by a transition time. This maximum must only be met if the device does not stretch the LOW period (tLOW) of the SCL signal. If the clock stretches the SCL, the data must be valid by the set-up time before it releases the clock. 19 When the I2C peripheral is stretching the clock, the tSU;DAT of the \ufb01rst bit of the next byte is 62.5 ns. UBX-19014285 - R08 5 Communications interfaces Page 14 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S4P0C6",
+        "source_url": "https://www.lcsc.com/product-detail/gnss-modules_u-blox-neo-m9n-00b_C5119087.html",
+        "title": "LCSC NEO-M9N-00B C5119087",
+        "page": null,
+        "text": "c Receivers Fiber Optic Switches, Multiplexers, Demultiplexers Fiber Optic Transceiver Modules Fiber Optic Transmitters - Discrete Fiber Optic Transmitters - Drive Circuitry Integrated Incandescent, Neon Lamps Laser Diodes, Modules LCD, OLED Character and Numeric LCD, OLED, Graphic LED Addressable, Specialty LED Character and Numeric LED COBs, Engines, Modules, Strips LED Color Lighting LED Dot Matrix and Cluster LED Emitters - Infrared, UV, Visible LED Indication - Discrete LED White Lighting Lenses Light Pipes Optic Spacers, Standoffs Optoelectronics Accessories Reflectors Vacuum Fluorescent (VFD) Xenon Lighting View All Passives Capacitors Aluminum - Polymer Capacitors Aluminum Electrolytic Capacitors Capacitor Networks, Arrays Ceramic Capacitors Electric Double Layer Capacitors (EDLC), Supercapacitors Film Capacitors Mica and PTFE Capacitors Motor Start, Motor Run Capacitors (AC) Niobium Oxide Capacitors Silicon Capacitors Tantalum - Polymer Capacitors Tantalum Capacitors Thin Film Capacitors Trimmers, Variable Capacitors View All Crystals, Oscillators, Resonators Crystal, Oscillator, Resonator Accessories Crystals Oscillators Pin Configurable/Selectable Oscillators Programmable Oscillators Resonators Stand Alone Programmers VCOs (Voltage Controlled Oscillators) View All Filters Cable Ferrites Ceramic Filters Common Mode Chokes EMI/RFI Filters (LC, RC Networks) Feed Through Capacitors Ferrite Beads and Chips Filter Accessories Monolithic Crystals Power Line Filter Modules RF Filters SAW Filters View All Inductors, Coils, Chokes Adjustable Inductors Arrays, Signal Transformers Delay Lines Fixed Inductors Wireless Charging Coils View All Magnetics - Transformer, Inductor Components Bobbins (Coil Formers), Mounts, Hardware Ferrite Cores Magnet Wire View All Potentiometers, Variable Resistors Adjustable Power Resistor Rotary Potentiometers, Rheostats Scale Dials Slide Potentiometers Thumbwheel Potentiometers Trimmer Potentiometers Value Display Potentiometers View All Resistors Chassis Mount Resistors Chip Resistor - Surface Mount Current Sense Resistors Resistor Kits Resistor Networks, Arrays Resistors Accessories Specialized Resistors Through Hole Resistors View All View All Power Supplies Power Suppliers - Board Mount AC DC Converters Board Mount Power Supply Accessorie DC DC Converters LED Drivers View All Power Supplies - External/Internal (Off-Board) AC AC Wall Power Adapters AC DC Configurable Power Supplies (Factory Assembled) AC DC Configurable Power Supply Chassis AC DC Configurable Power Supply Modules AC DC Converters (Off-Board) AC DC Desktop, Wall Power Adapters Computer Power Supply Units DC AC Inverters DC DC Converters (Off-Board) DC Power Supplies External/Internal Power Supply Accessories Industrial, DIN Rail Power Supplies LED Drivers (Off-Board) Power over Ethernet (PoE) View All View All Relays Automotive Relays Contactors (Electromechanical) Contactors (Solid State) High Frequency (RF) Relays Industrial Relays Power Relays "
+      },
+      {
+        "chunk_id": "S2P8C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 8,
+        "text": "NEO-M9N-00B - Data sheet 3 Pin de\ufb01nition 3.1 Pin assignment The pin assignment of the NEO-M9N-00B module is shown in Figure 2. The de\ufb01ned con\ufb01guration of the PIOs is listed in Table 9. For detailed information on pin functions and characteristics, see the integration manual [3]. Figure 2: NEO-M9N-00B pin assignment Pin no. Name I/O Description 1 SAFEBOOT_N I SAFEBOOT_N (used for FW updates and recon\ufb01guration, leave open) 2 D_SEL I Interface select (open or VCC = UART + I2C; GND = SPI) 3 TIMEPULSE O TIMEPULSE (1 PPS) 4 EXTINT I EXTINT (PIO 7) 5 USB_DM I/O USB data (DM) 6 USB_DP I/O USB data (DP) 7 V_USB I USB supply 8 RESET_N I RESET (active low) 9 VCC_RF O Voltage for external LNA 10 GND I Ground 11 RF_IN I GNSS signal input 12 GND I Ground 13 GND I Ground 14 LNA_EN O Antenna/LNA control 15 Reserved - Reserved 16 Reserved - Reserved UBX-19014285 - R08 3 Pin de\ufb01nition Page 8 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P11C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 11,
+        "text": "NEO-M9N-00B - Data sheet Parameter Symbol MinTypical MaxUnitsCondition Digital IO pin low level output voltageVol 0.4 VIol = 2 mA11 Digital IO pin high level output voltageVohVCC \u2013 0.4 VIoh = 2 mA11 DC current through any digital I/O pin (except supplies)Ipin 5 mA Pull-up resistance for SCL, SDA Rpu 7 15 30 k\u03a9 Pull-up resistance for D_SEL, RXD, TXD, SAFEBOOT_N, EXTINTRpu 30 75 130 k\u03a9 Pull-up resistance for RESET_N Rpu 7 10 13 k\u03a9 Voltage at USB pinsV_USBIO 0 V_USB V VCC_RF voltage VCC_RFVCC \u2013 0.1 V VCC_RF output currentICC_RF 50 mA Input impedance at RF_IN Zin 50 \u03a9 Receiver chain noise \ufb01gure12NFtot 3.5 dB External gain (at RF_IN)Ext_gain 30 dB Operating temperatureTopr \u201340 +25 +85\u00b0C Table 11: Operating conditions 4.3 Indicative power requirements Table 12 provides examples of typical current requirements when using a cold start command. The given values are total system supply current for a possible application including RF and baseband sections. All values in Table 12 have been measured at 25 \u00b0C ambient temperature. SBAS and QZSS were activated in all measurements. The actual power requirements vary depending on the FW version used, external circuitry, number of satellites tracked, signal strength, type and time of start, duration, and conditions of test. Symbol Parameter Conditions GPS+GLO+GAL+BDS GPS+GLOGPS Unit IPEAK Peak current Acquisition 100 100 100 mA IVCC13, 14 VCC current Acquisition 50 43 36 mA Tracking (Continuous mode)36 32 28 mA Tracking (Power save mode)1521 20 19 mA Table 12: Currents to calculate the indicative power requirements 11 TIMEPULSE has 4 mA current drive/sink capability 12 Only valid for GPS 13 Simulated signal, current measured at 3.0 V 14 Navigation update rate 1 Hz 15 Cyclic tracking operation UBX-19014285 - R08 4 Electrical speci\ufb01cations Page 11 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P32C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 32,
+        "text": "NEO-M9N - Integration manual The safeboot mode can be used to recover from situations where the \ufb02ash content has become corrupted and needs to be restored. In safeboot mode the receiver runs from a passive oscillator circuit with less accurate timing and hence the receiver is unable to communicate via USB. In this mode UART1, I2C or SPI communication is possible. For communication via UART1 in safeboot mode, the host must send a training sequence (0x55 0x55 at 9600 baud) to the receiver in order to begin communication. After this the host must wait at least 2 ms before sending any data. It is recommended to have the possibility to pull the SAFEBOOT_N pin low in the application. This can be provided using an externally connected test point or a host I/O port. 3.8.4 TIMEPULSE The NEO-M9N module provides a time pulse on the TIMEPULSE pin. More information about the time pulse feature and its con\ufb01guration can be found in the Time pulse section. 3.8.5 TX_READY This feature enables each port to de\ufb01ne a corresponding pin, which indicates if bytes are ready to be transmitted. A listener can wait on the TX-READY signal instead of polling the I2C or SPI interfaces. The CFG-TXREADY message lets you con\ufb01gure the polarity and the number of bytes in the bu\ufb00er before the TX-READY signal goes active. By default, this feature is disabled. For USB, this feature is con\ufb01gurable but might not behave as described below due to a di\ufb00erent internal transmission mechanism. If the number of pending bytes reaches the threshold con\ufb01gured for this port, the corresponding pin will become active (con\ufb01gurable active-low or active-high), and stay active until the last bytes have been transferred from software to hardware. This is not necessarily equal to all bytes transmitted, i.e. after the pin has become inactive, up to 16 bytes might still need to be transferred to the host. The TX_READY pin can be selected from all PIOs which are not in use (see UBX-MON-HW3 in the applicable interface description [2] for a list of the PIOs and their mapping). Each TX_READY pin is exclusively associated to one port and cannot be shared. If PIO is invalid or already in use, only the con\ufb01guration for the speci\ufb01c TX_READY pin is ignored, the rest of the port con\ufb01guration is applied if valid. The acknowledge message does not indicate if the TX-READY con\ufb01guration is successfully set, it only indicates the successful con\ufb01guration of the port. To validate successful con\ufb01guration of the TX_READY pin, the port con\ufb01guration should be read back and the settings of TX-READY feature veri\ufb01ed (will be set to disabled/all zero if the settings are invalid). The threshold when TX_READY is asserted should not be set above 2 kB as it is possible that the internal message bu\ufb00er limit is reached before this. This results in the TX_READY pin never being set as the messages are discarded before the threshold is reached. 3.8.5.1 Extended TX timeout If the host does not communicate over SPI or I2C for more than approxi"
+      },
+      {
+        "chunk_id": "S2P13C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 13,
+        "text": "NEO-M9N-00B - Data sheet SymbolParameter Min Max Unit 1 CS deassertion hold time 23 - ns 2Chip select time (CS to SCK) 20 - ns 3SCK rise/fall time - 7 ns 4SCK high time 24 - ns 5SCK low time 24 - ns 6Chip deselect time (SCK falling to CS) 30 - ns 7Chip deselect time (CS to SCK) 30 - ns 9CS high time 32 - ns 10SDI transition time - 7 ns 11 SDI setup time 16 - ns 12 SDI hold time 24 - ns Table 14: SPI peripheral input timing parameters 1 - 12 SymbolParameter Min Max Unit ASDO data valid time (CS) 12 40 ns BSDO data valid time (SCK), weak driver mode 15 40 ns CSDO data hold time 100 140 ns DSDO rise/fall time, weak driver mode 0 5 ns ESDO data disable lag time 15 35 ns Table 15: SPI peripheral timing parameters A - E, 2 pF load capacitance SymbolParameter Min Max Unit ASDO data valid time (CS) 16 55 ns BSDO data valid time (SCK), weak driver mode 20 55 ns CSDO data hold time 100 150 ns DSDO rise/fall time, weak driver mode 3 20 ns ESDO data disable lag time 15 35 ns Table 16: SPI peripheral timing parameters A - E, 20 pF load capacitance SymbolParameter Min Max Unit ASDO data valid time (CS) 26 85 ns BSDO data valid time (SCK), weak driver mode 30 85 ns CSDO data hold time 110 160 ns DSDO rise/fall time, weak driver mode 13 45 ns ESDO data disable lag time 15 35 ns Table 17: SPI peripheral timing parameters A - E, 60 pF load capacitance 5.3 I2C An I2C interface is available for communication with an external host CPU in I2C Fast-mode. Backwards compatibility with Standard-mode I2C bus operation is not supported. The interface can be operated only in peripheral mode with a maximum bit rate of 400 kbit/s. The interface can make use of clock stretching by holding the SCL line LOW to pause a transaction. In this case, the bit transfer rate is reduced. The maximum clock stretching time is 20 ms. UBX-19014285 - R08 5 Communications interfaces Page 13 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P15C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 15,
+        "text": "NEO-M9N-00B - Data sheet I2C Fast-mode SymbolParameter Min Max Unit VnHNoise margin at the high level0.2 VCC - V Table 18: NEO-M9N-00B I2C peripheral timings and speci\ufb01cations The I2C interface is only available with the UART default mode. If the SPI interface is selected by using D_SEL = 0, the I2C interface is not available. 5.4 USB The USB 2.0 FS (full speed, 12 Mbit/s) interface can be used for host communication. Due to the hardware implementation, it may not be possible to certify the USB interface. The V_USB pin supplies the USB interface. 5.5 Default interface settings Interface Settings UART 38400 baud, 8 bits, no parity bit, 1 stop bit. Output messages: NMEA GGA, GLL, GSA, GSV, RMC, VTG, TXT (no UBX). Input protocols: UBX, NMEA and RTCM 3.3. USB Output messages activated as in UART. Input protocols available as in UART. I2C Output messages activated as in UART. Input protocols available as in UART. SPI Output messages activated as in UART. Input protocols available as in UART. Table 19: Default interface settings Refer to the applicable Interface description [1] for information about further settings. By default NEO-M9N-00B outputs NMEA messages that include satellite data for all GNSS bands being received. This results in a higher-than-before NMEA load output for each navigation period. Make sure the UART baud rate being used is su\ufb03cient for the selected navigation rate and the number of GNSS signals being received. UBX-19014285 - R08 5 Communications interfaces Page 15 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P11C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 11,
+        "text": "NEO-M9N - Integration manual center application. RTCM corrections from a virtual reference service are also supported by the u- center NTRIP client. 3.1.6 Legacy con\ufb01guration interface compatibility Although there is some backwards compatibility for the legacy UBX-CFG con\ufb01guration messages, users are strongly advised to adopt the con\ufb01guration interface described in this document. See Legacy UBX-CFG message \ufb01elds reference section in the applicable Interface description [2]. 3.1.7 Navigation con\ufb01guration This section presents various con\ufb01guration options related to the navigation engine. These options can be con\ufb01gured through CFG-NAVSPG-* con\ufb01guration keys. 3.1.7.1 Platform settings u-blox receivers support di\ufb00erent dynamic platform models (see the table below) to adjust the navigation engine to the expected application environment. These platform settings can be changed dynamically without performing a power cycle or reset. The settings improve the receiver's interpretation of the measurements and thus provide a more accurate position output. Setting the receiver to an unsuitable platform model for the given application environment is likely to result in a loss of receiver performance and position accuracy. The dynamic platform model can be con\ufb01gured through the CFG-NAVSPG-DYNMODEL con\ufb01guration item. The supported dynamic platform models and their details can be seen in Table 3 and Table 4 below. Platform Description Portable (default) Applications with low acceleration, e.g. portable devices. Suitable for most situations. Stationary Used in timing applications (antenna must be stationary) or other stationary applications. Velocity restricted to 0 m/s. Zero dynamics assumed. Pedestrian Applications with low acceleration and speed, e.g. how a pedestrian would move. Low acceleration assumed. Automotive Used for applications with equivalent dynamics to those of a passenger car. Low vertical acceleration assumed. At sea Recommended for applications at sea, with zero vertical velocity. Zero vertical velocity assumed. Sea level assumed. Airborne <1g Used for applications with a higher dynamic range and greater vertical acceleration than a passenger car. No 2D position \ufb01xes supported. Airborne <2g Recommended for typical airborne environments. No 2D position \ufb01xes supported. Airborne <4g Only recommended for extremely dynamic environments. No 2D position \ufb01xes supported. Wrist Only recommended for wrist-worn applications. Receiver will \ufb01lter out arm motion. Table 3: Dynamic platform models Platform Max altitude [m] Max horizontal velocity [m/s]Max vertical velocity [m/s]Sanity check type Max position deviation Portable 12000 310 50 Altitude and velocity Medium Stationary 9000 10 6 Altitude and velocitySmall Pedestrian 9000 30 20 Altitude and velocitySmall Automotive 6000 100 15 Altitude and velocity Medium At sea 500 25 5 Altitude and velocity Medium Airborne <1g 80000 100 6400 Altitude Large UBX-19014286 - R10 3 Receiver functionality Page 11 of 95 C1-Pu"
+      },
+      {
+        "chunk_id": "S2P10C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 10,
+        "text": "NEO-M9N-00B - Data sheet 4 Electrical speci\ufb01cations For detailed information on the device integration, see the Integration manual [3]. 4.1 Absolute maximum ratings CAUTION. Risk of device damage. Exceeding the absolute maximum ratings may a\ufb00ect the lifetime and reliability of the device or permanently damage it. Do not exceed the absolute maximum ratings. This product is not protected against overvoltage or reversed voltages. Use appropriate protection to avoid device damage from voltage spikes exceeding the speci\ufb01ed boundaries. Parameter Symbol Condition Min Max Units Power supply voltage VCC \u20130.5 3.6 V Voltage ramp on VCC7 20 8000 \u00b5s/V Backup battery voltage V_BCKP \u20130.5 3.6 V Input pin voltage Vin VCC \u2264 3.1 V \u20130.5 VCC + 0.5 V VCC > 3.1 V \u20130.5 3.6 V VCC_RF output current ICC_RF 200 mA Supply voltage USB V_USB \u20130.5 3.6 V USB signals USB_DM, USB_DP\u20130.5 V_USB + 0.5V Input power at RF_IN Pr\ufb01n Source impedance = 50 \u2126, continuous wave138 dBm Storage temperature Tstg \u201340 +85 \u00b0C Table 10: Absolute maximum ratings 4.2 Operating conditions Extreme operating temperatures can signi\ufb01cantly impact the speci\ufb01ed values. If an application operates near the min or max temperature limits, ensure the speci\ufb01ed values are not exceeded. Parameter Symbol Min Typical Max Units Condition Power supply voltage VCC 2.7 3.0 3.6 V Supply voltage for USB interface V_USB 3.0 3.6 V V_USB current I_USB 2.0 mA Backup battery voltage V_BCKP 1.65 3.6 V Backup battery current9, 10 I_BCKP 45 \u00b5A V_BCKP = 3 V, VCC = 0 V SW backup current10 I_SWBCKP 0.36 mA Input pin voltage range Vin 0 VCC V Digital IO pin low level input voltage Vil 0.4 V Digital IO pin high level input voltage Vih 0.8 * VCC V 7Exceeding the ramp speed may permanently damage the device 8+13 dBm for outband; 0 dBm for inband 9To measure the I_BCKP, the receiver should \ufb01rst be switched on, i.e. VCC and V_BCKP is available. Then set VCC to 0 V while the V_BCKP remains available. Afterward, measure the current consumption at the V_BCKP. 10 The value has been characterized at 25 \u00b0C ambient temperature. UBX-19014285 - R08 4 Electrical speci\ufb01cations Page 10 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P22C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 22,
+        "text": "NEO-M9N-00B - Data sheet Revision history RevisionDate Status / comments R01 15-Aug-2019Objective speci\ufb01cation R02 14-Nov-2019Advance information R03 24-Jan-2020Advance information. Added out-band value for Pr\ufb01n, renamed VDD_USB to V_USB. R04 11-Sep-2020 Early production information. - Updated \ufb01rmware to SPG 4.04. - Updated I_BCKP and indicative power consumption values. - Added supported voltage range for V_USB. - Added value for Ext_gain, External gain at RF_IN. - Added digital I/O pin DC current and pull up resistance values. - Clari\ufb01ed UART timing speci\ufb01cations. - Clari\ufb01ed use of USB interface. R05 09-Jul-2021Document status replaced by Product status in Document information. - Updated product name to include product option and quality grade - Updated GLONASS tracking sensitivity - Updated supported GNSS constellations: QZSS L1C/A support now listed - Updated QZSS augmentation service name - Updated Absolute maximum ratings: supply voltage ramp requirements R06 14-Dec-22Updated section Mechanical speci\ufb01cation R07 27-Mar-2023Updated sections - Document information: updated IN/PCN reference - Absolute maximum ratings: updated maximum VCC_RF output current - DC electrical characteristics: updated TIMEPULSE drive strength - Indicative power requirements: current measured at 1 Hz navigation update rate, updated hardware backup mode current - SPI: updated timing speci\ufb01cation - I2C: updated timing speci\ufb01cation R08 09-Oct-2025Updated sections - Updated module weight in table Mechanical speci\ufb01cations - Updated section Product marking UBX-19014285 - R08 Revision history Page 22 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P83C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 83,
+        "text": "NEO-M9N - Integration manual During assembly of end-user devices which contain passive patch antennas, an ESD discharge may occur during production when pre-charged antennas are soldered to the GNSS receiver board. In such cases, use of external protection in front of RF_IN is mandatory to avoid device destruction. ESD discharge cannot be avoided during assembly and / or \ufb01eld use. Note that SAW \ufb01lters are susceptible to ESD damage. To provide additional robustness an ESD protection diode may be placed at the antenna RF connector to GND. 4.9.4 Antenna/RF input Check RF input requirements and schematic: \u2022Make sure the antenna is not placed close to noisy parts of the circuitry and does not face any other noisy elements (for example microcontroller, display). \u2022ESD protection on the RF input is mandatory. \u2022Possible external antenna bias-t inductor must be L-band frequency selected with high impedance in the GNSS band. \u2022Ensure RF trace is tuned for 50 \u03a9 to ensure proper GNSS bandwidth. 4.9.5 Ground pads Ensure the ground pads of the module are connected to ground. If a patch type antenna is used, a su\ufb03cient antenna ground plane is required. 4.9.6 Schematic design For a minimal design with the NEO-M9N GNSS modules, consider the following functions and pins: \u2022Connect the power supply to VCC and V_BCKP. \u2022V_USB: If USB is used it is recommended V_USB is to be powered as per USB self-powered mode speci\ufb01cation. \u2022If USB is not used connect V_USB to ground. \u2022Ensure an optimal ground connection to all ground pins of the NEO-M9N GNSS module. \u2022Choose the required serial communication interfaces (UART, USB, SPI or I2C) and connect the appropriate pins to your application. \u2022If you need hot or warm start in your application, connect a backup battery to V_BCKP. 4.9.7 Layout design-in guideline \u2022Is the receiver placed away from heat sources? \u2022Is the receiver placed away from air-cooling sources? \u2022Is the receiver shielded by a cover/case to prevent the e\ufb00ects of air currents and rapid environmental temperature changes? \u2022Is the receiver placed as recommended in the Layout and Layout guidance? \u2022Assure a low serial resistance on the VCC power supply line (choose a line width > 400 um). \u2022Keep the power supply line as short as possible. \u2022Add a ground plane underneath the module to reduce interference. This is especially important for the RF input line. \u2022For improved shielding, add as many vias as possible around the micro strip/co-planar waveguide, around the serial communication lines, underneath the module, etc. UBX-19014286 - R10 4 Design Page 83 of 95 C1-Public"
+      },
+      {
+        "chunk_id": "S3P29C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 29,
+        "text": "NEO-M9N - Integration manual Figure 14: I2C write access 3.7.3 SPI interface NEO-M9N has an SPI peripheral interface that can be selected by setting D_SEL = 0. The SPI peripheral interface is shared with UART1 and I2C port, the physical pins are same. The SPI pins available are: \u2022SPI_SDO (TXD) \u2022SPI_SDI (RXD) \u2022SPI_CS_N \u2022SPI_CLK See more information about communication interface selection from the D_SEL section. The SPI interface is designed to allow communication to a host CPU. The interface can be operated in peripheral mode only. The SPI interface transmits data in Most Signi\ufb01cant Bit (MSB) \ufb01rst order. 3.7.3.1 Read access As the register mode is not implemented for the SPI port, only the UBX/NMEA message stream is provided. This stream is accessed using the back-to-back read and write access (see section Back- to-back read and write access below). When no data is available to be written to the receiver, SDI should be held logic high, i.e. all bytes written to the receiver are set to 0xFF. To prevent the receiver from being busy parsing incoming data, the parsing process is stopped after 50 subsequent bytes containing 0xFF. The parsing process is re-enabled with the \ufb01rst byte not equal to 0xFF. If the receiver has no more data to send, it sets SDO to logic high, i.e. all bytes transmitted decode to 0xFF. An e\ufb03cient parser in the host will ignore all 0xFF bytes which are not part of a message and will resume data processing as soon as the \ufb01rst byte not equal to 0xFF is received. 3.7.3.2 Back-to-back read and write access The receiver does not provide any write access except for writing UBX and NMEA messages to the receiver, such as con\ufb01guration or aiding data. For every byte written to the receiver, a byte will simultaneously be read from the receiver. While the controller writes to SDI of the peripheral, at the same time it needs to read from SDO of the peripheral, as any pending data will be output by UBX-19014286 - R10 3 Receiver functionality Page 29 of 95 C1-Public"
+      },
+      {
+        "chunk_id": "S2P3C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 3,
+        "text": "NEO-M9N-00B - Data sheet Contents Document information............................................................................................................2 Contents.......................................................................................................................................3 1 Functional description.........................................................................................................4 1.1 Overview....................................................................................................................................................4 1.2 Performance.............................................................................................................................................4 1.3 Supported GNSS constellations..........................................................................................................5 1.4 Supported protocols...............................................................................................................................5 1.5 Firmware features...................................................................................................................................6 2 System description...............................................................................................................7 2.1 Block diagram..........................................................................................................................................7 3 Pin de\ufb01nition...........................................................................................................................8 3.1 Pin assignment........................................................................................................................................8 4 Electrical speci\ufb01cations....................................................................................................10 4.1 Absolute maximum ratings................................................................................................................10 4.2 Operating conditions............................................................................................................................10 4.3 Indicative power requirements...........................................................................................................11 5 Communications interfaces.............................................................................................12 5.1 UART........................................................................................................................................................12 5.2 SPI............................................................................................................................................................12 5.3 I2C............................................................................................................................................................13 5.4 USB ..............."
+      },
+      {
+        "chunk_id": "S2P2C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 2,
+        "text": "NEO-M9N-00B - Data sheet Document information Title NEO-M9N-00B Subtitle Standard precision GNSS module Document type Data sheet Document number UBX-19014285 Revision and date R08 09-Oct-2025 Disclosure restriction C1-Public Product statusCorresponding content statusFunctional sampleDraft For functional testing. Revised and supplementary data will be published later.In development / prototypeObjective speci\ufb01cation Target values. Revised and supplementary data will be published later. Engineering sampleAdvance information Data based on early testing. Revised and supplementary data will be published later.Initial productionEarly production information Data from product veri\ufb01cation. Revised and supplementary data may be published later.Mass production / End of lifeProduction information Document contains the \ufb01nal product speci\ufb01cation. This document applies to the following products: Product name Type number FW version IN/PCN reference Product status NEO-M9N NEO-M9N-00B-00 SPG 4.04 UBX-21029274 UBX-22039049 UBX-23000084Mass production u-blox or third parties may hold intellectual property rights in the products, names, logos and designs included in this document. Copying, reproduction, or modi\ufb01cation of this document or any part thereof is only permitted with the express written permission of u-blox. Disclosure to third parties is permitted for clearly public documents only. The information contained herein is provided \"as is\" and u-blox assumes no liability for its use. No warranty, either express or implied, is given, including but not limited to, with respect to the accuracy, correctness, reliability and \ufb01tness for a particular purpose of the information. This document may be revised by u-blox at any time without notice. For the most recent documents and product statuses, visit www.u-blox.com. Copyright \u00a9 2025, u-blox AG. UBX-19014285 - R08 Document information Page 2 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P74C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 74,
+        "text": "NEO-M9N - Integration manual Active antennas for GNSS application are usually powered through a DC bias on the RF cable. A simple bias-T as in Figure 33 can be used to add this DC current to the RF signal line. The bias voltage can be supplied either by the VCC_RF pin of the module or by an external antenna supply. Figure 33: NEO-M9N active antenna example circuit (bias-T) Part Recommended value Description C1 X7R 100 nF 10% 16 V Bias-T capacitor removes high frequency noise coming from the DC supply. L1 27 nH, impedance > 500 \u03a9 at GNSS frequency, rated current > 300 mABias-T inductor isolates RF from the DC path. R1 10 \u03a9 10% 0.25 W Current limiter series resistor in the event of a short circuit. Table 26: Components in active antenna example circuit (bias-T) Design recommendations: \u2022If the application has a passive antenna with su\ufb03cient gain but the antenna is located far away from the module, an additional external LNA must be placed close to the passive antenna. \u2022If the application needs an active antenna, it is recommended to use an OEM active antenna module meeting u-blox's speci\ufb01cation. \u2022A suitable ground plane is required for the antenna to achieve good performance. \u2022Active antenna may have strong gain. For maximum external gain, see the Data sheet [1] in Related documents. \u2022A series current limiting resistor is required to prevent short circuits destroying the bias-t inductor. \u2022If the VCC_RF voltage of the NEO-M9N module does not match the supply voltage of the active antenna, use a \ufb01ltered external supply instead of the VCC_RF. \u2022The antenna circuit should include \ufb01ltering to ensure adequate protection from the nearby transmitters' interface. Take care in designing the circuit of antennas placed close to cellular or Wi-Fi transmitting antennas. \u2022An ESD protection diode should also be connected to the input. It is recommended to use active current limiting. If active current limiting is not used, take into account the following important points: The bias-t inductor and current limiting resistor must be selected to be reliable with a short circuit on the antenna feed. In cases where the module supplies the voltage via VCC_RF, a higher value resistor will be needed to ensure the module supply inductor is protected. The current UBX-19014286 - R10 4 Design Page 74 of 95 C1-Public"
+      },
+      {
+        "chunk_id": "S2P4C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 4,
+        "text": "NEO-M9N-00B - Data sheet 1 Functional description 1.1 Overview The NEO-M9N-00B GNSS receiver features the u-blox M9 standard precision GNSS platform. It provides exceptional sensitivity and acquisition times for L1 GNSS systems. u-blox M9 receivers are available in di\ufb00erent variants to serve automotive and industrial tracking applications, such as navigation, telematics and UAVs. The NEO-M9N-00B module is available in the NEO form factor, which is a 12.2 x 16.0 mm LCC package. 1.2 Performance Parameter Speci\ufb01cation Receiver type Multi-constellation GNSS standard precision receiver Accuracy of time pulse signal RMS 99%30 ns 60 ns Frequency of time pulse signal 0.25 Hz to 10 MHz (con\ufb01gurable) Operational limits1 Dynamics Altitude Velocity\u2264 4 g 80,000 m 500 m/s Velocity accuracy2 0.05 m/s Dynamic heading accuracy2 0.3 deg GNSS GPS+GLO+GAL+BDSGPS+GLO+GALGPS+GLOGPS+BDSGPS+GAL Acquisition3 Cold start Hot start Aided start424 s 2 s 2 s25 s 2 s 2 s26 s 2 s 2 s28 s 2 s 2 s29 s 2 s 2 s Max navigation update ratePVT 25 Hz 25 Hz 25 Hz 25 Hz 25 Hz Sensitivity5 Tracking and nav. Reacquisition Cold start Hot start-167 dBm -160 dBm -148 dBm -159 dBm-167 dBm -160 dBm -148 dBm -159 dBm-167 dBm -160 dBm -148 dBm -159 dBm-166 dBm -160 dBm -148 dBm -159 dBm-166 dBm -160 dBm -148 dBm -159 dBm Position accuracy PVT 2.0 m CEP 2.0 m CEP 2.0 m CEP 2.0 m CEP 2.0 m CEP Table 1: NEO-M9N-00B typical performance in multi-constellation GNSS modes 1Assuming Airborne 4 g platform 250% at 30 m/s for dynamic operation 3Commanded starts. All satellites at -130 dBm. GPS always in combination with QZSS and SBAS. Measured at room temperature. 4Dependent on the speed and latency of the aiding data connection, commanded starts. 5Demonstrated with a good external LNA. Measured at room temperature. UBX-19014285 - R08 1 Functional description Page 4 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P3C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 3,
+        "text": "............................................................................................................12 5.3 I2C............................................................................................................................................................13 5.4 USB ..........................................................................................................................................................15 5.5 Default interface settings...................................................................................................................15 6 Mechanical speci\ufb01cations ................................................................................................16 7 Reliability tests and approvals.......................................................................................18 7.1 Approvals................................................................................................................................................18 8 Product marking and ordering information................................................................19 8.1 Product marking....................................................................................................................................19 8.2 Product identi\ufb01ers................................................................................................................................19 8.3 Ordering codes......................................................................................................................................20 Related documents................................................................................................................21 Revision history.......................................................................................................................22 Contact.......................................................................................................................................23 UBX-19014285 - R08 Contents Page 3 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P5C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 5,
+        "text": "NEO-M9N-00B - Data sheet GNSS GPSGLONASSBEIDOUGALILEO Acquisition3Cold start Hot start Aided start429 s 2 s 2 s27 s 2 s 2 s32 s 2 s 2 s42 s 2 s 5 s Max navigation update ratePVT 25 Hz 25 Hz 25 Hz 25 Hz Sensitivity5Tracking and nav. Reacquisition Cold start Hot start-166 dBm -160 dBm -148 dBm -159 dBm-166 dBm -156 dBm -145 dBm -156 dBm-160 dBm -158 dBm -145 dBm -159 dBm-159 dBm -154 dBm -140 dBm -154 dBm Position accuracy PVT 2.0 m CEP 4.0 m CEP 3.0 m CEP 3.0 m CEP Table 2: NEO-M9N-00B typical performance in single-GNSS modes 1.3 Supported GNSS constellations NEO-M9N-00B is a concurrent GNSS receiver which can receive and track multiple GNSS systems. The NEO-M9N-00B receiver can be con\ufb01gured for concurrent GPS, GLONASS, Galileo and BeiDou plus SBAS and QZSS reception. If power consumption is a key factor, then the receiver can be con\ufb01gured for a subset of GNSS constellations. Supported GNSS systems and their signals are: GPS / QZSS GLONASS Galileo BeiDou L1C/A (1575.42 MHz) L1OF (1602 MHz + k*562.5 kHz, k = \u20137,..., 5, 6)E1-B/C (1575.42 MHz) B1I (1561.098 MHz) Table 3: Supported GNSS systems and signals The following GNSS assistance services can be activated: AssistNow\u2122 Live Orbits AssistNow\u2122 Predictive Orbits AssistNow\u2122 Autonomous Supported Supported Supported6 Table 4: Supported assisted GNSS (A-GNSS) services NEO-M9N-00B supports the following augmentation systems: SBAS QZSS IMES Di\ufb00erential GNSS EGNOS, GAGAN, MSAS and WAAS supported L1S supported Not supported RTCM 3.3 Table 5: Supported augmentation systems The SBAS and QZSS augmentation systems can be enabled only if GPS operation is also enabled. 1.4 Supported protocols NEO-M9N-00B supports the following protocols: Protocol Type UBX Input/output, binary, u-blox proprietary NMEA 4.10 (default), 4.0, 2.3, and 2.1 Input/output, ASCII RTCM 3.3 Input, binary Table 6: Supported protocols 6AssistNow Autonomous is enabled by default. UBX-19014285 - R08 1 Functional description Page 5 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P16C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 16,
+        "text": "NEO-M9N-00B - Data sheet 6 Mechanical speci\ufb01cations Figure 5: NEO-M9N-00B mechanical drawing Symbol Min (mm) Typical (mm) Max (mm) A 15.9 16.0 16.1 B 12.1 12.2 12.3 C 2.2 2.4 2.6 D 0.9 1.0 1.1 E 1.0 1.1 1.2 F 2.9 3.0 3.1 G 0.9 1.0 1.1 H - 0.82 - K 0.7 0.8 0.9 M 0.8 0.9 1.0 N 0.4 0.5 0.6 P* 0.0 - 0.5 The de-paneling residual tabs may be on either side (not both). Weight 1.0 g Table 20: NEO-M9N-00B mechanical dimensions UBX-19014285 - R08 6 Mechanical speci\ufb01cations Page 16 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P21C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+        "title": "NEO-M9N-00B Data sheet UBX-19014285",
+        "page": 21,
+        "text": "NEO-M9N-00B - Data sheet Related documents [1] u-blox M9 SPG 4.04 Interface description, UBX-21022436 u-blox M9 SPG 4.04 Interface description, UBX-21022437 (NDA required) [2] u-blox M9 FW 0.00 XXX 0.00X00 Release notes, UBX-20036165 [3] NEO-M9N Integration manual, UBX-19014286 NEO-M9N Integration manual, UBX-19015769 (NDA required) [4] Product packaging reference guide, UBX-14001652 For regular updates to u-blox documentation and to receive product change noti\ufb01cations please register on our homepage https://www.u-blox.com. UBX-19014285 - R08 Related documents Page 21 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S3P9C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 9,
+        "text": "NEO-M9N - Integration manual For more information about the default con\ufb01guration, see the applicable Interface description [2]. 3.1.3 Default interface settings Interface Settings UART 38400 baud, 8 bits, no parity bit, 1 stop bit. Output messages: NMEA GGA, GLL, GSA, GSV, RMC, VTG, TXT (no UBX). Input protocols: UBX, NMEA and RTCM 3.3. USB Output messages activated as in UART. Input protocols available as in UART. I2C Output messages activated as in UART. Input protocols available as in UART. SPI Output messages activated as in UART. Input protocols available as in UART. Table 1: Default interface settings Refer to the applicable interface description [2] for information about further settings. By default NEO-M9N outputs NMEA messages that include satellite data for all GNSS bands being received. This results in a higher-than-before NMEA load output for each navigation period. Make sure the UART baud rate being used is su\ufb03cient for the selected navigation rate and the number of GNSS signals being received. 3.1.4 Basic receiver con\ufb01guration This section summarizes the basic receiver con\ufb01guration most commonly used. 3.1.4.1 Basic hardware con\ufb01guration The NEO-M9N receiver has been con\ufb01gured with default setting already during the module production. The receiver starts up and is fully operational as soon as proper power supply, communication interfaces and antenna signal from the application have been connected. 3.1.4.2 Communication interface con\ufb01guration Several con\ufb01guration groups allow operation mode con\ufb01guration of the various communication interfaces. These include parameters for the data framing, transfer rate and enabled input/output protocols. See Communication interfaces section for details. The con\ufb01guration groups available for each interface are: Interface Con\ufb01guration groups UART1 CFG-UART1-*, CFG-UART1INPROT-*, CFG-UART1OUTPROT-* USB CFG-USB-*, CFG-USBINPROT-*, CFG-USBOUTPROT-* I2C CFG-I2C-*, CFG-I2CINPROT-*, CFG-I2COUTPROT-* SPI CFG-SPI-*, CFG-SPIINPROT-*, CFG-SPIOUTPROT-* Table 2: Interface con\ufb01gurations 3.1.4.3 Message output con\ufb01guration This product supports two protocols for output messages. One is NMEA and the other one is a u- blox proprietary \"UBX\" protocol. NMEA is a well-known industry standard, used mainly for providing information about position, time and satellites. UBX messages can be used to con\ufb01gure the receiver and also to periodically provide information about position, time and satellites. With the UBX protocol it is easy to monitor the receiver status and get much deeper information about the receiver status. The rate of NMEA and UBX protocol output messages are con\ufb01gurable and it is possible to enable or disable single NMEA or UBX messages individually. If the rate con\ufb01guration value is zero, then the corresponding message will not be output. Values greater than zero indicate how often the message is output. UBX-19014286 - R10 3 Receiver functionality Page 9 of 95 C1-Public"
+      },
+      {
+        "chunk_id": "S3P69C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+        "title": "NEO-M9N Integration manual UBX-19014286",
+        "page": 69,
+        "text": "NEO-M9N - Integration manual 4 Design This section provides information to help carry out a successful schematic and PCB design integrating the NEO-M9N. 4.1 Pin assignment The pin assignment of the NEO-M9N module is shown in Figure 30. The de\ufb01ned con\ufb01guration of the PIOs is listed in Table 25. Figure 30: NEO-M9N pin assignment Pin no. Name I/O Description 1 SAFEBOOT_N I SAFEBOOT_N (used for FW updates and recon\ufb01guration, leave open) 2 D_SEL I Interface select (open or VCC = UART + I2C; GND = SPI) 3 TIMEPULSE O TIMEPULSE (1 PPS) 4 EXTINT I EXTINT (PIO 7) 5 USB_DM I/O USB data (DM) 6 USB_DP I/O USB data (DP) 7 V_USB I USB supply 8 RESET_N I RESET (active low) 9 VCC_RF O Voltage for external LNA 10 GND I Ground 11 RF_IN I GNSS signal input 12 GND I Ground 13 GND I Ground 14 LNA_EN O Antenna/LNA control 15 Reserved - Reserved UBX-19014286 - R10 4 Design Page 69 of 95 C1-Public"
+      }
+    ],
+    "source_urls": [
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://www.lcsc.com/product-detail/gnss-modules_u-blox-neo-m9n-00b_C5119087.html",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N-00B_DataSheet_UBX-19014285.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf",
+      "https://content.u-blox.com/sites/default/files/NEO-M9N_Integrationmanual_UBX-19014286.pdf"
+    ],
+    "unanswered_questions": [
+      "Main VCC decoupling capacitor values and exact low-ESR bulk capacitance are not specified in the supplied chunks; integration text only states the supply/low-ESR capacitors must support peak/startup current.",
+      "Exact RF ESD diode part number, capacitance, and footprint are not specified in the supplied chunks.",
+      "Antenna choice is application-dependent. The extracted bias-T parts apply only if an active antenna or external LNA bias is required; passive antenna use may omit them.",
+      "Backup supply implementation for V_BCKP is application-dependent: supplied chunks do not specify whether to tie V_BCKP to the main 3.3 V rail, battery, supercapacitor, or another source.",
+      "Support component footprints/land patterns are not specified in the supplied chunks.",
+      "The supplied chunks include USB example parts, but this extraction targets SPI/no-USB. If USB is required, the USB LDO capacitor values depend on the selected LDO and need separate extraction/review."
+    ],
+    "validation_warnings": [
+      "SPI is not available unless D_SEL is set low/GND; selecting SPI makes the shared UART1/I2C functions unavailable on pins 18\u201321.",
+      "PIO voltage levels are related to VCC, so host SPI logic must be compatible with the selected VCC rail.",
+      "Peak current is listed as 100 mA; integration guidance says the supply must provide clean/stable voltage and not add series resistance greater than 0.2 Ohm in the VCC supply path.",
+      "RF input requires 50 Ohm layout and mandatory ESD protection; antenna/RF layout is application-sensitive.",
+      "For unused USB, one chunk states V_USB should be connected to ground while another gives a 100 kOhm pull-down for USB-not-used. This extraction includes the cited 100 kOhm pull-down and flags the difference for review."
+    ],
+    "extraction_notes": [
+      "Part identity and mass-production status are from the NEO-M9N-00B datasheet document information chunk S2P2C1.",
+      "Package is extracted from datasheet overview/mechanical chunks: NEO form factor, 12.2 x 16.0 mm LCC.",
+      "This is a minimal SPI-oriented schematic extraction using only cited chunks; optional UART/I2C/USB application circuits are not included except V_USB no-USB handling.",
+      "Default SPI output/input protocols match UART defaults per supplied chunks: NMEA output messages and UBX/NMEA/RTCM 3.3 input protocols.",
+      "Deterministic schematic-label extraction supplemented the AI extraction with 5 pin(s) and 3 support component(s).",
+      "Supplier CAD lookup will prefer LCSC C5119087."
+    ],
+    "confidence": "medium"
+  }
+}

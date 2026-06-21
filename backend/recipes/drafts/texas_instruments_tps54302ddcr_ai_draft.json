@@ -1,0 +1,525 @@
+{
+  "id": "draft_texas_instruments_tps54302ddcr_ai_draft",
+  "block_name": "Texas Instruments TPS54302DDCR Extracted Draft",
+  "block_slug": "texas_instruments_tps54302ddcr_ai_draft",
+  "summary": "Datasheet-derived draft for Texas Instruments TPS54302DDCR. Interface: buck regulator power stage. Package: unspecified.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "TPS54302DDCR",
+    "mpn": "TPS54302DDCR",
+    "manufacturer": "Texas Instruments",
+    "supplier": null,
+    "supplier_part_number": null,
+    "supplier_url": null,
+    "symbol": "TraceLabs_TPS54302DDCR:TPS54302DDCR",
+    "footprint": "TraceLabs_TPS54302DDCR:TraceLabs_TPS54302DDCR_PLACEHOLDER",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for TPS54302DDCR.",
+    "connects": [
+      "BOOT",
+      "EN",
+      "FB",
+      "GND",
+      "SW",
+      "VIN",
+      "VOUT"
+    ],
+    "footprint_confidence": "needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Symbol pin map is generated from cited datasheet/reference-design extraction.",
+    "status": "draft",
+    "footprint_asset": null
+  },
+  "support_components": [
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "10 uF",
+      "purpose": "input bypass capacitor",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P0C1",
+      "source_citations": [
+        "S1P0C1"
+      ]
+    },
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "bootstrap capacitor",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "BOOT",
+        "SW"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P0C1",
+      "source_citations": [
+        "S1P0C1"
+      ]
+    },
+    {
+      "reference": "L?",
+      "type": "inductor",
+      "value": "6.48 uH",
+      "purpose": "buck output inductor",
+      "symbol": "Device:L",
+      "footprint": "Inductor_SMD:L_4.0x4.0mm",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SW",
+        "VOUT"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P0C1",
+      "source_citations": [
+        "S1P0C1"
+      ]
+    },
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "22 uF",
+      "purpose": "output capacitor",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P0C1",
+      "source_citations": [
+        "S1P0C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "739 kOhm",
+      "purpose": "upper feedback divider resistor",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT",
+        "FB"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P0C1",
+      "source_citations": [
+        "S1P0C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "100 kOhm",
+      "purpose": "lower feedback divider resistor",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "FB",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P0C1",
+      "source_citations": [
+        "S1P0C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "EN",
+    "GND",
+    "VIN",
+    "VOUT"
+  ],
+  "internal_nets": [
+    "BOOT",
+    "FB",
+    "SW"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm",
+    "calc_input_voltage_v": "12",
+    "calc_output_voltage_v": "5",
+    "calc_output_current_a": "3",
+    "calc_switching_frequency_khz": "500",
+    "calc_inductor_ripple_percent": "30",
+    "calc_feedback_reference_voltage_v": "0.596",
+    "calc_feedback_lower_resistance_kohm": "100"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "TPS54302 fixture datasheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "/private/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/pytest-of-sebastian/pytest-306/test_component_extraction_hand0/tps54302_fixture.txt",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "TPS54302DDCR Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "3 VIN -> VIN\n1 GND -> GND\n5 EN -> EN\n6 BOOT -> BOOT\n2 SW -> SW\n4 FB -> FB",
+    "connections": [
+      "BOOT",
+      "EN",
+      "FB",
+      "GND",
+      "SW",
+      "VIN",
+      "VOUT"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "TPS54302DDCR",
+    "manufacturer": "Texas Instruments",
+    "package": "",
+    "supply_range": "",
+    "interface": "buck regulator power stage",
+    "pins": [
+      {
+        "number": "3",
+        "name": "VIN",
+        "electrical_type": "power_in",
+        "net_name": "VIN",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      },
+      {
+        "number": "1",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "EN",
+        "electrical_type": "input",
+        "net_name": "EN",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "BOOT",
+        "electrical_type": "output",
+        "net_name": "BOOT",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "SW",
+        "electrical_type": "output",
+        "net_name": "SW",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "FB",
+        "electrical_type": "input",
+        "net_name": "FB",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "10 uF",
+        "purpose": "input bypass capacitor",
+        "connects": [
+          "VIN",
+          "GND"
+        ],
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "required": true,
+        "placement_note": "Place close to VIN and GND pins; verify capacitance, voltage rating, and ripple current.",
+        "source_citations": [
+          "S1P0C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "100 nF",
+        "purpose": "bootstrap capacitor",
+        "connects": [
+          "BOOT",
+          "SW"
+        ],
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "required": true,
+        "placement_note": "Connect between BOOT and SW as shown in the reference schematic; verify the datasheet-recommended value.",
+        "source_citations": [
+          "S1P0C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "L",
+        "type": "inductor",
+        "value": "6.48 uH",
+        "purpose": "buck output inductor",
+        "connects": [
+          "SW",
+          "VOUT"
+        ],
+        "footprint": "Inductor_SMD:L_4.0x4.0mm",
+        "required": true,
+        "placement_note": "Starter value selected until the requested operating point is calculated; verify current rating and saturation against the datasheet design procedure. Calculated value: 6.48 uH; verify voltage, current, tolerance, and thermal limits. Calculated value: 6.48 uH; verify voltage, current, tolerance, and thermal limits.",
+        "source_citations": [
+          "S1P0C1"
+        ],
+        "calculation_role": "buck_output_inductor",
+        "calculation_inputs": [
+          "calc_input_voltage_v",
+          "calc_output_voltage_v",
+          "calc_output_current_a",
+          "calc_switching_frequency_khz",
+          "calc_inductor_ripple_percent"
+        ],
+        "calculation_formula": "L = Vout * (Vin - Vout) / (Vin * fsw * ripple_current)"
+      },
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "22 uF",
+        "purpose": "output capacitor",
+        "connects": [
+          "VOUT",
+          "GND"
+        ],
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected; verify capacitance, ESR, voltage rating, and loop stability.",
+        "source_citations": [
+          "S1P0C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "739 kOhm",
+        "purpose": "upper feedback divider resistor",
+        "connects": [
+          "VOUT",
+          "FB"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected until the requested output voltage is calculated using the datasheet equation. Calculated value: 739 kOhm; verify voltage, current, tolerance, and thermal limits. Calculated value: 739 kOhm; verify voltage, current, tolerance, and thermal limits.",
+        "source_citations": [
+          "S1P0C1"
+        ],
+        "calculation_role": "feedback_divider_upper",
+        "calculation_inputs": [
+          "calc_output_voltage_v",
+          "calc_feedback_reference_voltage_v",
+          "calc_feedback_lower_resistance_kohm"
+        ],
+        "calculation_formula": "Rupper = Rlower * (Vout / Vref - 1)"
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "100 kOhm",
+        "purpose": "lower feedback divider resistor",
+        "connects": [
+          "FB",
+          "GND"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected until the requested output voltage is calculated using the datasheet equation. Calculated value: 100 kOhm; verify voltage, current, tolerance, and thermal limits. Calculated value: 100 kOhm; verify voltage, current, tolerance, and thermal limits.",
+        "source_citations": [
+          "S1P0C1"
+        ],
+        "calculation_role": "feedback_divider_lower",
+        "calculation_inputs": [
+          "calc_feedback_lower_resistance_kohm"
+        ],
+        "calculation_formula": "Rlower = selected reference divider lower resistance"
+      }
+    ],
+    "nets": [
+      {
+        "name": "BOOT",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "BOOT"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "EN",
+        "role": "configuration",
+        "external": true,
+        "connected_pins": [
+          "EN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "FB",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "FB"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "GND"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SW",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "SW"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VIN",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VIN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VOUT",
+        "role": "power",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S1P0C1",
+        "source_url": "/private/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/pytest-of-sebastian/pytest-306/test_component_extraction_hand0/tps54302_fixture.txt",
+        "title": "TPS54302 fixture datasheet",
+        "page": null,
+        "text": "Texas Instruments TPS54302 datasheet. Simplified Schematic. VIN 3 connects to C_IN and the input supply. GND 1 connects to ground. EN 5 connects to enable. BOOT 6 connects to C_BOOT. SW 2 connects to L_O and the bootstrap capacitor. L_O connects from SW to VOUT. C_O connects from VOUT to GND. FB 4 connects to the feedback divider. R_FB1 connects VOUT to FB. R_FB2 connects FB to GND. The device is a buck step-down converter. The switching frequency is 500 kHz. The feedback reference voltage is 0.596 V."
+      }
+    ],
+    "source_urls": [
+      "/private/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/pytest-of-sebastian/pytest-306/test_component_extraction_hand0/tps54302_fixture.txt"
+    ],
+    "unanswered_questions": [],
+    "validation_warnings": [],
+    "extraction_notes": [
+      "Requested conversion: 12V to 5V.",
+      "Requested output current: 3 A.",
+      "Local heuristic extraction used downloaded source chunks.",
+      "No supplier part number was captured; export will try KiCad/LCSC lookup by MPN and fail if no CAD asset is found.",
+      "Calculated buck output inductor as 6.48 uH using L = Vout * (Vin - Vout) / (Vin * fsw * ripple_current).",
+      "Calculated upper feedback divider resistor as 739 kOhm using Rupper = Rlower * (Vout / Vref - 1).",
+      "Calculated lower feedback divider resistor as 100 kOhm using Rlower = selected reference divider lower resistance."
+    ],
+    "confidence": "low"
+  }
+}

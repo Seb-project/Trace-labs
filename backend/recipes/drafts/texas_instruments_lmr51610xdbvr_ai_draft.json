@@ -1,0 +1,1012 @@
+{
+  "id": "draft_texas_instruments_lmr51610xdbvr_ai_draft",
+  "block_name": "Texas Instruments LMR51610XDBVR Extracted Draft",
+  "block_slug": "texas_instruments_lmr51610xdbvr_ai_draft",
+  "summary": "Datasheet-derived draft for Texas Instruments LMR51610XDBVR. Interface: DC/DC buck power stage with EN control and FB resistor-divider configuration; no serial interface.. Package: DBV / SOT-23-6, 2.90 mm \u00d7 2.80 mm.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "LMR51610XDBVR",
+    "mpn": "LMR51610XDBVR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part_number": "C20539658",
+    "supplier_url": "https://www.lcsc.com/product-detail/C20539658.html",
+    "symbol": "TraceLabs_LMR51610XDBVR:LMR51610XDBVR",
+    "footprint": "TraceLabs_LMR51610XDBVR:TraceLabs_LMR51610XDBVR_LCSC_C20539658",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for LMR51610XDBVR.",
+    "connects": [
+      "CB_BOOT",
+      "FB",
+      "GND",
+      "SW",
+      "VIN",
+      "VIN_12V",
+      "VOUT",
+      "VOUT_5V"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_LMR51610XDBVR_LCSC_C20539658",
+      "footprint_id": "TraceLabs_LMR51610XDBVR:TraceLabs_LMR51610XDBVR_LCSC_C20539658",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C20539658",
+      "source_url": "https://www.lcsc.com/product-detail/C20539658.html",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_LMR51610XDBVR_LCSC_C20539658\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -4.950) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR (at 0.000 4.950) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C20539658\")\n\t(fp_line (start -0.90 -1.55) (end 0.90 -1.55) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -0.90 1.55) (end 0.90 1.55) (layer F.SilkS) (width 0.25))\n\t(pad 3 smd rect (at 1.35 -0.95 0.00) (size 1.100 0.600) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd rect (at 1.35 0.00 0.00) (size 1.100 0.600) (layers F.Cu F.Paste F.Mask))\n\t(pad 1 smd rect (at 1.35 0.95 0.00) (size 1.100 0.600) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd rect (at -1.35 0.95 0.00) (size 1.100 0.600) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd rect (at -1.35 0.00 0.00) (size 1.100 0.600) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd rect (at -1.35 -0.95 0.00) (size 1.100 0.600) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center 1.40 1.45) (end 1.43 1.45) (layer F.SilkS) (width 0.06))\n\t(fp_circle (center 1.40 0.95) (end 1.50 0.95) (layer Cmts.User) (width 0.20))\n\t(fp_circle (center 1.40 1.65) (end 1.52 1.65) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -0.80 1.45) (end -0.80 -1.45) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -0.80 -1.45) (end 0.80 -1.45) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 0.80 -1.45) (end 0.80 1.45) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 0.80 1.45) (end -0.80 1.45) (layer F.CrtYd) (width 0.05))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_vx25tm8i/TraceLabs_C20539658.3dshapes/SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 180))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "CIN1?",
+      "type": "Capacitor, ceramic input decoupling",
+      "value": "2.2 \u00b5F",
+      "purpose": "High-frequency input decoupling for VIN.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN_12V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P17C1, S2P20C1, S2P23C1, S2P25C1",
+      "source_citations": [
+        "S2P17C1",
+        "S2P20C1",
+        "S2P23C1",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "CIN2?",
+      "type": "Capacitor, high-frequency input filter",
+      "value": "0.1 \u00b5F",
+      "purpose": "Additional high-frequency filtering at input pins.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN_12V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P20C1, S2P23C1, S2P25C1",
+      "source_citations": [
+        "S2P20C1",
+        "S2P23C1",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "CBOOT?",
+      "type": "Capacitor, bootstrap",
+      "value": "0.1 \u00b5F",
+      "purpose": "Bootstrap capacitor for high-side FET driver.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "CB_BOOT",
+        "SW"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P3C1, S2P14C1, S2P20C1, S2P25C1",
+      "source_citations": [
+        "S2P3C1",
+        "S2P14C1",
+        "S2P20C1",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "L?",
+      "type": "Inductor",
+      "value": "33 \u00b5H",
+      "purpose": "Buck output inductor for 5 V / 1 A, 400 kHz application values.",
+      "symbol": "Device:L",
+      "footprint": "Inductor_SMD:L_4.0x4.0mm",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SW",
+        "VOUT_5V"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P17C1, S2P19C1, S2P23C2, S2P25C1",
+      "source_citations": [
+        "S2P17C1",
+        "S2P19C1",
+        "S2P23C2",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "COUT?",
+      "type": "Capacitor, ceramic output",
+      "value": "22 \u00b5F / 25 V",
+      "purpose": "Output filter capacitor for 5 V / 1 A, 400 kHz application values.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT_5V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P17C1, S2P20C1, S2P23C2, S2P25C1",
+      "source_citations": [
+        "S2P17C1",
+        "S2P20C1",
+        "S2P23C2",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "RFBT?",
+      "type": "Resistor, feedback top",
+      "value": "118 k\u03a9",
+      "purpose": "Sets 5 V output voltage with RFBB = 22.1 k\u03a9.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT_5V",
+        "FB"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P17C1, S2P18C1, S2P23C1, S2P24C1, S2P25C1",
+      "source_citations": [
+        "S2P17C1",
+        "S2P18C1",
+        "S2P23C1",
+        "S2P24C1",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "RFBB?",
+      "type": "Resistor, feedback bottom",
+      "value": "22.1 k\u03a9",
+      "purpose": "Sets 5 V output voltage with RFBT = 118 k\u03a9.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "FB",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P13C1, S2P17C1, S2P18C1, S2P24C1, S2P25C1",
+      "source_citations": [
+        "S2P13C1",
+        "S2P17C1",
+        "S2P18C1",
+        "S2P24C1",
+        "S2P25C1"
+      ]
+    },
+    {
+      "reference": "CBULK?",
+      "type": "Capacitor, optional input bulk electrolytic",
+      "value": "10 \u00b5F or 22 \u00b5F",
+      "purpose": "Additional input bulk capacitance when input supply is more than a few inches from the converter.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN_12V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P23C1",
+      "source_citations": [
+        "S2P23C1"
+      ]
+    },
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "supply decoupling",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P20C1",
+      "source_citations": [
+        "S2P20C1"
+      ]
+    },
+    {
+      "reference": "C?",
+      "type": "capacitor",
+      "value": "0.1 uF",
+      "purpose": "output capacitor",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P17C1",
+      "source_citations": [
+        "S2P17C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "GND",
+    "VIN",
+    "VIN_12V",
+    "VOUT",
+    "VOUT_5V"
+  ],
+  "internal_nets": [
+    "CB_BOOT",
+    "FB",
+    "SW"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "Requested 1 A output equals the LMR51610 maximum continuous DC output current; thermal/current-limit margin must be validated for the actual PCB and ambient conditions.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Maximum continuous current can be derated at high switching frequency or high ambient temperature.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Output capacitor effective capacitance must be checked after DC-bias derating.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "LMR516xx datasheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from LMR516xx datasheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "http://www.ti.com/applications/industrial/appliances/overview.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "LMR51610XDBVR LCSC listing",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.lcsc.com/product-detail/C20539658.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from LMR51610 product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.ti.com/product-category/power-management/voltage-references/overview.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "LMR51610XDBVR Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 CB -> CB_BOOT\n2 GND -> GND\n3 FB -> FB\n4 EN -> VIN_12V\n5 VIN -> VIN_12V\n6 SW -> SW\n730 SW -> SW\n100 VIN -> VIN",
+    "connections": [
+      "CB_BOOT",
+      "FB",
+      "GND",
+      "SW",
+      "VIN",
+      "VIN_12V",
+      "VOUT",
+      "VOUT_5V"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "LMR51610XDBVR",
+    "manufacturer": "Texas Instruments",
+    "package": "DBV / SOT-23-6, 2.90 mm \u00d7 2.80 mm",
+    "supply_range": "VIN recommended operating range: 4 V to 65 V; LMR51610 output current up to 1 A",
+    "interface": "DC/DC buck power stage with EN control and FB resistor-divider configuration; no serial interface.",
+    "pins": [
+      {
+        "number": "1",
+        "name": "CB",
+        "electrical_type": "Power / bootstrap",
+        "net_name": "CB_BOOT",
+        "required": true,
+        "notes": "Bootstrap capacitor connection for high-side FET driver; connect 100 nF capacitor from CB to SW.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P20C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "electrical_type": "Ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Power ground; connect to system ground and ground side of input and output capacitors. Path to CIN must be short.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "FB",
+        "electrical_type": "Analog input",
+        "net_name": "FB",
+        "required": true,
+        "notes": "Feedback input; connect resistor divider from VOUT to FB to GND. Do not short FB to ground during operation.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P13C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "EN",
+        "electrical_type": "Analog input",
+        "net_name": "VIN_12V",
+        "required": true,
+        "notes": "Enable input; do not float. High = on, low = off. This reference ties EN to VIN for self-start, which TI describes as the simplest enable connection.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P13C1",
+          "S2P16C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "VIN",
+        "electrical_type": "Power input",
+        "net_name": "VIN_12V",
+        "required": true,
+        "notes": "Supply input to internal bias LDO and high-side FET; connect to input supply and input bypass capacitors directly to VIN and GND.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P4C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "SW",
+        "electrical_type": "Power switching output",
+        "net_name": "SW",
+        "required": true,
+        "notes": "Switching output; connect to power inductor and bootstrap capacitor. Keep SW area small and trace to inductor short.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P23C2",
+          "S2P25C1"
+        ]
+      },
+      {
+        "number": "730",
+        "name": "SW",
+        "electrical_type": "output",
+        "net_name": "SW",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S10P0C3"
+        ]
+      },
+      {
+        "number": "100",
+        "name": "VIN",
+        "electrical_type": "power_in",
+        "net_name": "VIN",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P1C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "CIN1",
+        "type": "Capacitor, ceramic input decoupling",
+        "value": "2.2 \u00b5F",
+        "purpose": "High-frequency input decoupling for VIN.",
+        "connects": [
+          "VIN_12V",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place as close as possible to VIN and GND pins; ground locally to GND pin. Datasheet design example uses X7R, 100 V for wide VIN operation.",
+        "source_citations": [
+          "S2P17C1",
+          "S2P20C1",
+          "S2P23C1",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CIN2",
+        "type": "Capacitor, high-frequency input filter",
+        "value": "0.1 \u00b5F",
+        "purpose": "Additional high-frequency filtering at input pins.",
+        "connects": [
+          "VIN_12V",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place as close as possible to device pins.",
+        "source_citations": [
+          "S2P20C1",
+          "S2P23C1",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CBOOT",
+        "type": "Capacitor, bootstrap",
+        "value": "0.1 \u00b5F",
+        "purpose": "Bootstrap capacitor for high-side FET driver.",
+        "connects": [
+          "CB_BOOT",
+          "SW"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place close to CB and SW pins; use X7R or X5R ceramic rated 16 V or higher.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P14C1",
+          "S2P20C1",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "L",
+        "type": "Inductor",
+        "value": "33 \u00b5H",
+        "purpose": "Buck output inductor for 5 V / 1 A, 400 kHz application values.",
+        "connects": [
+          "SW",
+          "VOUT_5V"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Keep SW-to-inductor connection short. Datasheet example selects ferrite inductor with 1.5 A RMS and 2.5 A saturation capability.",
+        "source_citations": [
+          "S2P17C1",
+          "S2P19C1",
+          "S2P23C2",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "COUT",
+        "type": "Capacitor, ceramic output",
+        "value": "22 \u00b5F / 25 V",
+        "purpose": "Output filter capacitor for 5 V / 1 A, 400 kHz application values.",
+        "connects": [
+          "VOUT_5V",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place close to VOUT end of inductor and ground closely to GND pin. Datasheet example uses X7R ceramic, about 5 m\u03a9 ESR, considering derating.",
+        "source_citations": [
+          "S2P17C1",
+          "S2P20C1",
+          "S2P23C2",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RFBT",
+        "type": "Resistor, feedback top",
+        "value": "118 k\u03a9",
+        "purpose": "Sets 5 V output voltage with RFBB = 22.1 k\u03a9.",
+        "connects": [
+          "VOUT_5V",
+          "FB"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place close to FB pin. Route VOUT sense away from SW node and inductor noise.",
+        "source_citations": [
+          "S2P17C1",
+          "S2P18C1",
+          "S2P23C1",
+          "S2P24C1",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RFBB",
+        "type": "Resistor, feedback bottom",
+        "value": "22.1 k\u03a9",
+        "purpose": "Sets 5 V output voltage with RFBT = 118 k\u03a9.",
+        "connects": [
+          "FB",
+          "GND"
+        ],
+        "footprint": "",
+        "required": true,
+        "placement_note": "Place close to FB pin. TI recommends 1% tolerance, low temperature coefficient feedback resistors.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P17C1",
+          "S2P18C1",
+          "S2P24C1",
+          "S2P25C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CBULK",
+        "type": "Capacitor, optional input bulk electrolytic",
+        "value": "10 \u00b5F or 22 \u00b5F",
+        "purpose": "Additional input bulk capacitance when input supply is more than a few inches from the converter.",
+        "connects": [
+          "VIN_12V",
+          "GND"
+        ],
+        "footprint": "",
+        "required": false,
+        "placement_note": "Use in addition to ceramic bypass capacitors if input supply lead/trace distance requires bulk capacitance.",
+        "source_citations": [
+          "S2P23C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "100 nF",
+        "purpose": "supply decoupling",
+        "connects": [
+          "VIN",
+          "GND"
+        ],
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "required": true,
+        "placement_note": "Place close to the IC supply pins.",
+        "source_citations": [
+          "S2P20C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "C",
+        "type": "capacitor",
+        "value": "0.1 uF",
+        "purpose": "output capacitor",
+        "connects": [
+          "VOUT",
+          "GND"
+        ],
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected; verify capacitance, ESR, voltage rating, and loop stability.",
+        "source_citations": [
+          "S2P17C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "CB_BOOT",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "CB"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "FB",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "FB"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "GND"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SW",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "SW",
+          "SW"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VIN",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VIN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VIN_12V",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "EN",
+          "VIN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VOUT",
+        "role": "power",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "VOUT_5V",
+        "role": "power",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S2P23C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 23,
+        "text": "IL[500mA/div]Vout[2V/div] Time[200ms/div]Figure 8-9. Short Protection and Recovery 8.3 Power Supply Recommendations The LMR516xx is designed to operate from an input voltage supply range between 4 V and 65 V. This input supply must be well-regulated and able to withstand maximum input current and maintain a stable voltage. The resistance of the input supply rail must be low enough that an input current transient does not cause a high enough drop at the LMR516xx supply voltage that can cause a false UVLO fault triggering and system reset. If the input supply is located more than a few inches from the LMR516xx additional bulk capacitance can be required in addition to the ceramic bypass capacitors. The amount of bulk capacitance is not critical, but a 10-\u00b5F or 22-\u00b5F electrolytic capacitor is a typical choice. 8.4 Layout 8.4.1 Layout Guidelines Layout is a critical portion of good power supply design. The following guidelines help users design a PCB with the best power conversion performance, thermal performance, and minimized generation of unwanted EMI. \u2022Place the input bypass capacitor C IN as close as possible to the VIN and GND pins. Grounding for both the input and output capacitors must consist of localized top side planes that connect to the GND pin. \u2022Minimize trace length to the FB pin net. Both feedback resistors, R FBT and R FBB, must be located close to the FB pin. If V OUT accuracy at the load is important, make sure V OUT sense is made at the load. Route V OUT sense path away from noisy nodes and preferably through a layer on the other side of a shielded layer. \u2022Use ground plane in one of the middle layers as noise shielding and heat dissipation path if possible. \u2022Make V IN, VOUT, and ground bus connections as wide as possible. This action reduces any voltage drops on the input or output paths of the converter and maximizes efficiency. \u2022Provide adequate device heat-sinking. GND, VIN, and SW pins provide the main heat dissipation path, make the GND, VIN, and SW plane area as large as possible. Use an array of heat-sinking vias to connect the top side ground plane to the ground plane on the bottom PCB layer. If the PCB has multiple copper layers, these thermal vias can also be connected to inner layer heat-spreading ground planes. Make sure enough copper area is used for heat-sinking to keep the junction temperature below 125\u00b0C. 8.4.1.1 Compact Layout for EMI Reduction Radiated EMI is generated by the high di/dt components in pulsing currents in switching converters. The larger area covered by the path of a pulsing current, the more EMI is generated. High frequency ceramic bypass capacitors at the input side provide primary path for the high di/dt components of the pulsing current. Placing a ceramic bypass capacitor or capacitors as close as possible to the VIN and GND pins is the key to EMI reduction. The SW pin connecting to the inductor must be as short as possible, and just wide enough to carry the load current without excessive heati"
+      },
+      {
+        "chunk_id": "S2P20C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 20,
+        "text": "\u2022IOL = Low level output current during load transient \u2022IOH = High level output current during load transient \u2022VOUT_SHOOT = Target output voltage overshoot or undershoot For this design example, the target output ripple is 25 mV. Assuming \u0394VOUT_ESR = \u0394VOUT_C = 15 mV, choose KIND = 0.3. Equation 10 yields ESR no larger than 50 m \u2126 and Equation 11 yields C OUT no smaller than 6.25 \u00b5F. For the target overshoot and undershoot limitation of this design, \u0394VOUT_SHOOT = 5% \u00d7 V OUT = 250 mV. The COUT can be calculated to be no less than 20 \u00b5F by Equation 12 . In summary, the most stringent criteria for the output capacitor is 20 \u00b5F. Considering derating, one 22 \u00b5F, 25 V, X7R ceramic capacitor with 5 m\u2126 ESR is used. 8.2.2.6 Input Capacitor Selection The LMR51610 device requires a high frequency input decoupling capacitor or capacitor. The typical recommended value for the high frequency decoupling capacitor is 2.2 \u00b5F or higher. TI reommends a high- quality ceramic type X5R or X7R with sufficiency voltage rating. The voltage rating must be greater than the maximum input voltage. To compensate the derating of ceramic capacitors, TI recommends a voltage rating of twice the maximum input voltage. For this design, one 2.2 \u00b5F, X7R dielectric capacitor rated for 100 V is used for the input decoupling capacitor. The equivalent series resistance (ESR) is approximately 10 m \u2126, and the current rating is 1 A. Include a capacitor with a value of 0.1 \u00b5F for high-frequency filtering and place the capacitor as close as possible to the device pins. 8.2.2.7 Bootstrap Capacitor Every LMR516xx design requires a bootstrap capacitor, C BOOT . The recommended bootstrap capacitor is 0.1 \u00b5F and rated at 16 V or higher. The bootstrap capacitor is located between the SW pin and the CB pin. The bootstrap capacitor must be a high-quality ceramic type with X7R or X5R grade dielectric for temperature stability. 8.2.2.8 Undervoltage Lockout Setpoint The system undervoltage lockout (UVLO) is adjusted using the external voltage divider network of R ENT and RENB. The UVLO has two thresholds, one for power up when the input voltage is rising and one for power down or brown outs when the input voltage is falling. Equation 13 can be used to determine the V IN UVLO level. V IN _ RISING = V E N H \u00d7R EBT + R E N B R EN B(13) The EN rising threshold (V ENH) for LMR51610 is set to be 1.227 V (typical). Choose a value of 200 k \u03a9 for R ENB to minimize input current from the supply. If the desired V IN UVLO level is at 6.0 V, then the value of R ENT can be calculated using Equation 14 : R ENT =V IN _ RISING V ENH\u2212 1 \u00d7 R EN B (14) The above equation yields a value of 775.6 k \u03a9, a standard value of 768 k \u03a9 is selected. The resulting falling UVLO threshold, equal to 4.84 V, can be calculated by Equation 15 where EN hysteresis voltage, V EN_HYS , is 0.227 V (typical). V IN _ F ALLIN G = V ENH \u2212 V ENH _ H Y S \u00d7R EBT + R EN B R EN B(15) 8.2.2.9 Replacing Non Sync Converter The LMR516xx can also be used to re"
+      },
+      {
+        "chunk_id": "S2P3C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 3,
+        "text": "4 Device Comparison Table ORDERABLE PART NUMBER OUTPUT CURRENT FREQUENCY PFM OR FPWM OUTPUT LMR51610XDBVR 1 A 400 kHz PFM Adjustable LMR51610XFDBVR 1 A 400 kHz FPWM Adjustable LMR51606XDBVR 0.6 A 400 kHz PFM Adjustable LMR51606XFDBVR 0.6 A 400 kHz FPWM Adjustable LMR51610YDBVR 1 A 1100 kHz PFM Adjustable LMR51610YFDBVR 1 A 1100 kHz FPWM Adjustable LMR51606YDBVR 0.6 A 1100 kHz PFM Adjustable LMR51606YFDBVR 0.6 A 1100 kHz FPWM Adjustable 5 Pin Configuration and Functions GND1 2 3 45 EN6 CB FBSW VIN Figure 5-1. 6-Pin SOT-23 DBV Package (Top View) Table 5-1. Pin Functions PIN TYPE(1)DESCRIPTION NAME NO CB 1 PBootstrap capacitor connection for high-side FET driver. Connect a high quality 100-nF capacitor from this pin to the SW pin. GND 2 GPower ground pins. Connected to the source of low-side FET internally. Connect to system ground, ground side of C IN and C OUT. The path to C IN must be as short as possible. FB 3 AFeedback input to the converter. Connect a resistor divider to set the output voltage. Never short this terminal to ground during operation. EN 4 APrecision enable input to the converter. Do not float. High = on, low = off. Can be tied to VIN. Precision enable input allows an adjustable UVLO by an external resistor divider. VIN 5 PSupply input pin to the internal bias LDO and high-side FET. Connect to the input supply and input bypass capacitors C IN. Input bypass capacitors must be directly connected to this pin and GND. SW 6 PSwitching output of the converter. Internally connected to source of the high-side FET and drain of the low-side FET. Connect to the power inductor. (1) A = Analog, P = Power, G = Ground www.ti.comLMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 Copyright \u00a9 2023 Texas Instruments Incorporated Submit Document Feedback 3 Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P25C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 25,
+        "text": "8.4.2 Layout Example ENVINSW CB GND FB Input Bypass CapacitorOutput Bypass Capacitor BOOT Capacitor VIA (Connect to GND Plane)Output Inductor Output Voltage Set ResistorsVIN GNDGNDVOUTNotes: 1. BOOT capacitor must be close to CB and SW pins. 2. SW area must be small. 3. Output voltage set resistors must be close to FB pin. 4. Input bypass capacitor must be close to VIN and GND pins. 5. Use ground plane to keep a low GND impedance. Figure 8-10. Layout www.ti.comLMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 Copyright \u00a9 2023 Texas Instruments Incorporated Submit Document Feedback 25 Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S10P0C4",
+        "source_url": "http://www.ti.com/applications/industrial/appliances/overview.html",
+        "title": "Linked reference from LMR516xx datasheet",
+        "page": null,
+        "text": "e design for variable frequency air conditioner outdoor unit controller in HVAC applications, which illustrates a method to implement sensorless 3-phase PMSM vector control for compressor and fan motor drive, and (...) Reference design People Counting and Tracking Reference Design Using mmWave Radar Sensor This reference design demonstrates the use of IWR6843, which is a single-chip mmWave radar sensor with integrated DSP for an indoor and outdoor people counting application. This reference design uses the IWR6843ISK evaluation module (EVM) and integrates a complete radar processing chain onto the (...) Reference designs related to Appliances Use our reference design selection tool to find designs that best match your application and parameters. View reference designs Technical resources White paper White paper Bringing Wireless Scalability to Intelligent Sensing Applications (Rev. B) With the increasing need for connectivity driven by the Internet of Things (IoT), a new dimension of scalability is required: wireless connectivity technology. document-pdfAcrobat PDF Resource Resource 750W motor inverter with C2000\u2122 MCU and MSPM0 reference design This reference design is a 750W motor drive that illustrates a method to implement sensorless Field Oriented Control (FOC) control for a 3-phase PMSM, and supports both C2000 and MSPM0 MCUs. Application brief Application brief MSP430 and DRV83xx Selection Guide for Power Tools (Rev. A) Read our application brief to find microcontroller and gate driver solutions for the development of different classes of power tools, from cordless hand-held tools to more robust garden tools. document-pdfAcrobat PDF Explore over 500 applications Search for the application you need or browse by market category Automotive 48V in automotive Advanced driver assistance systems (ADAS) Front camera Mirror replacement/camera mirror system Satellite camera Surround view system ECU 4D imaging radar Long range radar Radar processing ECU Satellite/streaming radar for central processing Short/medium range radar Ultra short range radar ADAS & infotainment fusion controller ADAS domain controller Autonomous driving module In-cabin camera module In-cabin monitoring ECU In-cabin radar module LIDAR module Ultrasonic park assist sensor Body electronics & lighting E-Latch Front door module Rear door module Roof motor module Seat fan module Seat heating module Seat lumbar/massage module Seat position & comfort module Seat position module Side mirror module Sliding door module Steering wheel adjust module Trunk module Window module Wiper module Headlight Interior light Rear light Small light Door handle module Immobilizer base station Kick to open module Passive entry passive start (PEPS) Phone as a key (PaaK) Remote keyless entry (RKE) Obstacle detection sensor Rearview mirror module Smart glass module Steering column control module Automotive HVAC compressor module Automotive HVAC control & HMI module Automotive ITMS/heat pump module Automotiv"
+      },
+      {
+        "chunk_id": "S2P13C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 13,
+        "text": "7.3.2 Adjustable Output Voltage A precision 0.8-V reference voltage (V REF) is used to maintain a tightly regulated output voltage over the entire operating temperature range. The output voltage is set by a resistor divider from V OUT to the FB pin. TI recommends to use 1% tolerance resistors with a low temperature coefficient for the FB divider. Select the bottom-side resistor, R FBB, for the desired divider current and use Equation 1 to calculate the top-side resistor, RFBT. The recommended range for R FBT is 10 k \u2126 to 100 k \u2126. A lower R FBT value can be used if pre-loading is desired to reduce the V OUT offset in PFM operation. Lower R FBT values reduce efficiency at very light load. Less static current goes through a larger R FBT value and can be more desirable when light-load efficiency is critical. However, TI does not recommend R FBT values larger than 1 M \u2126 make the feedback path more susceptible to noise. Larger R FBT values require a more carefully designed feedback path trace from the feedback resistors to the feedback pin of the device. The tolerance and temperature variation of the resistor divider network affect the output voltage regulation. VOUT FBRFBT RFBB Figure 7-2. Output Voltage Setting R FBT =V OUT \u2212 V REF V REF\u00d7 R FBB (1) 7.3.3 Enable The voltage on the EN pin controls the ON and OFF operation of the LMR516xx. A voltage of less than 1 V (typical) shuts down the device, while a voltage of greater than 1.227 V (typical) is required to start the converter. The EN pin is an input and cannot be left open or floating. The simplest way to enable the operation of the LMR516xx is to connect EN to VIN. This connection allows self-start-up of the LMR516xx when V IN is within the operating range. Many applications benefit from the employment of an enable divider, R ENT and R ENB (Figure 7-3 ) to establish a precision system UVLO level for the converter. A system UVLO can be used for supplies operating from utility power as well as battery power. A system UVLO can be used for sequencing, make sure there is reliable operation, or supplying protection, such as a battery discharge level. An external logic signal can also be used to drive the EN input for system sequencing and protection. Note The EN pin voltage must not to be greater than V IN + 0.3 V. TI does not recommend to apply EN voltage when V IN is 0 V. RENT ENVIN RENB Figure 7-3. System UVLO by Enable Divider www.ti.comLMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 Copyright \u00a9 2023 Texas Instruments Incorporated Submit Document Feedback 13 Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S4P0C6",
+        "source_url": "https://www.lcsc.com/product-detail/C20539658.html",
+        "title": "LMR51610XDBVR LCSC listing",
+        "page": null,
+        "text": "Receivers Fiber Optic Switches, Multiplexers, Demultiplexers Fiber Optic Transceiver Modules Fiber Optic Transmitters - Discrete Fiber Optic Transmitters - Drive Circuitry Integrated Incandescent, Neon Lamps Laser Diodes, Modules LCD, OLED Character and Numeric LCD, OLED, Graphic LED Addressable, Specialty LED Character and Numeric LED COBs, Engines, Modules, Strips LED Color Lighting LED Dot Matrix and Cluster LED Emitters - Infrared, UV, Visible LED Indication - Discrete LED White Lighting Lenses Light Pipes Optic Spacers, Standoffs Optoelectronics Accessories Reflectors Vacuum Fluorescent (VFD) Xenon Lighting View All Passives Capacitors Aluminum - Polymer Capacitors Aluminum Electrolytic Capacitors Capacitor Networks, Arrays Ceramic Capacitors Electric Double Layer Capacitors (EDLC), Supercapacitors Film Capacitors Mica and PTFE Capacitors Motor Start, Motor Run Capacitors (AC) Niobium Oxide Capacitors Silicon Capacitors Tantalum - Polymer Capacitors Tantalum Capacitors Thin Film Capacitors Trimmers, Variable Capacitors View All Crystals, Oscillators, Resonators Crystal, Oscillator, Resonator Accessories Crystals Oscillators Pin Configurable/Selectable Oscillators Programmable Oscillators Resonators Stand Alone Programmers VCOs (Voltage Controlled Oscillators) View All Filters Cable Ferrites Ceramic Filters Common Mode Chokes EMI/RFI Filters (LC, RC Networks) Feed Through Capacitors Ferrite Beads and Chips Filter Accessories Monolithic Crystals Power Line Filter Modules RF Filters SAW Filters View All Inductors, Coils, Chokes Adjustable Inductors Arrays, Signal Transformers Delay Lines Fixed Inductors Wireless Charging Coils View All Magnetics - Transformer, Inductor Components Bobbins (Coil Formers), Mounts, Hardware Ferrite Cores Magnet Wire View All Potentiometers, Variable Resistors Adjustable Power Resistor Rotary Potentiometers, Rheostats Scale Dials Slide Potentiometers Thumbwheel Potentiometers Trimmer Potentiometers Value Display Potentiometers View All Resistors Chassis Mount Resistors Chip Resistor - Surface Mount Current Sense Resistors Resistor Kits Resistor Networks, Arrays Resistors Accessories Specialized Resistors Through Hole Resistors View All View All Power Supplies Power Suppliers - Board Mount AC DC Converters Board Mount Power Supply Accessorie DC DC Converters LED Drivers View All Power Supplies - External/Internal (Off-Board) AC AC Wall Power Adapters AC DC Configurable Power Supplies (Factory Assembled) AC DC Configurable Power Supply Chassis AC DC Configurable Power Supply Modules AC DC Converters (Off-Board) AC DC Desktop, Wall Power Adapters Computer Power Supply Units DC AC Inverters DC DC Converters (Off-Board) DC Power Supplies External/Internal Power Supply Accessories Industrial, DIN Rail Power Supplies LED Drivers (Off-Board) Power over Ethernet (PoE) View All View All Relays Automotive Relays Contactors (Electromechanical) Contactors (Solid State) High Frequency (RF) Relays Industrial Relays Power Relays Re"
+      },
+      {
+        "chunk_id": "S6P0C1",
+        "source_url": "https://www.ti.com/product-category/power-management/voltage-references/overview.html",
+        "title": "Linked reference from LMR51610 product page",
+        "page": null,
+        "text": "Voltage references | TI.com Home Products Power management parametric-filter Amplifiers parametric-filter Audio, haptics & piezo parametric-filter Clocks & timing parametric-filter Data converters parametric-filter Die & wafer services parametric-filter DLP products parametric-filter Interface parametric-filter Isolation parametric-filter Logic & voltage translation parametric-filter Microcontrollers (MCUs) & processors parametric-filter Motor drivers parametric-filter Power management parametric-filter RF & microwave parametric-filter Sensors parametric-filter Switches & multiplexers parametric-filter Wireless connectivity Voltage references parametric-filter AC/DC switching regulators parametric-filter DC/DC power modules parametric-filter DC/DC switching regulators parametric-filter DDR memory power ICs parametric-filter Gate drivers parametric-filter High-side switches & controllers parametric-filter LCD & OLED display power & drivers parametric-filter LED drivers parametric-filter Linear & low-dropout (LDO) regulators parametric-filter Load switches parametric-filter Low-side switches parametric-filter MOSFETs parametric-filter Multi-channel ICs (PMICs) parametric-filter Power over Ethernet (PoE) ICs parametric-filter Power protection switches & controllers parametric-filter Power stages parametric-filter Sequencers parametric-filter Solid-state relays parametric-filter Supervisor & reset ICs parametric-filter USB power switches & charging port controllers parametric-filter USB Type-C & USB Power Delivery ICs parametric-filter Voltage references Home Products Power management Voltage references Voltage references High-accuracy shunt and series voltage references to support a variety of applications parametric-filter View all products Our broad portfolio of series, shunt and current voltage references features low temperature coefficient, precise initial accuracy, low noise and excellent long-term stability for a wide variety of applications, such as data conversion and signal conditioning. Voltage references are also commonly used as voltage monitors, current limiters and programmable current sources. Browse by category Current references & sources Series voltage references Shunt voltage references Featured products Reference designs related to Voltage references Use our reference design selection tool to find designs that best match your application and parameters. View reference designs New products parametric-filter View all new products = 3 */ --> LM4060-Q1 NEW Shunt voltage references LM4060-Q1 ACTIVE Automotive, 20ppm/\u00b0C maximum drift high precision shunt voltage reference Approx. price ( USD ) 1ku | 1.3 REF30E NEW Series voltage references REF30E ACTIVE 15 ppm\u00b0/C drift, 27uA Iq in SOT-23-3 package series voltage reference Approx. price ( USD ) 1ku | 0.39 LM4060 NEW Shunt voltage references LM4060 ACTIVE 20ppm/\u00b0C maximum drift high-precision shunt voltage reference Approx. price ( USD ) 1ku | 1 REF81 NEW Series voltage references REF81"
+      },
+      {
+        "chunk_id": "S2P4C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 4,
+        "text": "6 Specifications 6.1 Absolute Maximum Ratings Over junction temperature range of \u201340\u00b0C to 150\u00b0C (unless otherwise noted)(1) MIN MAX UNIT Input voltageVIN to GND \u20130.3 70 V EN to GND \u20130.3 VIN + 0.3 V FB to GND \u20130.3 5.5 V Output voltageSW to GND \u20130.3 70 V SW to GND less than 10-ns transients \u20135 70 V CBOOT to SW \u20130.3 5.5 V Junction Temperature T J \u201340 150 \u00b0C Storage temperature, T stg \u201355 150 \u00b0C (1) Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute Maximum Ratings do not imply functional operation of the device at these or any other conditions beyond those listed under Recommended Operating Conditions. If used outside the Recommended Operating Conditions but within the Absolute Maximum Ratings, the device may not be fully functional, and this may affect device reliability, functionality, performance, and shorten the device lifetime. 6.2 ESD Ratings VALUE UNIT V(ESD) Electrostatic dischargeHuman-body model (HBM), per ANSI/ESDA/ JEDEC JS-001(1) \u00b12500 V Charged-device model (CDM), per ANSI/ESDA/ JEDEC JS-002(2) \u00b1750 (1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process. (2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process. 6.3 Recommended Operating Conditions Over the recommended operating junction temperature range of \u201340\u00b0C to 150\u00b0C (unless otherwise noted)(1) MIN NOM MAX UNIT Input voltageVIN to GND 4 65 V EN 0 VIN V FB 0 4.5 V Output voltage VOUT (2)0.8 28 V Output current Iout(LMR51606)(3)0.6 A Output current Iout(LMR51610)(3)1 A TJ Operating junction temperature(4)\u201340 +150 \u00b0C (1) Recommended operating conditions indicate conditions for which the device is intended to be functional, but do not make sure of specific performance limits. For compliant specifications, see Electrical Characteristics table. (2) Under no conditions can the output voltage be allowed to fall below zero volts. (3) Maximum continuous DC current can be derated when operating with high switching frequency or high ambient temperature. See Application section for details. (4) High junction temperatures degrade operating lifetimes. Operating lifetime is de-rated for junction temperatures greater than 150 \u2103.LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 4 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P17C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 17,
+        "text": "8 Application and Implementation Note Information in the following applications sections is not part of the TI component specification, and TI does not warrant its accuracy or completeness. TI\u2019s customers are responsible for determining suitability of components for their purposes, as well as validating and testing their design implementation to confirm system functionality. 8.1 Application Information The LMR516xx is a step-down DC-to-DC converter. The LMR51610 is typically used to convert a higher input voltage to a lower output DC voltage with a maximum output current of 1 A. The LMR51606 is typically used to convert a higher input voltage to a lower output DC voltage with a maximum output current of 0.6 A. The following design procedure can be used to select components for the LMR516xx. 8.2 Typical Application The LMR51610 only requires a few external components to convert from a wide voltage range supply to a fixed output voltage. Figure 8-1 shows a basic schematic. CB SWLout 33\u00b5HCBOOT 0.1 \u00b5F FBVINVIN 24 V COUT 22 \u00b5FENCIN 2.2 \u00b5F GNDVOUT 5 V RFBT 118 k\u2126 RFBB 22.1 k\u2126 Figure 8-1. Application Circuit The external components have to fulfill the needs of the application and the stability criteria of the control loop of the device. Table 8-1 can be used to simplify the output filter component selection. Table 8-1. L and C OUT Typical Values fSW (kHz) VOUT (V) IOUT (A) L (\u00b5H) COUT (\u00b5F) (1)RFBT (k\u03a9) RFBB (k\u03a9) 4003.3 1 22 22 \u00b5F / 16 V 69.8 22.1 5 1 33 22 \u00b5F / 25 V 118 22.1 12 1 68 2 \u00d7 22 \u00b5F / 25 V 309 22.1 11003.3 1 8.2 10 \u00b5F / 16V 69.8 22.1 5 1 10 10 \u00b5F / 25V 118 22.1 12 1 22 22 \u00b5F / 25V + 10 \u00b5F / 25V 309 22.1 (1) Ceramic capacitor is used in this table. www.ti.comLMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 Copyright \u00a9 2023 Texas Instruments Incorporated Submit Document Feedback 17 Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S10P0C3",
+        "source_url": "http://www.ti.com/applications/industrial/appliances/overview.html",
+        "title": "Linked reference from LMR516xx datasheet",
+        "page": null,
+        "text": "appliances arrow-right Benefits of linear thermistors in air conditioning Featured products for sensing & connectivity IWRL6432 ACTIVE Single-chip low-power 57-GHz to 64-GHz industrial mmWave radar sensor CC3301 ACTIVE SimpleLink\u2122 2.4GHz Wi-Fi\u00ae 6 and Bluetooth\u00ae Low Energy companion IC TMAG5273 ACTIVE Low-power linear 3D Hall-effect sensor with I\u00b2C interface Our battery monitoring and charging products enable safer monitoring and control of battery packs for improved safety and more efficient charging. With the help of our reference designs and battery monitoring, gauge and charger devices, we can help you create reliable battery-management solutions that meet strict safety, efficiency and USB Type-C\u00ae standards. arrow-right 5s to 7s battery pack monitor reference design arrow-right 100W USB Type-C power delivery (PD) charger design arrow-right 100W USB Type-C PD bidirectional charger design arrow-right 10s-16s battery pack monitor reference design arrow-right High-side control (up to 32s) battery pack design Featured products for battery monitoring & charging BQ76905 ACTIVE Low-power monitor and protector for 2S to 5S with high accuracy cell voltage measurement BQ25756 ACTIVE Stand-alone or I\u00b2C-controlled 70-V bidirectional buck-boost charge controller with MPPT MSPM0C1104 ACTIVE 24MHz Arm\u00ae Cortex\u00ae-M0+ MCU with 16KB flash, 1KB SRAM, 12-bit ADC Our engineers analog and embedded products with the latest component-level requirements in mind. We can help you meet system-level certifications for air conditioners, major appliances, power tools and home service robots while minimizing cost, risk and development time. arrow-right C2000 SafeTI\u2122 60730 SW Packages arrow-right MSPM0 diagnostic library for functional safety arrow-right IEC 60730/UL 1998 compliance library for C2000 MCU arrow-right C2000 UL/IEC60730-1/60335-1 Class B implementation Download Featured products for appliances MSPM0G1507 ACTIVE 80MHz Arm\u00ae Cortex\u00ae-M0+ MCU with 128KB flash 32KB SRAM 2x4Msps ADC, 12-bit DAC, 3xCOMP, 2xOPA, MATHAC TMS320F2800137 ACTIVE C2000\u2122 32-bit MCU with 120 MHz, 256-KB flash, FPU and TMU Design & development resources Reference design 4-kW single-phase totem pole PFC reference design with C2000 and GaN This reference design is a 4-kW CCM totem-pole PFC with F280049/F280025 control card and LMG342x EVM board. This design demos a robust PFC solution, which avoids isolated current sense by putting the controller's ground in the middle of a MOSFET leg. Benefitting from non-isolation, AC current (...) Reference design Dual motor control with digital interleaved PFC for HVAC reference design The TIDM-02010 reference design is a 1.5-kW dual motor drive and PFC control reference design for variable frequency air conditioner outdoor unit controller in HVAC applications, which illustrates a method to implement sensorless 3-phase PMSM vector control for compressor and fan motor drive, and (...) Reference design People Counting and Tracking Reference Design Using mmWave Radar"
+      },
+      {
+        "chunk_id": "S2P1C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 1,
+        "text": "LMR516xx SIMPLE SWITCHER\u00ae Power Converter, 4-V to 65-V, 0.6-A/1-A Buck Converter in a SOT-23 Package 1 Features \u2022Functional Safety-Capable \u2013Documentation available to aid functional safety system design \u2022Configured for rugged industrial applications \u20134-V to 65-V input voltage range \u2013Input transient protection up to 70-V \u20130.6-A/1-A continuous output current \u201380-ns minimum switching on time \u2013Fixed 400-kHz and 1.1-MHz switching frequency \u2013\u201340\u00b0C to 150\u00b0C junction temperature range \u201398% maximum duty cycle \u2013Monotonic start-up with pre-biased output \u2013Short-circuit protection with hiccup mode \u2013Precision enable \u2013\u00b11.5% tolerance voltage reference \u2022Small design size and ease of use \u2013Integrated synchronous rectification \u2013Internal compensation for ease of use \u2013SOT-23 package \u2022Various options in pin-to-pin compatible package \u2013PFM and forced PWM (FPWM) options \u2022Pin-to-pin compatible with the LMR16006 , LV2862 , LMR50410 , TPS560430 , LMR54406 , and LMR54410 \u2022Create a custom design using the LMR516xx with the WEBENCH \u00ae Power Designer 2 Applications \u2022Major appliances \u2022PLC, DCS, and PAC \u2022Smart meters \u2022Power delivery 3 Description The LMR516xx is a wide-V IN, easy-to-use synchronous buck converter capable of driving up to 0.6-A and 1-A load current. With a wide input range of 4 V to 65 V, the device is designed for a wide range of industrial applications for power conditioning from an unregulated source. The LMR516xx operates at 400-kHz and 1.1-MHz switching frequency to support use of relatively small inductors for an optimized design size. The LMR516xx has a PFM version to realize high efficiency at light load and a FPWM version to achieve constant frequency and small output voltage ripple over the full load range. Soft-start and compensation circuits are implemented internally, which allow the device to be used with minimal external components. The device has built-in protection features, such as cycle-by-cycle current limit, hiccup mode short-circuit protection, and thermal shutdown in case of excessive power dissipation. Device Information PART NUMBER(3)PACKAGE(1)PACKAGE SIZE(2) LMR51610 DBV (SOT-23, 6) 2.90 mm \u00d7 2.80 mm LMR51606 (1) For more information, see Section 11. (2) The package size (length \u00d7 width) is a nominal value and includes pins, where applicable. (3) See the Device Comparison Table . Simplified Schematic IOUT(A)Efficiency (%) 0.001 0.002 0.005 0.01 0.02 0.05 0.1 0.20.30.5 1405060708090100 VIN= 12 V VIN= 24 V VIN= 36 V VIN= 48 V VIN = 65 V Efficiency Versus Output Current VOUT = 5 V, 400 kHzLMR51606 , LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, intellectual property matters and other important disclaimers. PRODUCTION DATA."
+      },
+      {
+        "chunk_id": "S2P24C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 24,
+        "text": "8.4.1.2 Feedback Resistors To reduce noise sensitivity of the output voltage feedback path, place the resistor divider close to the FB pin, rather than close to the load. The FB pin is the input to the error amplifier, so the pin is a high impedance node and very sensitive to noise. Placing the resistor divider closer to the FB pin reduces the trace length of FB signal and reduces noise coupling. The output node is a low impedance node, so the trace from V OUT to the resistor divider can be long if short path is not available. If voltage accuracy at the load is important, make sure voltage sense is made at the load. Doing so corrects for voltage drops along the traces and provides the best output accuracy. The voltage sense trace from the load to the feedback resistor divider must be routed away from the SW node path and the inductor to avoid contaminating the feedback signal with switch noise, while also minimizing the trace length. This action is most important when high value resistors are used to set the output voltage. TI recommends to route the voltage sense trace and place the resistor divider on a different layer than the inductor and SW node path, such that there is a ground plane in between the feedback trace and inductor/SW node polygon. This action provides further shielding for the voltage feedback path from EMI noises.LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 24 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S10P0C2",
+        "source_url": "http://www.ti.com/applications/industrial/appliances/overview.html",
+        "title": "Linked reference from LMR516xx datasheet",
+        "page": null,
+        "text": "ering smarter and more efficient appliances Our motor-control solutions enable intelligent monitoring and control of various motors for increased efficiency, smaller size and lower bill-of-materials costs. Our gallium nitride devices, sophisticated motor-control algorithms and >99% efficient reference designs can help you create reliable motor-control solutions that meet stringent industry efficiency standards. arrow-right Dual motor control reference design for HVAC arrow-right 1kW brushless DC motor inverter reference design arrow-right 750W motor inverter with C2000\u2122 MCU and MSPM0 arrow-right 18V, 600W BLDC motor inverter reference design arrow-right 250W motor inverter reference design with GaN Featured products for motor control TMS320F2800137 ACTIVE C2000\u2122 32-bit MCU with 120 MHz, 256-KB flash, FPU and TMU MSPM0G1506 ACTIVE 80MHz Arm\u00ae Cortex\u00ae-M0+ MCU with 64KB flash 32KB SRAM 2x4Msps ADC, 12-bit DAC, 3xCOMP, 2xOPA, MATHACL NEW DRV7308 ACTIVE 650V, 205m\u03a9 3-phase integrated GaN intelligent power module (IPM) with protection and current sense As energy requirements become more stringent, power supply systems must be more efficient. Our power solutions help you implement power factor correction (PFC) with GaN FETs and advanced totem-pole bridgeless topology, and our cost-optimized Vienna PFC solutions help you improve total harmonic distortion (THD) and power factor performance. arrow-right 4kW GaN totem-pole PFC design for appliances arrow-right 4kW single-phase totem-pole PFC reference design arrow-right Vienna three-phase PFC reference design 98% efficiency reference design\" data-navtitle=\"learn-more\"> arrow-right 3.5kW PFC with >98% efficiency reference design arrow-right 15W bias supply with 4mW standby power design Featured products for power supply TMS320F280025C ACTIVE C2000\u2122 32-bit MCU with 100-MHz, FPU, TMU, 128-kb flash, CLB LMG3422R030 ACTIVE 600-V 30-m\u2126 GaN FET with integrated driver, protection and temperature reporting UCC5350 ACTIVE 10A/10A single-channel isolated gate driver w/ miller clamp/ split outputs, 8V/12V UVLO Sensor technologies help create a more comfortable and healthy environment. Our analog and embedded solutions are dedicated to detecting data such as temperature, humidity, air quality, liquid level and human occupancy, helping you achieve higher performance control in home appliance systems within a room. Our wired and wireless communication solutions make home appliances more intelligent and convenient. arrow-right View our wireless connectivity products arrow-right Battery-powered mmWave sensor reference design arrow-right Smart home appliances with mmWave radar sensors arrow-right 3D Hall-effect sensor for knobs in appliances arrow-right Benefits of linear thermistors in air conditioning Featured products for sensing & connectivity IWRL6432 ACTIVE Single-chip low-power 57-GHz to 64-GHz industrial mmWave radar sensor CC3301 ACTIVE SimpleLink\u2122 2.4GHz Wi-Fi\u00ae 6 and Bluetooth\u00ae Low Energy companion IC TMAG5273 ACTIV"
+      },
+      {
+        "chunk_id": "S2P35C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 35,
+        "text": "IMPORTANT NOTICE AND DISCLAIMER TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES \u201cAS IS\u201d AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY RIGHTS. These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable standards, and any other safety, security, regulatory or other requirements. These resources are subject to change without notice. TI grants you permission to use these resources only for development of an application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources. TI\u2019s products are provided subject to TI\u2019s Terms of Sale , TI\u2019s General Quality Guidelines , or other applicable terms available either on ti.com or provided in conjunction with such TI products. TI\u2019s provision of these resources does not expand or otherwise alter TI\u2019s applicable warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products are standard, catalog, general purpose devices. TI objects to and rejects any additional or different terms you may propose. IMPORTANT NOTICE Copyright \u00a9 2025, Texas Instruments Incorporated Last updated 10/2025"
+      },
+      {
+        "chunk_id": "S2P2C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 2,
+        "text": "Table of Contents 1 Features ............................................................................ 1 2 Applications ..................................................................... 1 3 Description ....................................................................... 1 4 Device Comparison Table ............................................... 3 5 Pin Configuration and Functions ................................... 3 6 Specifications .................................................................. 4 6.1 Absolute Maximum Ratings ........................................ 4 6.2 ESD Ratings ............................................................... 4 6.3 Recommended Operating Conditions ......................... 4 6.4 Thermal Information .................................................... 5 6.5 Electrical Characteristics ............................................. 5 6.6 System Characteristics ............................................... 6 6.7 Typical Characteristics ................................................ 7 7 Detailed Description ...................................................... 10 7.1 Overview ................................................................... 10 7.2 Functional Block Diagram ......................................... 11 7.3 Feature Description ................................................... 117.4 Device Functional Modes .......................................... 16 8 Application and Implementation .................................. 17 8.1 Application Information ............................................. 17 8.2 Typical Application .................................................... 17 8.3 Power Supply Recommendations ............................. 23 8.4 Layout ....................................................................... 23 9 Device and Documentation Support ............................ 26 9.1 Device Support ......................................................... 26 9.2 Documentation Support ............................................ 26 9.3 Receiving Notification of Documentation Updates ....26 9.4 Support Resources ................................................... 26 9.5 Trademarks ............................................................... 26 9.6 Electrostatic Discharge Caution ................................ 26 9.7 Glossary .................................................................... 27 10 Revision History .......................................................... 27 11 Mechanical, Packaging, and Orderable Information .................................................................... 27LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 2 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P15C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 15,
+        "text": "See the Functional Block Diagram for more details. The peak current of high-side switch is limited by a clamped maximum peak current threshold I HS_PK(OC) (see Electrical Characteristics ), which is constant. The current going through the low-side MOSFET is also sensed and monitored. When the low-side switch turns on, the inductor current begins to ramp down. The low-side switch is not turned OFF at the end of a switching cycle if its current is above the low-side current limit, I LS_V(OC) (see Electrical Characteristics ). The low-side switch is kept ON so that inductor current keeps ramping down until the inductor current ramps below I LS_V(OC) . Then, the low-side switch is turned OFF and the high-side switch is turned on after a dead time. After I LS_V(OC) is achieved, peak and valley current limit controls the maximum current delivered and can be calculated using Equation 6 . I O UT _ MAX =I HS _ PK OC + I L S _ V OC 2(6) If the feedback voltage is lower than 40% of the V REF, the current of the low-side switch triggers I HS_PK(OC) for 256 consecutive cycles and hiccup current protection mode is activated. In hiccup mode, the converter shuts down and keeps off for a period of hiccup, T HICCUP (150 ms typical) before the LMR516xx tries to start again. If overcurrent or a short-circuit fault condition still exists, hiccup repeats until the fault condition is removed. Hiccup mode reduces power dissipation under severe overcurrent conditions, preventing overheating and potential damage to the device. For the FPWM version, the inductor current is allowed to go negative. When this current exceeds the low-side negative current limit, I LS(NOC) , the low-side switch is turned off and high-side switch is turned on immediately. This event is used to protect the low-side switch from excessive negative current. 7.3.7 Soft Start The integrated soft-start circuit prevents input inrush current impacting the LMR516xx and the input power supply. Soft start is achieved by slowly ramping up the internal reference voltage when the device is first enabled or powered up. The typical soft-start time is 2.3 ms. The LMR516xx also employs overcurrent protection blanking time, T OCP_BLK (33 ms typical), at the beginning of power up. Without this feature, in applications with a large amount of output capacitors and high V OUT, the inrush current is large enough to trigger the current-limit protection, which can cause a false start as the device enters into hiccup mode. This event results in a continuous recycling of soft start without raising up to the programmed output voltage. The LMR516xx is able to charge the output capacitor to the programmed V OUT by controlling the average inductor current during the start-up sequence in the blanking time, T OCP_BLK . 7.3.8 Thermal Shutdown The LMR516xx provides an internal thermal shutdown to protect the device when the junction temperature exceeds 165 \u00b0C. Both high-side and low-side FETs stop switching in thermal shutdown. Aft"
+      },
+      {
+        "chunk_id": "S2P5C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 5,
+        "text": "6.4 Thermal Information The value of R \u03b8JA given in this table is only valid for comparison with other packages and cannot be used for design purposes. These values were calculated in accordance with JESD 51-7, and simulated on a 4-layer JEDEC board. They do not represent the performance obtained in an actual application. For example, with a 2-layer PCB, a R \u03b8JA = 95\u2103/W can be achieved. For design information, see Maximum Output Current Versus Ambient Temperature. THERMAL METRIC(1)LMR516xx UNIT DBV(SOT-23-6) 6 PINS R\u03b8JA Junction-to-ambient thermal resistance 147.8 \u00b0C/W R\u03b8JA(Effective) Junction-to-ambient thermal resistance with EVM 95 \u00b0C/W R\u03b8JC(top) Junction-to-case (top) thermal resistance 71.1 \u00b0C/W R\u03b8JB Junction-to-board thermal resistance 36.6 \u00b0C/W \u03c8JT Junction-to-top characterization parameter 14.2 \u00b0C/W \u03c8JB Junction-to-board characterization parameter 36.4 \u00b0C/W (1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application report. 6.5 Electrical Characteristics Limits apply over operating junction temperature (T J) range of \u201340\u00b0C to +150\u00b0C, unless otherwise stated. Minimum and Maximum limits(1) are specified through test, design or statistical correlation. Typical values represent the most likely parametric norm at T J = 25\u00b0C, and are provided for reference purposes only. Unless otherwise stated, the following s apply: VIN = 4 V to 65 V. PARAMETER TEST CONDITIONS MIN TYP MAX UNIT SUPPLY IQ(VIN) VIN quiescent current VEN = 3 V, FPWM Operation 420 \u00b5A IQ(VIN)VIN quiescent current (non-switching) (2) VEN = 3 V, PFM Variant Only 26.5 40 \u00b5A ISD(VIN) VIN shutdown supply current VEN = 0 V 0.8 3 \u00b5A UVLO VIN UVLO(R) VIN UVLO rising threshold VIN rising 3.82 4 V VIN UVLO(F) VIN UVLO falling threshold VIN falling 3.4 3.56 V VIN UVLO(H) VIN UVLO hysteresis 0.25 V ENABLE VEN(R) EN voltage rising threshold EN rising, enable switching 1.1 1.227 1.36 V VEN(F) EN voltage falling threshold EN falling, disable switching 0.85 1.0 1.15 V IEN(P2)EN pin sourcing current post EN rising thresholdVEN = 3 V 10 50 nA REFERENCE VOLTAGE Vfb Reference voltage 0.788 0.8 0.812 V IFB(LKG) FB input leakage current VFB = 0.8 V 0.2 nA SWITCHING FREQUENCY fSW(CCM)Switching frequency, CCM operation \"X\" Version 340 400 460 KHz Switching frequency, CCM operation \"Y\" Version 0.935 1.1 1.265 Mhz STARTUP tSS Internal fixed soft-start time 2.3 ms POWER STAGE RDSON(HS) High-side MOSFET on-resistance VIN = 12 V, T J = 25\u00b0C 0.7 \u03a9 RDSON(LS) Low-side MOSFET on-resistance VIN = 12 V, T J = 25\u00b0C 0.36 \u03a9 tON(min) Minimum ON pulse width VIN = 12 V, I OUT = 0.1A 80 ns tON(max) Maximum ON pulse width VIN = 12 V, I OUT = 0.5A 5 \u00b5s www.ti.comLMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 Copyright \u00a9 2023 Texas Instruments Incorporated Submit Document Feedback 5 Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P14C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 14,
+        "text": "7.3.4 Minimum ON Time, Minimum OFF Time, and Frequency Foldback The minimum ON time (T ON_MIN ) is the shortest duration of time that the high-side switch can be turned on. TON_MIN is typically 80 ns for the LMR516xx. The minimum OFF time (T OFF_MIN ) is the shortest duration of time that the high-side switch can be off. T OFF_MIN is typically 200 ns. In CCM operation, T ON_MIN and T OFF_MIN limit the voltage conversion range without switching frequency foldback. The minimum duty cycle without frequency foldback allowed is: D MIN = T O N _ MI N \u00d7 f SW (2) The maximum duty cycle without frequency foldback allowed is: D MAX = 1 \u2212 T OFF _ M IN \u00d7 f SW (3) Given a required output voltage, the maximum V IN without frequency foldback can be found by: V IN _ MAX =V OUT f S W \u00d7 T ON _ MIN(4) The minimum V IN without frequency foldback can be calculated by: V IN _ MIN =V O UT 1 \u2212 f SW \u00d7 T OFF _ M IN(5) In the LMR516xx, a frequency foldback scheme is employed after the T ON_MIN or T OFF_MIN is triggered, which can extend the maximum duty cycle or lower the minimum duty cycle. The on time decreases while V IN voltage increases. After the on time decreases to T ON_MIN , the switching frequency starts to decrease while V IN continues to go up, which lowers the duty cycle further to keep V OUT in regulation according to Equation 4 . The frequency foldback scheme also works after larger duty cycle is needed under a low V IN condition. The frequency decreases after the device hits T OFF_MIN , which extends the maximum duty cycle according to Equation 5 . In such condition, the frequency can be as low as approximately 200 kHz. A wide range of frequency foldback allows for the LMR516xx output voltage to stay in regulation with a much lower supply voltage V IN, which leads to a lower effective dropout. With frequency foldback while maintaining a regulated output voltage, V IN_MAX is raised and V IN_MIN is lowered by decreased f SW. 7.3.5 Bootstrap Voltage The LMR516xx provides an integrated bootstrap voltage converter. A small capacitor between the CB and SW pins provides the gate drive voltage for the high-side MOSFET. The bootstrap capacitor is refreshed when the high-side MOSFET is off and the low-side switch is on. The recommended value of the bootstrap capacitor is 0.1 \u00b5F. TI recommends a ceramic capacitor with an X7R or X5R grade dielectric with a voltage rating of 16 V or higher for stable performance over temperature and voltage. 7.3.6 Overcurrent and Short-Circuit Protection The LMR516xx incorporates both peak and valley inductor current limit to provide protection to the device from overloads and short circuits and limit the maximum output current. Valley current limit prevents inductor current runaway during short circuits on the output, while both peak and valley limits work together to limit the maximum output current of the converter. Cycle-by-cycle current limit is used for overloads, while hiccup mode is used for sustained short circuits. High-side M"
+      },
+      {
+        "chunk_id": "S2P16C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 16,
+        "text": "7.4 Device Functional Modes 7.4.1 Shutdown Mode The EN pin provides electrical ON and OFF control for the LMR516xx. When V EN is below 1 V (typical) , the device is in shutdown mode. The LMR516xx also employs V IN undervoltage lockout protection (UVLO). If V IN voltage is below the UVLO threshold of 3.56 V (typical), the converter turns off. 7.4.2 Active Mode The LMR516xx is in active mode when both V EN and V IN are above their respective operating threshold. The simplest way to enable the LMR516xx is to connect the EN pin to VIN pin. This action allows self-start-up when the input voltage is in the operating range of 4 V to 65 V. See Enable for details on setting these operating levels. In active mode, depending on the load current, the LMR516xx is in one of four modes: 1.Continuous conduction mode (CCM) with fixed switching frequency when load current is greater than half of the peak-to-peak inductor current ripple (for both PFM and FPWM versions) 2.Discontinuous conduction mode (DCM) with fixed switching frequency when load current is less than half of the peak-to-peak inductor current ripple (only for PFM versions) 3.Pulse frequency modulation mode (PFM) when switching frequency is decreased at very light load (only for PFM version) 4.Forced pulse width modulation mode (FPWM) with fixed switching frequency even at light load (only for FPWM version) 7.4.3 CCM Mode Continuous conduction mode (CCM) operation is employed in the LMR516xx when the load current is greater than half of the peak-to-peak inductor current. In CCM operation, the frequency of operation is fixed, output voltage ripple is at a minimum in this mode and the maximum output current of 1 A or 0.6 A can be supplied by the LMR51610 or LMR51606, respectively. 7.4.4 Light Load Operation (PFM Version) For PFM versions, when the load current is lower than half of the peak-to-peak inductor current in CCM, the LMR516xx operates in discontinuous conduction mode (DCM), also known as diode emulation mode (DEM). In DCM operation, the low-side switch is turned off when the inductor current drops to I ZC (0 mA typical) to improve efficiency. Both switching losses and conduction losses are reduced in DCM, compared to forced PWM operation at light load. During light load operation, pulse frequency modulation (PFM) mode is activated to maintain high efficiency operation. When either the minimum high-side switch ON time t ON_MIN or the minimum peak inductor current IPEAK_MIN (330 mA typical) is reached, the switching frequency decreases to maintain regulation. In PFM mode, switching frequency is decreased by the control loop to maintain output voltage regulation when load current reduces. Switching loss is further reduced in PFM operation due to a significant drop in effective switching frequency. 7.4.5 Light-Load Operation (FPWM Version) For FPWM versions, LMR516xx is locked in continuous conduction across the entire load range. This operation is maintained, even in no-load condition, by allowi"
+      },
+      {
+        "chunk_id": "S2P18C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 18,
+        "text": "8.2.1 Design Requirements The detailed design procedure is described based on a design example. For this design example, use the parameters listed in Table 8-2 as the input parameters. Table 8-2. Design Example Parameters PARAMETER VALUE Input voltage, V IN 5 V typical, range from 6 V to 65 V Output voltage, V OUT 5 V \u00b13% Maximum output current, I OUT_MAX 1 A Output overshoot, undershoot (0.25 A to 0.75 A) \u00b15% Output voltage ripple 0.5% Operating frequency 400 kHz 8.2.2 Detailed Design Procedure 8.2.2.1 Custom Design With WEBENCH \u00ae Tools Click here to create a custom design using the LMR51610 device with the WEBENCH \u00ae Power Designer. 1.Start by entering the input voltage (V IN), output voltage (V OUT), and output current (I OUT) requirements. 2.Optimize the design for key parameters such as efficiency, footprint, and cost using the optimizer dial. 3.Compare the generated design with other possible solutions from Texas Instruments. The WEBENCH Power Designer provides a customized schematic along with a list of materials with real-time pricing and component availability. In most cases, these actions are available: \u2022Run electrical simulations to see important waveforms and circuit performance \u2022Run thermal simulations to understand board thermal performance \u2022Export customized schematic and layout into popular CAD formats \u2022Print PDF reports for the design, and share the design with colleagues Get more information about WEBENCH tools at www.ti.com/WEBENCH . 8.2.2.2 Output Voltage Setpoint The output voltage of the LMR516xx device is externally adjustable using a resistor divider network. The divider network is comprised of a top feedback resistor R FBT and bottom feedback resistor R FBB. Equation 7 is used to determine the output voltage of the converter: R FBT =V OUT \u2212 V REF V REF\u00d7 R FBB (7) Choose the value of R FBB to be 22.1 k \u2126. With the desired output voltage set to 5 V and the V REF = 0.8 V, the RFBT value can then be calculated using Equation 7 . The formula yields to a value 116 k \u2126, a standard value of 118 k\u2126 is selected. 8.2.2.3 Switching Frequency The higher switching frequency allows for lower value inductors and smaller output capacitors, which results in smaller design size and lower component cost. However, higher switching frequency brings more switching loss, making the design less efficient and produce more heat. The switching frequency is also limited by the minimum on time of the integrated power switch, the input voltage, the output voltage, and the frequency shift limitation as mentioned in Minimum ON Time, Minimum OFF Time, and Frequency Foldback . For this example, a switching frequency of 400 kHz is selected.LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 18 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P23C2",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 23,
+        "text": "/dt components of the pulsing current. Placing a ceramic bypass capacitor or capacitors as close as possible to the VIN and GND pins is the key to EMI reduction. The SW pin connecting to the inductor must be as short as possible, and just wide enough to carry the load current without excessive heating. Short, thick traces or copper pours (shapes) must be used for high current conduction path to minimize parasitic resistance. The output capacitors must be placed close to the V OUT end of the inductor and closely grounded to GND pin. www.ti.comLMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 Copyright \u00a9 2023 Texas Instruments Incorporated Submit Document Feedback 23 Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P6C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 6,
+        "text": "6.5 Electrical Characteristics (continued) Limits apply over operating junction temperature (T J) range of \u201340\u00b0C to +150\u00b0C, unless otherwise stated. Minimum and Maximum limits(1) are specified through test, design or statistical correlation. Typical values represent the most likely parametric norm at T J = 25\u00b0C, and are provided for reference purposes only. Unless otherwise stated, the following s apply: VIN = 4 V to 65 V. PARAMETER TEST CONDITIONS MIN TYP MAX UNIT tOFF(min) Minimum OFF pulse width VIN = 5 V 200 ns BOOT CIRCUIT HIGH-SIDE GATE DRIVER OVERCURRENT PROTECTION IHS_PK(OC) High-side peak current limit LMR51610 1.25 1.6 1.95 A ILS_V(OC) Low-side valley current limit LMR51610 T J = \u201340\u00b0C to 105\u00b0C 0.9 1.1 1.3 A ILS(NOC) Low-side negative current limit LMR51610 FPWM Only \u20130.66 A IHS_PK(OC) High-side peak current limit LMR51606 0.8 1.1 1.4 A ILS_V(OC) Low-side valley current limit LMR51606 0.62 0.8 0.98 A ILS(NOC) Low-side negative current limit LMR51606 FPWM Only \u20130.36 A IZC Zero-cross detection current threshold 0 A THERMAL SHUTDOWN TJ(SD) Thermal shutdown threshold (3)Temperature rising 165 \u00b0C TJ(HYS) Thermal shutdown hysteresis (3)20 \u00b0C (1) MIN and MAX limits are 100% production tested at 25 \u2103. Limits over the operating temperature range verified through correlation using Statistical Quality Control (SQC) methods. Limits are used to calculate Average Outgoing Quality Level (AOQL). (2) This is the current used by the device open loop. It does not represent the total input current of the system when in regulation. (3) Not production tested. Specified by correlation by design. 6.6 System Characteristics The following specifications apply to a typical application circuit with nominal component values. Specifications in the typical (TYP) column apply to T J = 25\u00b0C only. Specifications in the minimum (MIN) and maximum (MAX) columns apply to the case of typical components over the temperature range of T J = -40\u00b0C to 150\u00b0C. These specifications are not ensured by production testing. PARAMETER TEST CONDITIONS MIN TYP MAX UNIT VIN Operating input voltage range 4 65 V VOUTAdjustable output voltage regulation(1) PFM operation \u20131.5% 2.5% ISUPPLYInput supply current when in regulationVIN = 24 V, V OUT = 5 V, I OUT = 0 A, RFBT = 22.1k\u03a9, PFM variant38 \u00b5A DMAX Maximum switch duty cycle(2)98% VHCFB pin voltage required to trip short- circuit hiccup mode0.32 V tD Switch voltage dead time 5 ns (1) Deviation in V OUT from nominal output voltage value at V IN = 24 V, I OUT = 0 A to full load (2) In dropout the switching frequency drops to increase the effective duty cycle. The lowest frequency is clamped at approximately: F MIN = 1 / (t ON-MAX + tOFF-MIN ). D MAX = tON-MAX /(tON-MAX + tOFF-MIN ).LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 6 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P19C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 19,
+        "text": "8.2.2.4 Inductor Selection The most critical parameters for the inductor are the inductance, saturation current, and the RMS current. The inductance is based on the desired peak-to-peak ripple current \u0394iL. Because the ripple current increases with the input voltage, the maximum input voltage is always used to calculate the minimum inductance L MIN. Use Equation 9 to calculate the minimum value of the output inductor. K IND is a coefficient that represents the amount of inductor ripple current relative to the maximum output current of the device. A reasonable value of K IND must be 20% to 60% of maximum I OUT supported by converter. During an instantaneous overcurrent operation event, the RMS and peak inductor current can be high. The inductor saturation current must be higher than peak current limit level. \u2206 i L =V O U T \u00d7 V IN _ MAX \u2212 V OUT V IN _ MAX \u00d7 L \u00d7 f SW(8) L MIN =V IN _ MAX \u2212 V OUT I OUT \u00d7 K IND\u00d7V OUT V IN _ M AX \u00d7 f SW(9) In general, choose lower inductance in switching power supplies because it usually corresponds to faster transient response, smaller DCR, and reduced size for more compact designs. Too low of an inductance can generate too large of an inductor current ripple such that overcurrent protection at the full load can be falsely triggered. Too low of an inductance also generates more inductor core loss because the current ripple is larger. Larger inductor current ripple also implies larger output voltage ripple with the same output capacitors. With peak current mode control, TI recommends to have adequate amount of inductor ripple current. A larger inductor ripple current improves the comparator signal-to-noise ratio. For this design example, choose K IND = 0.3. The minimum inductor value is calculated to be 32.9 \u00b5H. Choose the nearest standard 33-\u00b5H ferrite inductor with a capability of 1.5 A RMS current and 2.5 A saturation current. 8.2.2.5 Output Capacitor Selection The device is designed to be used with a wide variety of LC filters. Minimize the output capacitance to keep cost and size down. The output capacitor or capacitors, C OUT, must be chosen with care because it directly affects the steady state output voltage ripple, loop stability, and output voltage overshoot and undershoot during load current transient. The output voltage ripple is essentially composed of two parts. One part is caused by the inductor ripple current flowing through the Equivalent Series Resistance (ESR) of the output capacitors: \u2206 V O UT _ ESR = \u2206 i L \u00d7 E SR = K IND \u00d7 I OUT \u00d7 E SR (10) The other part is caused by the inductor current ripple charging and discharging the output capacitors: The two components of the voltage ripple are not in-phase, therefore, the actual peak-to-peak ripple is less than the sum of the two peaks. \u2206 V O UT _ C =\u2206 i L 8 \u00d7 f S W \u00d7 C OUT=K I N D \u00d7 I OUT 8 \u00d7 f SW \u00d7 C OUT(11) The output capacitance value is limited by the load transient specifications of the system. . When a large load step occurs, output capacitors provi"
+      },
+      {
+        "chunk_id": "S2P26C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 26,
+        "text": "9 Device and Documentation Support 9.1 Device Support 9.1.1 Third-Party Products Disclaimer TI'S PUBLICATION OF INFORMATION REGARDING THIRD-PARTY PRODUCTS OR SERVICES DOES NOT CONSTITUTE AN ENDORSEMENT REGARDING THE SUITABILITY OF SUCH PRODUCTS OR SERVICES OR A WARRANTY, REPRESENTATION OR ENDORSEMENT OF SUCH PRODUCTS OR SERVICES, EITHER ALONE OR IN COMBINATION WITH ANY TI PRODUCT OR SERVICE. 9.1.2 Development Support 9.1.2.1 Custom Design With WEBENCH \u00ae Tools Click here to create a custom design using the LMR51610 device with the WEBENCH \u00ae Power Designer. 1.Start by entering the input voltage (V IN), output voltage (V OUT), and output current (I OUT) requirements. 2.Optimize the design for key parameters such as efficiency, footprint, and cost using the optimizer dial. 3.Compare the generated design with other possible solutions from Texas Instruments. The WEBENCH Power Designer provides a customized schematic along with a list of materials with real-time pricing and component availability. In most cases, these actions are available: \u2022Run electrical simulations to see important waveforms and circuit performance \u2022Run thermal simulations to understand board thermal performance \u2022Export customized schematic and layout into popular CAD formats \u2022Print PDF reports for the design, and share the design with colleagues Get more information about WEBENCH tools at www.ti.com/WEBENCH . 9.2 Documentation Support 9.2.1 Related Documentation For related documentation see the following: Texas Instruments, AN-1149 Layout Guidelines for Switching Power Supplies application report 9.3 Receiving Notification of Documentation Updates To receive notification of documentation updates, navigate to the device product folder on ti.com . Click on Notifications to register and receive a weekly digest of any product information that has changed. For change details, review the revision history included in any revised document. 9.4 Support Resources TI E2E\u2122 support forums are an engineer's go-to source for fast, verified answers and design help \u2014 straight from the experts. Search existing answers or ask your own question to get the quick design help you need. Linked content is provided \"AS IS\" by the respective contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of Use . 9.5 Trademarks TI E2E\u2122 is a trademark of Texas Instruments. SIMPLE SWITCHER\u00ae is a registered trademark of Texas Instruments. All trademarks are the property of their respective owners. 9.6 Electrostatic Discharge Caution This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage. ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may be more susceptible to damage because very small parametric changes could cause the device n"
+      },
+      {
+        "chunk_id": "S10P0C1",
+        "source_url": "http://www.ti.com/applications/industrial/appliances/overview.html",
+        "title": "Linked reference from LMR516xx datasheet",
+        "page": null,
+        "text": "Appliances design resources | TI.com Home Applications Industrial Automotive Communications equipment Data center Industrial Personal electronics Appliances Aerospace & defense Appliances Building automation Energy infrastructure Industrial automation Medical & healthcare Power delivery Robotics Test & measurement Home Applications Industrial Appliances Appliances Create next-generation appliances and power tools with greater efficiency, reliability and intelligence with our products and expertise Browse applications Our system expertise and innovative technologies inspire engineers to create next-generation appliances and power tools with greater efficiency, reliability and intelligence. With our comprehensive solutions, designers can add maximum functionality across the entire system. Our leading-edge smart sensing and secure connectivity, along with power-saving motor drive and control and power management devices enable designs that optimize performance and enhance consumer lifestyles. Browse applications Expand all Collapse all Appliance system components Appliances power module Appliances pumps & fans Appliances: compressor Smart home remote control Temperature & humidity sensing module Battery pack & charger Battery charger Battery pack: cordless power tool Battery pack: vacuum cleaner/robot Other industrial battery pack (1S-9S) =10S)\" data-navtitle=\"learn-more\"> Other industrial battery pack (>=10S) Garden & power tools Cordless handheld garden tool Cordless power tool Lawn mower Mains powered tools Home service robot Robotic lawn mower Vacuum robot Major appliance Cooker hood Cooking top Dishwasher Oven Refrigerator & freezer Washer & dryer Residential air conditioner Air conditioner indoor unit Air conditioner outdoor unit Small home appliances Air purifier & humidifier Coffee machine Cordless vacuum cleaner Mixer, blender & food processor Residential & living fan Why choose TI for your appliance systems? checkmark More energy efficiency Our innovative power and motor control and drive solutions reduce power consumption while achieving the highest efficiency for appliance systems. checkmark Enhance smart features and connectivity Smart sensing and secure connectivity technology allows you to optimize performance for comfortable lifestyles. checkmark Accelerate time to market Our large selection of reference designs and on-demand performance tests, such as EMI, voltage drop and surge, enables you to create innovative solutions for your appliance system needs. checkmark Functional Safety Certification Meet your IEC 60730 Class B requirement with TI MCU devices that provide diagnostic library to minimizing cost, risk and development time. Engineering smarter and more efficient appliances Our motor-control solutions enable intelligent monitoring and control of various motors for increased efficiency, smaller size and lower bill-of-materials costs. Our gallium nitride devices, sophisticated motor-control algorithms and >99% efficient referen"
+      },
+      {
+        "chunk_id": "S2P10C1",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 10,
+        "text": "7 Detailed Description 7.1 Overview The LMR516xx converter is an easy-to-use, synchronous, step-down DC/DC converter operating from a 4-V to 65-V supply voltage. The LMR51610 is capable of delivering up to 1-A DC load current in a very small design size while the LMR51606 is capable of delivering up to 0.6-A load current. The family has multiple versions applicable to various applications. For detailed information, see the Device Comparison Table . The LMR516xx employs fixed-frequency peak-current mode control. The PFM version enters PFM mode at light load to achieve high efficiency. A FPWM version is provided to achieve low output voltage ripple, tight output voltage regulation, and constant switching frequency at light load. The device is internally compensated, which reduces design time and requires few external components. Additional features, such as precision enable and internal soft start, provide a flexible and easy-to-use design for a wide range of applications. Protection features include the following: \u2022Thermal shutdown \u2022VIN undervoltage lockout \u2022Cycle-by-cycle current limit \u2022Hiccup mode short-circuit protection This family of devices requires very few external components and has a pinout designed for simple, designed for PCB layout.LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 10 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      },
+      {
+        "chunk_id": "S2P20C2",
+        "source_url": "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+        "title": "LMR516xx datasheet",
+        "page": 20,
+        "text": "selected. The resulting falling UVLO threshold, equal to 4.84 V, can be calculated by Equation 15 where EN hysteresis voltage, V EN_HYS , is 0.227 V (typical). V IN _ F ALLIN G = V ENH \u2212 V ENH _ H Y S \u00d7R EBT + R EN B R EN B(15) 8.2.2.9 Replacing Non Sync Converter The LMR516xx can also be used to replace asynchronous converters, which need a rectifying diode in the application circuit. The design works fine with or without a rectifying diode connected to the switch node of the LMR516xx as shown in Figure 8-2 .LMR51606, LMR51610 SLUSEY1B \u2013 JUNE 2023 \u2013 REVISED DECEMBER 2023 www.ti.com 20 Submit Document Feedback Copyright \u00a9 2023 Texas Instruments Incorporated Product Folder Links: LMR51606 LMR51610"
+      }
+    ],
+    "source_urls": [
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "http://www.ti.com/applications/industrial/appliances/overview.html",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.lcsc.com/product-detail/C20539658.html",
+      "https://www.ti.com/product-category/power-management/voltage-references/overview.html",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "http://www.ti.com/applications/industrial/appliances/overview.html",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "http://www.ti.com/applications/industrial/appliances/overview.html",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "http://www.ti.com/applications/industrial/appliances/overview.html",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf",
+      "https://www.ti.com/lit/ds/symlink/lmr51610.pdf"
+    ],
+    "unanswered_questions": [
+      "Passive component footprints/package sizes are not specified in the supplied chunks.",
+      "Confirm whether the optional input bulk capacitor is needed; datasheet says it can be required if the input supply is located more than a few inches from the LMR516xx.",
+      "Confirm maximum VIN/transient level for final capacitor voltage-rating choices; supplied datasheet example uses 100 V input decoupling for wide-input operation."
+    ],
+    "validation_warnings": [
+      "Requested 1 A output equals the LMR51610 maximum continuous DC output current; thermal/current-limit margin must be validated for the actual PCB and ambient conditions.",
+      "Maximum continuous current can be derated at high switching frequency or high ambient temperature.",
+      "Output capacitor effective capacitance must be checked after DC-bias derating."
+    ],
+    "extraction_notes": [
+      "Selected the 400 kHz component row because LMR51610XDBVR is listed as 1 A, 400 kHz, PFM, adjustable output.",
+      "The 5 V / 1 A / 400 kHz typical values used here are L = 33 \u00b5H, COUT = 22 \u00b5F / 25 V, RFBT = 118 k\u03a9, RFBB = 22.1 k\u03a9.",
+      "The datasheet typical application and design procedure provide the required external components: input capacitors, bootstrap capacitor, inductor, output capacitor, and feedback divider.",
+      "No rectifying diode was included because the supplied chunk says the synchronous design works with or without a rectifying diode and provides no required diode value/specification.",
+      "Deterministic schematic-label extraction supplemented the AI extraction with 2 pin(s) and 2 support component(s).",
+      "Supplier CAD lookup will prefer LCSC C20539658."
+    ],
+    "confidence": "high"
+  }
+}

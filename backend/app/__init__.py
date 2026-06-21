@@ -1,1 +1,1 @@
-"""PCBStream backend package."""
+"""Trace Labs backend package."""

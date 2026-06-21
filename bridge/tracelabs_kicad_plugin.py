@@ -15,8 +15,8 @@ except ImportError:
     pcbnew = None
     wx = None
 
-from pcbstream_bridge.client import BridgeClient
-from pcbstream_bridge.core import resolve_project_root
+from tracelabs_bridge.client import BridgeClient
+from tracelabs_bridge.core import resolve_project_root
 
 
 def _message(title: str, body: str) -> None:
@@ -53,8 +53,8 @@ def _current_project_path() -> Path:
             continue
 
     raise RuntimeError(
-        "PCBStream could not detect a saved KiCad project folder. "
-        "Open the project PCB editor from a saved .kicad_pro file, or link the folder manually in PCBStream."
+        "Trace Labs could not detect a saved KiCad project folder. "
+        "Open the project PCB editor from a saved .kicad_pro file, or link the folder manually in Trace Labs."
     )
 
 
@@ -71,9 +71,9 @@ def _call_optional(owner: object, attr: str) -> object | None:
 
 
 def run_bridge_action() -> None:
-    backend_url = os.environ.get("PCBSTREAM_BACKEND_URL", "http://127.0.0.1:8765")
-    generated_dir = os.environ.get("PCBSTREAM_GENERATED_BLOCK_DIR")
-    import_mode = os.environ.get("PCBSTREAM_IMPORT_MODE", "hierarchical_sheet")
+    backend_url = os.environ.get("TRACELABS_BACKEND_URL", "http://127.0.0.1:8765")
+    generated_dir = os.environ.get("TRACELABS_GENERATED_BLOCK_DIR")
+    import_mode = os.environ.get("TRACELABS_IMPORT_MODE", "hierarchical_sheet")
     client = BridgeClient(backend_url)
     project_path = _current_project_path()
     link = client.link_project(project_path)
@@ -81,34 +81,34 @@ def run_bridge_action() -> None:
     if generated_dir:
         imported = client.import_block(generated_dir, link.get("link_id"), import_mode)
         _message(
-            "PCBStream Bridge",
+            "Trace Labs Bridge",
             f"{imported['message']}\n\nRoot schematic:\n{imported['root_schematic']}",
         )
         return
 
     _message(
-        "PCBStream Bridge",
-        "Linked this KiCad project to PCBStream.\n\n"
+        "Trace Labs Bridge",
+        "Linked this KiCad project to Trace Labs.\n\n"
         f"Project: {link['project_name']}\n"
         f"Folder: {link['project_path']}\n\n"
-        "Export a block in PCBStream, then click Mock Insert into KiCad in the app.",
+        "Export a block in Trace Labs, then click Mock Insert into KiCad in the app.",
     )
 
 
 if pcbnew is not None:
 
-    class PCBStreamBridgePlugin(pcbnew.ActionPlugin):  # type: ignore[misc]
+    class TraceLabsBridgePlugin(pcbnew.ActionPlugin):  # type: ignore[misc]
         def defaults(self) -> None:
-            self.name = "PCBStream Bridge"
-            self.category = "PCBStream"
-            self.description = "Link the current KiCad project to PCBStream and import generated blocks."
+            self.name = "Trace Labs Bridge"
+            self.category = "Trace Labs"
+            self.description = "Link the current KiCad project to Trace Labs and import generated blocks."
             self.show_toolbar_button = True
 
         def Run(self) -> None:
             try:
                 run_bridge_action()
             except Exception as exc:  # KiCad plugin boundary should show actionable failures.
-                _message("PCBStream Bridge Error", str(exc))
+                _message("Trace Labs Bridge Error", str(exc))
 
 
-    PCBStreamBridgePlugin().register()
+    TraceLabsBridgePlugin().register()

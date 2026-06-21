@@ -1,6 +1,6 @@
-# PCBStream Codeplain Specs
+# Trace Labs Codeplain Specs
 
-This folder contains the new PCBStream specification pack. It is spec-only:
+This folder contains the new Trace Labs specification pack. It is spec-only:
 do not render it until you are ready for Codeplain to generate the MVP.
 
 ## Files

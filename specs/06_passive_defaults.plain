@@ -2,7 +2,7 @@
 import:
   - "00_product_overview"
   - "04_circuit_block_schema"
-description: PCBStream passive component symbol, footprint, and confidence defaults.
+description: Trace Labs passive component symbol, footprint, and confidence defaults.
 ---
 
 ***definitions***
@@ -25,6 +25,8 @@ description: PCBStream passive component symbol, footprint, and confidence defau
 
 - Capacitor symbols should default to Device:C.
 
+- Diode symbols should default to Device:D.
+
 - Polarised capacitor symbols should default to Device:CP.
 
 - Inductor symbols should default to Device:L.
@@ -44,6 +46,8 @@ description: PCBStream passive component symbol, footprint, and confidence defau
 - Capacitor footprints under 1uF should default to Capacitor_SMD:C_0603_1608Metric.
 
 - Capacitor footprints from 1uF through 10uF should default to Capacitor_SMD:C_0805_2012Metric.
+
+- Diode footprints should default to Diode_SMD:D_SOD-123.
 
 - Test point footprints should default to TestPoint:TestPoint_Pad_D1.0mm.
 

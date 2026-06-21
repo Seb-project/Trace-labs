@@ -27,6 +27,7 @@ class KiCadWriter:
 
         if block.block_slug == "bme280_i2c":
             library_paths = self.library_assets.write_export_libraries(target)
+            self.library_assets.attach_footprint_asset(block)
         else:
             library_paths = self.draft_library_assets.write_export_libraries(
                 target,
@@ -55,12 +56,12 @@ class KiCadWriter:
         if block.recipe_source == "ai_proposed" and block.extraction_status == "ready":
             return
         safe_part = self._safe_library_name(block.main_component.value or block.main_component.mpn or "DraftPart")
-        library_name = f"PCBStream_{safe_part}"
+        library_name = f"TraceLabs_{safe_part}"
         expected_symbol = f"{library_name}:{safe_part}"
         expected_footprint = f"{library_name}:{library_name}_PLACEHOLDER"
-        if not block.main_component.symbol or block.main_component.symbol.startswith("PCBStream_Draft:"):
+        if not block.main_component.symbol or block.main_component.symbol.startswith("TraceLabs_Draft:"):
             block.main_component.symbol = expected_symbol
-        if not block.main_component.footprint or block.main_component.footprint.startswith("PCBStream_Draft:"):
+        if not block.main_component.footprint or block.main_component.footprint.startswith("TraceLabs_Draft:"):
             block.main_component.footprint = expected_footprint
         block.main_component.symbol_confidence = "needs_review"
         block.main_component.footprint_confidence = "needs_review"
@@ -92,7 +93,7 @@ class KiCadWriter:
 
     def _notes(self, block: CircuitBlock, pricing: PricingPreview) -> str:
         lines = [
-            f"# PCBStream Export: {block.block_name}",
+            f"# Trace Labs Export: {block.block_name}",
             "",
             block.summary,
             "",
@@ -172,8 +173,8 @@ class KiCadWriter:
         support = block.support_components
         symbol_entries = [
                 self._placed_symbol(block.main_component.symbol, "U1", "BME280", 101.6, 76.2, block.main_component.footprint),
-                self._placed_symbol("Device:C", "C1", "100 nF", 45.72, 68.58, support[0].footprint),
-                self._placed_symbol("Device:C", "C2", "100 nF", 60.96, 68.58, support[1].footprint),
+                self._placed_symbol("Device:C", "C1", "100 nF", 86.36, 64.77, support[0].footprint),
+                self._placed_symbol("Device:C", "C2", "100 nF", 116.84, 64.77, support[1].footprint),
         ]
         resistors = [component for component in support if component.symbol == "Device:R"]
         sda_pullup = next((component for component in resistors if "SDA pull-up" in component.purpose), None)
@@ -184,64 +185,62 @@ class KiCadWriter:
         next_resistor = 1
         if sda_pullup:
             symbol_entries.append(
-                self._placed_symbol("Device:R", f"R{next_resistor}", sda_pullup.value, 149.86, 74.93, sda_pullup.footprint)
+                self._placed_symbol("Device:R", f"R{next_resistor}", sda_pullup.value, 132.08, 74.93, sda_pullup.footprint)
             )
             next_resistor += 1
         if scl_pullup:
             symbol_entries.append(
-                self._placed_symbol("Device:R", f"R{next_resistor}", scl_pullup.value, 162.56, 69.85, scl_pullup.footprint)
+                self._placed_symbol("Device:R", f"R{next_resistor}", scl_pullup.value, 139.7, 69.85, scl_pullup.footprint)
             )
             next_resistor += 1
         wires = "\n".join(
             [
-                self._wire(40.64, 50.8, 172.72, 50.8),
-                self._wire(40.64, 101.6, 172.72, 101.6),
+                self._wire(83.82, 50.8, 147.32, 50.8),
+                self._wire(83.82, 91.44, 147.32, 91.44),
                 self._wire(99.06, 50.8, 99.06, 60.96),
                 self._wire(104.14, 50.8, 104.14, 60.96),
-                self._wire(99.06, 91.44, 99.06, 101.6),
-                self._wire(104.14, 91.44, 104.14, 101.6),
-                self._wire(45.72, 50.8, 45.72, 64.77),
-                self._wire(45.72, 72.39, 45.72, 101.6),
-                self._wire(60.96, 50.8, 60.96, 64.77),
-                self._wire(60.96, 72.39, 60.96, 101.6),
-                self._wire(116.84, 73.66, 167.64, 73.66),
-                self._wire(116.84, 78.74, 154.94, 78.74),
-                self._wire(116.84, 68.58, 152.4, 68.58),
-                self._wire(116.84, 83.82, 152.4, 83.82),
+                self._wire(99.06, 60.96, 86.36, 60.96),
+                self._wire(104.14, 60.96, 116.84, 60.96),
+                self._wire(86.36, 68.58, 86.36, 91.44),
+                self._wire(116.84, 68.58, 116.84, 91.44),
+                self._wire(116.84, 73.66, 144.78, 73.66),
+                self._wire(116.84, 78.74, 144.78, 78.74),
+                self._wire(116.84, 68.58, 137.16, 68.58),
+                self._wire(116.84, 83.82, 137.16, 83.82),
                 *(self._pullup_wires(sda_pullup, scl_pullup)),
             ]
         )
         labels = "\n".join(
             [
                 self._hierarchical_label("+3V3", "input", 91.44, 50.8),
-                self._hierarchical_label("GND", "input", 91.44, 101.6),
+                self._hierarchical_label("GND", "input", 91.44, 91.44),
                 self._hierarchical_label("I2C1_SCL", "input", 121.92, 73.66),
                 self._hierarchical_label("I2C1_SDA", "bidirectional", 121.92, 78.74),
-                self._label(sdo_target, 152.4, 68.58),
-                self._label("+3V3", 152.4, 83.82),
+                self._label(sdo_target, 137.16, 68.58),
+                self._label("+3V3", 137.16, 83.82),
                 self._text(f"SDO={address}", 124.46, 66.04),
                 self._text("CSB=I2C", 124.46, 81.28),
             ]
         )
         junctions = "\n".join(
             [
-                self._junction(45.72, 50.8),
-                self._junction(60.96, 50.8),
                 self._junction(99.06, 50.8),
                 self._junction(104.14, 50.8),
-                self._junction(45.72, 101.6),
-                self._junction(60.96, 101.6),
-                self._junction(99.06, 101.6),
-                self._junction(104.14, 101.6),
+                self._junction(86.36, 60.96),
+                self._junction(116.84, 60.96),
+                self._junction(86.36, 91.44),
+                self._junction(99.06, 91.44),
+                self._junction(104.14, 91.44),
+                self._junction(116.84, 91.44),
                 *(self._pullup_junctions(sda_pullup, scl_pullup)),
             ]
         )
-        return f"""(kicad_sch (version 20230121) (generator "PCBStream")
+        return f"""(kicad_sch (version 20230121) (generator "Trace Labs")
   (uuid "{uuid4()}")
   (paper "A4")
   (title_block
     (title "{block.block_name}")
-    (company "PCBStream")
+    (company "Trace Labs")
     (comment 1 "Generated from local verified BME280 recipe")
     (comment 2 "Review footprints and run ERC before fabrication")
   )
@@ -259,6 +258,8 @@ class KiCadWriter:
             [
                 self.library_assets.schematic_cached_symbol(),
                 self._capacitor_library_symbol(),
+                self._diode_library_symbol(),
+                self._inductor_library_symbol(),
                 self._resistor_library_symbol(),
             ]
         )
@@ -266,6 +267,7 @@ class KiCadWriter:
     def _generic_review_schematic(self, block: CircuitBlock) -> str:
         capacitors = [component for component in block.support_components if component.symbol == "Device:C"]
         resistors = [component for component in block.support_components if component.symbol == "Device:R"]
+        diodes = [component for component in block.support_components if self._is_diode(component)]
         ref_base = self._reference_base(block.block_slug)
         symbol_entries = [
             self._placed_symbol(
@@ -286,6 +288,11 @@ class KiCadWriter:
             x, y = self._generic_resistor_position(index)
             symbol_entries.append(
                 self._placed_symbol("Device:R", f"R{ref_base + index}", resistor.value, x, y, resistor.footprint)
+            )
+        for index, diode in enumerate(diodes[:6], start=1):
+            x, y = self._generic_resistor_position(len(resistors[:8]) + index)
+            symbol_entries.append(
+                self._placed_symbol("Device:D", f"D{ref_base + index}", diode.value, x, y, diode.footprint)
             )
 
         power_net = next((net for net in block.external_nets if net.startswith("+")), "VCC_UNSPECIFIED")
@@ -325,6 +332,12 @@ class KiCadWriter:
             )
             junctions.append(self._junction(x, 50.8))
             signal_labels.append(self._label(label, label_x, bottom_y))
+        for index, diode in enumerate(diodes[:6], start=1):
+            x, y = self._generic_resistor_position(len(resistors[:8]) + index)
+            top_net = diode.connects[0] if diode.connects else f"REVIEW_D{index}_1"
+            bottom_net = diode.connects[1] if len(diode.connects) > 1 else f"REVIEW_D{index}_2"
+            wires.extend(self._support_terminal_wires(x, y))
+            signal_labels.extend(self._support_terminal_labels(x, y, top_net, bottom_net))
         wires_text = "\n".join(wires)
         junctions_text = "\n".join(junctions)
         labels = "\n".join(
@@ -336,12 +349,12 @@ class KiCadWriter:
                 self._text("Review pin map and package before layout", 101.6, 114.3),
             ]
         )
-        return f"""(kicad_sch (version 20230121) (generator "PCBStream")
+        return f"""(kicad_sch (version 20230121) (generator "Trace Labs")
   (uuid "{uuid4()}")
   (paper "A4")
   (title_block
     (title "{block.block_name}")
-    (company "PCBStream")
+    (company "Trace Labs")
     (comment 1 "Generated from AI-proposed draft recipe")
     (comment 2 "Review all values, pin maps, symbols and footprints")
   )
@@ -357,76 +370,227 @@ class KiCadWriter:
     def _extracted_reference_schematic(self, block: CircuitBlock) -> str:
         extraction = block.reference_extraction
         assert extraction is not None
-        ref_base = self._reference_base(block.block_slug)
         main_x = 101.6
-        main_y = 76.2
+        main_y = 81.28
         pin_layout = self._extracted_pin_layout(extraction.pins, main_x, main_y)
+        no_connect_pin_rows = [row for row in pin_layout["pins"] if self._is_no_connect_pin(row[0])]
+        pin_rows = [row for row in pin_layout["pins"] if not self._is_no_connect_pin(row[0])]
         external_nets = set(block.external_nets)
+        net_roles = {net.name: net.role for net in extraction.nets}
+        is_ground_net = lambda net: net_roles.get(net) == "ground" or self._is_ground_net(net)
+        is_power_net = lambda net: net_roles.get(net) in {"power", "ground"} or self._is_power_net(net)
+        all_nets = self._unique_strings(
+            [
+                *block.external_nets,
+                *(pin.net_name for pin, _side, _x, _y in pin_rows),
+                *(net for component in block.support_components for net in component.connects),
+            ]
+        )
+        power_nets = [net for net in all_nets if is_power_net(net) and not is_ground_net(net)][:4]
+        power_rail_y = {net: 35.56 + index * 10.16 for index, net in enumerate(power_nets)}
+        capacitor_supports = [
+            component
+            for component in block.support_components[:16]
+            if component.symbol == "Device:C" or component.type == "capacitor"
+        ]
+        grounded_capacitors = sum(
+            1
+            for component in capacitor_supports
+            if any(is_ground_net(net) for net in component.connects)
+        )
+        ground_clearance = 45.72 + max(0, grounded_capacitors - 1) * 5.08
+        ground_rail_y = max(111.76, main_y + pin_layout["half_height"] + ground_clearance)
+        def rail_y_for_net(net: str) -> float | None:
+            if is_ground_net(net):
+                return ground_rail_y
+            return power_rail_y.get(net)
+
+        rail_x1 = 22.86
+        rail_x2 = 187.96
         symbol_entries = [
             self._placed_symbol(
                 block.main_component.symbol,
-                f"U{ref_base}",
+                "U1",
                 block.main_component.value,
                 main_x,
                 main_y,
                 block.main_component.footprint,
             )
         ]
-        support_positions = []
-        support_start_y = max(116.84, main_y + pin_layout["half_height"] + 22.86)
-        for index, component in enumerate(block.support_components[:16], start=1):
-            prefix = "C" if component.symbol == "Device:C" else "R"
-            x = 45.72 + ((index - 1) % 3) * 53.34
-            y = support_start_y + ((index - 1) // 3) * 22.86
-            support_positions.append((component, f"{prefix}{ref_base + index}", x, y))
-            symbol_entries.append(
-                self._placed_symbol(
-                    component.symbol,
-                    f"{prefix}{ref_base + index}",
-                    component.value,
-                    x,
-                    y,
-                    component.footprint,
-                )
-            )
-
         wires = []
         labels = []
         junctions = []
+        no_connects = []
 
-        for pin, side, x, y in pin_layout["pins"]:
-            if side == "left":
-                label_x = x - 10.16
-                wires.append(self._wire(x, y, label_x, y))
-                labels.append(self._label(pin.net_name, label_x, y))
-            else:
-                label_x = x + 10.16
-                wires.append(self._wire(x, y, label_x, y))
-                labels.append(self._label(pin.net_name, label_x, y))
+        for net, y in power_rail_y.items():
+            wires.append(self._wire(rail_x1, y, rail_x2, y))
+            labels.append(self._label(net, rail_x1, y))
+        wires.append(self._wire(rail_x1, ground_rail_y, rail_x2, ground_rail_y))
+        labels.append(self._label("GND", rail_x1, ground_rail_y))
 
-        for index, net in enumerate(block.external_nets[:12]):
-            y = 35.56 + index * 5.08
-            wires.append(self._wire(170.18, y, 180.34, y))
-            labels.append(self._hierarchical_label(net, self._label_shape(net), 180.34, y))
+        pin_rows_by_net: dict[str, list[tuple[object, str, float, float]]] = {}
+        signal_line_bounds: dict[str, tuple[float, float, float]] = {}
+        for index, (pin, side, x, y) in enumerate(pin_rows):
+            net = pin.net_name
+            pin_rows_by_net.setdefault(net, []).append((pin, side, x, y))
+            rail_y = rail_y_for_net(net)
+            if rail_y is not None:
+                trunk_x = x - 10.16 - (index % 2) * 2.54 if side == "left" else x + 10.16 + (index % 2) * 2.54
+                wires.append(self._wire(x, y, trunk_x, y))
+                wires.append(self._wire(trunk_x, y, trunk_x, rail_y))
+                junctions.append(self._junction(trunk_x, rail_y))
+                continue
 
-        for component, _ref, x, y in support_positions:
-            top_net = component.connects[0] if component.connects else f"REVIEW_{_ref}_1"
-            bottom_net = component.connects[1] if len(component.connects) > 1 else f"REVIEW_{_ref}_2"
+            label_x = 35.56 if side == "left" else 167.64
+            wire_start = min(x, label_x)
+            wire_end = max(x, label_x)
+            wires.append(self._wire(x, y, label_x, y))
+            signal_line_bounds[net] = (wire_start, wire_end, y)
+            labels.append(self._label(net, label_x, y))
+
+        for _pin, _side, x, y in no_connect_pin_rows:
+            no_connects.append(self._no_connect(x, y))
+
+        capacitor_side_slots = {"left": 0, "right": 0}
+        pullup_side_slots = {"left": 0, "right": 0}
+        anchored_side_slots = {"left": 0, "right": 0}
+        generic_index = 0
+        for index, component in enumerate(block.support_components[:16], start=1):
+            ref = self._support_ref(component, index)
+            top_net = component.connects[0] if component.connects else f"REVIEW_{ref}_1"
+            bottom_net = component.connects[1] if len(component.connects) > 1 else f"REVIEW_{ref}_2"
+            if self._is_capacitor(component):
+                active_net = next((net for net in component.connects if not is_ground_net(net)), None) or top_net
+                active_rail_y = rail_y_for_net(active_net)
+                active_pin = pin_rows_by_net.get(active_net, [None])[0]
+                side = active_pin[1] if active_pin else "left"
+                if active_pin and any(is_ground_net(net) for net in component.connects):
+                    _pin, side, pin_x, pin_y = active_pin
+                    slot = capacitor_side_slots[side]
+                    capacitor_side_slots[side] += 1
+                    x = self._support_x_for_pin(pin_x, side, slot)
+                    lane = slot // 2
+                    y = self._snap_mm(pin_y + 3.81 + lane * 5.08)
+                    top_terminal_y = self._snap_mm(y - 3.81)
+                    symbol_entries.append(
+                        self._placed_symbol(self._support_symbol(component), ref, component.value, x, y, component.footprint)
+                    )
+                    wires.append(self._wire(pin_x, pin_y, x, pin_y))
+                    if top_terminal_y != pin_y:
+                        wires.append(self._wire(x, pin_y, x, top_terminal_y))
+                    wires.append(self._wire(x, y + 3.81, x, ground_rail_y))
+                    junctions.append(self._junction(x, pin_y))
+                    junctions.append(self._junction(x, ground_rail_y))
+                    continue
+                if active_rail_y is not None and any(is_ground_net(net) for net in component.connects):
+                    slot = capacitor_side_slots[side]
+                    capacitor_side_slots[side] += 1
+                    x = self._snap_mm(rail_x1 + 25.4 + slot * 6.35)
+                    y = self._snap_mm(active_rail_y + 3.81)
+                    symbol_entries.append(
+                        self._placed_symbol(self._support_symbol(component), ref, component.value, x, y, component.footprint)
+                    )
+                    wires.append(self._wire(x, y + 3.81, x, ground_rail_y))
+                    junctions.append(self._junction(x, active_rail_y))
+                    junctions.append(self._junction(x, ground_rail_y))
+                    continue
+
+            power_net = next((net for net in component.connects if is_power_net(net) and not is_ground_net(net)), None)
+            signal_net = next((net for net in component.connects if not is_power_net(net) and not is_ground_net(net)), None)
+            if self._is_resistor(component) and self._is_pull_resistor(component) and power_net and signal_net:
+                signal_pin = pin_rows_by_net.get(signal_net, [None])[0]
+                if signal_pin:
+                    _pin, side, pin_x, signal_y = signal_pin
+                    rail_y = rail_y_for_net(power_net)
+                    if rail_y is not None:
+                        slot = pullup_side_slots[side]
+                        pullup_side_slots[side] += 1
+                        x = self._support_x_for_pin(pin_x, side, slot)
+                        y = self._snap_mm(signal_y - 3.81 if rail_y <= signal_y else signal_y + 3.81)
+                        rail_terminal_y = y - 3.81 if rail_y <= signal_y else y + 3.81
+                        symbol_entries.append(
+                            self._placed_symbol(self._support_symbol(component), ref, component.value, x, y, component.footprint)
+                        )
+                        wires.append(self._wire(x, rail_y, x, rail_terminal_y))
+                        bounds = signal_line_bounds.get(signal_net)
+                        if bounds:
+                            start, end, line_y = bounds
+                            extension = self._line_extension_to_x(start, end, x, line_y)
+                            if extension:
+                                wires.append(extension)
+                        power_extension = self._line_extension_to_x(rail_x1, rail_x2, x, rail_y)
+                        if power_extension:
+                            wires.append(power_extension)
+                        junctions.append(self._junction(x, rail_y))
+                        junctions.append(self._junction(x, signal_y))
+                        continue
+
+            anchor_net = next((net for net in component.connects if pin_rows_by_net.get(net)), None)
+            anchor_pin = pin_rows_by_net.get(anchor_net or "", [None])[0]
+            other_net = next((net for net in component.connects if net != anchor_net), bottom_net)
+            other_rail_y = rail_y_for_net(other_net)
+            if anchor_pin and other_rail_y is not None and self._should_shunt_to_rail(component, other_net):
+                _pin, side, pin_x, pin_y = anchor_pin
+                slot = anchored_side_slots[side]
+                anchored_side_slots[side] += 1
+                x = self._support_x_for_pin(pin_x, side, slot)
+                lane = slot // 2
+                terminal_offset = 3.81 + lane * 5.08
+                y = self._snap_mm(pin_y - terminal_offset if other_rail_y <= pin_y else pin_y + terminal_offset)
+                anchor_terminal_y = self._snap_mm(y + 3.81 if other_rail_y <= pin_y else y - 3.81)
+                rail_terminal_y = y - 3.81 if other_rail_y <= pin_y else y + 3.81
+                symbol_entries.append(
+                    self._placed_symbol(self._support_symbol(component), ref, component.value, x, y, component.footprint)
+                )
+                wires.append(self._wire(pin_x, pin_y, x, pin_y))
+                if anchor_terminal_y != pin_y:
+                    wires.append(self._wire(x, pin_y, x, anchor_terminal_y))
+                wires.append(self._wire(x, other_rail_y, x, rail_terminal_y))
+                junctions.append(self._junction(x, pin_y))
+                junctions.append(self._junction(x, other_rail_y))
+                continue
+            if anchor_pin:
+                _pin, side, pin_x, pin_y = anchor_pin
+                slot = anchored_side_slots[side]
+                anchored_side_slots[side] += 1
+                x = self._support_x_for_pin(pin_x, side, slot)
+                near_x = x + 3.81 if side == "left" else x - 3.81
+                far_x = x - 3.81 if side == "left" else x + 3.81
+                label_x = far_x - 10.16 if side == "left" else far_x + 10.16
+                symbol_entries.append(
+                    self._placed_symbol(
+                        self._support_symbol(component),
+                        ref,
+                        component.value,
+                        x,
+                        pin_y,
+                        component.footprint,
+                        rotation=self._inline_support_rotation(component),
+                    )
+                )
+                wires.append(self._wire(pin_x, pin_y, near_x, pin_y))
+                wires.append(self._wire(far_x, pin_y, label_x, pin_y))
+                labels.append(self._label(other_net, label_x, pin_y))
+                junctions.append(self._junction(near_x, pin_y))
+                continue
+
+            x = 45.72 + (generic_index % 3) * 45.72
+            y = ground_rail_y + 25.4 + (generic_index // 3) * 22.86
+            generic_index += 1
+            symbol_entries.append(
+                self._placed_symbol(self._support_symbol(component), ref, component.value, x, y, component.footprint)
+            )
             labels.extend(self._support_terminal_labels(x, y, top_net, bottom_net))
             wires.extend(self._support_terminal_wires(x, y))
             if len(component.connects) > 2:
-                labels.append(self._text(f"{_ref} extra nets: {', '.join(component.connects[2:])}", x + 7.62, y + 10.16))
+                labels.append(self._text(f"{ref} extra nets: {', '.join(component.connects[2:])}", x + 7.62, y + 10.16))
 
-        for net, points in self._net_points(pin_layout["pins"], support_positions).items():
-            if len(points) > 1 and net not in external_nets:
-                first = points[0]
-                junctions.append(self._junction(first[0], first[1]))
-        return f"""(kicad_sch (version 20230121) (generator "PCBStream")
+        return f"""(kicad_sch (version 20230121) (generator "Trace Labs")
   (uuid "{uuid4()}")
   (paper "A4")
   (title_block
     (title "{block.block_name}")
-    (company "PCBStream")
+    (company "Trace Labs")
     (comment 1 "Generated from cited datasheet/reference extraction")
     (comment 2 "Review extracted pins, passives, symbol and footprint")
   )
@@ -435,6 +599,7 @@ class KiCadWriter:
   )
 {chr(10).join(wires)}
 {chr(10).join(junctions)}
+{chr(10).join(no_connects)}
 {chr(10).join(labels)}
 {chr(10).join(symbol_entries)}
 )"""
@@ -491,6 +656,24 @@ class KiCadWriter:
             self._label(bottom_net, label_x, y + 8.89),
         ]
 
+    def _support_x_for_pin(self, pin_x: float, side: str, slot: int) -> float:
+        offset = 20.32 + slot * 7.62
+        if side == "left":
+            return self._snap_mm(pin_x - offset)
+        return self._snap_mm(pin_x + offset)
+
+    def _line_extension_to_x(self, start_x: float, end_x: float, target_x: float, y: float) -> str | None:
+        left = min(start_x, end_x)
+        right = max(start_x, end_x)
+        if target_x < left:
+            return self._wire(target_x, y, left, y)
+        if target_x > right:
+            return self._wire(right, y, target_x, y)
+        return None
+
+    def _no_connect(self, x: float, y: float) -> str:
+        return f'  (no_connect (at {self._format_mm(x)} {self._format_mm(y)}) (uuid "{uuid4()}"))'
+
     def _net_points(self, pin_rows, support_positions) -> dict[str, list[tuple[float, float]]]:
         points: dict[str, list[tuple[float, float]]] = {}
         for pin, _side, x, y in pin_rows:
@@ -501,6 +684,112 @@ class KiCadWriter:
             if len(component.connects) > 1:
                 points.setdefault(component.connects[1], []).append((x, y + 3.81))
         return points
+
+    def _support_ref(self, component, index: int) -> str:
+        prefix = (
+            "C"
+            if self._is_capacitor(component)
+            else "D"
+            if self._is_diode(component)
+            else "L"
+            if self._is_inductor(component)
+            else "R"
+            if self._is_resistor(component)
+            else "X"
+        )
+        ref = str(component.reference or "").replace("?", "").strip()
+        if ref and ref != prefix:
+            return ref
+        return f"{prefix}{index}"
+
+    def _support_symbol(self, component) -> str:
+        if self._is_capacitor(component):
+            return "Device:C"
+        if self._is_diode(component):
+            return "Device:D"
+        if self._is_inductor(component):
+            return "Device:L"
+        if self._is_resistor(component):
+            return "Device:R"
+        return component.symbol
+
+    def _inline_support_rotation(self, component) -> int:
+        return 90
+
+    def _rail_y_for_net(
+        self,
+        net: str,
+        power_rail_y: dict[str, float],
+        ground_rail_y: float,
+    ) -> float | None:
+        if self._is_ground_net(net):
+            return ground_rail_y
+        return power_rail_y.get(net)
+
+    def _preferred_non_ground_net(self, nets: list[str]) -> str | None:
+        return next((net for net in nets if not self._is_ground_net(net)), None)
+
+    def _is_resistor(self, component) -> bool:
+        return "resistor" in str(component.type).lower() or str(component.symbol).lower() == "device:r"
+
+    def _is_capacitor(self, component) -> bool:
+        return "capacitor" in str(component.type).lower() or str(component.symbol).lower() == "device:c"
+
+    def _is_inductor(self, component) -> bool:
+        return "inductor" in str(component.type).lower() or str(component.symbol).lower() == "device:l"
+
+    def _is_pull_resistor(self, component) -> bool:
+        purpose = str(component.purpose).lower()
+        return bool(re.search(r"pull[-\s]?(?:up|down)", purpose))
+
+    def _should_shunt_to_rail(self, component, other_net: str) -> bool:
+        if self._is_ground_net(other_net):
+            return True
+        if self._is_pull_resistor(component):
+            return True
+        return "capacitor" in str(component.type).lower() and any(
+            self._is_ground_net(net) for net in component.connects
+        )
+
+    def _unique_strings(self, values) -> list[str]:
+        result = []
+        for value in values:
+            if not value or value in result:
+                continue
+            result.append(value)
+        return result
+
+    def _is_ground_net(self, net: str) -> bool:
+        upper = net.upper()
+        return upper in {"GND", "DGND", "AGND"} or upper.endswith("_GND")
+
+    def _is_no_connect_pin(self, pin) -> bool:
+        name = (pin.name or "").upper()
+        net = (pin.net_name or "").upper()
+        role = (pin.electrical_type or "").lower()
+        return (
+            "no_connect" in role
+            or "do not connect" in role
+            or name in {"NC", "DNC", "RESV"}
+            or net.startswith("NC_")
+            or net.startswith("DNC_")
+            or "DNC_FLOAT" in net
+        )
+
+    def _is_power_net(self, net: str) -> bool:
+        upper = net.upper()
+        return (
+            self._is_ground_net(net)
+            or upper.startswith("+")
+            or upper.startswith("VDD")
+            or upper.startswith("VCC")
+            or upper.startswith("VIO")
+            or upper == "VPU"
+            or upper == "IOVDD"
+            or upper.startswith("VBAT")
+            or upper.endswith("_VDD")
+            or upper.endswith("_VCC")
+        )
 
     def _label_shape(self, net: str) -> str:
         upper = net.upper()
@@ -522,7 +811,7 @@ class KiCadWriter:
         zero_index = index - 1
         column = zero_index // 3
         row = zero_index % 3
-        return 129.54 + column * 35.56, 60.96 + row * 15.24
+        return 127 + column * 17.78, 63.5 + row * 10.16
 
     def _reference_base(self, block_slug: str) -> int:
         total = sum((index + 1) * ord(char) for index, char in enumerate(block_slug))
@@ -533,6 +822,8 @@ class KiCadWriter:
             [
                 self.draft_library_assets.schematic_cached_symbol(block),
                 self._capacitor_library_symbol(),
+                self._diode_library_symbol(),
+                self._inductor_library_symbol(),
                 self._resistor_library_symbol(),
             ]
         )
@@ -583,6 +874,35 @@ class KiCadWriter:
       )
     )"""
 
+    def _diode_library_symbol(self) -> str:
+        return """    (symbol "Device:D" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 2.54 0 90) (effects (font (size 1.27 1.27))))
+      (property "Value" "D" (at -2.54 0 90) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 -3.81 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_0_1"
+        (polyline (pts (xy 0 -1.905) (xy -1.27 1.905) (xy 1.27 1.905) (xy 0 -1.905)) (stroke (width 0.254) (type default)) (fill (type none)))
+        (polyline (pts (xy -1.27 -1.905) (xy 1.27 -1.905)) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "D_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27) (name "") (number "1"))
+        (pin passive line (at 0 -3.81 90) (length 1.27) (name "") (number "2"))
+      )
+    )"""
+
+    def _inductor_library_symbol(self) -> str:
+        return """    (symbol "Device:L" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "L" (at 2.032 0 90) (effects (font (size 1.27 1.27))))
+      (property "Value" "L" (at 0 0 90) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at -1.778 0 90) (effects (font (size 1.27 1.27)) hide))
+      (symbol "L_0_1"
+        (polyline (pts (xy 0 -2.54) (xy 0 -1.27) (xy -1.016 -0.635) (xy 1.016 0) (xy -1.016 0.635) (xy 1.016 1.27) (xy 0 1.905) (xy 0 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "L_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27) (name "") (number "1"))
+        (pin passive line (at 0 -3.81 90) (length 1.27) (name "") (number "2"))
+      )
+    )"""
+
     def _placed_symbol(
         self,
         lib_id: str,
@@ -624,7 +944,7 @@ class KiCadWriter:
         if lib_id == "Device:C":
             return (x + 6.35, y - 3.81, 0, x + 6.35, y + 3.81, 0, x, y + 8.89)
 
-        if lib_id == "Device:R" and rotation == 90:
+        if lib_id in {"Device:R", "Device:D", "Device:L"} and rotation == 90:
             return (x - 3.81, y - 5.08, 0, x - 3.81, y + 5.08, 0, x, y + 7.62)
 
         if lib_id == "Device:R":
@@ -632,9 +952,14 @@ class KiCadWriter:
 
         return (x, y - 8.0, 0, x, y + 8.0, 0, x, y + 10.0)
 
+    def _is_diode(self, component) -> bool:
+        return "diode" in str(component.type).lower() or str(component.symbol).lower() == "device:d"
+
     def _format_mm(self, value: float) -> str:
         return f"{value:.2f}".rstrip("0").rstrip(".")
 
+    def _snap_mm(self, value: float) -> float:
+        return round(value, 2)
 
     def _wire(self, x1: float, y1: float, x2: float, y2: float) -> str:
         return (
@@ -648,13 +973,13 @@ class KiCadWriter:
         if sda_pullup:
             wires.extend(
                 [
-                    self._wire(149.86, 50.8, 149.86, 71.12),
+                    self._wire(132.08, 50.8, 132.08, 71.12),
                 ]
             )
         if scl_pullup:
             wires.extend(
                 [
-                    self._wire(162.56, 50.8, 162.56, 66.04),
+                    self._wire(139.7, 50.8, 139.7, 66.04),
                 ]
             )
         return wires
@@ -662,9 +987,9 @@ class KiCadWriter:
     def _pullup_junctions(self, sda_pullup, scl_pullup) -> list[str]:
         junctions = []
         if sda_pullup:
-            junctions.extend([self._junction(149.86, 50.8), self._junction(149.86, 78.74)])
+            junctions.extend([self._junction(132.08, 50.8), self._junction(132.08, 78.74)])
         if scl_pullup:
-            junctions.extend([self._junction(162.56, 50.8), self._junction(162.56, 73.66)])
+            junctions.extend([self._junction(139.7, 50.8), self._junction(139.7, 73.66)])
         return junctions
 
     def _label(self, text: str, x: float, y: float) -> str:

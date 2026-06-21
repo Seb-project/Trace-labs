@@ -17,8 +17,8 @@ class Option(BaseModel):
 class MissingQuestion(BaseModel):
     id: str
     question: str
-    type: Literal["select"] = "select"
-    options: list[Option]
+    type: Literal["select", "number", "text"] = "select"
+    options: list[Option] = Field(default_factory=list)
     required: bool = True
     default: str
     depends_on: dict[str, str] = Field(default_factory=dict)
@@ -44,6 +44,19 @@ class Component(BaseModel):
     symbol_confidence: str
     assignment_reason: str
     status: str = "draft"
+    footprint_asset: "FootprintAsset | None" = None
+
+
+class FootprintAsset(BaseModel):
+    name: str
+    footprint_id: str = ""
+    source_kind: str = ""
+    source_project: str = ""
+    source_path: str = ""
+    source_url: str = ""
+    confidence: str = "downloaded_needs_review"
+    kicad_mod: str
+    warnings: list[str] = Field(default_factory=list)
 
 
 class SupportComponent(BaseModel):
@@ -56,7 +69,7 @@ class SupportComponent(BaseModel):
     footprint_confidence: str = "default_selected"
     symbol_confidence: str = "default_selected"
     connects: list[str] = Field(default_factory=list)
-    assignment_reason: str = "Default selected from PCBStream passive defaults."
+    assignment_reason: str = "Default selected from Trace Labs passive defaults."
     source_citations: list[str] = Field(default_factory=list)
 
 
@@ -147,6 +160,9 @@ class SupportRequirement(BaseModel):
     required: bool = True
     placement_note: str = ""
     source_citations: list[str] = Field(default_factory=list)
+    calculation_role: str = ""
+    calculation_inputs: list[str] = Field(default_factory=list)
+    calculation_formula: str = ""
 
 
 class CircuitNet(BaseModel):
@@ -181,7 +197,16 @@ class ComponentExtractionStartRequest(BaseModel):
 
 class ComponentExtractionJobResponse(BaseModel):
     job_id: str
-    status: Literal["queued", "fetching_sources", "extracting", "acquiring_cad", "validating", "ready", "failed"]
+    status: Literal[
+        "queued",
+        "fetching_sources",
+        "sources_found",
+        "extracting",
+        "acquiring_cad",
+        "validating",
+        "ready",
+        "failed",
+    ]
     progress: float = 0.0
     message: str = ""
     candidate: DatasheetCandidate | None = None
@@ -199,10 +224,15 @@ class SchematicPreview(BaseModel):
 
 
 class UsageEvent(BaseModel):
+    reference: str = Field(default_factory=lambda: f"evt_{uuid4().hex}")
     event_type: str
     quantity: float = 1
     metadata: dict[str, Any] = Field(default_factory=dict)
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    account_id: str = "local-dev"
+    solvimon_sync_status: Literal["not_configured", "pending", "synced", "failed"] = "not_configured"
+    solvimon_synced_at: str | None = None
+    solvimon_error: str | None = None
 
 
 class PricingPreview(BaseModel):
@@ -219,6 +249,41 @@ class PricingPreview(BaseModel):
         "This generation recorded 1 circuit block and 1 KiCad export. "
         "On the Maker plan, 49 included blocks remain. Estimated bill impact: GBP 0.00."
     )
+
+
+class AccountProfile(BaseModel):
+    account_id: str = "local-dev"
+    display_name: str = "Local developer"
+    email: str = ""
+    status: Literal["local", "active"] = "local"
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    solvimon_customer_reference: str = ""
+    solvimon_subscription_reference: str = ""
+
+
+class BillingIntegrationStatus(BaseModel):
+    provider: Literal["solvimon"] = "solvimon"
+    mode: Literal["disabled", "test", "live"] = "disabled"
+    configured: bool = False
+    customer_reference: str = ""
+    subscription_reference: str = ""
+    meter_references: dict[str, str] = Field(default_factory=dict)
+    last_sync_status: Literal["not_configured", "synced", "failed"] = "not_configured"
+    last_synced_at: str | None = None
+    last_error: str | None = None
+    setup_required: list[str] = Field(default_factory=list)
+
+
+class AccountOverview(BaseModel):
+    account: AccountProfile
+    pricing_preview: PricingPreview
+    billing: BillingIntegrationStatus
+
+
+class BillingPortalResponse(BaseModel):
+    available: bool = False
+    message: str
+    actions: list[str] = Field(default_factory=list)
 
 
 class CircuitBlock(BaseModel):
@@ -265,7 +330,7 @@ class ProjectContext(BaseModel):
 
 class HealthResponse(BaseModel):
     status: str = "ok"
-    app_name: str = "PCBStream"
+    app_name: str = "Trace Labs"
     project_name: str = "weather_station.kicad_pro"
     kicad_bridge_status: str = "mocked"
 
@@ -310,12 +375,15 @@ class ExportResponse(BaseModel):
     files: dict[str, str]
     pricing_preview: PricingPreview
     bridge_action_note: str
+    block: CircuitBlock
 
 
 class UsageEventRequest(BaseModel):
+    reference: str | None = None
     event_type: str
     quantity: float = 1
     metadata: dict[str, Any] = Field(default_factory=dict)
+    timestamp: str | None = None
 
 
 class BridgeLinkRequest(BaseModel):

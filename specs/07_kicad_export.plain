@@ -4,7 +4,7 @@ import:
   - "01_architecture"
   - "04_circuit_block_schema"
   - "06_passive_defaults"
-description: PCBStream deterministic KiCad export and mocked insertion contract.
+description: Trace Labs deterministic KiCad export and mocked insertion contract.
 ---
 
 ***definitions***
@@ -44,6 +44,11 @@ description: PCBStream deterministic KiCad export and mocked insertion contract.
 - :KiCadWriter: must create :PricingUsageFile: named pricing_usage.json.
 
 - :BlockJsonFile: must contain the full final :CircuitBlock: JSON.
+
+- :KiCadWriter: should attach written footprint geometry to the exported :CircuitBlock:.
+  - When :KiCadWriter: writes a downloaded or bundled KiCad footprint file, it stores the same text as
+    :FootprintAsset:.
+  - The backend export endpoint should return the updated :CircuitBlock: so the UI can save the geometry.
 
 - :NotesMarkdownFile: must include a human-readable summary.
 

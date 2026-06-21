@@ -1,7 +1,7 @@
 ---
 import:
   - "00_product_overview"
-description: PCBStream shared CircuitBlock and usage schema contract.
+description: Trace Labs shared CircuitBlock and usage schema contract.
 ---
 
 ***definitions***
@@ -15,7 +15,11 @@ description: PCBStream shared CircuitBlock and usage schema contract.
 - :Component: is the main generated part in a circuit block.
   - It has reference, type, value, mpn, manufacturer, symbol, and footprint.
   - It has model_3d, purpose, connects, footprint_confidence, and symbol_confidence.
-  - It has assignment_reason and status.
+  - It has assignment_reason, status, and optional :FootprintAsset:.
+
+- :FootprintAsset: is a downloaded KiCad footprint candidate for visual review.
+  - It has name, footprint_id, source metadata, confidence, warnings, and kicad_mod text.
+  - The kicad_mod text is the source used by :FootprintPreview:.
 
 - :SupportComponent: is a passive or support item in a circuit block.
   - It has reference, type, value, purpose, symbol, and footprint.
@@ -24,6 +28,14 @@ description: PCBStream shared CircuitBlock and usage schema contract.
 
 - :MissingQuestion: is a required user choice before final generation.
   - It has id, question, type, options, required, and default.
+  - Its type may be select, number, or text.
+
+- :CalculationInput: is a user-provided value used to calculate support components.
+  - It is collected through :MissingQuestion: when required.
+
+- :CalculatedSupportRequirement: is a support requirement that has a calculation role.
+  - It has calculation_role, calculation_inputs, and calculation_formula.
+  - It still keeps source citations for the topology and formula source.
 
 - :NextStep: is a review task shown to the user.
   - It has id, category, task, required, status, and reason.
@@ -61,6 +73,14 @@ description: PCBStream shared CircuitBlock and usage schema contract.
 
 - :MissingQuestion: options should preserve display labels and submitted values.
 
+- :MissingQuestion: with type number may have no options.
+
+- :MissingQuestion: may be returned by chat before a :CircuitBlock: draft exists.
+
+- :CalculatedSupportRequirement: should not be tied to one part number.
+
+- :CalculatedSupportRequirement: should support reusable formula roles.
+
 - :ValidationWarning: severity values should include info, warning, and critical.
 
 - :NextStep: status values should include todo, done, and blocked.
@@ -72,6 +92,8 @@ description: PCBStream shared CircuitBlock and usage schema contract.
 - :Component: and :SupportComponent: must include symbol and footprint assignment metadata.
 
 - :Component: must include confidence labels for symbol and footprint.
+
+- :Component: should include :FootprintAsset: when downloaded footprint geometry is available.
 
 - :CircuitBlock: must include :ReviewMetadata: before it can be exported.
 

@@ -1,18 +1,18 @@
 ---
 import:
   - "00_product_overview"
-description: PCBStream monorepo architecture and module boundaries.
+description: Trace Labs monorepo architecture and module boundaries.
 ---
 
 ***definitions***
 
-- :PCBStreamMonorepo: is the generated project workspace for the MVP.
+- :TraceLabsMonorepo: is the generated project workspace for the MVP.
 
-- :DesktopApp: is the Electron and React frontend for :PCBStreamApp:.
+- :DesktopApp: is the Electron and React frontend for :TraceLabsApp:.
 
 - :BackendService: is the local FastAPI service used by :DesktopApp:.
 
-- :KiCadBridgeAddon: is the lightweight KiCad add-on used to link projects to PCBStream.
+- :KiCadBridgeAddon: is the lightweight KiCad add-on used to link projects to Trace Labs.
 
 - :SchemasPackage: is the shared schema package or mirrored schema documentation.
 
@@ -30,7 +30,7 @@ description: PCBStream monorepo architecture and module boundaries.
 
 ***implementation reqs***
 
-- :PCBStreamMonorepo: should use this intended structure:
+- :TraceLabsMonorepo: should use this intended structure:
   - `apps/desktop` for :DesktopApp:.
   - `apps/backend` for :BackendService:.
   - `apps/kicad-bridge` for :KiCadBridgeAddon:.

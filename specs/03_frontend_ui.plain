@@ -6,7 +6,7 @@ import:
   - "05_component_recipes"
   - "08_mock_solvimon_pricing"
   - "10_acceptance_criteria"
-description: PCBStream Electron React frontend, chat-first UI, preview, export, and mock bridge.
+description: Trace Labs Electron React frontend, chat-first UI, preview, export, and mock bridge.
 ---
 
 ***definitions***
@@ -25,7 +25,12 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
 
 - :OptionChipGroup: lets the user answer missing questions with selectable chips.
 
+- :CalculationInputForm: lets the user answer numeric calculation questions.
+
 - :SchematicPreviewCard: shows the reviewable block diagram.
+
+- :FootprintPreview: shows the footprint candidate for the main :Component: in the active :CircuitBlock:.
+  - It shares the preview area used by :SchematicPreviewCard:.
 
 - :ComponentListCard: shows generated components and assignment confidence.
 
@@ -82,6 +87,11 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
 - :DesktopApp: should use generated or SVG UI only for schematic preview.
   - The preview is not a real KiCad render.
 
+- :DesktopApp: should render :FootprintPreview: from :FootprintAsset: kicad_mod text.
+  - It should parse KiCad footprint pads and front-layer drawing primitives.
+  - It must not infer footprint geometry from the footprint name alone.
+  - It must not show a package-shaped approximation as if it were the real footprint.
+
 - :UnitTests: should use Vitest and React Testing Library.
 
 - :UnitTests: should use `test_scripts/run_unittests_frontend_node.sh`.
@@ -91,7 +101,7 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
 - :UnitTests: must use stable accessible selectors for repeated brand text.
   - App identity tests should query the header landmark or `data-testid="app-title"`.
   - Unit tests must not use broad partial text regexes such as `/PCB/i`.
-  - Repeated text like PCBStream in welcome copy must not make app identity tests fail.
+  - Repeated text like Trace Labs in welcome copy must not make app identity tests fail.
 
 ***test reqs***
 
@@ -117,11 +127,11 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
   - Narrow layout uses one column and keeps the input sticky at the bottom.
 
   ***acceptance tests***
-  - Launching the app should show PCBStream in the header.
+  - Launching the app should show Trace Labs in the header.
   - The prompt input should be visible on first load.
 
 - :Header: should show the mocked project connection.
-  - It shows app name PCBStream.
+  - It shows app name Trace Labs.
   - The app name is exposed with `data-testid="app-title"` for stable tests.
   - It shows project name weather_station.kicad_pro.
   - It shows a connected status dot.
@@ -138,8 +148,8 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
   - A failed response marks the backend as offline and shows a retry action.
 
 - :ChatView: should show the welcome state before the first request.
-  - It shows an empty assistant welcome message for PCBStream.
-  - :PromptInput: placeholder is "Ask PCBStream to add a part...".
+  - It shows an empty assistant welcome message for Trace Labs.
+  - :PromptInput: placeholder is "Ask Trace Labs to add a part...".
   - It shows an example prompt button labelled "Add a BME280 temperature sensor".
   - It shows the connected project mock weather_station.kicad_pro.
 
@@ -172,6 +182,17 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
   - The UI shows a loading state while waiting for the final block.
   - Backend validation errors remain visible in the chat.
 
+- :CalculationInputForm: should collect numeric values for extracted circuit calculations.
+  - It should render :MissingQuestion: items with type number as numeric inputs.
+  - It should prefill the backend default when one is supplied.
+  - It should submit the entered value through the normal answer flow.
+  - It should not show option chips for numeric questions.
+  - The final chat summary should mention calculated power targets when present.
+  - It should support numeric, text, and select clarification questions before a draft block exists.
+  - When all pre-search clarification questions are answered, it resumes the original chat request with those answers.
+  - The resumed request should include the clarification answers in the chat message.
+  - The resumed request should not require the user to retype the original request.
+
 - :SchematicPreviewCard: should show the generated BME280 preview.
   - It shows a BME280 block.
   - It shows +3V3, GND, SDA, and SCL connections.
@@ -189,6 +210,8 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
   - It shows R? 4.7 kOhm SDA pull-up with Device:R and 0603 when selected.
   - It shows R? 4.7 kOhm SCL pull-up with Device:R and 0603 when selected.
   - It shows optional address strap or selection information when present.
+  - Compact rows must keep long package, footprint, supplier, and value text inside the card.
+  - Compact rows may truncate long text when the expanded components table shows the full details.
 
 - :DesktopApp: should show assumptions and validation warnings.
   - Assumptions include default +3V3 rail, default 0603 passives, and I2C mode.
@@ -203,6 +226,7 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
   - The checklist includes Run ERC.
   - The checklist includes Place decoupling capacitors close to the sensor.
   - The checklist includes Add firmware driver with selected I2C address.
+  - Checked items remain checked when the user reopens a saved component.
 
 - :UsagePricingCard: should show mock pricing and usage.
   - It calls `GET /pricing-preview` when the app starts.
@@ -239,4 +263,37 @@ description: PCBStream Electron React frontend, chat-first UI, preview, export, 
   - Full-screen layout keeps chat, preview, and prompt visible without overlap.
   - Split-screen layout uses a compact header and compact progress bar.
   - Split-screen layout has stacked chat bubbles, stacked review cards, and sticky actions.
+  - Sticky action setup cards appear in front of scrollable review content.
+  - Sticky action setup cards are not clipped by panel boundaries.
+  - Sticky action setup cards use an opaque surface over review content.
+  - Review cards and checklist text must not cover sticky action setup cards.
   - Text must wrap or truncate cleanly without clipping controls.
+
+- :DesktopApp: should show clear progress for component extraction jobs.
+  - While extraction is running, the loading status should show the latest backend job message.
+  - The loading status should distinguish queued, fetching, found, extracting, CAD, and validation stages.
+  - Before sources are found, the loading status should say Trace Labs is still looking for readable text.
+  - When the job reaches sources_found, the UI should say that readable datasheet content was found.
+  - When readable content is found, :ChatView: should add one assistant update that says extraction continues.
+  - That assistant update should say the documentation panel now shows the selected source when one exists.
+  - After sources_found, the UI should say that pin and reference-circuit extraction is still running.
+  - :SchematicPreviewCard: documentation should show the selected candidate datasheet during extraction.
+  - :SchematicPreviewCard: documentation should keep showing block documentation after draft generation.
+  - Timeout messages should include the last backend extraction status when one exists.
+  - Extracted power-regulator previews should show inductor support components with inductor references.
+  - Extracted power-regulator previews should show regulator nets such as VIN, SW, FB, BOOT, and VOUT.
+  - Calculated support component values should appear in the component list and schematic preview.
+
+- :DesktopApp: should let :TraceLabsUser: swap the preview area to :FootprintPreview:.
+  - The swap control appears at the top right of the preview area.
+  - The schematic and footprint views use the same dotted background.
+  - :FootprintPreview: renders the actual :FootprintAsset: geometry when available.
+  - :FootprintPreview: shows a missing-geometry state when no :FootprintAsset: is available.
+  - :FootprintPreview: shows the footprint name, confidence, real pads, and real outline primitives.
+  - Pin 1 must be visually distinct when the parsed footprint includes pad 1.
+  - Returning to schematic view shows the existing schematic preview for the active :CircuitBlock:.
+
+- :ChatView: should keep answered follow-up questions in the transcript.
+  - When :TraceLabsUser: answers a :MissingQuestion:, append that question as an assistant :ChatBubble:.
+  - Append the selected or entered answer as a user :ChatBubble: immediately after the question.
+  - If all pre-search questions are answered, the hidden resume request must not add another user bubble.

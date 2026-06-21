@@ -101,7 +101,7 @@ class GitLabKiCadLibraryClient:
             url,
             headers={
                 "Accept": "application/json,text/plain,*/*",
-                "User-Agent": "PCBStream/0.1 KiCadLibraryLookup",
+                "User-Agent": "TraceLabs/0.1 KiCadLibraryLookup",
             },
         )
         with urllib.request.urlopen(request, timeout=self.timeout_seconds) as response:
@@ -111,21 +111,21 @@ class GitLabKiCadLibraryClient:
 class EasyEDALCSCProvider:
     def __init__(self, *, enabled: bool | None = None):
         if enabled is None:
-            enabled = os.getenv("PCBSTREAM_LCSC_LOOKUP_ENABLED", "true").lower() not in {
+            enabled = os.getenv("TRACELABS_LCSC_LOOKUP_ENABLED", "true").lower() not in {
                 "0",
                 "false",
                 "no",
                 "off",
             }
         self.enabled = enabled
-        self.timeout_seconds = float(os.getenv("PCBSTREAM_LCSC_LOOKUP_TIMEOUT_SECONDS", "90"))
-        self.search_enabled = os.getenv("PCBSTREAM_LCSC_SEARCH_ENABLED", "true").lower() in {
+        self.timeout_seconds = float(os.getenv("TRACELABS_LCSC_LOOKUP_TIMEOUT_SECONDS", "90"))
+        self.search_enabled = os.getenv("TRACELABS_LCSC_SEARCH_ENABLED", "true").lower() in {
             "1",
             "true",
             "yes",
             "on",
         }
-        self.import_symbols = os.getenv("PCBSTREAM_SUPPLIER_SYMBOL_IMPORT_ENABLED", "false").lower() in {
+        self.import_symbols = os.getenv("TRACELABS_SUPPLIER_SYMBOL_IMPORT_ENABLED", "false").lower() in {
             "1",
             "true",
             "yes",
@@ -171,8 +171,8 @@ class EasyEDALCSCProvider:
     ) -> DownloadedLibraryAssets:
         lcsc_id = supplier_match.lcsc_id
         supplier_footprint_name = self._supplier_footprint_name(footprint_name, lcsc_id)
-        with tempfile.TemporaryDirectory(prefix="pcbstream_lcsc_") as tmp_dir:
-            output_base = Path(tmp_dir) / f"PCBStream_{lcsc_id}"
+        with tempfile.TemporaryDirectory(prefix="tracelabs_lcsc_") as tmp_dir:
+            output_base = Path(tmp_dir) / f"TraceLabs_{lcsc_id}"
             command = [
                 sys.executable,
                 "-m",
@@ -377,16 +377,16 @@ class OnlineLibraryAcquisitionService:
         enabled: bool | None = None,
     ):
         if enabled is None:
-            enabled = os.getenv("PCBSTREAM_ONLINE_LIBRARY_LOOKUP_ENABLED", "true").lower() not in {
+            enabled = os.getenv("TRACELABS_ONLINE_LIBRARY_LOOKUP_ENABLED", "true").lower() not in {
                 "0",
                 "false",
                 "no",
                 "off",
             }
-        timeout = float(os.getenv("PCBSTREAM_LIBRARY_LOOKUP_TIMEOUT_SECONDS", "6"))
+        timeout = float(os.getenv("TRACELABS_LIBRARY_LOOKUP_TIMEOUT_SECONDS", "6"))
         self.client = client or GitLabKiCadLibraryClient(timeout_seconds=timeout)
         self.enabled = enabled
-        self.import_symbols = os.getenv("PCBSTREAM_ONLINE_SYMBOL_IMPORT_ENABLED", "false").lower() in {
+        self.import_symbols = os.getenv("TRACELABS_ONLINE_SYMBOL_IMPORT_ENABLED", "false").lower() in {
             "1",
             "true",
             "yes",
@@ -543,9 +543,9 @@ class OnlineLibraryAcquisitionService:
                 score = self._match_score(needle, path)
                 if score <= 0:
                     continue
-                item = {**item, "_pcbstream_score": score}
+                item = {**item, "_tracelabs_score": score}
                 matches.append(item)
-        return sorted(matches, key=lambda item: (-int(item["_pcbstream_score"]), str(item.get("path", ""))))
+        return sorted(matches, key=lambda item: (-int(item["_tracelabs_score"]), str(item.get("path", ""))))
 
     def _match_score(self, needle: str, path: str) -> int:
         filename = path.rsplit("/", 1)[-1]
@@ -618,7 +618,7 @@ class OnlineLibraryAcquisitionService:
             )
         symbol = self._replace_or_add_property(symbol, "Value", value)
         symbol = self._replace_or_add_property(symbol, "Footprint", footprint_id)
-        symbol = self._replace_or_add_property(symbol, "Description", "PCBStream downloaded KiCad symbol candidate; review before fabrication")
+        symbol = self._replace_or_add_property(symbol, "Description", "Trace Labs downloaded KiCad symbol candidate; review before fabrication")
         return symbol
 
     def _replace_or_add_property(self, symbol: str, name: str, value: str) -> str:
@@ -644,10 +644,10 @@ class OnlineLibraryAcquisitionService:
             text,
             count=1,
         )
-        if "PCBStream downloaded KiCad footprint candidate" not in text:
+        if "Trace Labs downloaded KiCad footprint candidate" not in text:
             text = text.replace(
                 "\n  (tags ",
-                '\n  (descr "PCBStream downloaded KiCad footprint candidate; review package and land pattern before fabrication")\n  (tags ',
+                '\n  (descr "Trace Labs downloaded KiCad footprint candidate; review package and land pattern before fabrication")\n  (tags ',
                 1,
             )
         return text

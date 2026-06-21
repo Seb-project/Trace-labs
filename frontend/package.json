@@ -1,5 +1,5 @@
 {
-  "name": "pcbstream-desktop",
+  "name": "tracelabs-desktop",
   "version": "0.1.0",
   "private": true,
   "main": "electron/main.cjs",
@@ -9,7 +9,16 @@
     "electron": "electron electron/main.cjs",
     "start": "concurrently -k \"npm run dev\" \"wait-on http://127.0.0.1:5173 && npm run electron\"",
     "fix:electron": "node scripts/repair-electron.cjs",
+    "postinstall": "node scripts/patch-electron-name.cjs",
     "build": "tsc && vite build",
+    "build:backend": "node ../packaging/run-pyinstaller.cjs",
+    "prepare:demo-env": "node scripts/prepare-demo-env.cjs",
+    "pack:dir": "npm run build && npm run build:backend && npm run prepare:demo-env && electron-builder --dir",
+    "dist:mac": "node ../packaging/assert-platform.cjs darwin && npm run build && npm run build:backend && npm run prepare:demo-env && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg zip",
+    "dist:win": "node ../packaging/assert-platform.cjs win32 && npm run build && npm run build:backend && npm run prepare:demo-env && electron-builder --win nsis zip --x64",
+    "dist:judge:mac": "npm run dist:mac",
+    "dist:judge:win": "npm run dist:win",
+    "dist": "npm run dist:mac",
     "test": "vitest run --environment jsdom"
   },
   "dependencies": {
@@ -26,6 +35,7 @@
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
     "electron": "^30.5.1",
+    "electron-builder": "^26.15.3",
     "jsdom": "^24.1.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
@@ -33,5 +43,58 @@
     "vite": "^5.2.11",
     "vitest": "^1.6.0",
     "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.tracelabs.desktop",
+    "productName": "Trace Labs",
+    "icon": "build/icon",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "build/**/*",
+      "package.json",
+      "logo.svg"
+    ],
+    "extraResources": [
+      {
+        "from": "../dist",
+        "to": "backend",
+        "filter": [
+          "tracelabs-backend*"
+        ]
+      },
+      {
+        "from": "../dist/demo",
+        "to": "demo",
+        "filter": [
+          "backend.env"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "artifactName": "${productName}-${version}-${arch}-windows.${ext}",
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "verifyUpdateCodeSignature": false
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development"
+    }
   }
 }

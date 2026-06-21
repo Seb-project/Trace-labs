@@ -1,19 +1,19 @@
 ---
-description: PCBStream product overview and MVP boundaries shared by renderable specs.
+description: Trace Labs product overview and MVP boundaries shared by renderable specs.
 ---
 
 ***definitions***
 
-- :PCBStreamApp: is the standalone desktop-style app for electronics designers.
-  - The visible app name is exactly PCBStream.
+- :TraceLabsApp: is the standalone desktop-style app for electronics designers.
+  - The visible app name is exactly Trace Labs.
   - The app helps create reviewable schematic blocks for KiCad projects.
 
-- :PCBStreamUser: is an electronics designer using the app to add a part to a schematic.
+- :TraceLabsUser: is an electronics designer using the app to add a part to a schematic.
 
 - :KiCadProjectMock: is the mocked open KiCad project used by the MVP.
   - The project name is exactly weather_station.kicad_pro.
 
-- :PartRequest: is user text asking PCBStream to add an electronic part.
+- :PartRequest: is user text asking Trace Labs to add an electronic part.
   - The MVP happy-path request is "Can you add a BME280 temperature sensor?".
 
 - :LocalVerifiedRecipe: is trusted local recipe data bundled with the MVP.
@@ -23,7 +23,7 @@ description: PCBStream product overview and MVP boundaries shared by renderable 
   - It represents Bosch BME280 over I2C with support parts and review notes.
 
 - :ReviewMetadata: is the set of assumptions, warnings, confidence labels, and next steps.
-  - PCBStream must show this metadata before export.
+  - Trace Labs must show this metadata before export.
 
 - :MockKiCadBridge: is the MVP stand-in for live KiCad insertion.
   - It can show a fake insert action after files are exported.
@@ -32,11 +32,11 @@ description: PCBStream product overview and MVP boundaries shared by renderable 
 
 ***implementation reqs***
 
-- :Implementation: must use the app name PCBStream in new user-visible text.
+- :Implementation: must use the app name Trace Labs in new user-visible text.
 
 - :Implementation: must not use the previous product name in the new specs or generated UI.
 
-- :PCBStreamApp: is not a full PCB designer.
+- :TraceLabsApp: is not a full PCB designer.
   - It only prepares reviewable schematic blocks and export files.
 
 - :Implementation: must use :LocalVerifiedRecipe: data for the MVP BME280 flow.

@@ -15,7 +15,7 @@ DEFAULT_BACKEND_URL = "http://127.0.0.1:8765"
 
 class BridgeClient:
     def __init__(self, backend_url: str | None = None):
-        self.backend_url = (backend_url or os.environ.get("PCBSTREAM_BACKEND_URL") or DEFAULT_BACKEND_URL).rstrip("/")
+        self.backend_url = (backend_url or os.environ.get("TRACELABS_BACKEND_URL") or DEFAULT_BACKEND_URL).rstrip("/")
 
     def health(self) -> dict[str, Any]:
         return self._request("GET", "/health")
@@ -55,6 +55,6 @@ class BridgeClient:
                 return json.loads(response.read().decode("utf-8"))
         except HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"PCBStream backend returned HTTP {exc.code}: {body}") from exc
+            raise RuntimeError(f"Trace Labs backend returned HTTP {exc.code}: {body}") from exc
         except URLError as exc:
-            raise RuntimeError(f"PCBStream backend is not reachable at {self.backend_url}: {exc.reason}") from exc
+            raise RuntimeError(f"Trace Labs backend is not reachable at {self.backend_url}: {exc.reason}") from exc

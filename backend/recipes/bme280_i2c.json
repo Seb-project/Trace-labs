@@ -7,8 +7,8 @@
     "mpn": "BME280",
     "manufacturer": "Bosch Sensortec",
     "purpose": "temperature, pressure and humidity environmental sensor",
-    "symbol": "PCBStream_BME280:BME280",
-    "footprint": "PCBStream_BME280:PCBStream_BME280_LGA8_2.5x2.5mm_P0.65mm"
+    "symbol": "TraceLabs_BME280:BME280",
+    "footprint": "TraceLabs_BME280:TraceLabs_BME280_LGA8_2.5x2.5mm_P0.65mm"
   },
   "assumptions": [
     "Default logic rail is +3V3.",

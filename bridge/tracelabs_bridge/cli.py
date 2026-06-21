@@ -9,20 +9,20 @@ from .core import detect_project_context
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="pcbstream-bridge", description="PCBStream KiCad bridge CLI")
+    parser = argparse.ArgumentParser(prog="tracelabs-bridge", description="Trace Labs KiCad bridge CLI")
     parser.add_argument("--backend", default=None, help="Backend URL, default http://127.0.0.1:8765")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     detect_parser = subparsers.add_parser("detect", help="Detect KiCad project context")
     detect_parser.add_argument("project_path", type=Path)
 
-    link_parser = subparsers.add_parser("link", help="Link a KiCad project to PCBStream")
+    link_parser = subparsers.add_parser("link", help="Link a KiCad project to Trace Labs")
     link_parser.add_argument("project_path", type=Path)
     link_parser.add_argument("--kicad-version", default=None)
 
     subparsers.add_parser("status", help="Show linked project status")
 
-    import_parser = subparsers.add_parser("import-block", help="Import an exported PCBStream block")
+    import_parser = subparsers.add_parser("import-block", help="Import an exported Trace Labs block")
     import_parser.add_argument("generated_block_dir", type=Path)
     import_parser.add_argument("--link-id", default=None)
     import_parser.add_argument(

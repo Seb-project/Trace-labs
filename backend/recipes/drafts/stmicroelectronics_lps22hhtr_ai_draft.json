@@ -1,0 +1,248 @@
+{
+  "id": "draft_stmicroelectronics_lps22hhtr_ai_draft",
+  "block_name": "STMicroelectronics LPS22HHTR Extracted Draft",
+  "block_slug": "stmicroelectronics_lps22hhtr_ai_draft",
+  "summary": "Datasheet-derived draft for STMicroelectronics LPS22HHTR. Interface: I2C/MIPI I3C/SPI capable. Extracted baseline is I2C with CS tied to Vdd_IO; SCL/SDA require pull-ups to Vdd_IO.. Package: HLGA-10L, 2.0 x 2.0 x 0.73 mm typ..",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "LPS22HHTR",
+    "mpn": "LPS22HHTR",
+    "manufacturer": "STMicroelectronics",
+    "supplier": "LCSC",
+    "supplier_part_number": "C2827824",
+    "supplier_url": "https://www.lcsc.com/product-detail/Force-Sensors_span-style-background-color-ff0-STMicroelectronics-span-LPS22HHTR_C2827824.html",
+    "symbol": "TraceLabs_LPS22HHTR:LPS22HHTR",
+    "footprint": "TraceLabs_LPS22HHTR:TraceLabs_LPS22HHTR_PLACEHOLDER",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for LPS22HHTR.",
+    "connects": [
+      "VDD",
+      "VDD_IO",
+      "GND",
+      "I2C_SCL",
+      "I2C_SDA",
+      "SA0_CONFIG",
+      "INT_DRDY_NC"
+    ],
+    "footprint_confidence": "needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Symbol pin map is generated from cited datasheet/reference-design extraction.",
+    "status": "draft"
+  },
+  "support_components": [
+    {
+      "reference": "C1?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "VDD supply decoupling capacitor; must be placed as near as possible to the supply pads.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VDD",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P24C1",
+      "source_citations": [
+        "S2P24C1"
+      ]
+    },
+    {
+      "reference": "C2?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "VDD_IO supply decoupling capacitor; recommended as a separate capacitor when VDD and VDD_IO are separate supplies.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VDD_IO",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P24C1",
+      "source_citations": [
+        "S2P24C1"
+      ]
+    },
+    {
+      "reference": "C3?",
+      "type": "capacitor",
+      "value": "4.7 \u00b5F",
+      "purpose": "Optional additional capacitor on VDD line, depending on application.",
+      "symbol": "Device:C",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VDD",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P24C1",
+      "source_citations": [
+        "S2P24C1"
+      ]
+    },
+    {
+      "reference": "R1?",
+      "type": "resistor",
+      "value": "not specified",
+      "purpose": "I2C SCL pull-up to VDD_IO; datasheet states both I2C lines have to be connected to Vdd_IO through pull-up resistors, but supplied chunks do not provide resistor values.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "I2C_SCL",
+        "VDD_IO"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P26C1",
+      "source_citations": [
+        "S2P26C1"
+      ]
+    },
+    {
+      "reference": "R2?",
+      "type": "resistor",
+      "value": "not specified",
+      "purpose": "I2C SDA pull-up to VDD_IO; datasheet states both I2C lines have to be connected to Vdd_IO through pull-up resistors, but supplied chunks do not provide resistor values.",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "I2C_SDA",
+        "VDD_IO"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P26C1",
+      "source_citations": [
+        "S2P26C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "VDD",
+    "VDD_IO",
+    "GND",
+    "I2C_SCL",
+    "I2C_SDA",
+    "SA0_CONFIG"
+  ],
+  "internal_nets": [
+    "INT_DRDY_NC"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "I2C pull-up resistor components are included because the datasheet requires them, but their values are not specified in the supplied chunks.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Do not use this I2C baseline unchanged for SPI: CS must not be tied high for SPI communication mode.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "For MIPI I3C-only initialization, the supplied chunks describe INT_DRDY connected to VDD_IO; this differs from the I2C/MIPI coexistence baseline where INT_DRDY is left unconnected.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "All voltage and ground supplies must be present at the same time for proper IC behavior, per the application hints.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Sensor placement and enclosure venting affect response time and measurement quality; place close to vent aperture, minimize dead volume, and consider environmental protection as needed.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "STMicroelectronics LPS22HH datasheet DS12253",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/lps22hh.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from STMicroelectronics LPS22HH product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/etc/designs/st-search-cx/search.min.721107fd235b8929aa6d3078bbc38e01.css",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "STEVAL-MKI192V1 schematic for LPS22HH adapter board",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/resource/en/schematic_pack/steval-mki192v1_schematic.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from STMicroelectronics LPS22HH product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/content/st_com/en/stm32-mpu-developer-zone/boards-and-hardware-tools.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "AN5227 LPS22HH hardware guidelines for system integration",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.st.com/resource/en/application_note/dm00538294-lps22hh-digital-pressure-sensor-hardware-guidelines-for-system-integration-stmicroelectronics.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ]
+}

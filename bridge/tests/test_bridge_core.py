@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-from bridge.pcbstream_bridge.client import BridgeClient
-from bridge.pcbstream_bridge.core import detect_project_context, resolve_project_root
+from bridge.tracelabs_bridge.client import BridgeClient
+from bridge.tracelabs_bridge.core import detect_project_context, resolve_project_root
 
 
 def test_detect_project_context_uses_existing_project_files(tmp_path: Path):

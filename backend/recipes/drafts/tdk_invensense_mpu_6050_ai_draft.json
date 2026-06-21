@@ -1,0 +1,233 @@
+{
+  "id": "draft_tdk_invensense_mpu_6050_ai_draft",
+  "block_name": "TDK InvenSense MPU-6050 Extracted Draft",
+  "block_slug": "tdk_invensense_mpu_6050_ai_draft",
+  "summary": "Datasheet-derived draft for TDK InvenSense MPU-6050. Interface: Primary I2C slave interface, SDA/SCL up to 400 kHz; auxiliary I2C bus on AUX_DA/AUX_CL for external sensors. MPU-6050 is I2C-only.. Package: 24-pin QFN, 4 mm x 4 mm x 0.9 mm.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "MPU-6050",
+    "mpn": "MPU-6050",
+    "manufacturer": "TDK InvenSense",
+    "supplier": "LCSC",
+    "supplier_part_number": "C24112",
+    "supplier_url": "https://www.lcsc.com/product-detail/C24112.html",
+    "symbol": "TraceLabs_MPU_6050:MPU_6050",
+    "footprint": "TraceLabs_MPU_6050:TraceLabs_MPU_6050_PLACEHOLDER",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for MPU-6050.",
+    "connects": [
+      "VDD",
+      "VLOGIC",
+      "GND",
+      "REGOUT",
+      "CPOUT",
+      "I2C_SCL",
+      "I2C_SDA",
+      "AD0",
+      "INT",
+      "AUX_DA",
+      "AUX_CL"
+    ],
+    "footprint_confidence": "needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Symbol pin map is generated from cited datasheet/reference-design extraction.",
+    "status": "draft"
+  },
+  "support_components": [
+    {
+      "reference": "C1?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "Regulator filter capacitor for REGOUT, pin 10.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "REGOUT",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P22C1, S2P31C1",
+      "source_citations": [
+        "S2P22C1",
+        "S2P31C1"
+      ]
+    },
+    {
+      "reference": "C2?",
+      "type": "capacitor",
+      "value": "100 nF",
+      "purpose": "VDD bypass capacitor for VDD, pin 13.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VDD",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P22C1",
+      "source_citations": [
+        "S2P22C1"
+      ]
+    },
+    {
+      "reference": "C3?",
+      "type": "capacitor",
+      "value": "2.2 nF",
+      "purpose": "Charge pump capacitor for CPOUT, pin 20.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "CPOUT",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P22C1, S2P31C1",
+      "source_citations": [
+        "S2P22C1",
+        "S2P31C1"
+      ]
+    },
+    {
+      "reference": "C4?",
+      "type": "capacitor",
+      "value": "10 nF",
+      "purpose": "VLOGIC bypass capacitor for VLOGIC, pin 8; MPU-6050 only.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VLOGIC",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P22C1",
+      "source_citations": [
+        "S2P22C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "VDD",
+    "VLOGIC",
+    "GND",
+    "I2C_SCL",
+    "I2C_SDA",
+    "AD0",
+    "INT",
+    "AUX_DA",
+    "AUX_CL"
+  ],
+  "internal_nets": [
+    "REGOUT",
+    "CPOUT"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "MPU-6050 is obsolete per the supplied product-page chunk.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "VLOGIC must be less than or equal to VDD at all times, and the power-on sequencing constraints must be respected.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "MPU-6050 supports I2C only; SPI pin functions shown for MPU-6000 must not be used for MPU-6050.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Pins 19, 21, and 22 are reserved and must not be connected.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Pins marked NC are not internally connected; do not rely on them for an electrical function.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "MPU-6000/MPU-6050 Product Specification Rev. 3.4",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://product.tdk.com/system/files/dam/doc/product/sensor/mortion-inertial/imu/data_sheet/mpu-6000-datasheet1.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "MPU-6050 Detailed Information | TDK Product Center",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://product.tdk.com/en/search/sensor/mortion-inertial/imu/info?part_no=MPU-6050",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from MPU-6050 Detailed Information | TDK Product Center",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://product.tdk.com/en/applicationguide/ict/5g-small-cell.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from MPU-6050 Detailed Information | TDK Product Center",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://product.tdk.com/en/applicationguide/index.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ]
+}

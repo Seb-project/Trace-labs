@@ -49,7 +49,7 @@ def resolve_project_root(path: str | Path, strict: bool = True) -> Path:
     if strict:
         raise ValueError(
             f"Could not find a .kicad_pro file from {candidate}. "
-            "Open a saved KiCad project, or link the project folder manually in PCBStream."
+            "Open a saved KiCad project, or link the project folder manually in Trace Labs."
         )
     return candidate
 

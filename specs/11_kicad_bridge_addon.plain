@@ -6,7 +6,7 @@ import:
   - "07_kicad_export"
   - "08_mock_solvimon_pricing"
   - "10_acceptance_criteria"
-description: PCBStream lightweight KiCad bridge add-on and mocked project linking.
+description: Trace Labs lightweight KiCad bridge add-on and mocked project linking.
 ---
 
 ***definitions***
@@ -17,7 +17,7 @@ description: PCBStream lightweight KiCad bridge add-on and mocked project linkin
 
 - :BridgeProjectLinker: sends :BridgeProjectContext: to :BackendService:.
 
-- :BridgeGeneratedBlockImporter: validates exported PCBStream block files.
+- :BridgeGeneratedBlockImporter: validates exported Trace Labs block files.
 
 - :BridgeImportManifest: is a deterministic record of a bridge import attempt.
 
@@ -72,7 +72,7 @@ description: PCBStream lightweight KiCad bridge add-on and mocked project linkin
 ***functional specs***
 
 - :KiCadBridgeAddon: should expose three user actions.
-  - The actions are Test PCBStream Connection, Link Current KiCad Project, and Insert Generated Block.
+  - The actions are Test Trace Labs Connection, Link Current KiCad Project, and Insert Generated Block.
   - In :BridgeMockMode:, the actions are available through :BridgeCli:.
   - Each action returns :BridgeActionResult: with status, message, warnings, and next steps.
 
@@ -82,9 +82,9 @@ description: PCBStream lightweight KiCad bridge add-on and mocked project linkin
 
 - :BridgeConnectionTester: should test the backend connection.
   - It calls `GET /health` on the configured backend.
-  - A successful PCBStream health response returns status connected.
+  - A successful Trace Labs health response returns status connected.
   - A failed or timed-out health response returns status offline.
-  - The offline result includes a next step to start the PCBStream backend.
+  - The offline result includes a next step to start the Trace Labs backend.
 
 - :BridgeProjectContext: should be detected or mocked.
   - In live mode, the bridge should try to read the open KiCad project and schematic.
@@ -93,12 +93,12 @@ description: PCBStream lightweight KiCad bridge add-on and mocked project linkin
   - In :BridgeMockMode:, detected_mcu is STM32L072.
   - Missing live KiCad APIs should automatically fall back to :BridgeMockMode:.
 
-- :BridgeProjectLinker: should link the current project to PCBStream.
+- :BridgeProjectLinker: should link the current project to Trace Labs.
   - It sends :BridgeProjectContext: to `POST /bridge/link`.
   - A successful response stores link_id and project_name locally.
   - A successful result shows project_name weather_station.kicad_pro.
   - If the backend is offline, the linker stores a pending link record locally.
-  - Pending links are retried the next time Test PCBStream Connection succeeds.
+  - Pending links are retried the next time Test Trace Labs Connection succeeds.
 
   ***acceptance tests***
   - Linking weather_station.kicad_pro against a mocked backend should store a link id.
@@ -107,7 +107,7 @@ description: PCBStream lightweight KiCad bridge add-on and mocked project linkin
 - :BridgeGeneratedBlockImporter: should validate generated BME280 files before import.
   - It requires block.json.
   - It requires notes.md.
-  - It requires bme280_i2c.kicad_sch.
+  - It requires one generated .kicad_sch file.
   - It requires pricing_usage.json.
   - Missing files prevent import and return a failed :BridgeActionResult:.
 
@@ -129,8 +129,11 @@ description: PCBStream lightweight KiCad bridge add-on and mocked project linkin
 
 - :KiCadBridgeAddon: should keep MVP insertion safe and reviewable.
   - The MVP may copy or reference the generated schematic file in a project-local block folder.
-  - The MVP must not mutate the user's active schematic automatically.
-  - The user-visible result must say that insertion is mocked in this MVP.
+  - The backend creates a backup before updating the root schematic.
+  - The backend installs project-local Trace Labs symbol and footprint libraries.
+  - The backend upserts sym-lib-table and fp-lib-table entries for those libraries.
+  - When opening a hierarchical import, the root schematic is opened so project library tables are loaded.
+  - The user-visible result must say that insertion is ready for review.
   - The result must tell the user to review the block and run ERC.
 
 - :BridgeCli: should support local smoke testing.

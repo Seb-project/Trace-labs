@@ -1,0 +1,1351 @@
+{
+  "id": "draft_texas_instruments_tps5401dgqr_ai_draft",
+  "block_name": "Texas Instruments TPS5401DGQR Extracted Draft",
+  "block_slug": "texas_instruments_tps5401dgqr_ai_draft",
+  "summary": "Datasheet-derived draft for Texas Instruments TPS5401DGQR. Interface: Buck regulator power pins plus EN, SS/TR, RT/CLK synchronization/frequency-set, VSENSE feedback, COMP compensation, and open-drain PWRGD. Package: DGQ 10-pin MSOP/HVSSOP with PowerPAD / thermal pad.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "TPS5401DGQR",
+    "mpn": "TPS5401DGQR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part_number": "C58517",
+    "supplier_url": "https://www.lcsc.com/product-detail/Switching-Controllers_TI_TPS5401DGQR_TPS5401DGQR_C58517.html",
+    "symbol": "TraceLabs_TPS5401DGQR:TPS5401DGQR",
+    "footprint": "TraceLabs_TPS5401DGQR:TraceLabs_TPS5401DGQR_LCSC_C58517",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for TPS5401DGQR.",
+    "connects": [
+      "BOOT",
+      "COMP",
+      "COMP_RC_NODE",
+      "EN",
+      "GND",
+      "GND anode",
+      "PGOOD_PULLUP_5V5_MAX",
+      "PH_SW",
+      "PH_SW cathode",
+      "PWRGD",
+      "RT_CLK",
+      "SS_TR",
+      "VIN",
+      "VIN_24V",
+      "VOUT_5V",
+      "VSENSE"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_TPS5401DGQR_LCSC_C58517",
+      "footprint_id": "TraceLabs_TPS5401DGQR:TraceLabs_TPS5401DGQR_LCSC_C58517",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C58517",
+      "source_url": "https://www.lcsc.com/product-detail/Switching-Controllers_TI_TPS5401DGQR_TPS5401DGQR_C58517.html",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_TPS5401DGQR_LCSC_C58517\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(descr \"Buck Step Down Regulator with 3.5 to 42 V Input and 0.8 to 39 V Output, -40 to 150 degC, 10-Pin MSOP-PowerPAD (DGQ), Green (RoHS  no SbBr)\")\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -6.110) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value MSOP-10_L3.0-W3.0-P0.50-LS5.0-BL-EP (at 0.000 6.110) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C58517\")\n\t(fp_line (start -1.52 -1.52) (end -1.52 -0.42) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.52 1.52) (end -1.52 0.42) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.52 1.52) (end -1.32 1.52) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.32 -1.52) (end -1.52 -1.52) (layer F.SilkS) (width 0.15))\n\t(fp_line (start 1.32 1.52) (end 1.52 1.52) (layer F.SilkS) (width 0.15))\n\t(fp_line (start 1.52 1.52) (end 1.52 -1.52) (layer F.SilkS) (width 0.15))\n\t(fp_line (start 1.52 -1.52) (end 1.32 -1.52) (layer F.SilkS) (width 0.15))\n\t(pad 1 smd oval (at -1.00 2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd oval (at -0.50 2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 3 smd oval (at 0.00 2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd oval (at 0.50 2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd oval (at 1.00 2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 10 smd oval (at -1.00 -2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 9 smd oval (at -0.50 -2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 8 smd oval (at 0.00 -2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 7 smd oval (at 0.50 -2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd oval (at 1.00 -2.11 0.00) (size 0.280 1.620) (layers F.Cu F.Paste F.Mask))\n\t(pad 11 smd rect (at 0.00 0.00 0.00) (size 2.100 1.830) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center -1.50 2.45) (end -1.47 2.45) (layer F.SilkS) (width 0.06))\n\t(fp_circle (center -1.69 2.20) (end -1.54 2.20) (layer F.SilkS) (width 0.30))\n\t(fp_circle (center -1.00 2.85) (end -0.85 2.85) (layer Cmts.User) (width 0.30))\n\t(fp_arc (start -1.72 -0.00) (end -1.52 -0.42) (angle 130.09) (layer F.SilkS) (width 0.15))\n\t(fp_line (start -1.50 1.50) (end -1.50 -1.50) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -1.50 -1.50) (end 1.50 -1.50) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 1.50 -1.50) (end 1.50 1.50) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 1.50 1.50) (end -1.50 1.50) (layer F.CrtYd) (width 0.05))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_5ew22lc2/TraceLabs_C58517.3dshapes/MSOP-10_L3.0-W3.0-H1.1-LS5.0-P0.50.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 0))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "CBOOT?",
+      "type": "ceramic capacitor",
+      "value": "100 nF, \u226510 V, X5R/X7R",
+      "purpose": "Bootstrap capacitor for high-side MOSFET gate drive.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "BOOT",
+        "PH_SW"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P13C1, S2P31C1, S4P9C1",
+      "source_citations": [
+        "S2P13C1",
+        "S2P31C1",
+        "S4P9C1"
+      ]
+    },
+    {
+      "reference": "CIN1, CIN2?",
+      "type": "ceramic capacitors",
+      "value": "2 \u00d7 2.2 \u00b5F, 100 V, X5R/X7R",
+      "purpose": "Input bypass/decoupling capacitance; example design selected two 2.2 \u00b5F, 100 V capacitors in parallel.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN_24V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P27C1, S2P37C1, S4P9C1",
+      "source_citations": [
+        "S2P27C1",
+        "S2P37C1",
+        "S4P9C1"
+      ]
+    },
+    {
+      "reference": "CBULK?",
+      "type": "electrolytic capacitor",
+      "value": "100 \u00b5F",
+      "purpose": "Additional input bulk capacitance when the input supply is more than a few inches from the converter.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VIN_24V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P37C1, S4P9C1",
+      "source_citations": [
+        "S2P37C1",
+        "S4P9C1"
+      ]
+    },
+    {
+      "reference": "D1?",
+      "type": "Schottky catch diode",
+      "value": "B160A",
+      "purpose": "Freewheel/catch diode for non-synchronous buck operation.",
+      "symbol": "Device:R",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "PH_SW cathode",
+        "GND anode"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P30C1, S2P37C1",
+      "source_citations": [
+        "S2P30C1",
+        "S2P37C1"
+      ]
+    },
+    {
+      "reference": "L1?",
+      "type": "inductor",
+      "value": "47 \u00b5H",
+      "purpose": "Output inductor for the 7.5 V\u201335 V input, 5 V, 700 kHz typical design.",
+      "symbol": "Device:L",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "PH_SW",
+        "VOUT_5V"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P23C1, S2P37C1",
+      "source_citations": [
+        "S2P23C1",
+        "S2P37C1"
+      ]
+    },
+    {
+      "reference": "COUT?",
+      "type": "aluminum electrolytic capacitor",
+      "value": "220 \u00b5F, 260 mOhm ESR",
+      "purpose": "Output capacitor for 5 V typical design and load transient/ripple support.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT_5V",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P23C1, S2P29C2, S4P9C1",
+      "source_citations": [
+        "S2P23C1",
+        "S2P29C2",
+        "S4P9C1"
+      ]
+    },
+    {
+      "reference": "RFB_TOP / R1?",
+      "type": "resistor",
+      "value": "52.3 kOhm, 1% recommended",
+      "purpose": "Top feedback resistor setting 5 V output.",
+      "symbol": "Device:R",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VOUT_5V",
+        "VSENSE"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P14C1, S2P23C1, S4P9C1",
+      "source_citations": [
+        "S2P14C1",
+        "S2P23C1",
+        "S4P9C1"
+      ]
+    },
+    {
+      "reference": "RFB_BOT / R2?",
+      "type": "resistor",
+      "value": "10 kOhm, 1% recommended",
+      "purpose": "Bottom feedback resistor to set 5 V output with R1.",
+      "symbol": "Device:R",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "VSENSE",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P14C1, S2P23C1, S4P9C1",
+      "source_citations": [
+        "S2P14C1",
+        "S2P23C1",
+        "S4P9C1"
+      ]
+    },
+    {
+      "reference": "RCOMP / R3?",
+      "type": "resistor",
+      "value": "698 kOhm",
+      "purpose": "Compensation-network resistor for the 7.5 V\u201335 V input, 5 V, aluminum-output-capacitor typical design.",
+      "symbol": "Device:R",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "COMP",
+        "COMP_RC_NODE"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P14C1, S2P23C1, S2P1C1",
+      "source_citations": [
+        "S2P14C1",
+        "S2P23C1",
+        "S2P1C1"
+      ]
+    },
+    {
+      "reference": "CCOMP / C1?",
+      "type": "capacitor",
+      "value": "3300 pF",
+      "purpose": "Series compensation capacitor with R3 for the 5 V aluminum-output-capacitor typical design.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "COMP_RC_NODE",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P14C1, S2P23C1, S2P1C1",
+      "source_citations": [
+        "S2P14C1",
+        "S2P23C1",
+        "S2P1C1"
+      ]
+    },
+    {
+      "reference": "CHF / C2?",
+      "type": "capacitor",
+      "value": "82 pF",
+      "purpose": "High-frequency compensation capacitor shown in the TPS5401 simplified/typical compensation network and listed in the typical 5 V aluminum-output-capacitor design.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "COMP",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P23C1, S2P1C1",
+      "source_citations": [
+        "S2P23C1",
+        "S2P1C1"
+      ]
+    },
+    {
+      "reference": "CSS?",
+      "type": "capacitor",
+      "value": "10 nF",
+      "purpose": "Slow-start capacitor; example circuit uses 0.01 \u00b5F for approximately 3.2 ms slow-start time.",
+      "symbol": "Device:C",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SS_TR",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P15C1, S2P31C1, S2P1C1",
+      "source_citations": [
+        "S2P15C1",
+        "S2P31C1",
+        "S2P1C1"
+      ]
+    },
+    {
+      "reference": "RT?",
+      "type": "resistor",
+      "value": "165 kOhm",
+      "purpose": "RT/CLK timing resistor to ground for approximately 700 kHz switching frequency, derived from datasheet RT equation and the typical design frequency.",
+      "symbol": "Device:R",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "RT_CLK",
+        "GND"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P20C1, S2P23C1, S2P37C1",
+      "source_citations": [
+        "S2P20C1",
+        "S2P23C1",
+        "S2P37C1"
+      ]
+    },
+    {
+      "reference": "RPG?",
+      "type": "resistor",
+      "value": "10 kOhm to 100 kOhm",
+      "purpose": "Optional pullup for open-drain PWRGD output if power-good signal is used.",
+      "symbol": "Device:R",
+      "footprint": "not specified in supplied chunks",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "PWRGD",
+        "PGOOD_PULLUP_5V5_MAX"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S2P22C1",
+      "source_citations": [
+        "S2P22C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "EN",
+    "GND",
+    "VIN",
+    "VIN_24V",
+    "VOUT_5V",
+    "VSENSE"
+  ],
+  "internal_nets": [
+    "BOOT",
+    "COMP",
+    "COMP_RC_NODE",
+    "GND anode",
+    "PGOOD_PULLUP_5V5_MAX",
+    "PH_SW",
+    "PH_SW cathode",
+    "PWRGD",
+    "RT_CLK",
+    "SS_TR"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "The design uses the device at its 0.5 A maximum output-current rating; thermal design and derating must be validated.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "RT = 165 kOhm is calculated/rounded from the supplied RT equation for the 700 kHz typical design frequency; verify against the full datasheet graph/table before release.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The compensation value R3 is taken exactly from the supplied OCR chunk as 698 kOhm; verify against the original datasheet because OCR errors can affect decimal points.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "PowerPAD/thermal pad connection to GND is mandatory for proper operation.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The optional PWRGD pullup value is a datasheet range, not a single fixed EVM value in the supplied chunks.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "TPS5401 datasheet Rev. B",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.ti.com/lit/gpn/tps5401",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from TPS5401 product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.ti.com/product-category/power-management/voltage-references/overview.html",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "TPS5401 product page",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.ti.com/product/TPS5401",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "TPS5401EVM-708 User's Guide",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.ti.com/lit/pdf/SLVU430",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "TPS5401DGQR Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 BOOT -> BOOT\n2 VIN -> VIN_24V\n3 EN -> EN\n4 SS/TR -> SS_TR\n5 RT/CLK -> RT_CLK\n6 PWRGD -> PWRGD\n7 VSENSE -> VSENSE\n8 COMP -> COMP\n9 GND -> GND\n10 PH -> PH_SW\n11 Thermal Pad -> GND\n42 VIN -> VIN",
+    "connections": [
+      "BOOT",
+      "COMP",
+      "COMP_RC_NODE",
+      "EN",
+      "GND",
+      "GND anode",
+      "PGOOD_PULLUP_5V5_MAX",
+      "PH_SW",
+      "PH_SW cathode",
+      "PWRGD",
+      "RT_CLK",
+      "SS_TR",
+      "VIN",
+      "VIN_24V",
+      "VOUT_5V",
+      "VSENSE"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "TPS5401DGQR",
+    "manufacturer": "Texas Instruments",
+    "package": "DGQ 10-pin MSOP/HVSSOP with PowerPAD / thermal pad",
+    "supply_range": "VIN operating input: 3.5 V to 42 V; output current 0 A to 0.5 A",
+    "interface": "Buck regulator power pins plus EN, SS/TR, RT/CLK synchronization/frequency-set, VSENSE feedback, COMP compensation, and open-drain PWRGD",
+    "pins": [
+      {
+        "number": "1",
+        "name": "BOOT",
+        "electrical_type": "power/boot supply",
+        "net_name": "BOOT",
+        "required": true,
+        "notes": "Bootstrap capacitor is required between BOOT and PH; if BOOT capacitor voltage is too low, switching is forced off until refreshed.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P13C1",
+          "S2P31C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "VIN",
+        "electrical_type": "power input",
+        "net_name": "VIN_24V",
+        "required": true,
+        "notes": "Input supply voltage pin; device operating input range is 3.5 V to 42 V. Bypass VIN to GND with low-ESR ceramic capacitance placed close to the IC.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P4C1",
+          "S2P27C1",
+          "S2P37C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "EN",
+        "electrical_type": "digital/control input",
+        "net_name": "EN",
+        "required": true,
+        "notes": "Enable input with internal pullup current source. Pull below 1.2 V/1.25 V region to disable; float to enable. External UVLO divider may be used but is not included here because no requested UVLO thresholds were supplied and the example notes UVLO is not externally set.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P11C1",
+          "S2P14C1",
+          "S2P31C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "SS/TR",
+        "electrical_type": "analog/control input",
+        "net_name": "SS_TR",
+        "required": true,
+        "notes": "Slow-start/tracking pin. External capacitor to ground sets output rise time; example uses 0.01 \u00b5F for about 3.2 ms slow start.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P11C1",
+          "S2P15C1",
+          "S2P31C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "RT/CLK",
+        "electrical_type": "analog/digital input",
+        "net_name": "RT_CLK",
+        "required": true,
+        "notes": "Timing resistor or external clock input. A resistor to ground sets switching frequency; the typical 5 V design uses 700 kHz.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P11C1",
+          "S2P20C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "PWRGD",
+        "electrical_type": "open-drain output",
+        "net_name": "PWRGD",
+        "required": false,
+        "notes": "Open-drain power-good output. Pulls low for undervoltage/overvoltage/fault/EN shutdown conditions; use a pullup to a voltage source \u22645.5 V if the signal is used.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P11C1",
+          "S2P22C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "VSENSE",
+        "electrical_type": "analog input",
+        "net_name": "VSENSE",
+        "required": true,
+        "notes": "Inverting node of error amplifier; connects to feedback divider from VOUT to GND. Internal reference is 0.8 V.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P12C1",
+          "S2P14C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "8",
+        "name": "COMP",
+        "electrical_type": "analog output/input",
+        "net_name": "COMP",
+        "required": true,
+        "notes": "Error-amplifier output and current-comparator input; connect external compensation network to this pin.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P12C1",
+          "S2P14C1",
+          "S2P23C1"
+        ]
+      },
+      {
+        "number": "9",
+        "name": "GND",
+        "electrical_type": "ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground pin; tie directly to the thermal pad and ground planes with short paths/vias.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P37C1"
+        ]
+      },
+      {
+        "number": "10",
+        "name": "PH",
+        "electrical_type": "switching output",
+        "net_name": "PH_SW",
+        "required": true,
+        "notes": "Source of internal high-side MOSFET / switching node. Route to catch-diode cathode and output inductor; keep copper area minimized.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P30C1",
+          "S2P37C1"
+        ]
+      },
+      {
+        "number": "11",
+        "name": "Thermal Pad",
+        "electrical_type": "thermal/ground",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Thermal pad must be electrically connected to GND on PCB for proper operation, with multiple thermal vias recommended.",
+        "source_citations": [
+          "S2P3C1",
+          "S2P37C1",
+          "S4P9C1"
+        ]
+      },
+      {
+        "number": "42",
+        "name": "VIN",
+        "electrical_type": "power_in",
+        "net_name": "VIN",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P0C1"
+        ]
+      },
+      {
+        "number": "401",
+        "name": "EN",
+        "electrical_type": "input",
+        "net_name": "EN",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P1C1"
+        ]
+      },
+      {
+        "number": "1",
+        "name": "VIN",
+        "electrical_type": "power_in",
+        "net_name": "VIN",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P23C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "CBOOT",
+        "type": "ceramic capacitor",
+        "value": "100 nF, \u226510 V, X5R/X7R",
+        "purpose": "Bootstrap capacitor for high-side MOSFET gate drive.",
+        "connects": [
+          "BOOT",
+          "PH_SW"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Place close to BOOT and PH pins; EVM notes bootstrap capacitor is located as close to IC as possible.",
+        "source_citations": [
+          "S2P13C1",
+          "S2P31C1",
+          "S4P9C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CIN1, CIN2",
+        "type": "ceramic capacitors",
+        "value": "2 \u00d7 2.2 \u00b5F, 100 V, X5R/X7R",
+        "purpose": "Input bypass/decoupling capacitance; example design selected two 2.2 \u00b5F, 100 V capacitors in parallel.",
+        "connects": [
+          "VIN_24V",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Place close to VIN and GND; minimize loop area including VIN pin, bypass capacitor, and catch-diode anode.",
+        "source_citations": [
+          "S2P27C1",
+          "S2P37C1",
+          "S4P9C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CBULK",
+        "type": "electrolytic capacitor",
+        "value": "100 \u00b5F",
+        "purpose": "Additional input bulk capacitance when the input supply is more than a few inches from the converter.",
+        "connects": [
+          "VIN_24V",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": false,
+        "placement_note": "Use if source lead length or input impedance requires bulk capacitance.",
+        "source_citations": [
+          "S2P37C1",
+          "S4P9C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "D1",
+        "type": "Schottky catch diode",
+        "value": "B160A",
+        "purpose": "Freewheel/catch diode for non-synchronous buck operation.",
+        "connects": [
+          "PH_SW cathode",
+          "GND anode"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Place close to PH pin and GND; PH routes to diode cathode. Diode reverse voltage must be \u2265 VIN(max) and peak current rating > maximum inductor current.",
+        "source_citations": [
+          "S2P30C1",
+          "S2P37C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "L1",
+        "type": "inductor",
+        "value": "47 \u00b5H",
+        "purpose": "Output inductor for the 7.5 V\u201335 V input, 5 V, 700 kHz typical design.",
+        "connects": [
+          "PH_SW",
+          "VOUT_5V"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Place close to PH pin with minimized switching-node copper area.",
+        "source_citations": [
+          "S2P23C1",
+          "S2P37C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "COUT",
+        "type": "aluminum electrolytic capacitor",
+        "value": "220 \u00b5F, 260 mOhm ESR",
+        "purpose": "Output capacitor for 5 V typical design and load transient/ripple support.",
+        "connects": [
+          "VOUT_5V",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Connect close to output path; feedback divider should sense VOUT at point of regulation past output capacitor per EVM layout guidance.",
+        "source_citations": [
+          "S2P23C1",
+          "S2P29C2",
+          "S4P9C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RFB_TOP / R1",
+        "type": "resistor",
+        "value": "52.3 kOhm, 1% recommended",
+        "purpose": "Top feedback resistor setting 5 V output.",
+        "connects": [
+          "VOUT_5V",
+          "VSENSE"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Keep feedback divider close to IC and tie to output at point of regulation.",
+        "source_citations": [
+          "S2P14C1",
+          "S2P23C1",
+          "S4P9C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RFB_BOT / R2",
+        "type": "resistor",
+        "value": "10 kOhm, 1% recommended",
+        "purpose": "Bottom feedback resistor to set 5 V output with R1.",
+        "connects": [
+          "VSENSE",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Keep feedback divider close to IC.",
+        "source_citations": [
+          "S2P14C1",
+          "S2P23C1",
+          "S4P9C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RCOMP / R3",
+        "type": "resistor",
+        "value": "698 kOhm",
+        "purpose": "Compensation-network resistor for the 7.5 V\u201335 V input, 5 V, aluminum-output-capacitor typical design.",
+        "connects": [
+          "COMP",
+          "COMP_RC_NODE"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Compensation components connect from COMP to GND; keep traces short.",
+        "source_citations": [
+          "S2P14C1",
+          "S2P23C1",
+          "S2P1C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CCOMP / C1",
+        "type": "capacitor",
+        "value": "3300 pF",
+        "purpose": "Series compensation capacitor with R3 for the 5 V aluminum-output-capacitor typical design.",
+        "connects": [
+          "COMP_RC_NODE",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Part of COMP-to-GND compensation network.",
+        "source_citations": [
+          "S2P14C1",
+          "S2P23C1",
+          "S2P1C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CHF / C2",
+        "type": "capacitor",
+        "value": "82 pF",
+        "purpose": "High-frequency compensation capacitor shown in the TPS5401 simplified/typical compensation network and listed in the typical 5 V aluminum-output-capacitor design.",
+        "connects": [
+          "COMP",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Place with other compensation components close to COMP pin.",
+        "source_citations": [
+          "S2P23C1",
+          "S2P1C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "CSS",
+        "type": "capacitor",
+        "value": "10 nF",
+        "purpose": "Slow-start capacitor; example circuit uses 0.01 \u00b5F for approximately 3.2 ms slow-start time.",
+        "connects": [
+          "SS_TR",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "Place close to SS/TR pin and ground.",
+        "source_citations": [
+          "S2P15C1",
+          "S2P31C1",
+          "S2P1C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RT",
+        "type": "resistor",
+        "value": "165 kOhm",
+        "purpose": "RT/CLK timing resistor to ground for approximately 700 kHz switching frequency, derived from datasheet RT equation and the typical design frequency.",
+        "connects": [
+          "RT_CLK",
+          "GND"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": true,
+        "placement_note": "RT/CLK is noise-sensitive; locate RT resistor as close as possible to IC and route with minimal trace length.",
+        "source_citations": [
+          "S2P20C1",
+          "S2P23C1",
+          "S2P37C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "RPG",
+        "type": "resistor",
+        "value": "10 kOhm to 100 kOhm",
+        "purpose": "Optional pullup for open-drain PWRGD output if power-good signal is used.",
+        "connects": [
+          "PWRGD",
+          "PGOOD_PULLUP_5V5_MAX"
+        ],
+        "footprint": "not specified in supplied chunks",
+        "required": false,
+        "placement_note": "Pull up only to a voltage source of 5.5 V or less.",
+        "source_citations": [
+          "S2P22C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "BOOT",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "BOOT"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "COMP",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "COMP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "COMP_RC_NODE",
+        "role": "other",
+        "external": false,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "EN",
+        "role": "configuration",
+        "external": true,
+        "connected_pins": [
+          "EN",
+          "EN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "GND",
+          "Thermal Pad"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND anode",
+        "role": "other",
+        "external": false,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "PGOOD_PULLUP_5V5_MAX",
+        "role": "other",
+        "external": false,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "PH_SW",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "PH"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "PH_SW cathode",
+        "role": "other",
+        "external": false,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "PWRGD",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "PWRGD"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "RT_CLK",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "RT/CLK"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SS_TR",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "SS/TR"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VIN",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VIN",
+          "VIN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VIN_24V",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VIN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VOUT_5V",
+        "role": "power",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "VSENSE",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VSENSE"
+        ],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S2P3C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 3,
+        "text": "1 2 3 4 5 679 810 Thermal Pad (11)BOOT VIN ENPH GND COMP VSENSE PWRGDSS/TR RT/CLK 3TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporated5PinConfiguration andFunctions DGQ Package 10-Pin MSOP with PowerPAD \u2122 TopView PinFunctions PIN I/O DESCRIPTION NAME NO. BOOT 1 OAbootstrap capacitor isrequired between BOOT andPH.Ifthevoltage onthiscapacitor isbelow the minimum required bytheoutput device, theoutput isforced toswitch offuntil thecapacitor isrefreshed. COMP 8 OError amplifier output, andinput totheoutput switch current comparator. Connect frequency compensation components tothispin. EN 3 IEnable pin,internal pullup current source. Pullbelow 1.2Vtodisable. Float toenable. Adjust theinput undervoltage lockout with tworesistors. GND 9 \u2013 Ground PH 10 O Thesource oftheinternal high-side power MOSFET PWRGD 6 OAnopen-drain output; asserts lowifoutput voltage islowduetothermal shutdown, dropout, overvoltage or ENshutdown. RT/CLK 5 IResistor timing andexternal clock. Aninternal amplifier holds thispinatafixed voltage when using an external resistor toground tosettheswitching frequency. Ifthepinispulled above thePLL upper threshold, amode change occurs andthepinbecomes asynchronization input. Theinternal amplifier isdisabled and thepinisahigh-impedance clock input totheinternal PLL. Ifclocking edges stop, theinternal amplifier isre- enabled andthemode returns toaresistor-set function. SS/TR 4 ISlow-start andtracking. Anexternal capacitor connected tothispinsets theoutput risetime. Because the voltage onthispinoverrides theinternal reference, itcanbeused fortracking andsequencing. VIN 2 I Input supply voltage, 3.5Vto42V. VSENSE 7 I Inverting node ofthetransconductance (gm) error amplifier. Thermal pad (11) \u2013 GND pinmust beelectrically connected tothethermal padontheprinted circuit board forproper operation."
+      },
+      {
+        "chunk_id": "S2P37C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 37,
+        "text": "BOOT VIN EN SS/TR RT/CLKPH GND COMP VSENSE PWRGDInput Bypass Capacitor UVLO Adjust Resistors Slow\u25a1Start CapacitorFrequency Set\u25a1ResistorCompensation NetworkResistor DividerOutput InductorOutput CapacitorVout VinTopside Ground AreaCatch DiodeRoute\u25a1Boot\u25a1Capacitor Trace\u25a1on\u25a1another\u25a1layer\u25a1to provide\u25a1wide\u25a1path\u25a1for topside\u25a1ground Thermal\u25a1VIA Signal\u25a1VIA 37TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporated9Power Supply Recommendations Thedevice isdesigned tooperate from aninput-voltage supply range between 3.5Vand42V.This input supply should bewellregulated. Iftheinput supply islocated more than afewinches from theconverter additional bulk capacitance may berequired inaddition totheceramic bypass capacitors. Anelectrolytic capacitor with avalue of100\u03bcFisatypical choice. 10Layout 10.1 Layout Guidelines Layout isacritical portion ofgood power-supply design. There areseveral signal paths that conduct fast- changing currents orvoltages thatcaninteract with stray inductance orparasitic capacitance togenerate noise ordegrade thepower-supply performance. Tohelp eliminate these problems, theVINpinshould bebypassed to ground with alow-ESR ceramic bypass capacitor with X5R orX7R dielectric. Care should betaken tominimize theloop area formed bythebypass capacitor connections, theVINpin,andtheanode ofthecatch diode. See Figure 54foraPCB layout example. TheGND pinshould betieddirectly tothethermal padunder theIC. The thermal padshould beconnected toanyinternal PCB ground planes using multiple vias directly under the IC.The PHpinshould berouted tothecathode ofthecatch diode andtotheoutput inductor. Because thePH connection istheswitching node, thecatch diode and output inductor should belocated close tothePHpins, andthearea ofthePCB conductor minimized toprevent excessive capacitive coupling. Foroperation atfullrated load, thetop-side ground area must provide adequate heat dissipating area. The RT/CLK pinissensitive to noise, sotheRTresistor should belocated asclose aspossible totheICand routed with minimal lengths of trace. The additional external components canbeplaced approximately asshown. Itmay bepossible toobtain acceptable performance with alternate PCB layouts; however, thislayout has been shown toproduce good results andismeant asaguideline. 10.2 Layout Example Figure 54.PCB Layout Example"
+      },
+      {
+        "chunk_id": "S2P14C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 14,
+        "text": "ENA START ENA 1VR2V VIR1/c61/c45/c43 START STOP HYSV VR1I/c45/c61 ENVIN + \u2013TPS5401 R1 R2IHYSI 0.9 A1 /c109 1.25 V2.9 A/c109 OUTV 0.8 VR1 = R20.8 V/c45 /c230 /c246/c180/c231 /c247/c232 /c248 14TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) 7.3.4 Error Amplifier TheTPS5401 hasatransconductance amplifier astheerror amplifier. Theerror amplifier compares theVSENSE voltage tothelower oftheSS/TR pinvoltage ortheinternal 0.8-V voltage reference. Thetransconductance (gm) oftheerror amplifier is97\u03bcA/Vduring normal operation. During theslow-start operation, thetransconductance is afraction ofthenormal operating gm. When thevoltage oftheVSENSE pinisbelow 0.8Vand thedevice is regulating using theSS/TR voltage, thegmis26\u03bcA/V. The frequency compensation components (series resistor andcapacitor) areconnected between theCOMP pin andground. 7.3.5 Voltage Reference The voltage reference system produces aprecise \u00b13.5% voltage reference over temperature byscaling the output ofatemperature-stable bandgap circuit. 7.3.6 Adjusting theOutput Voltage The output voltage issetwith aresistor divider from theoutput node totheVSENSE pin.Itisrecommended to use1%tolerance orbetter divider resistors. Start with 10k\u2126fortheR2resistor anduseEquation 1tocalculate R1.Toimprove efficiency atlight loads, consider using larger-value resistors. Ifthevalues aretoohigh, the regulator becomes more susceptible tonoise, and voltage errors from theVSENSE input current become noticeable. (1) 7.3.7 Enabling andAdjusting Undervoltage Lockout The TPS5401 isdisabled when theVIN pinvoltage falls below 2.5V.Ifanapplication requires ahigher undervoltage lockout (UVLO), usetheENpinasshown inFigure 27toadjust theinput voltage UVLO byusing thetwoexternal resistors. Though itisnotnecessary tousetheUVLO adjust resistors, foroperation itishighly recommended toprovide consistent power-up behavior. The ENpinhasaninternal pullup current source, I1,of 0.9\u03bcAthat provides thedefault condition oftheTPS5401 operating when theENpinfloats. Once theENpin voltage exceeds theenable threshold voltage (VENA)of1.25 V,anadditional 2.9\u03bcAofhysteresis, IHYS,isadded. This additional current facilitates input-voltage hysteresis. Use Equation 2tocalculate R1which sets theexternal hysteresis fortheinput voltage. Use Equation 3tocalculate R2which sets theinput start voltage. Figure 27.Adjustable Undervoltage Lockout (UVLO) (2) (3)"
+      },
+      {
+        "chunk_id": "S2P22C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 22,
+        "text": "TPS5401 Clock SourcePLL RTRT/CLK 22TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) Figure 38.Synchronizing toaSystem Clock 7.3.15 Power Good (PWRGD Pin) The PWRGD pinisanopen-drain output. Once theVSENSE pinisbetween 94% and 107% oftheinternal voltage reference, thePWRGD pinisde-asserted andthepinfloats. Itisrecommended touseapullup resistor between thevalues of10k\u2126and 100 k\u2126connected toavoltage source that is5.5Vorless. PWRGD isina defined state once theVIN input voltage isgreater than 1.5V,butwith reduced current-sinking capability. PWRGD achieves fullcurrent-sinking capability astheVINinput voltage approaches 3V. The PWRGD pinispulled lowwhen VSENSE islower than 92% orgreater than 109% ofthenominal internal reference voltage. Also, PWRGD ispulled lowiftheUVLO orthermal shutdown isasserted ortheENpinis pulled low. 7.3.16 Overvoltage Transient Protection The TPS5401 incorporates anovervoltage transient protection (OVTP) circuit tominimize voltage overshoot when recovering from output fault conditions orstrong unload transients onpower-supply designs with low-value output capacitance. Forexample, when thepower-supply output isoverloaded, theerror amplifier compares the actual output voltage totheinternal reference voltage. IftheVSENSE pinvoltage islower than theinternal reference voltage foraconsiderable time, theoutput oftheerror amplifier responds byclamping theerror- amplifier output toahigh voltage, thus requesting themaximum output current. Once thecondition isremoved, theregulator output rises and theerror amplifier output transitions tothesteady-state duty cycle. Insome applications, thepower-supply output voltage can respond faster than theerror-amplifier output can respond, which leads tothepossibility ofanoutput overshoot. The OVTP feature minimizes theoutput overshoot when using alow-value output capacitor byimplementing acircuit tocompare theVSENSE pinvoltage toOVTP threshold, which is109% oftheinternal voltage reference. IftheVSENSE pinvoltage isgreater than theOVTP threshold, thehigh-side MOSFET isdisabled, preventing current from flowing totheoutput andminimizing output overshoot. When theVSENSE voltage drops lower than theOVTP threshold, thehigh-side MOSFET isallowed toturnonatthenext clock cycle. 7.3.17 Thermal Shutdown The device implements aninternal thermal shutdown toprotect itself ifthejunction temperature exceeds 182\u00b0C. The thermal shutdown forces thedevice tostop switching when thejunction temperature exceeds thethermal tripthreshold. Once thedietemperature decreases below 182\u00b0C,thedevice reinitiates thepower-up sequence bydischarging theSS/TR pin."
+      },
+      {
+        "chunk_id": "S2P11C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 11,
+        "text": "11TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporated7Detailed Description 7.1 Overview The TPS5401 device isa42-V, 0.5-A, step-down (buck) regulator with anintegrated high-side n-channel MOSFET. Toimprove performance during lineandload transients, thedevice implements aconstant-frequency, current-mode control which reduces output capacitance andsimplifies external frequency compensation design. The wide switching-frequency range of100 kHz to2500 kHz allows forefficiency and size optimization when selecting theoutput filter components. The switching frequency isadjusted using aresistor toground onthe RT/CLK pin.Thedevice hasaninternal phase-lock loop (PLL) ontheRT/CLK pinthatisused tosynchronize the power-switch turnon toafalling edge ofanexternal system clock. The TPS5401 device hasadefault start-up voltage ofapproximately 2.5V.The ENpinhasaninternal pullup current source that can beused toadjust theinput voltage undervoltage lockout (UVLO) threshold with two external resistors. Inaddition, thepullup current provides adefault condition. When theENpinisfloating, the device operates. The operating current is116\u03bcAwhen notswitching and under noload. When thedevice is disabled, thesupply current is1.3\u03bcA. Theintegrated 200-m\u2126high-side MOSFET allows forhigh-efficiency power-supply designs capable ofdelivering 0.5amperes ofcontinuous current toaload. TheTPS5401 reduces theexternal component count byintegrating theboot recharge diode. The bias voltage fortheintegrated high-side MOSFET issupplied byacapacitor from theBOOT pintothePHpin.The boot capacitor voltage ismonitored byaUVLO circuit andturns thehigh-side MOSFET offwhen theboot voltage falls below apreset threshold. TheTPS5401 canoperate athigh duty cycles because oftheboot UVLO. Theoutput voltage canbestepped down toaslowasthe0.8-V reference. The TPS5401 hasapower-good comparator (PWRGD) which asserts when theregulated output voltage isless than 92% orgreater than 109% ofthenominal output voltage. The PWRGD pinisanopen-drain output which deasserts when theVSENSE pinvoltage isbetween 94% and107% ofthenominal output voltage, allowing the pintotransition high when apullup resistor isused. The TPS5401 minimizes excessive output overvoltage (OV) transients bytaking advantage oftheOVpower- good comparator. When theOVcomparator isactivated, thehigh-side MOSFET isturned offandmasked from turning onuntil theoutput voltage islower than 107%. The SS/TR (slow-start/tracking) pinisused tominimize inrush currents orprovide power-supply sequencing during power up.Asmall-value capacitor should becoupled tothepintoadjust theslow-start time. Aresistor divider canbecoupled tothepinforcritical power-supply sequencing requirements. TheSS/TR pinisdischarged before theoutput powers up.This discharging ensures arepeatable restart after anovertemperature fault, UVLO fault, oradisabled condition. Th"
+      },
+      {
+        "chunk_id": "S2P13C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 13,
+        "text": "V \u2013 Input Voltage \u2013 VIN I \u2013 Output Current \u2013 AOUTV = 3.3 VOUT 4.64.855.25.45.6 0 0.05 0.10 0.15 0.20 I \u2013 Output Current \u2013 AOUTV \u2013 Input Voltage \u2013 VINV = 5 VOUT Start Stop 13TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) 7.3.3 Low-Dropout Operation andBootstrap Voltage (BOOT) The TPS5401 hasanintegrated boot regulator, andrequires asmall ceramic capacitor between theBOOT and PHpins toprovide thegate-drive voltage forthehigh-side MOSFET. TheBOOT capacitor isrefreshed when the high-side MOSFET isoffandthelow-side diode conducts. Thevalue ofthisceramic capacitor should be0.1\u03bcF. Aceramic capacitor with anX7R orX5R grade dielectric with avoltage rating of10Vorhigher isrecommended because ofthestable characteristics over temperature andvoltage. Toimprove dropout, theTPS5401 device isdesigned tooperate at100% duty cycle aslong astheBOOT-to-PH pinvoltage isgreater than 2.1V.When thevoltage from BOOT toPHdrops below 2.1V,thehigh-side MOSFET isturned offusing anUVLO circuit, which allows thelow-side diode toconduct and refresh thecharge onthe BOOT capacitor. Because thesupply current sourced from theBOOT capacitor islow, thehigh-side MOSFET canremain onformore switching cycles than arerequired torefresh thecapacitor. Therefore, theeffective duty cycle oftheswitching regulator ishigh. The effective duty cycle during dropout oftheregulator ismainly influenced bythevoltage drops across the power MOSFET, inductor resistance, low-side diode, and printed circuit board resistance. During operating conditions inwhich theinput voltage drops and theregulator isoperating incontinuous conduction mode, the high-side MOSFET canremain onfor100% oftheduty cycle tomaintain output regulation, until theBOOT-to-PH voltage falls below 2.1V. Attention must betaken inmaximum-duty-cycle applications which experience extended time periods with light loads ornoload. When thevoltage across theBOOT capacitor falls below the2.1-V UVLO threshold, thehigh- side MOSFET isturned off,butthere may notbeenough inductor current topullthePHpindown torecharge the BOOT capacitor. Thehigh-side MOSFET oftheregulator stops switching because thevoltage across theBOOT capacitor isless than 2.1V.Theoutput capacitor then decays until thedifference intheinput voltage andoutput voltage isgreater than 2.1V,atwhich point theBOOT UVLO threshold isexceeded, and thedevice starts switching again until thedesired output voltage isreached. This operating condition persists until theinput voltage and/or theload current increases. Itisrecommended toadjust theVIN stop voltage greater than the BOOT UVLO trigger condition attheminimum load oftheapplication using theadjustable VINUVLO feature with resistors ontheENpin. The start andstop voltages fortypical 3.3-V and5-Voutput applications areshown inFigure 25andFigure 26. Thevoltages areplotted versus load cur"
+      },
+      {
+        "chunk_id": "S2P15C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 15,
+        "text": "VEN VSS/TR VVSENSE VOUT ss ss ss reft (ms) I ( A)C (nF) =V (V) 0.8/c109 /c180 /c180 15TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) 7.3.8 Slow-Start/Tracking Pin(SS/TR) TheTPS5401 effectively uses thelower voltage oftheinternal voltage reference ortheSS/TR pinvoltage asthe power-supply reference voltage and regulates theoutput accordingly. Acapacitor ontheSS/TR pintoground implements aslow-start time. The TPS5401 has aninternal pullup current source of2\u03bcAthat charges the external slow-start capacitor. Thecalculations fortheslow-start time (10% to90%) areshown inEquation 4.The voltage reference (Vref)is0.8Vandtheslow-start current (ISS)is2\u03bcA.The slow-start capacitor should remain lower than 0.47\u03bcFandgreater than 0.47 nF. (4) Atpower up,theTPS5401 does notstart switching until theslow-start pinisdischarged toless than 40mVto ensure aproper power up;seeFigure 28. Also, during normal operation, theTPS5401 stops switching andSS/TR must bedischarged to40mVwhen the VINUVLO isexceeded, theENpinispulled below 1.25 V,orathermal shutdown event occurs. The VSENSE voltage follows theSS/TR pinvoltage with a45-mV offset upto85% oftheinternal voltage reference. When theSS/TR voltage isgreater than 85% oftheinternal reference voltage, theoffset increases as theeffective system reference transitions from theSS/TR voltage totheinternal voltage reference (see Figure 23).TheSS/TR voltage ramps linearly until clamped at1.7V. Figure 28.Operation ofSS/TR PinWhen Starting 7.3.9 Overload Recovery Circuit The TPS5401 hasanoverload recovery (OLR) circuit. The OLR circuit slow-starts theoutput from theoverload voltage tothenominal regulation voltage once thefault condition isremoved. The OLR circuit discharges the SS/TR pintoavoltage slightly greater than theVSENSE pinvoltage, using aninternal pulldown of100\u03bcAwhen theerror amplifier ischanged toahigh voltage from afault condition. When thefault condition isremoved, the output slow-starts from thefault voltage tonominal output voltage."
+      },
+      {
+        "chunk_id": "S2P31C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 31,
+        "text": "Zmod ESR OUT1f2 R C/c112/c61/c180 /c180 OUT Pmod OUT OUTIf2 V C/c112/c61/c180 /c180 OUT OUT SS SSAVGC V 0.8tI/c180 /c180/c62 31TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedThe slow-start time must belong enough toallow theregulator tocharge theoutput capacitor uptotheoutput voltage without drawing excessive current. Equation 25canbeused tofindtheminimum slow-start time, tSS, necessary tocharge theoutput capacitor, COUT,from 10% to90% oftheoutput voltage, VOUT,with anaverage slow-start current ofISSAVG .Intheexample, tocharge the220\u03bcFoutput capacitor upto5Vwhile only allowing theaverage input current ISSAVG tobe0.2Awould require a4.4-ms slow-start time. (25) When theslow-start time isknown, theslow-start capacitor value canbecalculated using Equation 4.Forthe example circuit, theslow-start time issettoavalue of3.2ms,which requires a0.01- \u00b5Fcapacitor. 8.2.2.8 Bootstrap Capacitor Selection A0.1-\u03bcFceramic capacitor must beconnected between theBOOT and PHpins forproper operation. Itis recommended touseaceramic capacitor with X5R orbetter grade dielectric. The capacitor should have a10-V orhigher voltage rating. 8.2.2.9 Undervoltage Lockout SetPoint The undervoltage lockout (UVLO) can beadjusted using anexternal voltage divider ontheENpinofthe TPS5401. The UVLO hastwothresholds, oneforpower upwhen theinput voltage isrising andoneforpower down orbrownouts when theinput voltage isfalling. Thesupply should turnonandstart switching once theinput voltage increases above power-up threshold (enabled). After theregulator starts switching, itshould continue to dosountil theinput voltage falls below thepower-down threshold (UVLO stop). Theprogrammable UVLO andenable voltages aresetusing aresistor divider between VINandground totheEN pin.Equation 2through Equation 3canbeused tocalculate theresistance values necessary. Fortheexample application, because theminimum input voltage is7.5V,when themaximum input voltage is35V,thevoltage at theENpinexceeds theabsolute voltage rating oftheENpin.SotheUVLO isnotsetexternally inthisdesign. 8.2.2.10 Compensation Theexternal compensation used with theTPS5401 allows forawide range ofoutput filter configurations. Alarge range ofcapacitor values andtypes ofdielectric issupported. This design example uses analuminum electrolytic output capacitor. Adesign example with theceramic dielectric output capacitors canbefound intheTPS54040 data sheet (SLVS918 ).More accurate designs canbefound intheWEBENCH software. Thepeak-current mode PWM modulator andtheoutput filter generate apairofpower stage pole andzero which aredetermined using Equation 26andEquation 27. (26) (27)"
+      },
+      {
+        "chunk_id": "S2P27C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 27,
+        "text": "OUT(max) INRIPPLE IN SWI \u00d7 0.25 V =C \u00d7 f /c40 /c41IN OUT OUT INRMS OUT IN INV -V VI = I \u00d7 \u00d7V V 27TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedDue tocurrent leakage oftheVSENSE pin,thecurrent flowing through thefeedback network should begreater than 1\u03bcAinorder tomaintain theoutput voltage accuracy. This requirement makes themaximum value ofR7 equal to800 k\u03a9.Choosing higher resistor values decreases quiescent current and improve efficiency atlow output currents butmay introduce noise immunity problems. 8.2.2.3 Input Capacitor The TPS5401 requires ahigh-quality ceramic, type X5R orX7R, input decoupling capacitor with atleast 3\u03bcFof effective capacitance, and insome applications additional bulk capacitance. The effective capacitance includes anydcbias effects. The voltage rating oftheinput capacitor must begreater than themaximum input voltage. The capacitor must also have aripple-current rating greater than themaximum input-current ripple ofthe TPS5401. Use Equation 13tocalculate theinput voltage ripple. The value ofaceramic capacitor varies significantly over temperature andtheamount ofdcbias applied tothe capacitor. Thecapacitance variations duetotemperature canbeminimized byselecting adielectric material that isstable over temperature. X5R andX7R ceramic dielectrics areusually selected forpower regulator capacitors because they have ahigh capacitance-to-volume ratio and arefairly stable over temperature. The output capacitor must also beselected with thedcbias taken into account. The capacitance value ofacapacitor decreases asthedcbias across acapacitor increases. Forthisexample design, aceramic capacitor with atleast a60-V voltage rating isrequired tosupport the maximum input voltage. Common standard ceramic capacitor voltage ratings include 4V,6.3V,10V,16V,25 V,50V,and100V,soa100-V capacitor should beselected. Forthisexample, two2.2-\u03bcF,100-V capacitors in parallel have been selected. Table 3shows aselection ofhigh-voltage capacitors. The input capacitance value determines theinput ripple voltage oftheregulator. Theinput voltage ripple canbecalculated using Equation 14. Using thedesign example values, IOUT(max) =0.5A,CIN=4.4\u03bcF,and fSW=700kHz, yields aninput voltage ripple of40.6 mVandamaximum rmsinput ripple current of0.25 Awhen VINisequal to10V,which is2times the output voltage of5V. (13) (14) Table 3.Capacitor Types VENDOR VALUE (\u03bcF) EIASize VOLTAGE DIELECTRIC COMMENTS Murata1to2.2 1210100V X7RGRM32 series 1to4.7 50V 1 1206100V GRM31 series 1to2.2 50V Vishay1to1.8 222050V VJX7R series1to1.2 100V 1to3.9 222550V 1to1.8 100V TDK1to2.2 1812100V Cseries C4532 1.5to6.8 50V 1.to2.2 1210100V Cseries C3225 1to3.3 50V AVX1to4.7 121050V X7R dielectric series1 100V 1to4.7 181250V 1to2.2 100V"
+      },
+      {
+        "chunk_id": "S2P20C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 20,
+        "text": "T 1.0888 SW206,003R (k\u03a9) f (kHz)/c61 20TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) 7.3.11 Constant Switching Frequency andTiming Resistor (RT/CLK Pin) The switching frequency oftheTPS5401 isadjustable over awide range from approximately 100 kHz to2500 kHzbyplacing aresistor ontheRT/CLK pin.TheRT/CLK pinvoltage istypically 0.5Vandmust have aresistor toground tosettheswitching frequency. Todetermine thetiming resistance foragiven switching frequency, use Equation 9orthecurves inFigure 5orFigure 6.Toreduce thesolution size onewould typically settheswitching frequency ashigh aspossible, buttradeoffs ofthesupply efficiency, maximum input voltage, and minimum controllable on-time should beconsidered. Theminimum controllable on-time istypically 130nsandlimits themaximum operating input voltage. Themaximum switching frequency isalso limited bythefrequency-shift circuit. More discussion onthedetails of themaximum switching frequency islocated asfollows. (9) 7.3.12 Overcurrent Protection andFrequency Shift The TPS5401 implements current-mode control, which uses theCOMP pinvoltage toturn offthehigh-side MOSFET onacycle-by-cycle basis. Each cycle, theswitch current andCOMP pinvoltage arecompared. When thepeak switch current intersects theCOMP voltage, thehigh-side switch isturned off.During overcurrent conditions thatpulltheoutput voltage low, theerror amplifier responds bydriving theCOMP pinhigh, increasing theswitch current. Theerror amplifier output isclamped internally, which functions asaswitch-current limit. Toincrease themaximum operating switching frequency athigh input voltages, theTPS5401 implements a frequency shift. The switching frequency isdivided by8,4,2,and1asthevoltage ramps from 0to0.8volts on theVSENSE pin. Thedevice implements adigital frequency shift toenable synchronizing toanexternal clock during normal start- upand fault conditions. Because thedevice canonly divide theswitching frequency by8,there isamaximum input voltage limit inwhich thedevice operates andstillhasfrequency-shift protection. During short-circuit events (particularly with high-input-voltage applications), thecontrol loop hasafinite minimum controllable on-time, andtheoutput hasalowvoltage. During theswitch on-time, theinductor current ramps to thepeak current limit because ofthehigh input voltage and minimum on-time. During theswitch off-time, the inductor current would normally nothave enough off-time and output voltage toramp down bytheramp-up amount. Thefrequency shift effectively increases theoff-time, allowing thecurrent toramp down. 7.3.13 Selecting theSwitching Frequency The switching frequency that isselected should bethelower value ofthetwo equations, Equation 10and Equation 11.Use Equation 10tocalculate themaximum switching frequency limitation setbytheminimum controllable on-time. Setting thesw"
+      },
+      {
+        "chunk_id": "S6P0C1",
+        "source_url": "https://www.ti.com/product-category/power-management/voltage-references/overview.html",
+        "title": "Linked reference from TPS5401 product page",
+        "page": null,
+        "text": "Voltage references | TI.com Home Products Power management parametric-filter Amplifiers parametric-filter Audio, haptics & piezo parametric-filter Clocks & timing parametric-filter Data converters parametric-filter Die & wafer services parametric-filter DLP products parametric-filter Interface parametric-filter Isolation parametric-filter Logic & voltage translation parametric-filter Microcontrollers (MCUs) & processors parametric-filter Motor drivers parametric-filter Power management parametric-filter RF & microwave parametric-filter Sensors parametric-filter Switches & multiplexers parametric-filter Wireless connectivity Voltage references parametric-filter AC/DC switching regulators parametric-filter DC/DC power modules parametric-filter DC/DC switching regulators parametric-filter DDR memory power ICs parametric-filter Gate drivers parametric-filter High-side switches & controllers parametric-filter LCD & OLED display power & drivers parametric-filter LED drivers parametric-filter Linear & low-dropout (LDO) regulators parametric-filter Load switches parametric-filter Low-side switches parametric-filter MOSFETs parametric-filter Multi-channel ICs (PMICs) parametric-filter Power over Ethernet (PoE) ICs parametric-filter Power protection switches & controllers parametric-filter Power stages parametric-filter Sequencers parametric-filter Solid-state relays parametric-filter Supervisor & reset ICs parametric-filter USB power switches & charging port controllers parametric-filter USB Type-C & USB Power Delivery ICs parametric-filter Voltage references Home Products Power management Voltage references Voltage references High-accuracy shunt and series voltage references to support a variety of applications parametric-filter View all products Our broad portfolio of series, shunt and current voltage references features low temperature coefficient, precise initial accuracy, low noise and excellent long-term stability for a wide variety of applications, such as data conversion and signal conditioning. Voltage references are also commonly used as voltage monitors, current limiters and programmable current sources. Browse by category Current references & sources Series voltage references Shunt voltage references Featured products Reference designs related to Voltage references Use our reference design selection tool to find designs that best match your application and parameters. View reference designs New products parametric-filter View all new products = 3 */ --> LM4060-Q1 NEW Shunt voltage references LM4060-Q1 ACTIVE Automotive, 20ppm/\u00b0C maximum drift high precision shunt voltage reference Approx. price ( USD ) 1ku | 1.3 REF30E NEW Series voltage references REF30E ACTIVE 15 ppm\u00b0/C drift, 27uA Iq in SOT-23-3 package series voltage reference Approx. price ( USD ) 1ku | 0.39 LM4060 NEW Shunt voltage references LM4060 ACTIVE 20ppm/\u00b0C maximum drift high-precision shunt voltage reference Approx. price ( USD ) 1ku | 1 REF81 NEW Series voltage references REF81"
+      },
+      {
+        "chunk_id": "S1P0C1",
+        "source_url": "https://www.ti.com/product/TPS5401",
+        "title": "TPS5401 product page",
+        "page": null,
+        "text": "TPS5401 data sheet, product information and support | TI.com Home Power management parametric-filter Amplifiers parametric-filter Audio, haptics & piezo parametric-filter Battery management ICs parametric-filter Clocks & timing parametric-filter DLP products parametric-filter Data converters parametric-filter Die & wafer services parametric-filter Interface parametric-filter Isolation parametric-filter Logic & voltage translation parametric-filter Microcontrollers (MCUs) & processors parametric-filter Motor drivers parametric-filter Passive and discrete parametric-filter Power management parametric-filter RF & microwave parametric-filter Sensors parametric-filter Switches & multiplexers parametric-filter Wireless connectivity DC/DC switching regulators parametric-filter AC/DC switching regulators parametric-filter DC/DC power modules parametric-filter DC/DC switching regulators parametric-filter DDR memory power ICs parametric-filter Gate drivers parametric-filter High-side switches & controllers parametric-filter LCD & OLED display power & drivers parametric-filter LED drivers parametric-filter Linear & low-dropout (LDO) regulators parametric-filter Load switches parametric-filter Low-side switches parametric-filter MOSFETs parametric-filter Multi-channel ICs (PMICs) parametric-filter Power over Ethernet (PoE) ICs parametric-filter Power protection switches & controllers parametric-filter Power stages parametric-filter Sequencers parametric-filter Solid-state relays parametric-filter Supervisor & reset ICs parametric-filter USB power switches & charging port controllers parametric-filter Voltage references DC/DC converters parametric-filter DC/DC controllers parametric-filter DC/DC converters Home Power management DC/DC switching regulators DC/DC converters TPS5401 ACTIVE 3.5V to 42V Input, 0.5 A Step Down Converter Order now Data sheet document-pdfAcrobat TPS5401 0.5-A, 42-V Input, Step-Down Converter datasheet (Rev. B) PDF | HTML A newer version of this product is available open-in-new Compare alternates Same functionality with different pin-out to the compared device TPS560430 ACTIVE 4V to 36V, 0.6A synchronous step-down SIMPLE SWITCHER\u00ae power converter SOT23 packaging, FPWM and PFM option. TPS5401 ACTIVE Data sheet Order now Product details Rating Catalog Topology Buck Iout (max) (A) 0.5 Vin (max) (V) 42 Vin (min) (V) 3.5 Vout (max) (V) 39 Vout (min) (V) 0.8 Features Enable, Frequency synchronization, Light-load efficiency, Overcurrent protection, Power good, Tracking, UVLO adjustable Control mode current mode Operating temperature range (\u00b0C) -40 to 150 Iq (typ) (A) 0.000116 Duty cycle (max) (%) 98 Rating Catalog Topology Buck Iout (max) (A) 0.5 Vin (max) (V) 42 Vin (min) (V) 3.5 Vout (max) (V) 39 Vout (min) (V) 0.8 Features Enable, Frequency synchronization, Light-load efficiency, Overcurrent protection, Power good, Tracking, UVLO adjustable Control mode current mode Operating temperature range (\u00b0C) -40 to 150 Iq (typ) (A) 0.000116 Duty cyc"
+      },
+      {
+        "chunk_id": "S2P1C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 1,
+        "text": "PHVIN GNDBOOT VSENSECOMPTPS5401 EN RT/CLKSS/TRPWRGD CIN CBOOT LOUT COUT R1 R2C2 C1R3RT CSSVIN VOUT 01020304050607080 0 0.1 0.2 0.3 0.4 Load Current \u2013 AEfficiency \u2013 %100 90 0.5V = 12 V V = 5 V f = 700 kHzIN OUT SW Product Folder Sample & Buy Technical Documents Tools & Software Support & Community AnIMPORTANT NOTICE attheend ofthisdata sheet addresses availability, warranty, changes, useinsafety-critical applications, intellectual property matters andother important disclaimers. PRODUCTION DATA.TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 TPS5401 0.5-A, 42-VInput, Step-Down Converter 11Features 1\u20223.5-V to42-V Input Voltage Range \u2022200-m\u2126High-Side MOSFET \u2022High Efficiency atLight Loads With aPulse- Skipping Eco-mode \u2122Control Scheme \u2022116-\u03bcAOperating Quiescent Current \u20221.3-\u03bcAShutdown Current \u2022100-kHz to2.5-MHz Switching Frequency \u2022Synchronizes toExternal Clock \u2022Adjustable Slow Start/Sequencing \u2022UVandOVPower-Good Output \u2022Adjustable UVLO Voltage andHysteresis \u20220.8-V \u00b13.5% Internal Voltage Reference \u2022MSOP10 With PowerPAD \u2122Package \u2022Supported byWEBENCH 2Applications \u202212-V and24-V Industrial andCommercial Low- Power Systems \u2022E-Meters3Description The TPS5401 device isa42-V, 0.5-A, step-down regulator with anintegrated high-side MOSFET. Current-mode control provides simple external compensation and flexible component selection. A low-ripple pulse-skip mode reduces the supply current to116\u03bcAwhen outputting regulated voltage with noload. Using theenable pin,shutdown supply current isreduced to1.3\u03bcAwhen theenable pinis low. Undervoltage lockout isinternally setat2.5V,but can beincreased using theenable pin. The output voltage start-up ramp iscontrolled bytheslow-start pin that can also be configured for sequencing/tracking. An open-drain power-good signal indicates theoutput iswithin 94% to107% of itsnominal voltage. Awide switching-frequency range allows efficiency andexternal component size optimization. Frequency foldback and thermal shutdown protect the part during anoverload condition. The TPS5401 isavailable ina10-pin thermally enhanced MSOP PowerPAD package. Device Information(1) PART NUMBER PACKAGE BODY SIZE (NOM) TPS5401 MSOP (10) 3.00 mm\u00d73.00 mm (1)Forallavailable packages, see theorderable addendum at theendofthedatasheet. Simplified Schematic Efficiency vs.Load Current"
+      },
+      {
+        "chunk_id": "S2P29C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 29,
+        "text": "OUT ORIPPLE SWESR LRIPPLE1 1CV 8 fRI/c62 /c180/c180/c45 /c45/c62 /c180 /c452 2 OH OL OUT OUT 2 2 FIN INII IC L V V /c40 /c41OUT OUT SW OUT OUT ESR2 ICf V I R/c180 /c68/c62/c180 /c68 /c45 /c68 /c180 29TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporatedcurrent andoutput voltage andadjust theduty cycle toreact tothechange. The output capacitor must besized tosupply theextra current totheload until thecontrol loop responds totheload change. Theoutput capacitance must belarge enough tosupply thedifference incurrent fortwoclock cycles while only allowing atolerable amount ofdrop intheoutput voltage. Equation 20shows theminimum output capacitance necessary to accomplish this. where \u2022\u0394IOUTisthechange inoutput current \u2022fSWistheregulator switching frequency \u2022\u0394VOUTistheallowable change intheoutput voltage \u2022RESRistheEquivalent Series Resistance (ESR) oftheoutput capacitor (20) Equation 20indicates theESR must beless than\u0394VOUT/\u0394IOUT.Forthisexample, thetransient load response is specified asa4%change inVOUTforaload step from 0A(noload) to0.5A(fullload). Inaddition, \u0394IOUT=0.5A and\u0394VOUT=0.04 \u00d75V=0.2V.Forceramic capacitors, theESR isusually small enough toignore inthis calculation. Aluminum electrolytic and tantalum capacitors have higher ESR that should betaken intoaccount. Using these numbers gives aminimum capacitance of7.14\u03bcFforceramic capacitor and20.4 \u00b5Fforelectrolytic capacitor with 260m\u03a9ESR. The catch diode oftheregulator cannot sink current, soanystored energy intheinductor produces anoutput voltage overshoot when theload current rapidly decreases. The output capacitor must also besized toabsorb energy stored intheinductor when transitioning from ahigh load current toalower load current. The excess energy that gets stored intheoutput capacitor increases thevoltage onthecapacitor. The capacitor must be sized tomaintain thedesired output voltage during these transient periods. Equation 21isused tocalculate the minimum capacitance tokeep theoutput voltage overshoot toadesired value, where LOUTisthevalue ofthe inductor, IOHistheoutput current under heavy load, IOListheoutput under light load, VFINisthefinal peak output voltage, andVINIistheinitial capacitor voltage. Forthisexample, theworst-case load step isfrom 0.5Ato0A. Theoutput voltage increases during thisload transition, andthestated maximum inourspecification is4%ofthe output voltage. This makes VFIN=1.04 \u00d75V=5.2V.VINIistheinitial capacitor voltage, which isthenominal output voltage of5V.Using these numbers inEquation 21yields aminimum capacitance of5.76\u03bcF. (21) Equation 22calculates theminimum output capacitance needed tomeet theoutput-voltage ripple specification, where fSWistheswitching frequency, VORIPPLE isthemaximum allowable output voltage ripple, andILRIPPLE isthe inductor ripple current. Equation 22shows theESR oftheoutput capacitor must beless than VORIPPLE /ILRIPPLE"
+      },
+      {
+        "chunk_id": "S1P0C4",
+        "source_url": "https://www.ti.com/product/TPS5401",
+        "title": "TPS5401 product page",
+        "page": null,
+        "text": "or encoder power over RS485 as per HIPERFACE DSL (...) Design guide: PDF Schematic: PDF Reference designs TIDA-00178 \u2014 Interface to a Sin/Cos Encoder with Sitara AM437x Reference Design The TIDA-00178 reference design is an EMC compliant industrial interface to Sin/Cos position encoders. Applications include industrial drives, which require accurate speed and position control. The design utilizes a 16-bit dual sample ADC with drop-in compatible 14- or 12-bit versions available, (...) Design guide: PDF Schematic: PDF Reference designs TIDA-01070 \u2014 HVAC Coil Airflow Sensor Reference Design for Predictive Maintenance in Air Filter Replacement This design provides a reference for monitoring airflow efficiency and temperature through heat ventilation and air conditioner (HVAC) systems. The reference design is used in conjunction with solid state relays and piezoelectric vibration sensors to monitor and react accordingly to low airflow and (...) Design guide: PDF Schematic: PDF Reference designs TIDM-1PHMTR-ESD \u2014 One-Phase Metrology with Enhanced ESD Protection Reference Design This reference design implements an ANSI/IEC Class 0.2 one-phase energy meter with enhanced ESD protection. The design also features communications through ZigBee\u2122 connectivity. The e-meter SoC is used to perform all metrology functions and sends active power results to the CC2530EM (...) Design guide: PDF Schematic: PDF Reference designs TIDM-TWOPHASEMETER-I2040 \u2014 Low-Cost Single/Dual-Phase Isolated Electricity Measurement Reference Design The design implements a low-cost single- or dual-phase electricity measurement solution. The design separates a small metrology MCU from the host MCU, providing both protection from the AC mains and also isolation of the energy measurement function from corruption by other software. The small, (...) Design guide: PDF Schematic: PDF Reference designs TIDA-00202 \u2014 Interface to a HIPERFACE Position Encoder Reference Design The TIDA-00202 reference design implements an EMC compliant industrial hybrid analog and digital interface to a HIPERFACE position encoder. A 3.3V supply RS485 transceiver with IEC-ESD and IEC-EFT protection is used for the bidirectional parameter channel. For the analog sin/cos signal (...) Design guide: PDF Schematic: PDF 10 Reference Design Assets */--> Package Pins CAD symbols, footprints & 3D models HVSSOP (DGQ) 10 Ultra Librarian TI's Standard Terms and Conditions for Evaluation Items apply. Ordering & quality Information included: RoHS REACH Device marking Lead finish/Ball material MSL rating/Peak reflow MTBF/FIT estimates Material content Qualification summary Ongoing reliability monitoring Information included: Fab location Assembly location Recommended products may have parameters, evaluation modules or reference designs related to this TI product. Support & training TI E2E\u2122 forums with technical support from TI engineers View all forum topics Content is provided \"as is\" by TI and community contributors and does not "
+      },
+      {
+        "chunk_id": "S2P18C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 18,
+        "text": "SS /TRTPS5401 EN PWRGD SS / TREN VSENSEVOUT1 VOUT2 R1 R2 R3 R4TPS5401 PWRGD 18TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) Figure 31shows amethod forratiometric start-up sequence byconnecting theSS/TR pins together. The regulator outputs ramp upandreach regulation atthesame time. When calculating theslow-start time, thepullup current source must bedoubled inEquation 4.Figure 32shows theresults ofFigure 31. Figure 33.Schematic forRatiometric andSimultaneous Start-Up Sequence Ratiometric andsimultaneous power supply sequencing canbeimplemented byconnecting theresistor network ofR1andR2shown inFigure 33totheoutput ofthepower supply thatmust betracked ortoanother voltage reference source. Using Equation 5andEquation 6,thetracking resistors canbecalculated toinitiate theVOUT2 slightly before, after, oratthesame time asVOUT1.Equation 7isthevoltage difference between VOUT1 andVOUT2 atthe95% ofnominal output regulation. The\u0394Vvariable iszero volts forsimultaneous sequencing. Tominimize theeffect oftheinherent SS/TR to VSENSE offset (Vssoffset )intheslow-start circuit and theoffset created bythepullup current source (Iss)and tracking resistors, theVssoffset andIssareincluded asvariables intheequations. Figure 36shows theresult when \u0394V=0V. Todesign aratiometric start-up inwhich theVOUT2 voltage isslightly greater than theVOUT1 voltage when VOUT2 reaches regulation, useanegative number inEquation 5through Equation 7for\u0394V.Equation 7results ina positive number forapplications inwhich VOUT2 isslightly lower than VOUT1 when VOUT2 regulation isachieved. Figure 34andFigure 35show thestart-up waveforms fornegative andpositive\u0394V,respectively. Because theSS/TR pinmust bepulled below 40mVbefore starting after anEN, UVLO, orthermal shutdown fault, careful selection ofthetracking resistors isneeded toensure thedevice canrestart after afault. Make sure thecalculated R1value from Equation 5isgreater than thevalue calculated inEquation 8toensure thedevice canrecover from afault."
+      },
+      {
+        "chunk_id": "S2P23C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 23,
+        "text": "23TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedFeature Description (continued) (1) Refer toSimplified Schematic .7.3.18 Current-Mode Compensation Design Tosimplify design efforts using theTPS5401, thetypical designs forcommon applications arelisted inTable 1. Fordesigns using ceramic output capacitors, TIrecommends proper derating ofceramic output capacitance when conducting thestability analysis because theactual ceramic capacitance drops considerably from the nominal value when theapplied voltage increases. Advanced users may seetheDetailed Design Procedure in fordetailed guidelines orusetheWEBENCH tool. Table 1.Typical Designs(1) VIN (V)VOUT (V)fSW (kHz)LOUT (\u00b5H)COUTR1 (k\u03a9)R2 (k\u03a9)C2 (pF)C1 (pF)R3 (k\u03a9) 7.5V\u201335V 5 700 47 Aluminum, 220\u00b5F/260 m\u03a9 52.3 10 82 3300 698 7.5V\u201335V 5 700 47 Ceramic, 47\u00b5F/10V 52.3 10 5.6 3300 75 12V\u201342V 5 700 47 Aluminum, 100\u00b5F/300 m\u03a9 52.3 10 100 3300 316 12V\u201342V 3.3 700 33 Ceramic, 33\u00b5F/10 V 30.9 10 10 3300 47 8V\u201314V 5 700 33 Ceramic, 47\u00b5F/10 V 52.3 10 5.6 3300 75 7.4 Device Functional Modes 7.4.1 Pulse-Skip Eco-mode Control Scheme The TPS5401 operates inapulse-skip Eco-mode control scheme atlight load currents toimprove efficiency by reducing switching and gate-drive losses. The TPS5401 isdesigned sothat iftheoutput voltage iswithin regulation and thepeak switch current attheend ofany switching cycle isbelow thepulse-skipping current threshold, the device enters the Eco-mode control scheme. This current threshold isthe current level corresponding toanominal COMP voltage of500mV. When intheEco-mode control scheme, theCOMP pinvoltage isclamped at500 mV, and thehigh-side MOSFET isinhibited. Further decreases inload current orincreases inoutput voltage cannot drive theCOMP pinbelow thisclamp voltage level. Because the device isnot switching, the output voltage begins todecay. Asthe voltage control loop compensates forthefalling output voltage, theCOMP pinvoltage begins torise. Atthistime, thehigh-side MOSFET isenabled, andaswitching pulse initiates onthenext switching cycle. The peak current issetbythe COMP pinvoltage. The output voltage recharges theregulated value (see Figure 39);then thepeak switch current starts todecrease andeventually falls below theEco-mode control-scheme threshold, atwhich time the device again enters theEco-mode control scheme. ForEco-mode control-scheme operation, theTPS5401 senses peak current, notaverage orload current, sothe load current where thedevice enters theEco-mode control scheme isdependent ontheoutput inductor value. Forexample, thecircuit inFigure 40enters theEco-mode control scheme atabout 20mAofoutput current. When theload current islowand theoutput voltage iswithin regulation, thedevice enters asleep mode and draws only 116\u03bcAofinput quiescent current. The internal PLL remains operating when insleep mode. When operating atlight load currents inthepulse-"
+      },
+      {
+        "chunk_id": "S2P30C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 30,
+        "text": "/c40 /c41 /c40 /c41 22 IN(max) OUT OUT FD J SW IN(max) FD D IN(max)V V I V C f V V PV/c45 /c180 /c180 /c180 /c180 /c43 /c61 /c43 /c40 /c41 OUT IN(max) OUT CO(RMS) IN(max) OUT SWV V V I 12 V L f/c180 /c45 /c61 /c180 /c180 /c180 30TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedCapacitors generally have limits totheamount ofripple current they can handle without failing orproducing excess heat. Anoutput capacitor thatcansupport theinductor ripple current must bespecified. Some capacitor data sheets specify theroot-mean-square (rms) value ofthemaximum ripple current. Equation 23canbeused to calculate thermsripple current theoutput capacitor must support. Forthisapplication, Equation 23yields 37.6 mA. (23) 8.2.2.6 Catch Diode The TPS5401 requires anexternal catch diode between thePHpinandGND. The selected diode must have a reverse voltage rating equal toorgreater than VIN(MAX) .Thepeak current rating ofthediode must begreater than themaximum inductor current. Thediode should also have alowforward voltage. Schottky diodes aretypically a good choice forthecatch diode, duetotheir lowforward voltage. Thelower theforward voltage ofthediode, the higher theefficiency oftheregulator. Typically, when thevoltage and current ratings forthediode arehigher, then theforward voltage ishigher. Because thedesign example hasaninput voltage upto42V,adiode with aminimum of42-V reverse voltage is selected. Fortheexample design, theB160A Schottky diode isselected foritslower forward voltage, and itcomes ina larger package size which hasgood thermal characteristics over small devices. Thetypical forward voltage ofthe B160A is0.5V. Thediode must also beselected with anappropriate power rating. Thediode conducts theoutput current during theoff-time oftheinternal power switch. The off-time oftheinternal switch isafunction ofthemaximum input voltage, theoutput voltage, and theswitching frequency. The output current during theoff-time ismultiplied by theforward voltage ofthediode, which equals theconduction losses ofthediode. Athigher switch frequencies, theaclosses ofthediode must betaken intoaccount. The aclosses ofthediode areduetothecharging and discharging ofthejunction capacitance and reverse recovery. Equation 24isused tocalculate thetotal power dissipation, conduction losses plus aclosses, ofthediode. TheB160A hasajunction capacitance (CJ)of110pF.Using Equation 24,theselected diode dissipates 0.29 W. This power dissipation, depending onmounting techniques, should produce a5.9\u00b0Ctemperature riseinthediode when theinput voltage is42Vandtheload current is0.5A. Ifthepower supply spends asignificant amount oftime atlight load currents orinsleep mode, consider using a diode which hasalowleakage current andslightly higher forward voltage drop. (24) 8.2.2.7 Slow-Start Capacitor The slow-start capacitor determines theminimum amount oftime ittakes forth"
+      },
+      {
+        "chunk_id": "S2P2C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 2,
+        "text": "2TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedTable ofContents 1Features .................................................................. 1 2Applications ........................................................... 1 3Description ............................................................. 1 4Revision History ..................................................... 2 5PinConfiguration andFunctions ......................... 3 6Specifications ......................................................... 4 6.1 Absolute Maximum Ratings ...................................... 4 6.2 ESD Ratings .............................................................. 4 6.3 Recommended Operating Conditions ....................... 4 6.4 Thermal Information .................................................. 5 6.5 Electrical Characteristics ........................................... 5 6.6 Typical Characteristics .............................................. 7 7Detailed Description ............................................ 11 7.1 Overview ................................................................. 11 7.2 Functional Block Diagram ....................................... 12 7.3 Feature Description ................................................. 127.4 Device Functional Modes ........................................ 23 8Application andImplementation ........................ 25 8.1 Application Information ............................................ 25 8.2 Typical Application ................................................. 25 9Power Supply Recommendations ...................... 37 10Layout ................................................................... 37 10.1 Layout Guidelines ................................................. 37 10.2 Layout Example .................................................... 37 10.3 Estimated Circuit Area .......................................... 38 11Device andDocumentation Support ................. 38 11.1 Device Support ...................................................... 38 11.2 Documentation Support ........................................ 38 11.3 Trademarks ........................................................... 38 11.4 Electrostatic Discharge Caution ............................ 38 11.5 Glossary ................................................................ 38 12Mechanical, Packaging, andOrderable Information ........................................................... 38 4Revision History NOTE: Page numbers forprevious revisions may differ from page numbers inthecurrent version. Changes from Revision A(December 2010) toRevision B Page \u2022Deleted SWIFT \u2122from thedata sheet title............................................................................................................................. 1 \u2022Deleted Features :\"ForSWIFT \u2122Power Products Documentation, seehttp://www.ti.com/swift ..."
+      },
+      {
+        "chunk_id": "S2P29C2",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 29,
+        "text": "s theminimum output capacitance needed tomeet theoutput-voltage ripple specification, where fSWistheswitching frequency, VORIPPLE isthemaximum allowable output voltage ripple, andILRIPPLE isthe inductor ripple current. Equation 22shows theESR oftheoutput capacitor must beless than VORIPPLE /ILRIPPLE to meet theoutput-voltage ripple requirement. Low-ESR capacitors arepreferred tokeep theoutput-voltage ripple low. Ifahigh-ESR electrolytic capacitor isused, asmall ESR ceramic capacitor isrecommended tobeinparallel with theelectrolytic capacitor tominimize theoutput voltage ripple. Inthisapplication, analuminum electrolytic capacitor ischosen astheoutput capacitor. Ithas260m\u03a9ESR. Equation 22yields 1.44 \u00b5F. (22) The most stringent criterion fortheoutput capacitor is20.5 \u00b5Fofcapacitance tokeep theoutput voltage in regulation during aload transient inthisexample. Additional capacitance de-ratings foraging, temperature anddcbias should befactored in,which increases this minimum value. Forthisexample, a220\u00b5Felectrolytic capacitor with 260m\u03a9ofESR canbeused forlowcost target."
+      },
+      {
+        "chunk_id": "S1P0C3",
+        "source_url": "https://www.ti.com/product/TPS5401",
+        "title": "TPS5401 product page",
+        "page": null,
+        "text": "on. A low-ripple pulse-skip mode reduces the supply current to 116 \u00b5A when outputting regulated voltage with no load. Using the enable pin, shutdown supply current is reduced to 1.3 \u00b5A when the enable pin is low. Undervoltage lockout is internally set at 2.5 V, but can be increased using the enable pin. The output voltage start-up ramp is controlled by the slow-start pin that can also be configured for sequencing/tracking. An open-drain power-good signal indicates the output is within 94% to 107% of its nominal voltage. A wide switching-frequency range allows efficiency and external component size optimization. Frequency foldback and thermal shutdown protect the part during an overload condition. The TPS5401 is available in a 10-pin thermally enhanced MSOP PowerPAD package. filter Find other DC/DC converters Download View video with transcript Video Technical documentation star = Top documentation for this product selected by TI No results found. Please clear your search and try again. View all 4 Top documentation Type Title Format options Date * Data sheet TPS5401 0.5-A, 42-V Input, Step-Down Converter datasheet (Rev. B) PDF | HTML 10 Feb 2016 Application note Design Considerations for DC-DC Converters in Fast-Input Slew Rate Applications 05 Mar 2015 Application note Designing Low Cost Flyback Power Supply Using Boost Converter (TPS61165) for HF 17 Apr 2014 Application note Improved Load Current Capability for Cap-Drop Off-Line Power Supply for E-Meter 27 Oct 2011 Design & development For additional terms or required resources, click any title below to view the detail page where available. 10 Reference Design Assets */--> Evaluation board TPS5401EVM-708 \u2014 Evaluation Module for TPS5401 0.5A Step-Down SWIFT\u2122 Converter The TPS5401EVM-708 is a fully assembled and tested circuit for evaluating the TPS5401 Step Down SWIFT Converter. The TPS5401EVM-708 accepts a 7.5V to 35V input and provides a 5V output at 0.5A. User guide: PDF Log in to order lock Log in to view inventory In stock Limit: Not available on TI.com 10 Reference Design Assets */--> Simulation model TPS5401 Unencrypted PSpice Transient Model Package (Rev. A) SLVMAZ9A.ZIP (65 KB) - PSpice Model Download Calculation tool SLVC392 \u2014 Capacitor Drop Design Calculator Supported products & hardware Supported products & hardware Download 10 Reference Design Assets */--> Reference designs TIDA-00177 \u2014 Two-Wire Interface to a HIPERFACE DSL\u00ae Encoder Reference Design The TIDA-00177 reference design is an EMC compliant industrial interface to a two-wire HIPERFACE DSL\u00ae encoder. Applications include industrial servo drives. The design features a 3.3-V supply RS485 transceiver and line termination and coupling for encoder power over RS485 as per HIPERFACE DSL (...) Design guide: PDF Schematic: PDF Reference designs TIDA-00178 \u2014 Interface to a Sin/Cos Encoder with Sitara AM437x Reference Design The TIDA-00178 reference design is an EMC compliant industrial interface to Sin/Cos position encoders. Application"
+      },
+      {
+        "chunk_id": "S2P12C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 12,
+        "text": "ERROR AMPLIFIERBoot Charge Boot UVLOUVLO Current Sense Oscillator with PLLFrequency ShiftLogic And PWM Latch Slope CompensationPWM ComparatorMinimum Clamp Pulse Skip Maximum ClampVoltage Reference Overload RecoveryVSENSE SS/TR COMP RT/CLKPHBOOTVIN Thermal ShutdownEN Enable Comparator Shutdown LogicShutdown Enable Threshold TPS5401 Block DiagramLogicShutdownPWRGD ShutdownOV GNDThermal Pad7 4 8 59111012 3 6 UV 12TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporated7.2 Functional Block Diagram 7.3 Feature Description 7.3.1 Fixed Frequency PWM Control The TPS5401 uses anadjustable fixed-frequency, peak current mode control. The output voltage iscompared through external resistors ontheVSENSE pintoaninternal voltage reference byanerror amplifier which drives theCOMP pin.Aninternal oscillator initiates theturnon ofthehigh-side power switch. The error amplifier output iscompared tothehigh-side power-switch current. When thepower-switch current reaches thelevel setbythe COMP voltage, thepower switch isturned off.The COMP pinvoltage increases and decreases astheoutput current increases anddecreases. The device implements acurrent limit byclamping theCOMP pinvoltage toa maximum level. TheEco-mode control scheme isimplemented with aminimum clamp ontheCOMP pin. 7.3.2 Slope Compensation Output Current The TPS5401 adds acompensating ramp totheswitch current signal. This slope compensation prevents sub- harmonic oscillations. Theavailable peak inductor current remains constant over thefullduty-cycle range."
+      },
+      {
+        "chunk_id": "S2P25C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 25,
+        "text": "+ 25TPS5401 www.ti.com SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporated8Application andImplementation NOTE Information inthe following applications sections isnot part ofthe TIcomponent specification, and TIdoes notwarrant itsaccuracy orcompleteness. TI\u2019scustomers are responsible fordetermining suitability ofcomponents fortheir purposes. Customers should validate andtesttheir design implementation toconfirm system functionality. 8.1 Application Information The TPS5401 isgood fortheE-meter application. The power supply design isachallenge work toE-meter designers because itmust getenough output current from awide input voltage range with alimited input power. Forexample, inChina, asingle-phase orthree-phase E-meter must work properly with aninput ACelectricity voltage range from 0.7Unto1.9Un.Here Unisthephase voltage of220V.The input active power limit is1.5 W.Atypical power supply design uses atransformer followed byarectifier bridge togetalowunregulated dc voltage. Then avoltage regulator generates 5Vforthewhole system. Considering theactransformer haslarge internal dcresistance and thefollowing rectifier hasavoltage drop, theoutput voltage oftherectifier circuit is different between empty load andheavy load. Sotheinput voltage forthevoltage regulator within thewhole ac input voltage range may have amaximum-to-minimum ratio of4.Inthissituation, alinear regulator isnotsuitable duetoitsvery lowefficiency athigh input voltage. 8.2 Typical Application Figure 40.Typical Application Schematic"
+      },
+      {
+        "chunk_id": "S2P51C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 51,
+        "text": "IMPORTANT NOTICE AND DISCLAIMER TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES \u201cAS IS\u201d AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY RIGHTS. These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable standards, and any other safety, security, regulatory or other requirements. These resources are subject to change without notice. TI grants you permission to use these resources only for development of an application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources. TI\u2019s products are provided subject to TI\u2019s Terms of Sale , TI\u2019s General Quality Guidelines , or other applicable terms available either on ti.com or provided in conjunction with such TI products. TI\u2019s provision of these resources does not expand or otherwise alter TI\u2019s applicable warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products are standard, catalog, general purpose devices. TI objects to and rejects any additional or different terms you may propose. IMPORTANT NOTICE Copyright \u00a9 2025, Texas Instruments Incorporated Last updated 10/2025"
+      },
+      {
+        "chunk_id": "S2P26C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 26,
+        "text": "1/c230 /c246/c45 /c231 /c247 /c232 /c248OUT refVR6 = x R7V 26TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments IncorporatedTypical Application (continued) 8.2.1 Design Requirements Figure 40shows atypical TPS5401 application schematic forthisrequirement. Theinput range issetto7.5Vto 35V.With such awide input voltage range, aninexpensive transformer with high dcresistance canbeused to save total cost. 8.2.2 Detailed Design Procedure The following design procedure can beused toselect component values fortheTPS5401. Alternately, the WEBENCH software may beused togenerate acomplete design. The WEBENCH software uses aniterative design procedure and accesses acomprehensive database ofcomponents when generating adesign. This section presents asimplified discussion ofthedesign process. Tobegin thedesign process, afewparameters must bedecided upon. Table 2liststheparameters thedesigner needs toknow. Table 2.Design Parameters DESIGN PARAMETER EXAMPLE VALUE Input voltage range 7.5Vto35V Output voltage 5V Input ripple voltage 300mV Output ripple voltage 1%ofVOUT Output transient response for0to500-mA load step 4%ofVOUT Maximum output current 500mA 8.2.2.1 Switching Frequency Thefirststep istodecide onaswitching frequency fortheregulator. Typically, theuser may want tochoose the highest switching frequency possible, because this produces thesmallest solution size. The high switching frequency allows forlower-valued inductors and smaller output capacitors compared toapower supply that switches atalower frequency. Alternatively, theuser may choose alower switching frequency toimprove efficiency. Atlower switching frequencies, switching losses areminimized. The switching frequency thatcanbe selected islimited bytheminimum on-time oftheinternal power switch, theinput voltage, theoutput voltage, and thefrequency shift limitation. Equation 10andEquation 11must beused tofindthemaximum switching frequency fortheregulator. Choose thelower value ofthetwoequations. Switching frequencies higher than these values result inpulse skipping or thelack ofovercurrent protection during ashort circuit. Thetypical minimum on-time, ton(min) ,is130nsfortheTPS5401. Forthisexample, theoutput voltage is5Vand themaximum input voltage is35V,which allows foramaximum switch frequency upto1213 kHzwhen including theinductor resistance, on-resistance, anddiode voltage inEquation 10.Toensure overcurrent runaway isnota concern during short circuits inyour design, useEquation 11orthesolid curve inFigure 37todetermine the maximum switching frequency. With amaximum input voltage of35V,assuming adiode voltage of0.5V, inductor resistance of130m\u2126,switch resistance of400m\u2126,acurrent-limit value of0.94 A,andashort-circuit output voltage of0.1V,themaximum switching frequency isapproximately 1265 kHz. Choosing high frequency can reduce external component size butresults inhigher switching lo"
+      },
+      {
+        "chunk_id": "S2P13C2",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 13,
+        "text": "N stop voltage greater than the BOOT UVLO trigger condition attheminimum load oftheapplication using theadjustable VINUVLO feature with resistors ontheENpin. The start andstop voltages fortypical 3.3-V and5-Voutput applications areshown inFigure 25andFigure 26. Thevoltages areplotted versus load current. Thestart voltage isdefined astheinput voltage needed toregulate theoutput voltage within 3.5%. Thestop voltage isdefined astheinput voltage atwhich theoutput drops by5% orstops switching. During high-duty-cycle conditions, theinductor current ripple increases while theBOOT capacitor isbeing recharged, resulting inanincrease inripple voltage ontheoutput. This isduetotherecharge time oftheboot capacitor being longer than thetypical high-side offtime, when switching occurs every cycle. Figure 25.3.3-V Start/Stop Voltage Figure 26.5-VStart/Stop Voltage"
+      },
+      {
+        "chunk_id": "S4P9C1",
+        "source_url": "https://www.ti.com/lit/pdf/SLVU430",
+        "title": "TPS5401EVM-708 User's Guide",
+        "page": 9,
+        "text": "PH = 20 V div V = 20 mV / div (ac coupled)OUT Inductor Current = 100 mA div Time = 20 usec / div www.ti.com BoardLayout 2.10Eco-mode \u2122Operation Atlightloadcurrents, theTPS5401 isdesigned tooperateinpulse-skipping Eco-mode \u2122operation. When theCOMPpinvoltagelowersto500mAtypical,thedeviceentersEco-mode \u2122operation. Figure10showsEco-mode operation; channel1(C1)showstheswitching node(PH)voltage,whereas channel2(C2)showstheoutputvoltage,andchannel3(C3)showstheinductorcurrent. Figure10.TPS5401EVM \u2013708Eco\u2013mode\u2122Operation 3BoardLayout Thissectionprovidesadescription oftheTPS5401EVM-708, boardlayout,andlayerillustrations. 3.1Layout TheboardlayoutfortheTPS5401EVM-708 isshowninFigure11throughFigure13.Thetopsidelayerof theEVMislaidoutinamannertypicalofauserapplication. Thetopandbottomlayersare2-oz.copper. ThetoplayercontainsthemainpowertracesforVIN,VOUT,andPH.Alsoonthetoplayerareconnections fortheremaining pinsoftheTPS5401 andalargeareafilledwithground.Thebottomlayercontains groundandasignalroutefortheBOOTcapacitor. Thetopandbottomandinternalgroundtracesare connected withmultipleviasplacedaroundtheboardincluding tenviasdirectlyundertheTPS5401 devicetoprovideathermalpathfromthetop-sidegroundplanetothebottom-side groundplane. Theinputdecoupling capacitors (C2andC3)andbootstrap capacitor (C6)arealllocatedasclosetothe ICaspossible. Inaddition,thevoltageset-pointresistordividercomponents arealsokeptclosetotheIC. Thevoltagedividernetworktiestotheoutputvoltageatthepointofregulation, thecopperVOUTtracepast theoutputcapacitor (C5).FortheTPS5401, anadditional inputbulkcapacitor mayberequired(C1), depending ontheEVMconnection totheinputsupply. 9 SLVU430 \u2013January2011 TPS5401EVM-708 0.5-A,SWIFT\u2122Regulator Evaluation Module SubmitDocumentation Feedback \u00a92011,TexasInstruments Incorporated"
+      },
+      {
+        "chunk_id": "S2P4C1",
+        "source_url": "https://www.ti.com/lit/gpn/tps5401",
+        "title": "TPS5401 datasheet Rev. B",
+        "page": 4,
+        "text": "4TPS5401 SLVSAB0B \u2013DECEMBER 2010 \u2013REVISED NOVEMBER 2014 www.ti.com Product Folder Links: TPS5401Submit Documentation Feedback Copyright \u00a92010 \u20132014, Texas Instruments Incorporated(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage tothedevice. These arestress ratings only, andfunctional operation ofthedevice atthese oranyother conditions beyond those indicated under Recommended Operating Conditions isnotimplied. Exposure toabsolute-maximum-rated conditions forextended periods may affect device reliability.6Specifications 6.1 Absolute Maximum Ratings Over operating temperature range (unless otherwise noted).(1) MIN MAX UNIT Input voltageVIN \u20130.3 47 VEN \u20130.3 5 BOOT 55 VSENSE \u20130.3 3 COMP \u20130.3 3 PWRGD \u20130.3 6 SS/TR \u20130.3 3 RT/CLK \u20130.3 3.6 Output voltageBOOT \u2013PH 8 V PH \u20130.6 47 PH,10-ns transient \u20132 47 Voltage differenceThermal padtoGND \u00b1200 mV Source currentEN 100 \u03bcA BOOT 100 mA VSENSE 10 \u03bcA PH Current limit A RT/CLK 100 \u03bcA Sink currentVIN Current limit A COMP 100 \u03bcA PWRGD 10 mA SS/TR 200 \u03bcA Storage temperature range, Tstg \u201365 150 \u00b0C (1) JEDEC document JEP155 states that1000-V HBM allows safe manufacturing with astandard ESD control process. QSS 009-105 (JESD22-A114A) (2) JEDEC document JEP157 states that250-V CDM allows safe manufacturing with astandard ESD control process. QSS 009-147 (JESD22-C101B.01)6.2 ESD Ratings VALUE UNIT V(ESD) Electrostatic dischargeHuman body model (HBM), perANSI/ESDA/JEDEC JS-001, allpins(1)\u00b11000 V Charged device model (CDM), perJEDEC specification JESD22-C101, allpins(2) \u00f7500 6.3 Recommended Operating Conditions over operating free-air temperature range (unless otherwise noted) MIN NOM MAX UNIT Operating input voltage ontheVINpin 3.5 42 V TJ Operating junction temperature \u201340 150 \u00b0C Output voltage 0.8 39 V Output current 0 0.5 A"
+      }
+    ],
+    "source_urls": [
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/product-category/power-management/voltage-references/overview.html",
+      "https://www.ti.com/product/TPS5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/product/TPS5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/product/TPS5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/gpn/tps5401",
+      "https://www.ti.com/lit/pdf/SLVU430",
+      "https://www.ti.com/lit/gpn/tps5401"
+    ],
+    "unanswered_questions": [
+      "What actual VIN operating range around the nominal 24 V must be supported? The extracted power-stage values are from TI's 7.5 V\u201335 V, 5 V, 0.5 A typical design.",
+      "Should EN be left floating for always-on operation, driven by a logic signal, or set with a UVLO resistor divider? No custom start/stop thresholds were supplied.",
+      "Is PWRGD used? If yes, what pullup rail should it use, limited to 5.5 V or less?",
+      "Exact manufacturer part numbers and footprints for the inductor, capacitors, diode, and resistors were not included in the supplied chunks.",
+      "Output ripple, transient-response, temperature, and derating requirements were not supplied beyond the typical design/example values."
+    ],
+    "validation_warnings": [
+      "The design uses the device at its 0.5 A maximum output-current rating; thermal design and derating must be validated.",
+      "RT = 165 kOhm is calculated/rounded from the supplied RT equation for the 700 kHz typical design frequency; verify against the full datasheet graph/table before release.",
+      "The compensation value R3 is taken exactly from the supplied OCR chunk as 698 kOhm; verify against the original datasheet because OCR errors can affect decimal points.",
+      "PowerPAD/thermal pad connection to GND is mandatory for proper operation.",
+      "The optional PWRGD pullup value is a datasheet range, not a single fixed EVM value in the supplied chunks."
+    ],
+    "extraction_notes": [
+      "Primary reference circuit is the TI typical 5 V, 0.5 A TPS5401 buck design with 7.5 V\u201335 V input and 700 kHz switching frequency.",
+      "Only components and values explicitly present in the supplied chunks or directly calculated from supplied equations were included.",
+      "No UVLO divider was included because the supplied example states external UVLO is not set in that design and no requested UVLO thresholds were given.",
+      "Deterministic schematic-label extraction supplemented the AI extraction with 3 pin(s) and 0 support component(s).",
+      "Supplier CAD lookup will prefer LCSC C58517."
+    ],
+    "confidence": "medium"
+  }
+}

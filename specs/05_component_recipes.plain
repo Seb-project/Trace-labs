@@ -2,7 +2,7 @@
 import:
   - "00_product_overview"
   - "04_circuit_block_schema"
-description: PCBStream local component recipe requirements for BME280 and optional SHT31.
+description: Trace Labs local component recipe requirements for BME280 and optional SHT31.
 ---
 
 ***definitions***

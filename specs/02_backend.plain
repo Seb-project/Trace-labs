@@ -9,7 +9,7 @@ import:
   - "08_mock_solvimon_pricing"
   - "09_future_ai_datasheet_services"
   - "10_acceptance_criteria"
-description: PCBStream FastAPI backend, local recipes, generation, export, and mock metering.
+description: Trace Labs FastAPI backend, local recipes, generation, export, and mock metering.
 ---
 
 ***definitions***
@@ -32,7 +32,7 @@ description: PCBStream FastAPI backend, local recipes, generation, export, and m
 
 - :BridgeLinkRequest: contains KiCad project context sent by the bridge add-on.
 
-- :BridgeLinkRecord: is the stored link between PCBStream and a KiCad project.
+- :BridgeLinkRecord: is the stored link between Trace Labs and a KiCad project.
 
 - :BridgeImportRequest: contains generated block files selected by the bridge add-on.
 
@@ -80,13 +80,13 @@ description: PCBStream FastAPI backend, local recipes, generation, export, and m
 
 - :BackendService: should expose `GET /health`.
   - The response returns backend status as ok when the service is ready.
-  - The response includes app_name with value PCBStream.
+  - The response includes app_name with value Trace Labs.
   - The response includes project_name with value weather_station.kicad_pro.
   - The response includes kicad_bridge_status with value mocked.
 
   ***acceptance tests***
   - Calling `GET /health` should return a successful response.
-  - The response should include app_name PCBStream.
+  - The response should include app_name Trace Labs.
 
 - :ProjectContextService: should return the MVP mocked project context.
   - The context includes project_name weather_station.kicad_pro.
@@ -108,6 +108,13 @@ description: PCBStream FastAPI backend, local recipes, generation, export, and m
   - :ChatRequest: accepts a user message string.
   - The backend recognises BME280 from "BME280", "temperature sensor", or "environmental sensor".
   - A recognised BME280 request loads :BME280I2CRecipe:.
+  - Broad converter requests ask for input voltage, output voltage, and maximum output current before recommendations.
+  - Converter clarification questions use numeric :MissingQuestion: entries whose ids match reusable calculation inputs.
+  - If converter requirements are present in the message or answers, the backend includes them in search context.
+  - Broad category requests without a target part ask for pre-search clarification before recommendations.
+  - Category clarification asks for missing application, interface, supply voltage, or priority context.
+  - Category clarification answers are included in part recommendation and datasheet search context.
+  - Exact target part requests skip broad-category clarification.
   - :ChatResponse: includes an assistant message explaining the found Bosch BME280.
   - :ChatResponse: includes draft block info and missing questions.
   - Unknown part requests return :BackendErrorResponse: with supported examples.
@@ -115,6 +122,10 @@ description: PCBStream FastAPI backend, local recipes, generation, export, and m
   ***acceptance tests***
   - Posting "Can you add a BME280 temperature sensor?" should produce a BME280 draft response.
   - The response should include missing questions for the required configuration values.
+  - Posting "I want to add a buck converter" should return numeric questions before any datasheet results.
+  - Posting the same buck request with converter answers should attempt datasheet search with those values in context.
+  - Posting "I need a temperature sensor" should return clarification questions before datasheet results.
+  - Posting the same broad request with clarification answers should return part choices with that context.
 
 - :BackendService: should expose `POST /generate`.
   - :GenerateRequest: accepts prompt text and optional known values.
@@ -208,10 +219,14 @@ description: PCBStream FastAPI backend, local recipes, generation, export, and m
 
 - :BackendService: should expose `POST /bridge/import`.
   - :BridgeImportRequest: accepts link_id and generated file paths.
-  - The request must include block.json, notes.md, bme280_i2c.kicad_sch, and pricing_usage.json.
+  - The request must include block.json, notes.md, one generated .kicad_sch file, and pricing_usage.json.
   - The endpoint validates that all referenced files exist when local paths are accessible.
+  - The endpoint copies exported Trace Labs symbol and footprint libraries into project-local tracelabs_libs.
+  - The endpoint upserts sym-lib-table and fp-lib-table entries for every copied Trace Labs library.
+  - Footprint library table entries must point at project-local .pretty folders through KIPRJMOD URIs.
+  - If open_after_import is requested for a hierarchical import, it opens the root schematic, not the child sheet.
   - The endpoint records a mock import event and returns import_status ready_for_review.
-  - The endpoint must not rewrite an existing user schematic in the MVP.
+  - The endpoint must create a backup before updating an existing user schematic.
   - The response includes the mocked KiCad insertion message and ERC next step.
 
 - :BackendService: should keep future AI and datasheet services mocked.
@@ -225,3 +240,45 @@ description: PCBStream FastAPI backend, local recipes, generation, export, and m
   - :BackendErrorResponse: includes message, validation warnings when relevant, and next steps.
   - Failed generation must not write KiCad files.
   - Failed export must not mark the block as exported.
+
+- :BackendService: should expose clear progress for component extraction jobs.
+  - `POST /component-extraction/start` returns a job status and message.
+  - `GET /component-extraction/{job_id}` returns the latest job status and message.
+  - Queued and fetching messages say readable datasheet text is not confirmed yet.
+  - The job status should include sources_found after readable datasheet text is downloaded.
+  - The sources_found message must name the selected part.
+  - The sources_found message must say that pin extraction is still running.
+  - Extracting messages say Trace Labs is now reading pins, support parts, and nets.
+  - CAD and validation messages say datasheet evidence has already been extracted.
+  - Timeout or validation failures must distinguish unreadable sources from incomplete pin extraction.
+  - Validation failures after readable sources must list the missing evidence.
+  - Validation failures after readable sources must say no placeholder schematic will be generated.
+
+- :BackendService: should attach downloaded footprint geometry to extraction-ready drafts.
+  - When CAD acquisition downloads a KiCad footprint candidate, it stores it as :FootprintAsset:.
+  - The stored :FootprintAsset: must include the downloaded kicad_mod text.
+  - Finalising the draft must preserve the same :FootprintAsset:.
+  - Export may reuse the preserved :FootprintAsset: instead of downloading another footprint.
+
+- :DatasheetExtractionService: should extract buck converter reference schematics.
+  - It should accept regulator supply pins such as VIN, PVIN, and AVIN as supply evidence.
+  - It should extract regulator pins such as SW, BOOT, FB, and EN from simplified schematics.
+  - It should support schematic label order where the pin name appears before the pin number.
+  - It should support pin tables labelled Pin Functions, Pin Configuration, Pin Assignment, or Terminal Functions.
+  - It should parse cited pin formats such as `Pin 1: RUN`, `RUN 1`, and `BST (Pin 7)`.
+  - It should extract inductors, input capacitors, bootstrap capacitors, output capacitors, and feedback dividers.
+  - It should use cited values or reviewable starter values when the schematic shows topology without values.
+  - It should use TBD only when the user explicitly says they are not sure.
+  - It should preserve cited source chunks for every extracted pin and support component.
+
+- :CircuitGenerator: should calculate extracted support component values from user inputs.
+  - Extracted support requirements may declare calculation roles and calculation inputs.
+  - Calculation roles must be reusable across part numbers and component families.
+  - The generator should ask numeric :MissingQuestion: items for required calculation inputs.
+  - The generator should seed question defaults from the original user request when possible.
+  - Buck output inductors should use input voltage, output voltage, load current, frequency, and ripple target.
+  - Buck feedback dividers should use output voltage, feedback reference voltage, and a lower resistor choice.
+  - Generic gain resistor roles should support non-inverting and inverting amplifier calculations.
+  - Calculated values should keep their source citations and include a review note.
+  - Values that cannot be calculated safely should keep reviewable starter values when possible.
+  - Values should remain TBD only when the user explicitly says they are not sure.

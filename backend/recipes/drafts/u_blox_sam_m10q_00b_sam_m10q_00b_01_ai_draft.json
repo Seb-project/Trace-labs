@@ -1,0 +1,1085 @@
+{
+  "id": "draft_u_blox_sam_m10q_00b_sam_m10q_00b_01_ai_draft",
+  "block_name": "u-blox SAM-M10Q-00B / SAM-M10Q-00B-01 Extracted Draft",
+  "block_slug": "u_blox_sam_m10q_00b_sam_m10q_00b_01_ai_draft",
+  "summary": "Datasheet-derived draft for u-blox SAM-M10Q-00B / SAM-M10Q-00B-01. Interface: UART and I2C. UART default: 9600 baud, 8N1, NMEA/UBX. I2C Fast-mode peripheral/slave; datasheet max SCL 320 kHz; clock stretching supported.. Package: Surface-mount GNSS patch-antenna module; body approx. 15.5 mm x 15.5 mm, height approx. 7.6 mm.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "SAM-M10Q-00B / SAM-M10Q-00B-01",
+    "mpn": "SAM-M10Q-00B / SAM-M10Q-00B-01",
+    "manufacturer": "u-blox",
+    "supplier": "LCSC",
+    "supplier_part_number": "C5443880",
+    "supplier_url": "https://www.lcsc.com/product-detail/C5443880.html",
+    "symbol": "TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01:SAM_M10Q_00B_SAM_M10Q_00B_01",
+    "footprint": "TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01:TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01_LCSC_C5443880",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for SAM-M10Q-00B / SAM-M10Q-00B-01.",
+    "connects": [
+      "+3V3",
+      "GND",
+      "GNSS_EXTINT_OR_NC",
+      "GNSS_I2C_SCL_OR_NC",
+      "GNSS_I2C_SDA_OR_NC",
+      "GNSS_RESET_N_OR_NC",
+      "GNSS_TIMEPULSE_OR_NC",
+      "GNSS_UART_RX_FROM_HOST_TX_OR_NC",
+      "GNSS_UART_TX_TO_HOST_RX_OR_NC",
+      "MODE",
+      "NC_SAFEBOOT_N",
+      "SCL",
+      "SDA",
+      "V_BCKP_OR_NC",
+      "V_GNSS",
+      "V_GNSS_IO"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01_LCSC_C5443880",
+      "footprint_id": "TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01:TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01_LCSC_C5443880",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C5443880",
+      "source_url": "https://www.lcsc.com/product-detail/C5443880.html",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_SAM_M10Q_00B_SAM_M10Q_00B_01_LCSC_C5443880\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -10.600) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value LCC-20_L15.5-W15.5-P1.90_SAM-M10Q-00B (at 0.000 10.600) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C5443880\")\n\t(fp_line (start -7.75 -7.75) (end -7.75 7.75) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -7.75 7.75) (end 7.75 7.75) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 7.75 7.75) (end 7.75 -7.75) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 7.75 -7.75) (end -7.75 -7.75) (layer F.SilkS) (width 0.25))\n\t(pad 1 smd rect (at -6.60 -3.80 90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd rect (at -6.60 -1.90 90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 3 smd rect (at -6.60 0.00 90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd rect (at -6.60 1.90 90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd rect (at -6.60 3.80 90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd rect (at -3.80 6.60 180.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 7 smd rect (at -1.90 6.60 180.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 8 smd rect (at -0.00 6.60 180.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 9 smd rect (at 1.90 6.60 180.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 10 smd rect (at 3.80 6.60 180.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 11 smd rect (at 6.60 3.80 -90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 12 smd rect (at 6.60 1.90 -90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 13 smd rect (at 6.60 0.00 -90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 14 smd rect (at 6.60 -1.90 -90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 15 smd rect (at 6.60 -3.80 -90.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 16 smd rect (at 3.80 -6.60 0.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 17 smd rect (at 1.90 -6.60 0.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 18 smd rect (at -0.00 -6.60 0.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 19 smd rect (at -1.90 -6.60 0.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(pad 20 smd rect (at -3.80 -6.60 0.00) (size 1.500 1.800) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center -7.75 -7.75) (end -7.72 -7.75) (layer F.SilkS) (width 0.06))\n\t(fp_circle (center -8.50 -3.80) (end -8.25 -3.80) (layer Cmts.User) (width 0.50))\n\t(fp_circle (center -8.50 -3.80) (end -8.25 -3.80) (layer F.SilkS) (width 0.50))\n\t(fp_line (start -7.75 7.75) (end 7.75 7.75) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 7.75 7.75) (end 7.75 -7.75) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 7.75 -7.75) (end -7.75 -7.75) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -7.75 -7.75) (end -7.75 7.75) (layer F.CrtYd) (width 0.05))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_shas51da/TraceLabs_C5443880.3dshapes/LCC-20_L15.5-W15.5-P1.90_SAM-M10Q-00B.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 90))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "R_SDA?",
+      "type": "resistor",
+      "value": "TBD",
+      "purpose": "Optional external I2C pull-up for SDA if internal pull-up is insufficient for selected clock speed and capacitive load.",
+      "symbol": "Device:R",
+      "footprint": "TBD",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "GNSS_I2C_SDA_OR_NC",
+        "V_GNSS_IO"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P14C1, S2P22C1",
+      "source_citations": [
+        "S1P14C1",
+        "S2P22C1"
+      ]
+    },
+    {
+      "reference": "R_SCL?",
+      "type": "resistor",
+      "value": "TBD",
+      "purpose": "Optional external I2C pull-up for SCL if internal pull-up is insufficient for selected clock speed and capacitive load.",
+      "symbol": "Device:R",
+      "footprint": "TBD",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "GNSS_I2C_SCL_OR_NC",
+        "V_GNSS_IO"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P14C1, S2P22C1",
+      "source_citations": [
+        "S1P14C1",
+        "S2P22C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "TBD",
+      "purpose": "I2C SDA pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SDA",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P10C1",
+      "source_citations": [
+        "S1P10C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "TBD",
+      "purpose": "I2C SCL pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SCL",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P10C1",
+      "source_citations": [
+        "S1P10C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "+3V3",
+    "GND",
+    "GNSS_EXTINT_OR_NC",
+    "GNSS_I2C_SCL_OR_NC",
+    "GNSS_I2C_SDA_OR_NC",
+    "GNSS_RESET_N_OR_NC",
+    "MODE",
+    "SCL",
+    "SDA",
+    "V_BCKP_OR_NC",
+    "V_GNSS",
+    "V_GNSS_IO"
+  ],
+  "internal_nets": [
+    "GNSS_TIMEPULSE_OR_NC",
+    "GNSS_UART_RX_FROM_HOST_TX_OR_NC",
+    "GNSS_UART_TX_TO_HOST_RX_OR_NC",
+    "NC_SAFEBOOT_N"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "Do not add a capacitor from RESET_N to GND; the integration manual warns it could trigger reset on every startup.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "TIMEPULSE and SAFEBOOT_N are internally related; do not pull TIMEPULSE low at startup or the receiver may enter safeboot mode.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "Digital IO voltage levels are referenced to V_IO; do not drive IO pins when VCC and V_IO are not supplied.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The datasheet gives I2C maximum clock frequency as 320 kHz, while the integration manual text says maximum bit rate 400 kbit/s; design should follow the latest datasheet unless u-blox confirms otherwise.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The application PCB is part of the integrated antenna solution; antenna performance depends on ground plane/layout. The datasheet cites optimal radiation pattern with a 50 x 50 mm\u00b2 ground plane.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "External power supply must handle startup inrush current up to 100 mA.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "SAM-M10Q Data sheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "SAM-M10Q Integration manual",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "SAM-M10Q-00B / SAM-M10Q-00B-01 Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 GND -> GND\n2 V_IO -> V_GNSS_IO\n3 V_BCKP -> V_BCKP_OR_NC\n4 GND -> GND\n5 GND -> GND\n6 GND -> GND\n7 TIMEPULSE -> GNSS_TIMEPULSE_OR_NC\n8 SAFEBOOT_N -> NC_SAFEBOOT_N\n9 SDA -> GNSS_I2C_SDA_OR_NC\n10 GND -> GND\n11 GND -> GND\n12 SCL -> GNSS_I2C_SCL_OR_NC",
+    "connections": [
+      "+3V3",
+      "GND",
+      "GNSS_EXTINT_OR_NC",
+      "GNSS_I2C_SCL_OR_NC",
+      "GNSS_I2C_SDA_OR_NC",
+      "GNSS_RESET_N_OR_NC",
+      "GNSS_TIMEPULSE_OR_NC",
+      "GNSS_UART_RX_FROM_HOST_TX_OR_NC",
+      "GNSS_UART_TX_TO_HOST_RX_OR_NC",
+      "MODE",
+      "NC_SAFEBOOT_N",
+      "SCL",
+      "SDA",
+      "V_BCKP_OR_NC",
+      "V_GNSS",
+      "V_GNSS_IO"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "SAM-M10Q-00B / SAM-M10Q-00B-01",
+    "manufacturer": "u-blox",
+    "package": "Surface-mount GNSS patch-antenna module; body approx. 15.5 mm x 15.5 mm, height approx. 7.6 mm",
+    "supply_range": "VCC: 2.7\u20133.6 V; V_IO: 2.7 V to VCC, max 3.6 V; V_BCKP optional: 1.65\u20133.6 V",
+    "interface": "UART and I2C. UART default: 9600 baud, 8N1, NMEA/UBX. I2C Fast-mode peripheral/slave; datasheet max SCL 320 kHz; clock stretching supported.",
+    "pins": [
+      {
+        "number": "1",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "V_IO",
+        "electrical_type": "power_input",
+        "net_name": "V_GNSS_IO",
+        "required": true,
+        "notes": "IO voltage supply. Recommended to connect VCC and V_IO together for normal operation.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1",
+          "S2P57C1",
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "V_BCKP",
+        "electrical_type": "power_input",
+        "net_name": "V_BCKP_OR_NC",
+        "required": false,
+        "notes": "Backup voltage supply. Optional; leave open if hardware backup mode is not used. If supplied, range is 1.65\u20133.6 V.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1",
+          "S2P57C1",
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "TIMEPULSE",
+        "electrical_type": "output",
+        "net_name": "GNSS_TIMEPULSE_OR_NC",
+        "required": false,
+        "notes": "Time pulse output, shared with SAFEBOOT_N function. Do not allow a load to pull this pin low at startup, because the receiver can enter safeboot mode.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1",
+          "S2P25C1",
+          "S2P26C1"
+        ]
+      },
+      {
+        "number": "8",
+        "name": "SAFEBOOT_N",
+        "electrical_type": "input",
+        "net_name": "NC_SAFEBOOT_N",
+        "required": false,
+        "notes": "Safeboot mode input, active low; leave open if not used. Receiver enters safeboot if this pin is low at startup. Internally connected to TIMEPULSE through 1 kOhm series resistor.",
+        "source_citations": [
+          "S1P9C1",
+          "S2P8C1",
+          "S2P25C1"
+        ]
+      },
+      {
+        "number": "9",
+        "name": "SDA",
+        "electrical_type": "bidirectional",
+        "net_name": "GNSS_I2C_SDA_OR_NC",
+        "required": false,
+        "notes": "I2C data. Leave open if not used. Internal pull-up exists; external pull-up may be necessary depending on clock speed and bus capacitance.",
+        "source_citations": [
+          "S1P10C1",
+          "S2P8C1",
+          "S1P14C1",
+          "S2P22C1"
+        ]
+      },
+      {
+        "number": "10",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "11",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "12",
+        "name": "SCL",
+        "electrical_type": "input",
+        "net_name": "GNSS_I2C_SCL_OR_NC",
+        "required": false,
+        "notes": "I2C clock. Leave open if not used. Internal pull-up exists; external pull-up may be necessary depending on clock speed and bus capacitance.",
+        "source_citations": [
+          "S1P10C1",
+          "S2P8C1",
+          "S1P14C1",
+          "S2P22C1"
+        ]
+      },
+      {
+        "number": "13",
+        "name": "TXD",
+        "electrical_type": "output",
+        "net_name": "GNSS_UART_TX_TO_HOST_RX_OR_NC",
+        "required": false,
+        "notes": "UART TX. Leave open if not used. Default UART output includes NMEA messages.",
+        "source_citations": [
+          "S1P10C1",
+          "S2P8C1",
+          "S1P15C1"
+        ]
+      },
+      {
+        "number": "14",
+        "name": "RXD",
+        "electrical_type": "input",
+        "net_name": "GNSS_UART_RX_FROM_HOST_TX_OR_NC",
+        "required": false,
+        "notes": "UART RX. Leave open if not used. Default UART accepts NMEA and UBX input messages.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P15C1"
+        ]
+      },
+      {
+        "number": "15",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "16",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "17",
+        "name": "VCC",
+        "electrical_type": "power_input",
+        "net_name": "V_GNSS",
+        "required": true,
+        "notes": "Main voltage supply. Recommended to connect VCC and V_IO together; VCC powers core and RF domains and is required for startup/continuous operation.",
+        "source_citations": [
+          "S1P10C1",
+          "S2P57C1",
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "18",
+        "name": "RESET_N",
+        "electrical_type": "input",
+        "net_name": "GNSS_RESET_N_OR_NC",
+        "required": false,
+        "notes": "System reset, active low. Internal pull-up to V_IO; leave open for normal operation. Driving low for at least 1 ms triggers reset. Do not place a capacitor from RESET_N to GND.",
+        "source_citations": [
+          "S1P10C1",
+          "S2P25C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "EXTINT",
+        "electrical_type": "input",
+        "net_name": "GNSS_EXTINT_OR_NC",
+        "required": false,
+        "notes": "External interrupt. Leave open if not used. Can be used for external frequency assistance, time assistance, time mark reporting, host-controlled on/off, or wake source depending on configuration.",
+        "source_citations": [
+          "S1P10C1",
+          "S2P26C1"
+        ]
+      },
+      {
+        "number": "20",
+        "name": "GND",
+        "electrical_type": "power",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Connect to GND.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "12",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "SCL",
+        "electrical_type": "input",
+        "net_name": "SCL",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "0",
+        "name": "MODE",
+        "electrical_type": "input",
+        "net_name": "MODE",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P9C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P9C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "SDA",
+        "electrical_type": "bidirectional",
+        "net_name": "SDA",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S2P8C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "R_SDA",
+        "type": "resistor",
+        "value": "TBD",
+        "purpose": "Optional external I2C pull-up for SDA if internal pull-up is insufficient for selected clock speed and capacitive load.",
+        "connects": [
+          "GNSS_I2C_SDA_OR_NC",
+          "V_GNSS_IO"
+        ],
+        "footprint": "TBD",
+        "required": false,
+        "placement_note": "Only populate if needed for I2C bus rise-time/speed/capacitance; source gives no fixed value.",
+        "source_citations": [
+          "S1P14C1",
+          "S2P22C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R_SCL",
+        "type": "resistor",
+        "value": "TBD",
+        "purpose": "Optional external I2C pull-up for SCL if internal pull-up is insufficient for selected clock speed and capacitive load.",
+        "connects": [
+          "GNSS_I2C_SCL_OR_NC",
+          "V_GNSS_IO"
+        ],
+        "footprint": "TBD",
+        "required": false,
+        "placement_note": "Only populate if needed for I2C bus rise-time/speed/capacitance; source gives no fixed value.",
+        "source_citations": [
+          "S1P14C1",
+          "S2P22C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "TBD",
+        "purpose": "I2C SDA pull-up",
+        "connects": [
+          "SDA",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Value depends on bus capacitance and I2C speed.",
+        "source_citations": [
+          "S1P10C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "TBD",
+        "purpose": "I2C SCL pull-up",
+        "connects": [
+          "SCL",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Value depends on bus capacitance and I2C speed.",
+        "source_citations": [
+          "S1P10C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "+3V3",
+        "role": "power",
+        "external": true,
+        "connected_pins": [],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_EXTINT_OR_NC",
+        "role": "interrupt",
+        "external": true,
+        "connected_pins": [
+          "EXTINT"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_I2C_SCL_OR_NC",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_I2C_SDA_OR_NC",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_RESET_N_OR_NC",
+        "role": "reset",
+        "external": true,
+        "connected_pins": [
+          "RESET_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_TIMEPULSE_OR_NC",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "TIMEPULSE"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_UART_RX_FROM_HOST_TX_OR_NC",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "RXD"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_UART_TX_TO_HOST_RX_OR_NC",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "TXD"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "MODE",
+        "role": "configuration",
+        "external": true,
+        "connected_pins": [
+          "MODE"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_SAFEBOOT_N",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "SAFEBOOT_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SCL",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SDA",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_BCKP_OR_NC",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "V_BCKP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_GNSS",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VCC"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_GNSS_IO",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "V_IO"
+        ],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S1P10C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 10,
+        "text": "SAM-M10Q - Data sheet Pin no. NamePIO no. I/ODescription 9SDA 2 I/OI2C data. Leave open if not used. 10 GND - -Connect to GND 11 GND - -Connect to GND 12 SCL 3 II2C clock. Leave open if not used. 13TXD 1 OUART TX. Leave open if not used. 14 RXD 0 IUART RX. Leave open if not used. 15 GND - -Connect to GND 16 GND - -Connect to GND 17VCC - IMain voltage supply 18RESET_N - ISystem reset (active low). Has to be low for at least 1 ms to trigger a reset. 19EXTINT 5 IExternal interrupt. Leave open if not used. 20 GND - -Connect to GND Table 9: SAM-M10Q pin assignment 3.2 Pin state Table 10 de\ufb01nes the state of the PIOs and RESET_N pins in di\ufb00erent modes. The functions of the PIOs are as de\ufb01ned in the default con\ufb01guration. PIO no.Pin no.Default function Continuous mode Software standby modeSafe boot mode 0 14 RXD Input pull-up Input pull-up Input pull-up 1 13 TXD Output Input pull-up Output 2 9 SDA Input pull-up Input pull-up Input pull-up 3 12 SCL Input pull-up Input pull-up Input pull-up 8 SAFEBOOT_N Output Input pull-up Output (low) 414 7 TIMEPULSE Output Input pull-up Output (low) 5 19 EXTINT Input pull-up Input pull-up Input pull-up - 18 RESET_N Input pull-up Input pull-up Input pull-up Table 10: Pins state In reset mode (RESET_N = low), all PIOs are con\ufb01gured as input pull-up. In hardware backup mode (VCC = 0 V and V_IO = 0 V), PIOs must not be driven. UBX-22013293 - R05 3 Pin de\ufb01nition Page 10 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P9C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 9,
+        "text": "SAM-M10Q - Data sheet 3 Pin de\ufb01nition 3.1 Pin assignment Figure 2: SAM-M10Q pin assignment Pin no. Name PIO no. I/O Description 1 GND - - Connect to GND 2 V_IO - I IO voltage supply 3 V_BCKP - I Backup voltage supply 4 GND - - Connect to GND 5 GND - - Connect to GND 6 GND - - Connect to GND 7 TIMEPULSE 4 OTime pulse signal (shared with SAFEBOOT_N pin)14 8 SAFEBOOT_N - ISafeboot mode (active low). Leave open if not used.14 14 The receiver enters safeboot mode if this pin is low at start up. The SAFEBOOT_N pin is internally connected to TIMEPULSE pin through a 1 k\u03a9 series resistor. UBX-22013293 - R05 3 Pin de\ufb01nition Page 9 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P15C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 15,
+        "text": "SAM-M10Q - Data sheet I2C Fast-mode SymbolParameter Min Max Unit fSCLSCL clock frequency 0 320 kHz tHD;STAHold time (repeated) START condition 0.6 - \u00b5s tLOWLow period of the SCL clock 1.3 - \u00b5s tHIGHHigh period of the SCL clock 0.6 - \u00b5s tSU;STASetup time for a repeated START condition 0.6 - \u00b5s tHD;DATData hold time0 28- 29 \u00b5s tSU;DATData setup time 100 ns trRise time of both SDA and SCL signals -300 (for C = 400pF) ns tfFall time of both SDA and SCL signals -300 (for C = 400pF) ns tSU;STOSetup time for STOP condition 0.6 - \u00b5s tBUFBus-free time between a STOP and START condition1.3 - \u00b5s tVD;DATData valid time -0.9 29 \u00b5s tVD;ACKData valid acknowledge time -0.9 29 \u00b5s VnLNoise margin at the low level0.1 V_IO - V VnHNoise margin at the high level0.2 V_IO - V Table 17: SAM-M10Q I2C peripheral timing and speci\ufb01cations 5.3 Default interface settings Interface Settings UART \u2022 9600 baud, 8 bits, no parity bit, 1 stop bit. \u2022 Input messages: NMEA and UBX. \u2022 Output messages: NMEA GGA, GLL, GSA, GSV, RMC, VTG and TXT. Table 18: Default interface settings 28 External device must provide a hold time of at least one transition time (max 300 ns) for the SDA signal (with respect to the min Vih of the SCL signal) to bridge the unde\ufb01ned region of the falling edge of SCL. 29The maximum t HD;DAT must be less than the maximum tVD;DAT or t VD;ACK with a maximum of 0.9 \u00b5s by a transition time. This maximum must only be met if the device does not stretch the LOW period (tLOW) of the SCL signal. If the clock stretches the SCL, the data must be valid by the set-up time before it releases the clock. UBX-22013293 - R05 5 Communication interfaces Page 15 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P22C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 22,
+        "text": "SAM-M10Q - Integration manual Baud rateData bitsParity Stop bits 230400 8 none 1 460800 8 none 1 921600 8 none 1 Table 11: Possible UART interface con\ufb01gurations Allow a short time delay of typically 100 ms between sending a baud rate change message and providing input data at the new rate. Otherwise some input characters may be ignored or the port could be disabled until the interface is able to process the new baud rate. If there is too much data for the interface's bandwidth, the output bu\ufb00er will \ufb01ll up. Once the bu\ufb00er space is exceeded, new messages to be sent will be dropped. To prevent message loss, the baud rate and the number of enabled messages should be selected carefully. 3.2.2 I2C An I2C interface is available for communication with an external host CPU in I2C Fast-mode. Backwards compatibility with Standard-mode I2C bus operation is not supported. The interface can be operated only in slave mode with a maximum bit rate of 400 kbit/s. The interface can make use of clock stretching by holding the SCL line LOW to pause a transaction. In this case, the bit transfer rate is reduced. The maximum clock stretching time is 20 ms. The SCL and SDA pins have internal pull-up resistors which should be su\ufb03cient for most applications. However, depending on the clock speed of the host and the capacitive load on the I2C lines, additional external pull-up resistors may be necessary. The higher the speed and the capacitance load, the lower the pull-up resistor needs to be. To poll or set the I2C address, use the CFG-I2C-ADDRESS con\ufb01guration item (see the u-blox M10 interface description [3]). The CFG-I2C-ADDRESS con\ufb01guration item is an 8-bit value containing the I2C address in the 7 most signi\ufb01cant bits plus a 0 as the least signi\ufb01cant bit. Thus, the default address becomes 0x84(1000 0100). In designs where the host uses the same I2C bus to communicate with more than one u-blox receiver, each receiver's I2C address must be con\ufb01gured with a di\ufb00erent value. 3.2.2.1 I2C register layout As shown in Figure 6, there are 256 registers. The data registers 0 to 252, at addresses 0x00 to 0xFC, contain reserved information and must not be used. Hence, only the last three registers are left for communication. The registers 0xFD and 0xFE contain the currently available number of bytes to be read, while the register 0xFF bu\ufb00ers the message stream. The 0xFF address delivers a 0xFF byte value if there is no data awaiting for transmission, or all the bytes have been read. UBX-22020019 - R02 3 Receiver functionality Page 22 of 76 C1-Public"
+      },
+      {
+        "chunk_id": "S1P14C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 14,
+        "text": "SAM-M10Q - Data sheet 5 Communication interfaces The receiver supports communication over the UART and I2C interfaces. All the inputs have an internal pull-up resistor in normal operation and can be left open if not used. The voltage level at the PIO pins is related to the V_IO supply voltage. 5.1 UART The UART interface supports con\ufb01gurable baud rates. Hardware \ufb02ow control is not supported. UART speci\ufb01cations are described in Table 16. Symbol Parameter Min Max Unit Ru Baud rate 9600 921600 bit/s \u0394Tx Tx baud rate accuracy -1% +1% - \u0394Rx Rx baud rate tolerance -2.5% +2.5% - Table 16: UART speci\ufb01cations 5.2 I2C An I2C interface is available for communication with an external host CPU in the I2C Fast-mode. Backwards compatibility with the Standard-mode I2C bus operation is not supported. The interface can be operated only in the peripheral mode with a maximum clock frequency of 320 kHz27. The interface can make use of clock stretching by holding the SCL line LOW to pause a transaction. In this case, the bit transfer rate is reduced. The maximum clock stretching time is 20 ms. Figure 3: I2C peripheral speci\ufb01cation 27 External pull-up resistors may be needed to achieve 320 kbit/s communication speed, as the internal pull-up resistance can be very large. UBX-22013293 - R05 5 Communication interfaces Page 14 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P8C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 8,
+        "text": "SAM-M10Q - Integration manual Figure 2: SAM-M10Q pin assignment Pin no. Name PIO no. I/O Description 1 GND - - Connect to GND 2 V_IO - I IO voltage supply 3 V_BCKP - I Backup voltage supply 4 GND - - Connect to GND 5 GND - - Connect to GND 6 GND - - Connect to GND 7 TIMEPULSE 4 OTime pulse signal (shared with SAFEBOOT_N pin)1 8 SAFEBOOT_N - ISafeboot mode (leave open)1 9 SDA 2 I/O I2C data 10 GND - - Connect to GND 11 GND - - Connect to GND 12 SCL 3 I I2C clock 13 TXD 1 O UART TX 1The receiver enters safeboot mode if this pin is low at start up. The SAFEBOOT_N pin is internally connected to TIMEPULSE pin through a 1 k\u03a9 series resistor. UBX-22020019 - R02 1 System description Page 8 of 76 C1-Public"
+      },
+      {
+        "chunk_id": "S1P12C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 12,
+        "text": "SAM-M10Q - Data sheet SymbolParameter MinTypical Max Unit VihHigh-level input voltage 0.68 x V_IO V VolLow-level output voltage, Iout = -1 mA 19 0.4 V VohHigh-level output voltage, Iout = 1 mA 19V_IO - 0.4 V Rpu, IOPull-up resistance, Digital IO 20 8 18 40 k\u03a9 Rpd, IOPull-down resistance, Digital IO 21 80 180 k\u03a9 Rpu, SAFEBOOT_NPull-up resistance, SAFEBOOT_N 21 6 17 72 k\u03a9 Rpu, RESET_NPull-up resistance, RESET_N 7 10 13 k\u03a9 Table 13: Digital IO 4.3 Indicative power requirements This section provides examples of typical current requirements. They are characterized on samples using a cold start command. The actual power requirements may vary depending on the \ufb01rmware version used, the external circuitry, the number of satellites tracked, the signal strength, the type and time of start, duration, internal LNA gain mode, and the test conditions. All values in Table 14, and Table 15 have been measured at 25 \u00b0C ambient temperature with the default con\ufb01guration unless otherwise stated. SBAS and QZSS are active in all measurements. Table 14 shows indicative current consumption for VCC and V_IO with a 3.0 V supply. Symbol (Parameter)Conditions GPS GPS+GALGPS+GAL +GLOGPS+GAL +BDS B1CGPS+GAL +BDS B1C +GLO (default)Unit Acquisition 248 10 12 11 13 mA Tracking (Continuous mode)7.5 8 9 8.5 10 mA IVCC 22, 23 (Current at VCC)Tracking (Power save mode) 254.5 5 5 - - mA Acquisition and Tracking (Continuous mode)2.1 2.2 2.3 2.2 2.3 mA IV_IO 22 (Current at V_IO)Tracking (Power save mode) 252 2 2 - - mA Table 14: Typical currents for 3.0 V supply at VCC and V_IO The inrush current can go up to 100 mA at startup. Ensure that the external power supply is able to deliver up to 100 mA. Table 15 shows current consumption for the backup modes. 19 TIMEPULSE (PIO4) has 2 mA current drive/sink capability. 20 TXD, RXD, TIMEPULSE, EXTINT, SCL, and SDA. 21 The SAFEBOOT_N pin has an additional 1 k\u03a9 series resistor. 22 1 Hz navigation update rate. 23 Simulated signal using power levels of -130 dBm. 24 Average current from start-up until the \ufb01rst \ufb01x. 25 Cyclic tracking operation. BeiDou B1C is not supported in this mode. UBX-22013293 - R05 4 Electrical speci\ufb01cations Page 12 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P26C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 26,
+        "text": "SAM-M10Q - Integration manual The TIMEPULSE and SAFEBOOT_N functions share the same internal IC function. If this pin is low at receiver startup, the receiver will enter safeboot mode. However, in normal operation the pin outputs the time pulse signal. Make sure there is no load on this pin that could pull it low at startup. 3.2.3.4 EXTINT SAM-M10Q supports external interrupts at the EXTINT pin. The EXTINT pin has a \ufb01xed input voltage threshold with respect to V_IO. It can be used for functions such as accurate external Frequency assistance, Time assistance and Time mark reporting. The EXTINT pin enables External control for host-controlled on/o\ufb00 operation of the receiver, and as a wake-up source for power save mode on/o\ufb00 operation (PSMOO). If con\ufb01gured for host-controlled on/o\ufb00 operation, the internal pull-up is disabled. Make sure the EXTINT input is always driven within the de\ufb01ned voltage level by the host. The EXTINT pin can also be con\ufb01gured for another functionality. EXTINT functionality is only available at the EXTINT pin. 3.2.3.5 TX_READY The receiver has an internal message bu\ufb00er for storing bytes to be sent to the host application. TX-ready feature in TX_READY pin enables I2C to have an associated signal to indicate that the bu\ufb00er has bytes to be transmitted. The host application can wait on the signal instead of polling the interface. The TX-ready signal is enabled and assigned to a selected pin with CFG-TXREADY con\ufb01guration items. The polarity of the signal (active-low or active-high) and the threshold for amount of bytes in the bu\ufb00er must also be con\ufb01gured. When the number of bytes in the bu\ufb00er reaches the threshold, the TX-ready signal becomes active. The signal stays active until all of the bytes in the bu\ufb00er have been transferred. The receiver has additional small transmit bu\ufb00er for each interface. Up to 16 bytes may still need to be transferred to the host after the TX-ready signal has become inactive. The TX-ready signal can be assigned to any pin. Old function on the pin must be disabled before the assigment. Pin assignment can be veri\ufb01ed with the UBX-MON-HW3 message. The threshold value of the CFG-TXREADY-THRESHOLD is presented as 8-byte (64 bit) chunks. Divide the desired threshold value by 8. E.g., value of 128 sets the TX-ready signal activation threshold to 1024 bytes. The threshold should not be set above 2048 bytes (256 8-byte chunks). Otherwise, the TX-ready signal may not be activated in time, and some messages may get discarded. 3.2.3.5.1 Extended TX timeout If the host does not communicate over I2C for more than 1.5 seconds, the receiver assumes that the host is no longer using this interface and no more packets are scheduled for this interface. This mechanism can be changed by enabling \"extended TX timeouts\" (con\ufb01guration key CFG-I2C- EXTENDEDTIMEOUT). When enabled, the receiver delays idling the interface until the allocated and undelivered bytes for this interface reach 4 kB. This feature is especially useful when"
+      },
+      {
+        "chunk_id": "S1P11C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 11,
+        "text": "SAM-M10Q - Data sheet 4 Electrical speci\ufb01cations 4.1 Absolute maximum ratings CAUTION. Risk of device damage. Exceeding the absolute maximum ratings may a\ufb00ect the lifetime and reliability of the device or permanently damage it. Do not exceed the absolute maximum ratings. This product is not protected against overvoltage or reversed voltages. Use appropriate protection to avoid device damage from voltage spikes exceeding the speci\ufb01ed boundaries. Symbol Parameter Min Max Unit VCC Main supply voltage -0.3 3.6 V V_IO IO supply voltage -0.3 VCC + 0.3 (max 3.6)V Voltage ramp on V_IO 15 25 35000 \u00b5s/V V_BCKP Backup supply voltage -0.3 3.6 V V_PIO Input voltage on RESET_N and digital pins -0.3 V_IO + 0.3 (max 3.6)V I_PIO Max source / sink current, digital pins 16 -10 10 mA Pr\ufb01n RF input power at RF_IN 17 0 dBm Tamb Ambient temperature -40 +85 \u00b0C Ts Storage temperature -40 +85 \u00b0C Table 11: Absolute maximum ratings 4.2 Operating conditions Table 12 shows the general operating conditions. Table 13 shows the electrical parameters for digital I/O. Symbol Parameter Min Typical Max Unit VCC Main supply voltage 2.7 3.0 3.6 V V_IO IO supply voltage 2.7 3.0 VCC (max 3.6)V V_BCKP Supply voltage, backup domain 1.65 3.6 V V_IOSWITCH V_IO voltage threshold to switch an internal supply for the backup domain from V_IO to V_BCKP1.45 V Topr Operating temperature -40 +85 \u00b0C Table 12: General operating conditions Symbol Parameter Min Typical Max Unit Ileak Leakage current input pins 18 25 nA Vin Input pin voltage range 0 V_IO V Vil Low-level input voltage 0.63 V 15 Exceeding the voltage ramp speed may permanently damage the device. 16 The SAFEBOOT_N pin has an internal 1 k\u03a9 series resistor. 17 At antenna feed point. Test conditions: source impedance = 50 \u03a9, continuous wave. 18Vin = V_IO, at room temperature. UBX-22013293 - R05 4 Electrical speci\ufb01cations Page 11 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P25C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 25,
+        "text": "SAM-M10Q - Integration manual Following the start condition from the master, the 7-bit device address and the RW bit (which is a logic low for write access) are clocked onto the bus by the master transmitter. The receiver answers with an acknowledge (logic low) response to indicate that it is responsible for the given address. The master can write 2 to N bytes to the receiver, generating a stop condition after the last byte being written. To properly distinguish from the write access to set the address counter in random read accesses, the number of data bytes must be at least 2. Figure 9: I2C write access 3.2.3 PIOs This section describes the PIOs supported by SAM-M10Q. All PIO active voltage levels are related to the V_IO supply voltage. All the inputs have internal pull-up resistors in normal operation and can be left open if unused. When assigning a di\ufb00erent function to a PIO, ensure that the default function is disabled where applicable. For example, disable the I2C interface with the CFG-I2C-ENABLED con\ufb01guration key if I2C pins are used for antenna supervisor functions. 3.2.3.1 RESET_N SAM-M10Q provides a RESET_N pin to reset the receiver. The RESET_N pin is input-only with an internal pull-up resistor to V_IO and should be left open for normal operation. Driving RESET_N low for at least 1 ms will trigger a reset of the receiver. The RESET_N complies with the V_IO level and can be actively driven high. Use RESET_N only in critical situations to recover the receiver. RESET_N resets the receiver and clears the BBR content including receiver con\ufb01guration, real-time clock (RTC), and GNSS orbit data, triggering a cold start. No capacitor should be placed at RESET_N to GND, otherwise it could trigger a reset on every startup. 3.2.3.2 SAFEBOOT_N The SAFEBOOT_N pin is for future service, updates and recon\ufb01guration. The SAFEBOOT_N pin is internally connected to the TIMEPULSE pin through a 1 k\u03a9 series resistor. 3.2.3.3 TIMEPULSE The SAM-M10Q features one time pulse output at the TIMEPULSE pin. This can only be con\ufb01gured in PIO04. The details about this feature are explained in the section Time pulse. UBX-22020019 - R02 3 Receiver functionality Page 25 of 76 C1-Public"
+      },
+      {
+        "chunk_id": "S2P57C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 57,
+        "text": "SAM-M10Q - Integration manual 4 Hardware integration This section explains how the receiver can be integrated into an application design. 4.1 Power supply The SAM-M10Q has the following power supply pins: VCC, V_IO and V_BCKP. Power supply at VCC and V_IO must be present for normal operation. These two pins can either be connected together or supplied independently by the application. Power supply at V_BCKP is optional. If present, it enables the hardware backup mode when V_IO and VCC supplies are o\ufb00. Refer to the SAM-M10Q Data sheet [1] for absolute maximum ratings, operating conditions, and power requirements. 4.1.1 VCC VCC provides power to the core and RF domains. Consequently, it always needs to be supplied to start up the receiver or for operation in continuous mode. The VCC pin supplies power to the core via an internal DCDC converter for e\ufb03cient power consumption. It is recommended to connect the VCC and V_IO pins together. If independent supplies are used for VCC and V_IO, turn o\ufb00 the V_IO supply \ufb01rst or simultaneously with the VCC supply. Do not add series resistance greater than 0.2 \u03a9 on the supply line to avoid voltage ripple due to the dynamic current conditions. 4.1.2 V_IO V_IO supplies all the digital IOs, clock, and the backup domain. The current drawn at V_IO depends on the activity and loading of the PIOs and the main oscillator. A power interruption at V_IO will erase the battery-backed RAM (BBR) unless there is an external supply connected to V_BCKP. It is recommended to connect the VCC and V_IO pins together. If independent supplies are used for VCC and V_IO, turn o\ufb00 the V_IO supply \ufb01rst or simultaneously with the VCC supply. 4.1.3 V_BCKP Power supply at V_BCKP is optional. If the power supply at V_IO is interrupted, but the V_BCKP pin is supplied, the receiver enters the hardware backup mode. In this mode, the RTC time and the GNSS orbit data in the BBR are maintained. Valid time and GNSS orbit data at startup improves positioning performance by enabling hot starts, warm starts, and AssistNow Autonomous. This ensures faster TTFF when V_IO is supplied again. To make these features available, connect an independent power supply to V_BCKP to ensure backup domain supply when V_IO is not supplied. Designs using an external battery as a power source at the V_BCKP pin must consider the battery capacity. The GNSS satellite ephemeris data is typically valid for up to 4 hours for hot starts, and up to a few days for warm starts and AssistNow (O\ufb04ine and Autonomous). Avoid high resistance on the V_BCKP line. During the switch to V_BCKP supply, a short current adjustment peak may cause a high voltage drop at the pin. If the hardware backup mode is not used, leave the V_BCKP pin open. UBX-22020019 - R02 4 Hardware integration Page 57 of 76 C1-Public"
+      },
+      {
+        "chunk_id": "S2P71C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 71,
+        "text": "SAM-M10Q - Integration manual Appendix A Migration u-blox is committed to ensure that products in the same form factor are backwards compatible over several technology generations. This section describes important di\ufb00erences to consider when migrating from u-blox M8 to u-blox M10. A.1 Hardware changes SAM-M10Q is pin-to-pin compatible with the SAM-M8Q module. Table 23 lists the key hardware- related changes. Feature Change Action needed / Remarks VCC, V_IO New power supply ramp requirements. The V_IO supply voltage must not be higher than VCC + 0.3 V. The absolute maximum rating for the minimum voltage at V_IO and VCC is -0.3 V.There is no change in the nominal supply voltage range 2.7 V - 3.6 V. Refer to the minimum and maximum VCC and V_IO ramp requirements in the SAM-M10Q data sheet [1]. V_BCKP supply rangeSAM-M10Q: 1.65 V - 3.6 V SAM-M8Q: 1.4 V - 3.6 VHardware change is required when migrating from a design with less than 1.65 V V_BCKP supply. Backup currentThe hardware backup and software standby current in SAM-M10Q is higher than in SAM-M8Q module.Check the backup battery capacity for suitability for the target design requirements. SAW-LNA RF front-endInternal component changes. Improved out-of-band immunity. SAFEBOOT_N, TIMEPULSEThe SAFEBOOT_N pin is internally connected to TIMEPULSE pin through a 1 k\u03a9 series resistor.Do not drive the TIMEPULSE pin low at startup because it will put the receiver in safeboot mode. RESET_N Resetting the receiver clears the BBR content. SAM-M10Q: time information, GNSS orbit data and receiver con\ufb01guration stored in BBR cleared SAM-M8Q: time information clearedTTFF after resetting SAM-M10Q with the RESET_N pin is similar to performing a cold start. Digital IO Digital IO pins must not be driven if VCC and V_IO are not supplied. The electrical speci\ufb01cation for digital IO pins has changed. The voltage levels are de\ufb01ned at 1 mA current (exception: TIMEPULSE pin 2 mA).Do not drive IO pins when VCC and V_IO are not supplied. Otherwise permanent damage may result. If driving the IO pins cannot be avoided, bu\ufb00ers are required to isolate the pins. Additional external pull-up resistors may be required to increase the drive strength of the digital IO output pin or adjust the load accordingly. Table 23: SAM-M10Q hardware features Refer to the SAM-M10Q data sheet [1] for product speci\ufb01cation. A.2 Software changes Table 24 presents a summary of the key software-related changes between u-blox M10 and u-blox M8. Feature Change Action needed / Remarks Signals UBX-22020019 - R02 Appendix Page 71 of 76 C1-Public"
+      },
+      {
+        "chunk_id": "S1P3C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 3,
+        "text": "SAM-M10Q - Data sheet Contents 1 Functional description.........................................................................................................4 1.1 Overview....................................................................................................................................................4 1.2 Performance.............................................................................................................................................4 1.3 Supported GNSS constellations..........................................................................................................5 1.4 Supported protocols...............................................................................................................................6 1.5 Firmware features...................................................................................................................................6 1.6 Integrated antenna.................................................................................................................................7 2 System description...............................................................................................................8 2.1 Block diagram..........................................................................................................................................8 3 Pin de\ufb01nition...........................................................................................................................9 3.1 Pin assignment........................................................................................................................................9 3.2 Pin state..................................................................................................................................................10 4 Electrical speci\ufb01cations....................................................................................................11 4.1 Absolute maximum ratings................................................................................................................11 4.2 Operating conditions............................................................................................................................11 4.3 Indicative power requirements...........................................................................................................12 5 Communication interfaces...............................................................................................14 5.1 UART........................................................................................................................................................14 5.2 I2C............................................................................................................................................................14 5.3 Default interface settings...................................................................................................................15 6 M"
+      },
+      {
+        "chunk_id": "S1P2C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 2,
+        "text": "SAM-M10Q - Data sheet Document information Title SAM-M10Q Subtitle u-blox M10 standard precision GNSS antenna module Document type Data sheet Document number UBX-22013293 Revision and date R05 08-Apr-2024 Disclosure restriction C1-Public Product statusCorresponding content statusFunctional sampleDraft For functional testing. Revised and supplementary data will be published later.In development / prototypeObjective speci\ufb01cation Target values. Revised and supplementary data will be published later. Engineering sampleAdvance information Data based on early testing. Revised and supplementary data will be published later.Initial productionEarly production information Data from product veri\ufb01cation. Revised and supplementary data may be published later.Mass production / End of lifeProduction information Document contains the \ufb01nal product speci\ufb01cation. This document applies to the following products: Product name Type number FW version IN/PCN referenceProduct status SAM-M10Q SAM-M10Q-00B-01 ROM SPG 5.10 UBXDOC-963802114- 12186Mass production u-blox or third parties may hold intellectual property rights in the products, names, logos and designs included in this document. Copying, reproduction, or modi\ufb01cation of this document or any part thereof is only permitted with the express written permission of u-blox. Disclosure to third parties is permitted for clearly public documents only. The information contained herein is provided \"as is\" and u-blox assumes no liability for its use. No warranty, either express or implied, is given, including but not limited to, with respect to the accuracy, correctness, reliability and \ufb01tness for a particular purpose of the information. This document may be revised by u-blox at any time without notice. For the most recent documents, visit www.u-blox.com. Copyright \u00a9 2024, u-blox AG. UBX-22013293 - R05 Page 2 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P5C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 5,
+        "text": "SAM-M10Q - Data sheet ParameterGPS+GAL +BDS B1C+GLO (default)GPS+GAL+GLOGPS+GAL +BDS B1CGPS+GAL Default 4 Hz 6 Hz 8 Hz 10 Hz Max navigation update rate 3High performance 4 10 Hz 16 Hz 16 Hz 20 Hz Position accuracy (CEP) 5, 61.5 m 1.5 m 1.5 m 1.5 m Cold start 23 s 23 s 28 s 28 s Hot start 1 s 1 s 1 s 1 s AssistNow Online 9 1 s 1 s 1 s 1 s AssistNow O\ufb04ine 10 2 2 2 2Time To First Fix (TTFF) 5, 7, 8 AssistNow Autonomous 11 4 4 4 3 Tracking and navigation \u2013165 dBm \u2013165 dBm \u2013165 dBm \u2013165 dBm Reacquisition \u2013158 dBm \u2013158 dBm \u2013158 dBm \u2013158 dBm Cold Start \u2013146 dBm \u2013146 dBm \u2013146 dBm \u2013146 dBmSensitivity 12 Hot start 7 \u2013157 dBm \u2013157 dBm \u2013157 dBm \u2013157 dBm Table 1: SAM-M10Q typical performance in multi-constellation GNSS modes. Parameter GPSGLONASSGALILEO BDS B1C Default 18 Hz 18 Hz 18 Hz 18 Hz Max navigation update rate 3High performance 4 25 Hz 25 Hz 25 Hz 25 Hz Position accuracy (CEP) 5, 61.5 m 4 m 3 m 2 m Cold start 29 s 27 s 41 s 56 s Hot start 1 s 1 s 1 s 1 sTime To First Fix (TTFF) 5, 7, 8 AssistNow Online 9 1 s 1 s 5 s N/A Tracking and navigation \u2013165 dBm \u2013164 dBm \u2013159 dBm \u2013161 dBm Reacquisition \u2013158 dBm \u2013156 dBm \u2013152 dBm \u2013154 dBm Cold Start \u2013146 dBm \u2013145 dBm \u2013139 dBm \u2013134 dBmSensitivity 12 Hot start 7 \u2013157 dBm \u2013157 dBm \u2013153 dBm \u2013155 dBm Table 2: SAM-M10Q typical performance in single-GNSS modes 1.3 Supported GNSS constellations SAM-M10Q is a concurrent GNSS receiver that can receive and track multiple GNSS systems. The single RF front-end architecture enables concurrent reception of multiple GNSS constellations. The receiver can be con\ufb01gured for a subset of GNSS constellations to achieve lower power consumption. 3Minimum 98% \ufb01x rate under typical conditions. 4Con\ufb01guration required. 5GPS is always in combination with SBAS and QZSS. 6CEP, 50%, 24 hours static, \u2013130 dBm, > 6 SVs for each GNSS system 7Commanded starts. 8All satellites at \u2013130 dBm. Measured at room temperature. 9Dependent on the speed and latency of the aiding data connection, commanded starts. 10 Using seven days old AssistNow O\ufb04ine data. External memory may be required. 11 Using two days old orbital predicted data. External memory may be required. 12On a 50 x 50 mm2 ground plane. Measured at room temperature. UBX-22013293 - R05 1 Functional description Page 5 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S2P13C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+        "title": "SAM-M10Q Integration manual",
+        "page": 13,
+        "text": "SAM-M10Q - Integration manual 3. Send the con\ufb01guration string provided in Table 3. The device returns two UBX-ACK-ACK messages with sequence of bytes B5 62 05 01 02 00 06 41 4F 78. 4. Set the device reset to a hardware reset. Power the device o\ufb00 and on or send the UBX-CFG-RST message to the device. The higher clock setting is applied at startup. 5. To verify that the con\ufb01guration item is correctly set, \u2022send the following sequence to the receiver: B5 62 06 8B 14 00 00 04 00 00 01 00 A4 40 03 00 A4 40 05 00 A4 40 0A 00 A4 40 4C 15 \u2022receive a UBX-CFG-VALGET message with the following sequence: B5 62 06 8B 24 00 01 04 00 00 01 00 A4 40 00 B0 71 0B 03 00 A4 40 00 B0 71 0B 05 00 A4 40 00 B0 71 0B 0A 00 A4 40 00 D8 B8 05 76 81 \u2022receive a UBX-ACK-ACK message with the following sequence: B5 62 05 01 02 00 06 8B 99 C2 6. The OTP memory con\ufb01guration is completed and veri\ufb01ed. 2.2 Navigation con\ufb01guration This section presents various con\ufb01guration options related to the navigation engine. These options can be con\ufb01gured through CFG-NAVSPG-* con\ufb01guration keys. 2.2.1 Dynamic platform The dynamic platform model can be con\ufb01gured through the CFG-NAVSPG-DYNMODEL con\ufb01guration item. For the supported dynamic platform models and their details, see Table 4 and Table 5. Platform Description Portable Applications with low acceleration, e.g. portable devices. Suitable for most situations. Stationary Used in timing applications (antenna must be stationary) or other stationary applications. Velocity restricted to 0 m/s. Zero dynamics assumed. Pedestrian Applications with low acceleration and speed, e.g. how a pedestrian would move. Low acceleration assumed. Automotive Used for applications with equivalent dynamics to those of a passenger car. Low vertical acceleration assumed. At sea Recommended for applications at sea, with zero vertical velocity. Zero vertical velocity assumed. Sea level assumed. Airborne <1g Used for applications with a higher dynamic range and greater vertical acceleration than a passenger car. No 2D position \ufb01xes supported. Airborne <2g Recommended for typical airborne environments. No 2D position \ufb01xes supported. Airborne <4g Only recommended for extremely dynamic environments. No 2D position \ufb01xes supported. Wrist Only recommended for wrist-worn applications. Receiver will \ufb01lter out arm motion. Table 4: Dynamic platform models Platform Max altitude [m] Max horizontal velocity [m/s]Max vertical velocity [m/s]Sanity check type Max position deviation Portable 12000 310 50 Altitude and velocity Medium Stationary 9000 10 6 Altitude and velocitySmall Pedestrian 9000 30 20 Altitude and velocitySmall Automotive 6000 100 15 Altitude and velocity Medium At sea 500 25 5 Altitude and velocity Medium Airborne <1g 80000 100 6400 Altitude Large UBX-22020019 - R02 2 Receiver con\ufb01guration Page 13 of 76 C1-Public"
+      },
+      {
+        "chunk_id": "S1P4C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 4,
+        "text": "SAM-M10Q - Data sheet 1 Functional description 1.1 Overview SAM-M10Q patch-antenna module features the u-blox M10 standard precision GNSS platform and provides exceptional sensitivity and acquisition time for all L1 GNSS signals. The M10 platform supports concurrent reception of four GNSS (GPS, GLONASS, Galileo, and BeiDou). The high number of visible satellites enables the receiver to select the best signals. This maximizes the position availability, in particular under challenging conditions such as in deep urban canyons. u-blox Super-S (Super-Signal) technology o\ufb00ers great RF sensitivity and can improve the dynamic position accuracy in non-line-of-sight scenarios. The extremely low power consumption of 37 mW in continuous tracking mode with four concurrent GNSS allows great power autonomy for all battery-operated devices, such as asset trackers, without compromising on GNSS performance. A front-end SAW \ufb01lter and an LNA is integrated in the SAM-M10Q module. This setup ensures excellent out-band jamming immunity, for example when a cellular modem is nearby. SAM-M10Q also detects jamming and spoo\ufb01ng attempts and reports them to the host, so that the system can react to such events. The high-gain 15 x 15 mm2 patch antenna provides the best balance between performance and small size. The omnidirectional antenna radiation pattern increases \ufb02exibility for device installation. Incorporating the SAM-M10Q module into customer designs is easy and straightforward, thanks to the integrated antenna, robust design, and simple interface. SAM-M10Q is a surface-mount device, enabling simple and automated manufacturing. SAM-M10Q o\ufb00ers backwards pin-to-pin compatibility with products from the previous u-blox generations, which saves the designer's e\ufb00ort and reduces costs when upgrading designs to the advanced low-power u-blox M10 GNSS technology. 1.2 Performance Parameter Speci\ufb01cation Value Receiver type u-blox M10 receiver Accuracy of time pulse signal RMS 99%30 ns 60 ns Frequency of time pulse signal Default 1PPS (0.25 Hz to 10 MHz con\ufb01gurable) Operational limits1 Dynamics \u2264 4 g Altitude 80,000 m Velocity 500 m/s Velocity accuracy 2 0.05 m/s Dynamic heading accuracy2 0.3 deg 1Assuming Airborne 4 g platform 250% at 30 m/s for dynamic operation UBX-22013293 - R05 1 Functional description Page 4 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P7C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 7,
+        "text": "SAM-M10Q - Data sheet Feature Description Data batchingAutonomous tracking up to 10 minutes at 1 Hz Odometer Measure traveled distance with support for di\ufb00erent user pro\ufb01les Table 7: Firmware features Feature Description Anti-jamming RF interference and jamming detection and reporting Anti-spoo\ufb01ng Spoo\ufb01ng detection and reporting Con\ufb01guration lockdownReceiver con\ufb01guration can be locked by command Message integrityAll messages can be cryptographically signed Secure boot Only signed \ufb01rmware images are executed Table 8: Security features 1.6 Integrated antenna SAM-M10Q module includes an integrated GNSS patch antenna. The RF signal is further \ufb01ltered and ampli\ufb01ed by an internal SAW \ufb01lter and a low-noise ampli\ufb01er (LNA). The application PCB is a part of the antenna solution and the PCB layout has an impact on the antenna performance. The antenna is right-hand circular polarized (RHCP) and has a peak gain of 3 dBic. The antenna is insensitive to surroundings and has high tolerance against frequency detuning. However, the antenna gain and radiation e\ufb03ciency may be reduced on a small ground plane. The optimal radiation pattern is achieved with a 50 x 50 mm2 ground plane. The operating frequency of the antenna has been tuned in the antenna production. The tuning involves removing small parts of the antenna metalization, and this may show as shallow scratches in the antenna element. UBX-22013293 - R05 1 Functional description Page 7 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P22C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 22,
+        "text": "SAM-M10Q - Data sheet Revision history RevisionDate Comments R01 27-Jun-2022 Initial release R02 20-Jul-2022Engineering sample. Updated sections Performance, Mechanical speci\ufb01cations, and Related documents. R03 30-Aug-2022Initial production. R04 19-May-2023Updated maximum navigation update rate in section Performance. Added 1 Hz navigation update rate footnote in section Indicative power requirements. R05 08-Apr-2024Mass production Added section \u2022 Product handling: Soldering Updated sections \u2022 Supported GNSS constellations: Supported Assisted GNSS (A-GNSS) services \u2022 Pin assignment \u2022 Pin state \u2022 Communication interfaces \u2022 Mechanical speci\ufb01cations \u2022 Quali\ufb01cations and approvals Change in document structure \u2022 Moisture sensitivity level (MSL) included in chapter Quali\ufb01cations and approvals UBX-22013293 - R05 Revision history Page 22 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P6C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 6,
+        "text": "SAM-M10Q - Data sheet The default con\ufb01guration on SAM-M10Q is concurrent reception of GPS, Galileo, GLONASS, and BeiDou B1C with QZSS and SBAS enabled. The following GNSS and their signals are supported: System Signals GPS / QZSS L1C/A (1575.42 MHz) Galileo E1-B/C (1575.42 MHz) GLONASS L1OF (1602 MHz + k*562.5 kHz, k = -7,..., 5, 6) BeiDou B1C (1575.42 MHz) Table 3: Supported GNSS and signals on SAM-M10Q The following GNSS assistance services are supported: Service Support AssistNow\u2122 Online GPS L1C/A, Galileo E1, QZSS L1C/A, GLONASS L1OF, BeiDou B1I AssistNow\u2122 O\ufb04ine GPS L1C/A, Galileo E1, GLONASS L1OF AssistNow\u2122 Autonomous GPS L1C/A, Galileo E1, GLONASS L1OF, QZSS L1C/A, BeiDou B1I Table 4: Supported Assisted GNSS (A-GNSS) services The following augmentation systems are supported: System Support SBAS EGNOS, GAGAN, MSAS, WAAS and BDSBAS QZSS L1S (SLAS) Table 5: Supported augmentation systems The augmentation systems SBAS and QZSS can be enabled only if GPS operation is also enabled. 1.4 Supported protocols SAM-M10Q supports the following interface protocols: Protocol Type UBX Input/output, binary, u-blox proprietary NMEA versions 2.1, 2.3, 4.0, 4.10 and 4.11 (default) Input/output, ASCII Table 6: Supported protocols 1.5 Firmware features Feature Description CloudLocate GNSS Extends the life of energy-constrained IoT applications. Small payload messages supported. Assisted GNSS AssistNow Online, AssistNow O\ufb04ine and AssistNow Autonomous Backup modes Hardware backup mode and software standby mode Super-S Improved dynamic position accuracy with small antennas Protection level Real-time position accuracy estimate with 95% con\ufb01dence level13 Galileo return link messages Galileo search and rescue (SAR) return link messages (RLM) via Galileo satellite signal 13 Veri\ufb01ed for automotive environment only. UBX-22013293 - R05 1 Functional description Page 6 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P13C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 13,
+        "text": "SAM-M10Q - Data sheet SymbolParameter Conditions Typ. Unit IV_BCKP 26Total current in hardware backup modeV_BCKP = 3.3 V, V_IO = VCC = 0 V 28 \u00b5A IV_IOV_IO current in software standby modeV_IO = 3.3 V 46 \u00b5A IVCCVCC current in software standby modeVCC = 3.3 V 120 nA Table 15: Backup currents Extreme operating temperatures can signi\ufb01cantly impact the speci\ufb01ed values. If an application operates near the min or max temperature limits, ensure the speci\ufb01ed values are not exceeded. 26IV_BCKP current in normal operation (V_BCKP = 3.3 V, V_IO = VCC = 3.3V) is ~3 \u00b5A. UBX-22013293 - R05 4 Electrical speci\ufb01cations Page 13 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P16C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 16,
+        "text": "SAM-M10Q - Data sheet 6 Mechanical speci\ufb01cations Figure 4: SAM-M10Q mechanical drawing Symbol Min (mm) Typical (mm) Max (mm) A 15.4 15.5 15.6 A1 15.4 15.5 16.0 B 7.5 7.6 7.7 C 3.7 3.8 3.9 D R0.9 R1.0 R1.1 E 10.9 11.1 11.3 F 5.8 6.3 6.8 G 15.0 15.3 15.6 H 1.6 1.7 1.9 I 1.4 1.5 1.6 J 13.1 13.2 13.3 L 0.0 0.3 Weight 5.6 g Table 19: SAM-M10Q mechanical dimensions Take the size of the de-paneling residual tabs into account when designing the component keepout area. UBX-22013293 - R05 6 Mechanical speci\ufb01cations Page 16 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P17C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 17,
+        "text": "SAM-M10Q - Data sheet 7 Quali\ufb01cations and approvals Quality and reliabilityProduct quali\ufb01cation Quali\ufb01ed according to u-blox quali\ufb01cation policy, based on a subset of AEC- Q104Manufacturing Manufactured at ISO/TS 16949 certi\ufb01ed sitesEnvironmentalRoHS compliance Yes Moisture sensitivity level (MSL)30, 31 4 Type approvalsEuropean RED certi\ufb01cation (CE) Declaration of Conformity (DoC) is available on the u-blox website.UK conformity assessment (UKCA) YesTable 20: Quali\ufb01cations and approvals 30 For MSL standard see IPC/JEDEC J-STD-020 and J-STD-033 [5]. 31 For more information regarding moisture sensitivity levels, labeling, storage, and drying, see the Product packaging reference guide [4]. UBX-22013293 - R05 7 Quali\ufb01cations and approvals Page 17 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P21C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 21,
+        "text": "SAM-M10Q - Data sheet Related documents [1] SAM-M10Q Integration manual, UBX-22020019 [2] u-blox M10 SPG 5.10 Release notes, UBX-22001426 [3] u-blox M10 SPG 5.10 Interface description, UBX-21035062 [4] Product packaging reference guide, UBX-14001652 [5] Joint IPC/JEDEC standard, www.jedec.org For regular updates to u-blox documentation and to receive product change noti\ufb01cations please register on our homepage https://www.u-blox.com. UBX-22013293 - R05 Related documents Page 21 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P1C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 1,
+        "text": "\ue002 SAM-M10Q u-blox M10 standard precision GNSS antenna module Data sheet Abstract This data sheet describes the SAM-M10Q antenna module with concurrent reception of four GNSS (GPS, Galileo, GLONASS, and BeiDou) and a simple design-in requiring no RF expertise. www.u-blox.com UBX-22013293 - R05 C1-Public"
+      },
+      {
+        "chunk_id": "S1P3C2",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 3,
+        "text": "..................................................................................................................................................14 5.3 Default interface settings...................................................................................................................15 6 Mechanical speci\ufb01cations ................................................................................................16 7 Quali\ufb01cations and approvals...........................................................................................17 8 Product handling.................................................................................................................18 8.1 Soldering .................................................................................................................................................18 9 Labeling and ordering information................................................................................19 9.1 Product labeling....................................................................................................................................19 9.2 Explanation of product codes............................................................................................................19 9.3 Ordering codes......................................................................................................................................19 Related documents................................................................................................................21 Revision history.......................................................................................................................22 UBX-22013293 - R05 Contents Page 3 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P8C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 8,
+        "text": "SAM-M10Q - Data sheet 2 System description 2.1 Block diagram Figure 1: SAM-M10Q block diagram UBX-22013293 - R05 2 System description Page 8 of 23 C1-Public"
+      },
+      {
+        "chunk_id": "S1P18C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+        "title": "SAM-M10Q Data sheet",
+        "page": 18,
+        "text": "SAM-M10Q - Data sheet 8 Product handling 8.1 Soldering Re\ufb02ow soldering procedures are described in the IPC/JEDEC J-STD-020 standard [5]. UBX-22013293 - R05 8 Product handling Page 18 of 23 C1-Public"
+      }
+    ],
+    "source_urls": [
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf"
+    ],
+    "unanswered_questions": [
+      "No fixed reference/typical application circuit passive values were present in the supplied chunks; confirm required power-supply decoupling capacitors from the full integration manual or schematic reference.",
+      "Confirm chosen host interface: UART, I2C, or both.",
+      "Confirm actual board supply voltage and whether VCC and V_IO will be tied together as recommended.",
+      "Confirm whether V_BCKP backup mode is required or whether pin 3 should be left open.",
+      "If I2C is used, determine external pull-up values from target bus speed and capacitance; supplied chunks do not specify resistor values.",
+      "Confirm whether TIMEPULSE, RESET_N, and EXTINT should be routed to the host or left unconnected.",
+      "Supplied chunks do not include a complete recommended PCB land pattern/footprint pad geometry; obtain the official footprint/land pattern before KiCad layout."
+    ],
+    "validation_warnings": [
+      "Do not add a capacitor from RESET_N to GND; the integration manual warns it could trigger reset on every startup.",
+      "TIMEPULSE and SAFEBOOT_N are internally related; do not pull TIMEPULSE low at startup or the receiver may enter safeboot mode.",
+      "Digital IO voltage levels are referenced to V_IO; do not drive IO pins when VCC and V_IO are not supplied.",
+      "The datasheet gives I2C maximum clock frequency as 320 kHz, while the integration manual text says maximum bit rate 400 kbit/s; design should follow the latest datasheet unless u-blox confirms otherwise.",
+      "The application PCB is part of the integrated antenna solution; antenna performance depends on ground plane/layout. The datasheet cites optimal radiation pattern with a 50 x 50 mm\u00b2 ground plane.",
+      "External power supply must handle startup inrush current up to 100 mA."
+    ],
+    "extraction_notes": [
+      "All pin names and numbers were taken from the supplied u-blox datasheet/integration-manual pin assignment chunks.",
+      "No mandatory support passives with numeric values were evidenced in the supplied chunks. Only optional I2C pull-ups are listed because the chunks explicitly state they may be necessary.",
+      "For a minimal UART design, connect VCC and V_IO to the selected 2.7\u20133.6 V rail, connect all GND pins, connect TXD/RXD to the host, leave V_BCKP open if backup is unused, and leave unused PIOs open per pin notes.",
+      "Deterministic schematic-label extraction supplemented the AI extraction with 6 pin(s) and 2 support component(s).",
+      "Supplier CAD lookup will prefer LCSC C5443880."
+    ],
+    "confidence": "medium"
+  }
+}

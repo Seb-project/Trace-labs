@@ -3,12 +3,12 @@ import:
   - "00_product_overview"
   - "01_architecture"
   - "04_circuit_block_schema"
-description: PCBStream full MVP acceptance criteria shared by backend and frontend specs.
+description: Trace Labs full MVP acceptance criteria shared by backend and frontend specs.
 ---
 
 ***definitions***
 
-- :MVPCompletionChecklist: is the final end-to-end completion criteria for PCBStream.
+- :MVPCompletionChecklist: is the final end-to-end completion criteria for Trace Labs.
 
 - :BME280HappyPath: is the required manual and automated acceptance flow.
 

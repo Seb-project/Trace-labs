@@ -85,7 +85,7 @@ class BridgeService:
             root_schematic.write_text(self._minimal_root_schematic(link.project_name), encoding="utf-8")
 
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        target_dir = project_path / "pcbstream_blocks" / block_slug
+        target_dir = project_path / "tracelabs_blocks" / block_slug
         target_dir.mkdir(parents=True, exist_ok=True)
 
         copied = []
@@ -94,21 +94,21 @@ class BridgeService:
             shutil.copy2(source / name, target)
             copied.append(str(target))
 
-        exported_libraries = source / "pcbstream_libs"
+        exported_libraries = source / "tracelabs_libs"
         if exported_libraries.exists():
             copied.extend(self._install_exported_libraries(project_path, exported_libraries, block_slug))
 
         backups = []
-        root_backup = root_schematic.with_suffix(root_schematic.suffix + f".pcbstream_backup_{timestamp}")
+        root_backup = root_schematic.with_suffix(root_schematic.suffix + f".tracelabs_backup_{timestamp}")
         shutil.copy2(root_schematic, root_backup)
         backups.append(str(root_backup))
 
         root_text = root_schematic.read_text(encoding="utf-8")
         opened_sheet_path: str | None = None
         open_error: str | None = None
+        path_to_open = root_schematic
         if import_mode == "hierarchical_sheet":
             rel_child = target_dir.relative_to(project_path) / schematic_file.name
-            sheet_to_open = target_dir / schematic_file.name
             if str(rel_child) not in root_text:
                 root_schematic.write_text(
                     self._insert_sheet(
@@ -121,21 +121,20 @@ class BridgeService:
                 )
             message = f"Generated {block_name} block inserted as a KiCad hierarchical sheet."
             next_steps = [
-                "Open the project in KiCad.",
-                "Open the root schematic and inspect the PCBStream sheet.",
-                "Review symbol and footprint assignments.",
+                "Open or reload the root schematic so KiCad rereads the Trace Labs library tables.",
+                "Open the Trace Labs hierarchical sheet from the root schematic.",
+                "Review symbol and footprint assignments; the footprint library is registered in fp-lib-table.",
                 "Run ERC before fabrication.",
             ]
         else:
             child_text = (target_dir / schematic_file.name).read_text(encoding="utf-8")
-            sheet_to_open = root_schematic
             duplicate_marker = f'(symbol (lib_id "{main_symbol}")' if main_symbol else f'(title "{block_name}")'
             if duplicate_marker not in root_text:
                 root_schematic.write_text(self._insert_inline_block(root_text, child_text), encoding="utf-8")
             message = f"Generated {block_name} block inserted directly into the root schematic."
             next_steps = [
-                "Reload the root schematic in KiCad if it was already open.",
-                "Review the inserted PCBStream components in the main sheet.",
+                "Reload the root schematic in KiCad if it was already open so library tables are re-read.",
+                "Review the inserted Trace Labs components in the main sheet.",
                 "Review symbol and footprint assignments.",
                 "Run ERC before fabrication.",
             ]
@@ -156,9 +155,9 @@ class BridgeService:
         copied.append(str(manifest_path))
 
         if open_after_import:
-            opened_sheet_path = str(sheet_to_open)
+            opened_sheet_path = str(path_to_open)
             try:
-                self._open_sheet(sheet_to_open)
+                self._open_sheet(path_to_open)
             except OSError as exc:
                 open_error = str(exc)
 
@@ -213,7 +212,7 @@ class BridgeService:
         return candidates[0] if candidates else preferred
 
     def _minimal_root_schematic(self, project_name: str) -> str:
-        return f"""(kicad_sch (version 20230121) (generator "PCBStream")
+        return f"""(kicad_sch (version 20230121) (generator "Trace Labs")
   (uuid "{uuid4()}")
   (paper "A4")
   (title_block (title "{project_name}"))
@@ -225,7 +224,7 @@ class BridgeService:
         exported_library_root: Path,
         block_slug: str,
     ) -> list[str]:
-        project_library_root = project_path / "pcbstream_libs"
+        project_library_root = project_path / "tracelabs_libs"
         project_library_root.mkdir(parents=True, exist_ok=True)
         shutil.copytree(exported_library_root, project_library_root, dirs_exist_ok=True)
 
@@ -243,8 +242,8 @@ class BridgeService:
                 "sym_lib_table",
                 library_name,
                 f'(lib (name "{library_name}") (type "KiCad") '
-                f'(uri "${{KIPRJMOD}}/pcbstream_libs/{symbol_library.name}") '
-                f'(options "") (descr "PCBStream {block_slug} symbol library"))',
+                f'(uri "${{KIPRJMOD}}/tracelabs_libs/{symbol_library.name}") '
+                f'(options "") (descr "Trace Labs {block_slug} symbol library"))',
             )
         for footprint_library in sorted(project_library_root.glob("*.pretty")):
             library_name = footprint_library.stem
@@ -253,8 +252,8 @@ class BridgeService:
                 "fp_lib_table",
                 library_name,
                 f'(lib (name "{library_name}") (type "KiCad") '
-                f'(uri "${{KIPRJMOD}}/pcbstream_libs/{footprint_library.name}") '
-                f'(options "") (descr "PCBStream {block_slug} footprint library"))',
+                f'(uri "${{KIPRJMOD}}/tracelabs_libs/{footprint_library.name}") '
+                f'(options "") (descr "Trace Labs {block_slug} footprint library"))',
             )
 
         copied.extend([str(symbol_table), str(footprint_table)])
@@ -268,16 +267,34 @@ class BridgeService:
 
         text = self._normalise_library_table(text, table_name)
 
-        if f'(name "{library_name}")' in text:
+        existing_span = self._library_entry_span(text, library_name)
+        if existing_span is not None:
+            start, end = existing_span
+            text = f"{text[:start].rstrip()}\n  {entry}\n{text[end:].lstrip()}"
             table_path.write_text(text, encoding="utf-8")
             return
 
         stripped = text.rstrip()
         if stripped.endswith(")"):
-            text = f"{stripped[:-1]}  {entry}\n)\n"
+            text = f"{stripped[:-1].rstrip()}\n  {entry}\n)\n"
         else:
             text = f"({table_name}\n  {entry}\n)\n"
         table_path.write_text(text, encoding="utf-8")
+
+    def _library_entry_span(self, text: str, library_name: str) -> tuple[int, int] | None:
+        pattern = re.compile(rf'\(name\s+(?:"{re.escape(library_name)}"|{re.escape(library_name)})\)')
+        index = 0
+        while True:
+            start = text.find("(lib", index)
+            if start == -1:
+                return None
+            try:
+                _, end = self._balanced_span(text, start)
+            except ValueError:
+                return None
+            if pattern.search(text[start:end]):
+                return start, end
+            index = end
 
     def _normalise_library_table(self, text: str, table_name: str) -> str:
         stripped = text.strip()
@@ -296,13 +313,13 @@ class BridgeService:
 
     def _sheet_name(self, block_slug: str, block_name: str) -> str:
         raw = re.sub(r"[^A-Za-z0-9_]+", "_", block_slug or block_name).strip("_")
-        return f"PCBStream_{raw or 'block'}"
+        return f"TraceLabs_{raw or 'block'}"
 
     def _insert_sheet(
         self,
         root_text: str,
         child_file: str,
-        sheet_name: str = "PCBStream_BME280",
+        sheet_name: str = "TraceLabs_BME280",
         external_nets: list[str] | None = None,
     ) -> str:
         pins = self._sheet_pins(external_nets or ["+3V3", "GND", "I2C1_SDA", "I2C1_SCL"])

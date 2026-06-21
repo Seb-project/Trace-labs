@@ -2,7 +2,7 @@
 import:
   - "00_product_overview"
   - "04_circuit_block_schema"
-description: PCBStream mock Solvimon-style usage metering and pricing.
+description: Trace Labs mock Solvimon-style usage metering and pricing.
 ---
 
 ***definitions***

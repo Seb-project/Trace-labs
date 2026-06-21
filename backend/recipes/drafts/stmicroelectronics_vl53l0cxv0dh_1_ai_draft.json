@@ -15,8 +15,8 @@
     "supplier": "JLCPCB",
     "supplier_part_number": "C91199",
     "supplier_url": "https://jlcpcb.com/partdetail/STMicroelectronics-VL53L0CXV0DH1/C91199",
-    "symbol": "PCBStream_VL53L0CXV0DH_1:VL53L0CXV0DH_1",
-    "footprint": "PCBStream_VL53L0CXV0DH_1:PCBStream_VL53L0CXV0DH_1_PLACEHOLDER",
+    "symbol": "TraceLabs_VL53L0CXV0DH_1:VL53L0CXV0DH_1",
+    "footprint": "TraceLabs_VL53L0CXV0DH_1:TraceLabs_VL53L0CXV0DH_1_PLACEHOLDER",
     "model_3d": "needs_review",
     "purpose": "Main IC extracted from datasheet/reference sources for VL53L0CXV0DH/1.",
     "connects": [

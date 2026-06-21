@@ -1,0 +1,1116 @@
+{
+  "id": "draft_u_blox_neo_f9p_15b_ai_draft",
+  "block_name": "u-blox NEO-F9P-15B Extracted Draft",
+  "block_slug": "u_blox_neo_f9p_15b_ai_draft",
+  "summary": "Datasheet-derived draft for u-blox NEO-F9P-15B. Interface: SPI-selected reference wiring: D_SEL = GND selects SPI; SPI peripheral only, max SPI clock 5.5 MHz, CPOL=0/CPHA=0 default. Module also has UART, I2C, and USB interfaces; I2C/UART mode is D_SEL open or VCC.. Package: Surface-mounted NEO module, 16.0 x 12.2 x 3.4 mm nominal body; mechanical table gives 15.9\u201316.1 x 12.1\u201312.4 x 3.40\u20133.76 mm.",
+  "recipe_source": "ai_proposed",
+  "recipe_status": "needs_review",
+  "recipe_review_confirmed": true,
+  "main_component": {
+    "reference": "U?",
+    "type": "IC",
+    "value": "NEO-F9P-15B",
+    "mpn": "NEO-F9P-15B",
+    "manufacturer": "u-blox",
+    "supplier": "DigiKey",
+    "supplier_part_number": "672-NEO-F9P-15BCT-ND",
+    "supplier_url": "https://www.digikey.com/en/products/detail/u-blox/NEO-F9P-15B/20838230",
+    "symbol": "TraceLabs_NEO_F9P_15B:NEO_F9P_15B",
+    "footprint": "TraceLabs_NEO_F9P_15B:TraceLabs_NEO_F9P_15B_LCSC_C9900135543",
+    "model_3d": "needs_review",
+    "purpose": "Main IC extracted from datasheet/reference sources for NEO-F9P-15B.",
+    "connects": [
+      "+3V3",
+      "EXTINT",
+      "GND",
+      "GNSS_RF_IN",
+      "LNA_EN",
+      "NC_SAFEBOOT_N",
+      "RESET_N",
+      "RTK_STAT",
+      "SCL",
+      "SDA",
+      "SPI_CS_N",
+      "SPI_MISO",
+      "SPI_MOSI",
+      "SPI_SCK",
+      "TIMEPULSE",
+      "UART2_RXD",
+      "UART2_TXD",
+      "USB_DM",
+      "USB_DP",
+      "VCC_RF",
+      "V_BCKP",
+      "V_USB"
+    ],
+    "footprint_confidence": "downloaded_needs_review",
+    "symbol_confidence": "datasheet_extracted_needs_review",
+    "assignment_reason": "Trace Labs downloaded a candidate KiCad footprint from an online KiCad library source; review package, pads, and pin-1 orientation before fabrication.",
+    "status": "draft",
+    "footprint_asset": {
+      "name": "TraceLabs_NEO_F9P_15B_LCSC_C9900135543",
+      "footprint_id": "TraceLabs_NEO_F9P_15B:TraceLabs_NEO_F9P_15B_LCSC_C9900135543",
+      "source_kind": "supplier_footprint",
+      "source_project": "LCSC/EasyEDA via easyeda2kicad",
+      "source_path": "C9900135543",
+      "source_url": "https://www.digikey.com/en/products/detail/u-blox/NEO-F9P-15B/20838230",
+      "confidence": "supplier_downloaded_needs_review",
+      "kicad_mod": "(footprint \"TraceLabs_NEO_F9P_15B_LCSC_C9900135543\" (layer F.Cu) (tedit 5DC5F6A4)\n\t(attr smd)\n\t(fp_text reference REF** (at 0.000 -9.800) (layer F.SilkS)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text value COMM-24_L16.0-W12.0-P1.10_P20M (at 0.000 9.800) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(fp_text user %R (at 0 0) (layer F.Fab)\n\t\t(effects (font (size 1 1) (thickness 0.15)))\n\t)\n\t(property \"LCSC Part\" \"C9900135543\")\n\t(fp_line (start -7.71 -6.05) (end -8.00 -6.05) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 1.89 -6.05) (end 0.31 -6.05) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 7.71 6.00) (end 7.95 6.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 7.95 6.00) (end 7.95 -6.05) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 7.95 -6.05) (end 7.71 -6.05) (layer F.SilkS) (width 0.25))\n\t(fp_line (start 0.31 6.00) (end 1.89 6.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -8.00 -6.00) (end -8.00 6.00) (layer F.SilkS) (width 0.25))\n\t(fp_line (start -8.00 6.00) (end -7.71 6.00) (layer F.SilkS) (width 0.25))\n\t(pad 24 smd rect (at -7.00 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 23 smd rect (at -5.90 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 22 smd rect (at -4.80 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 21 smd rect (at -3.70 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 20 smd rect (at -2.60 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 19 smd rect (at -1.50 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 18 smd rect (at -0.40 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 17 smd rect (at 2.60 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 16 smd rect (at 3.70 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 15 smd rect (at 4.80 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 14 smd rect (at 5.90 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 13 smd rect (at 7.00 -5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 12 smd rect (at 7.00 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 11 smd rect (at 5.90 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 10 smd rect (at 4.80 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 9 smd rect (at 3.70 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 8 smd rect (at 2.60 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 7 smd rect (at -0.40 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 6 smd rect (at -1.50 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 5 smd rect (at -2.60 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 4 smd rect (at -3.70 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 3 smd rect (at -4.80 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 2 smd rect (at -5.90 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(pad 1 smd rect (at -7.00 5.80 0.00) (size 0.800 1.700) (layers F.Cu F.Paste F.Mask))\n\t(fp_circle (center -8.00 6.00) (end -7.97 6.00) (layer F.SilkS) (width 0.06))\n\t(fp_line (start -8.00 6.00) (end -8.00 -6.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start -8.00 -6.00) (end 8.00 -6.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 8.00 -6.00) (end 8.00 6.00) (layer F.CrtYd) (width 0.05))\n\t(fp_line (start 8.00 6.00) (end -8.00 6.00) (layer F.CrtYd) (width 0.05))\n\t(fp_poly (pts (xy -6.984975 4.785030) (xy -7.484974 4.285031) (xy -7.484974 4.285031) (xy -6.484976 4.285031) (xy -6.984975 4.785030)) (stroke (width 0) (type solid)) (fill solid) (layer \"F.SilkS\"))\n\t(model \"/var/folders/92/qn4jy2m12wn390bvschwj2qr0000gn/T/tracelabs_lcsc_91y9dy7q/TraceLabs_C9900135543.3dshapes/COMM-24_L16.0-W12.0-P1.10_P20M.wrl\"\n\t\t(offset (xyz 0.000 0.000 0.000))\n\t\t(scale (xyz 1 1 1))\n\t\t(rotate (xyz 0 0 0))\n\t)\n)",
+      "warnings": []
+    }
+  },
+  "support_components": [
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "4.7 kOhm",
+      "purpose": "I2C SDA pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SDA",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P11C1",
+      "source_citations": [
+        "S1P11C1"
+      ]
+    },
+    {
+      "reference": "R?",
+      "type": "resistor",
+      "value": "4.7 kOhm",
+      "purpose": "I2C SCL pull-up",
+      "symbol": "Device:R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "footprint_confidence": "default_selected",
+      "symbol_confidence": "default_selected",
+      "connects": [
+        "SCL",
+        "+3V3"
+      ],
+      "assignment_reason": "Extracted from datasheet/reference-design evidence: S1P11C1",
+      "source_citations": [
+        "S1P11C1"
+      ]
+    }
+  ],
+  "external_nets": [
+    "+3V3",
+    "EXTINT",
+    "GND",
+    "RESET_N",
+    "SCL",
+    "SDA",
+    "SPI_CS_N",
+    "SPI_MISO",
+    "SPI_MOSI",
+    "SPI_SCK",
+    "VCC_RF",
+    "V_BCKP",
+    "V_USB"
+  ],
+  "internal_nets": [
+    "GNSS_RF_IN",
+    "LNA_EN",
+    "NC_SAFEBOOT_N",
+    "RTK_STAT",
+    "TIMEPULSE",
+    "UART2_RXD",
+    "UART2_TXD",
+    "USB_DM",
+    "USB_DP"
+  ],
+  "assumptions": [
+    "This recipe was extracted from downloaded datasheet/reference-design sources.",
+    "Every generated pin and support component must keep a source citation.",
+    "KiCad export is blocked if the extracted evidence is incomplete."
+  ],
+  "selected_options": {
+    "recipe_review_confirmed": "confirm"
+  },
+  "validation_warnings": [
+    {
+      "severity": "critical",
+      "message": "This AI-proposed circuit was extracted from datasheet/reference sources and still needs review.",
+      "related_component": "U?",
+      "fix_hint": "Check every cited pin, passive value, symbol, footprint, and package before fabrication."
+    },
+    {
+      "severity": "warning",
+      "message": "SPI is not available unless D_SEL is set low; the extracted reference pins tie D_SEL to GND accordingly.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The supplied chunks state all PIO voltage levels are related to VCC; host logic connected to SPI/UART/I2C/control pins must be compatible with VCC.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "The product is not protected against overvoltage or reversed voltages per the absolute maximum ratings text; protection components are likely needed in a real design, but no exact values/parts are provided in the supplied chunks.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    },
+    {
+      "severity": "warning",
+      "message": "USB interface may not be certifiable due to hardware implementation per datasheet; optional USB pins are listed but no USB connector/ESD/passive reference circuit was provided.",
+      "related_component": "U?",
+      "fix_hint": "Open the cited source chunk in the export notes and verify manually."
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "source-review",
+      "category": "review",
+      "task": "Review extracted source citations for pins and passives.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "cad-assets",
+      "category": "library",
+      "task": "Review downloaded symbol and footprint assets.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    },
+    {
+      "id": "erc",
+      "category": "verify",
+      "task": "Run ERC after insertion.",
+      "required": true,
+      "status": "todo",
+      "reason": null
+    }
+  ],
+  "datasheet_sources": [
+    {
+      "title": "NEO-F9P-15B Data Sheet",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from EVK-F9P evaluation kit",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    },
+    {
+      "title": "Linked reference from EVK-F9P evaluation kit",
+      "source_type": "manufacturer_datasheet",
+      "url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P_ProductSummary_UBX-22021832.pdf",
+      "confidence": "extracted_with_citations",
+      "notes": "Used for pin/support extraction."
+    }
+  ],
+  "schematic_preview": {
+    "title": "NEO-F9P-15B Extracted Schematic Preview",
+    "description": "Trace Labs schematic block generated from cited datasheet/reference-design extraction.",
+    "ascii_preview": "1 SAFEBOOT_N -> NC_SAFEBOOT_N\n2 D_SEL -> GND\n3 TIMEPULSE -> TIMEPULSE\n4 EXTINT -> EXTINT\n5 USB_DM -> USB_DM\n6 USB_DP -> USB_DP\n7 V_USB -> V_USB\n8 RESET_N -> RESET_N\n9 VCC_RF -> VCC_RF\n10 GND -> GND\n11 RF_IN -> GNSS_RF_IN\n12 GND -> GND",
+    "connections": [
+      "+3V3",
+      "EXTINT",
+      "GND",
+      "GNSS_RF_IN",
+      "LNA_EN",
+      "NC_SAFEBOOT_N",
+      "RESET_N",
+      "RTK_STAT",
+      "SCL",
+      "SDA",
+      "SPI_CS_N",
+      "SPI_MISO",
+      "SPI_MOSI",
+      "SPI_SCK",
+      "TIMEPULSE",
+      "UART2_RXD",
+      "UART2_TXD",
+      "USB_DM",
+      "USB_DP",
+      "VCC_RF",
+      "V_BCKP",
+      "V_USB"
+    ],
+    "notes": [
+      "Pins and support components were extracted from downloaded source chunks.",
+      "Export is blocked if extraction evidence is incomplete."
+    ]
+  },
+  "extraction_status": "ready",
+  "reference_extraction": {
+    "part_number": "NEO-F9P-15B",
+    "manufacturer": "u-blox",
+    "package": "Surface-mounted NEO module, 16.0 x 12.2 x 3.4 mm nominal body; mechanical table gives 15.9\u201316.1 x 12.1\u201312.4 x 3.40\u20133.76 mm",
+    "supply_range": "VCC 2.7\u20133.6 V operating; V_BCKP 1.65\u20133.6 V operating; V_USB max 3.6 V absolute/supplies USB interface",
+    "interface": "SPI-selected reference wiring: D_SEL = GND selects SPI; SPI peripheral only, max SPI clock 5.5 MHz, CPOL=0/CPHA=0 default. Module also has UART, I2C, and USB interfaces; I2C/UART mode is D_SEL open or VCC.",
+    "pins": [
+      {
+        "number": "1",
+        "name": "SAFEBOOT_N",
+        "electrical_type": "input",
+        "net_name": "NC_SAFEBOOT_N",
+        "required": false,
+        "notes": "SAFEBOOT_N used for firmware updates/reconfiguration; datasheet says leave open. Input has internal pull-up in listed modes.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "2",
+        "name": "D_SEL",
+        "electrical_type": "input",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Reference chooses SPI mode. D_SEL open or VCC = UART + I2C; GND = SPI. SPI is disabled by default and selected by setting D_SEL = 0.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P14C1"
+        ]
+      },
+      {
+        "number": "3",
+        "name": "TIMEPULSE",
+        "electrical_type": "output",
+        "net_name": "TIMEPULSE",
+        "required": false,
+        "notes": "TIMEPULSE / 1 PPS output; optional external timing output. Timepulse frequency is configurable from 0.25 Hz to 10 MHz.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P4C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "EXTINT",
+        "electrical_type": "input",
+        "net_name": "EXTINT",
+        "required": false,
+        "notes": "External interrupt / PIO 7 input; optional. Inputs have internal pull-ups and can be left open if unused.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P14C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "USB_DM",
+        "electrical_type": "bidirectional",
+        "net_name": "USB_DM",
+        "required": false,
+        "notes": "USB data DM for optional USB 2.0 full-speed host communication.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P17C1"
+        ]
+      },
+      {
+        "number": "6",
+        "name": "USB_DP",
+        "electrical_type": "bidirectional",
+        "net_name": "USB_DP",
+        "required": false,
+        "notes": "USB data DP for optional USB 2.0 full-speed host communication.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P17C1"
+        ]
+      },
+      {
+        "number": "7",
+        "name": "V_USB",
+        "electrical_type": "power_in",
+        "net_name": "V_USB",
+        "required": false,
+        "notes": "USB supply pin; supplies the USB interface. Only needed if USB is used.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P17C1"
+        ]
+      },
+      {
+        "number": "8",
+        "name": "RESET_N",
+        "electrical_type": "input",
+        "net_name": "RESET_N",
+        "required": false,
+        "notes": "Active-low reset input. Inputs have internal pull-ups and can be left open if unused; RESET_N pull-up is specified. Reset deletes volatile memory and triggers a cold start, so use as recovery/reset function.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P13C1",
+          "S8P10C1"
+        ]
+      },
+      {
+        "number": "9",
+        "name": "VCC_RF",
+        "electrical_type": "power_output",
+        "net_name": "VCC_RF",
+        "required": false,
+        "notes": "Voltage output for external LNA; operating condition gives VCC_RF = VCC - 0.1 V and 50 mA output current. Optional depending on antenna/RF front end.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P13C1"
+        ]
+      },
+      {
+        "number": "10",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "11",
+        "name": "RF_IN",
+        "electrical_type": "input",
+        "net_name": "GNSS_RF_IN",
+        "required": true,
+        "notes": "GNSS signal input. Absolute maximum RF_IN condition specifies source impedance = 50 \u03a9. Connect to suitable GNSS antenna/RF front-end per application.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P12C1"
+        ]
+      },
+      {
+        "number": "12",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "13",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S1P10C1"
+        ]
+      },
+      {
+        "number": "14",
+        "name": "LNA_EN",
+        "electrical_type": "output",
+        "net_name": "LNA_EN",
+        "required": false,
+        "notes": "Antenna/LNA control output; optional depending on antenna/RF front end.",
+        "source_citations": [
+          "S1P10C1",
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "15",
+        "name": "RTK_STAT",
+        "electrical_type": "output",
+        "net_name": "RTK_STAT",
+        "required": false,
+        "notes": "RTK status output: 0 = RTK/PPP-RTK fixed, blinking = receiving and using corrections, 1 = no corrections.",
+        "source_citations": [
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "16",
+        "name": "TXD2",
+        "electrical_type": "output",
+        "net_name": "UART2_TXD",
+        "required": false,
+        "notes": "UART2 TXD output; optional correction/data interface. UART2 defaults to 38400 baud; RTCM 3.3 output protocol enabled by default but no output messages enabled by default.",
+        "source_citations": [
+          "S1P11C1",
+          "S1P17C1"
+        ]
+      },
+      {
+        "number": "17",
+        "name": "RXD2",
+        "electrical_type": "input",
+        "net_name": "UART2_RXD",
+        "required": false,
+        "notes": "UART2 RXD input; optional correction/data interface. UART2 input defaults to 38400 baud with UBX, RTCM 3.3, and SPARTN input protocols enabled by default.",
+        "source_citations": [
+          "S1P11C1",
+          "S1P17C1"
+        ]
+      },
+      {
+        "number": "18",
+        "name": "SDA / SPI CS_N",
+        "electrical_type": "bidirectional",
+        "net_name": "SPI_CS_N",
+        "required": true,
+        "notes": "In selected SPI mode with D_SEL = GND, this pin is SPI chip select, active low. In D_SEL = VCC/open mode it is I2C SDA.",
+        "source_citations": [
+          "S1P11C1",
+          "S1P14C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "SCL / SPI SLK",
+        "electrical_type": "bidirectional",
+        "net_name": "SPI_SCK",
+        "required": true,
+        "notes": "In selected SPI mode with D_SEL = GND, this pin is SPI clock. In D_SEL = VCC/open mode it is I2C SCL. Datasheet text names SPI clock as SLK/SCK.",
+        "source_citations": [
+          "S1P11C1",
+          "S1P14C1"
+        ]
+      },
+      {
+        "number": "20",
+        "name": "TXD / SPI SDO",
+        "electrical_type": "output",
+        "net_name": "SPI_MISO",
+        "required": true,
+        "notes": "In selected SPI mode with D_SEL = GND, this pin is SPI SDO, connected to host MISO. In D_SEL = VCC/open mode it is UART1 TXD output.",
+        "source_citations": [
+          "S1P11C1",
+          "S8P11C1"
+        ]
+      },
+      {
+        "number": "21",
+        "name": "RXD / SPI SDI",
+        "electrical_type": "input",
+        "net_name": "SPI_MOSI",
+        "required": true,
+        "notes": "In selected SPI mode with D_SEL = GND, this pin is SPI SDI, connected to host MOSI. In D_SEL = VCC/open mode it is UART1 RXD input.",
+        "source_citations": [
+          "S1P11C1",
+          "S8P11C1"
+        ]
+      },
+      {
+        "number": "22",
+        "name": "V_BCKP",
+        "electrical_type": "power_in",
+        "net_name": "V_BCKP",
+        "required": false,
+        "notes": "Backup voltage supply. Operating range is 1.65\u20133.6 V; backup current is characterized at V_BCKP = 3 V, VCC = 0 V.",
+        "source_citations": [
+          "S1P11C1",
+          "S1P12C1"
+        ]
+      },
+      {
+        "number": "23",
+        "name": "VCC",
+        "electrical_type": "power_in",
+        "net_name": "+3V3",
+        "required": true,
+        "notes": "Main supply voltage. Operating range 2.7\u20133.6 V; 3.3 V system supply is within range.",
+        "source_citations": [
+          "S1P11C1",
+          "S1P12C1"
+        ]
+      },
+      {
+        "number": "24",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "Ground.",
+        "source_citations": [
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "SCL",
+        "electrical_type": "input",
+        "net_name": "SCL",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "19",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "21",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "13",
+        "name": "SDA",
+        "electrical_type": "bidirectional",
+        "net_name": "SDA",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S1P11C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "SDA",
+        "electrical_type": "bidirectional",
+        "net_name": "SDA",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S8P11C1"
+        ]
+      },
+      {
+        "number": "4",
+        "name": "SCL",
+        "electrical_type": "input",
+        "net_name": "SCL",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S8P11C1"
+        ]
+      },
+      {
+        "number": "5",
+        "name": "GND",
+        "electrical_type": "power_in",
+        "net_name": "GND",
+        "required": true,
+        "notes": "",
+        "source_citations": [
+          "S8P10C1"
+        ]
+      }
+    ],
+    "support_requirements": [
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "4.7 kOhm",
+        "purpose": "I2C SDA pull-up",
+        "connects": [
+          "SDA",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected because the source required I2C pull-ups but did not give a value; verify against bus capacitance and I2C speed.",
+        "source_citations": [
+          "S1P11C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      },
+      {
+        "reference_prefix": "R",
+        "type": "resistor",
+        "value": "4.7 kOhm",
+        "purpose": "I2C SCL pull-up",
+        "connects": [
+          "SCL",
+          "+3V3"
+        ],
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "required": true,
+        "placement_note": "Starter value selected because the source required I2C pull-ups but did not give a value; verify against bus capacitance and I2C speed.",
+        "source_citations": [
+          "S1P11C1"
+        ],
+        "calculation_role": "",
+        "calculation_inputs": [],
+        "calculation_formula": ""
+      }
+    ],
+    "nets": [
+      {
+        "name": "+3V3",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VCC"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "EXTINT",
+        "role": "interrupt",
+        "external": true,
+        "connected_pins": [
+          "EXTINT"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GND",
+        "role": "ground",
+        "external": true,
+        "connected_pins": [
+          "D_SEL",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND",
+          "GND"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "GNSS_RF_IN",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "RF_IN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "LNA_EN",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "LNA_EN"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "NC_SAFEBOOT_N",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "SAFEBOOT_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "RESET_N",
+        "role": "reset",
+        "external": true,
+        "connected_pins": [
+          "RESET_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "RTK_STAT",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "RTK_STAT"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SCL",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL",
+          "SCL"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SDA",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA",
+          "SDA"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_CS_N",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SDA / SPI CS_N"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_MISO",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "TXD / SPI SDO"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_MOSI",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "RXD / SPI SDI"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "SPI_SCK",
+        "role": "interface",
+        "external": true,
+        "connected_pins": [
+          "SCL / SPI SLK"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "TIMEPULSE",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "TIMEPULSE"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "UART2_RXD",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "RXD2"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "UART2_TXD",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "TXD2"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "USB_DM",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "USB_DM"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "USB_DP",
+        "role": "other",
+        "external": false,
+        "connected_pins": [
+          "USB_DP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "VCC_RF",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "VCC_RF"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_BCKP",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "V_BCKP"
+        ],
+        "notes": ""
+      },
+      {
+        "name": "V_USB",
+        "role": "power",
+        "external": true,
+        "connected_pins": [
+          "V_USB"
+        ],
+        "notes": ""
+      }
+    ],
+    "source_chunks": [
+      {
+        "chunk_id": "S1P11C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 11,
+        "text": "NEO-F9P-15B - Data sheet Pin no. Name I/ODescription 15RTK_STAT ORTK status: 0 = RTK/PPP-RTK \ufb01xed blinking = receiving and using corrections 1 = no corrections 16TXD2 OUART 2 TXD 17 RXD2 IUART 2 RXD 18SDA / SPI CS_N I/OI2C data if D_SEL = VCC (or open); SPI chip select if D_SEL = GND 19 SCL / SPI SLK I/OI2C clock if D_SEL = VCC (or open); SPI clock if D_SEL = GND 20TXD / SPI SDO OUART1 output if D_SEL = VCC (or open); SPI SDO if D_SEL = GND 21 RXD / SPI SDI IUART1 input if D_SEL = VCC (or open); SPI SDI if D_SEL = GND 22V_BCKP IBackup voltage supply 23VCC ISupply voltage 24 GND IGround Table 11: NEO-F9P-15B pin assignment 3.2 Pin states Table 12 de\ufb01nes the state of some NEO-F9P-15B pins in di\ufb00erent modes. The functions for the NEO-F9P-15B pins are as de\ufb01ned in the default con\ufb01guration. Pin no.Default function Continuous mode Software backup mode Safeboot mode D_SEL = open Input pull-up Input pull-up Input pull-up 2D_SEL = GND High-Z Input pull-down High-Z RXD Input pull-up Input pull-up Input pull-up 21SPI_SDO High-Z Input pull-up Input pull-up TXD Output Input pull-up Output 20SPI_SDI Output13 Input pull-up Output13 SDA Input pull-up / Output Input pull-up Input pull-up / Output 18SPI_CS_N High-Z High-Z High-Z SCL Input pull-up Input pull-up Input pull-up 19SPI_SLK High-Z High-Z High-Z 3 TIMEPULSE Output Input pull-up Output low 14 LNA_EN Output Input pull-down Input pull-up 15 RTK_STAT Output Input pull-up Input pull-up 1 SAFEBOOT_N Input pull-up Input pull-up Input pull-up 4 EXTINT Input pull-up Input pull-up Input pull-up 17 RXD2 Input pull-up Input pull-up Input pull-up 16 TXD2 Output Input pull-up Output 8 RESET_N Input pull-up Input pull-up Input pull-up Table 12: NEO-F9P-15B pin states in di\ufb00erent operational modes 13 If SPI CS = low. Otherwise it is con\ufb01gured as an input pull-up. UBX-22021920 - R04 3 Pin de\ufb01nition Page 11 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S8P11C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+        "title": "Linked reference from EVK-F9P evaluation kit",
+        "page": 11,
+        "text": "EVK -F9P -01 - User guide UBX -22038408 - R03 Device description Page 11 of 28 C1- Public \u2022 SPI \u2013 In this selection the EVK operates only with the SPI interface. The RS232 (DB9) port is switched off. 4.3.7 Pin header This 14 -pin test-connector provides additional functionality to the EVK, allowing access to the interface pins and an ability to measure the current used by the ZED -F9P module. All pins are ESD protected. Pin no. Name I/O Level Description 14 V5_IN I 4.75 - 5.25 V Power input \u2013 can be used instead of USB 13 GND - - Common ground pin 12 CUR GPS1 O 5.0 V Supply current measurement (Module current consumption) node 1. Current is measured over a 1 \u2126 1% tolerance resistor between pins 12 and 11. Pin 12 (CUR_GPS1) is at higher potential. 11 CUR GPS2 O 5.0 V Supply current measurement (Module current consumption) node 2. See description for pin 12. 10 TxD 2 O - Correction UART output 9 RxD 2 I Correction UART input 8 TIMEPULSE 1 O 3.3V Output signal for the timepulse1 signal 7 EXTINT I 3.3 V External interrupt or time -mark input ( connected directly to the module pins) 6 RTK stat us O 3.3 V RTK status: 0 = RTK/PPP -RTK fixed blinking = receiving and using corrections 1 = no corrections 5 SDA / CS I/O 3.3 V If slide switch on I2C, the DDC interface is selected; Function: data input / output If slide switch on SPI, the SPI interface is selected; chip select input \u2013 LOW ACTIVE 4 SCL / CLK I/O 3.3 V Clock input / output (signals are pulled up and then straight to the m odule) 3 TxD / MISO O 3.3 V If slide switch on I2C, the DDC interface is selected / UART TxD (3.3 V level) If slide switch on SPI, the SPI interface is selected; Master in Slave out (MISO) 2 RxD / MOSI I 3.3 V If slide switch on I2C, the DDC interface is selected / UART RxD (3.3V Level) If slide switch on SPI, the SPI interface is selected; Master out Slave in (MOSI) 1 TX_READY O 3.3 V TX_Buffer full and ready for TX of data Table 5: Connector pin description for EVK -F9P (pins numbered from right to left on the front panel) For accurate measurements, use a max 1 m cable . Figure 3 shows an example of a power supply connected t o the test connector by using standard adapter cables from the manufacturer Hirschmann. Table 5 shows an example for overall current measurement. When connecting the 3.3 V digital interfaces RS232, SPI and DDC to you r application, use a max 25 cm cable. Figure 3: Example 5V DC power supply V5_IN GND GND V5_IN Hirschmann Part Nr.: 934160100"
+      },
+      {
+        "chunk_id": "S8P10C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+        "title": "Linked reference from EVK-F9P evaluation kit",
+        "page": 10,
+        "text": "EVK -F9P -01 - User guide UBX -22038408 - R03 Device description Page 10 of 28 C1- Public can utilize the USB interface to connect directly to UART1 or UART2, see the Interface description [2 ] for configuration details. 4.3.3 DB9 connector (RS232) The evaluation unit includes an RS232 port for serial communication that is compatible with PC serial ports. The D B9 connector can only have the UART1 input if the user pr efers not to use UART1 from USB . Connect using a straight RS232 serial cable with male and female connectors to the port on your PC. The maximum cable length is 3 meters . To configure the RS232 port, use the CFG -UART1 command in the u -center application. The maximum operating baud rate is 230400 Baud . If you are using a USB to RS232 adaptor cable, you can connect it directly to the evaluation kit RS232 port. The 9 -pin D-SUB female connector is assigned as listed in Table 4 and diagram from schematic : Pin Nr. Assignment 1 Timepulse 1 output (RS232 levels) 2 TXD, GNSS Transmit Data, serial data to DTE 3 RXD, GNSS Receive Data, serial data from DTE 4 Optional time -mark input (RS232 levels) using EXTINT0 (internal jumper J6 fitment required) 5 GND 6 Timepulse 1 output (RS232 levels) 7 Not connected 8, 9 not connected Table 4: SUB -DB9 connector pin description for EVK -F9P 4.3.4 RST button The RST button on the front panel resets the unit. \u26a0 CAUTION Risk of data loss. The RESET pin deletes all information from the volatile memory and triggers a cold start. Reset the system only as a recovery option. 4.3.5 Safe boot button This is used to set the unit in safe boot mode. In this mode , the receiver executes only minimal functionality, such as updating new firmware into the flash memory. To set the receiver in safe boot mode : 1. Press the BOOT button and keep ho lding it down. 2. Press the RST button . 3. Release the RST button . 4. Release the BOOT button . 5. If the UART interface is used, a training sequence must be sent to the receiver. The training sequence is a transmission of 0x55 0x55 at a baud rate of 9600 b aud. Wait for at least 100 milliseconds before the interface is ready to accept commands. 4.3.6 Slide switch Use the slide switch on the front panel to choose between I2C (and UART) and SPI communication ports. You must reset the unit by pressing the RST button when the slide switch has been changed. \u2022 I2C \u2013 In this selection the EVK operates with the UART (RS232 DB9 \u2013 rear panel or the 3.3 V level TxD (MISO), RxD (MOSI) at the front panel ). Also, the communication via 3.3 V DDC interface (I2C) is selected."
+      },
+      {
+        "chunk_id": "S8P7C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+        "title": "Linked reference from EVK-F9P evaluation kit",
+        "page": 7,
+        "text": "EVK -F9P -01 - User guide UBX -22038408 - R03 Getting started Page 7 of 28 C1- Public 3 Getting started 3.1 Installing u-center software u-center, the u -blox interactive evaluation software tool is required for configuration, testing, visualization , and data analysis of u -blox GNSS receivers as well as EVKs. The provided user guide together with the evaluation tool provide useful assistance during all phases of a system integration project. 1. Dow nload the u-center software from http://www.u -blox.com/product/u -center . 2. Once the zipped installer file is downloaded, unzip it and double -click the exe file. The u -center software will be installed on your system and placed under the \u201cu -blox\u201d folder in th e \u201cStart > Programs\u201d menu . You can al ternatively choose the destination folder for the program installation. 3. After a successful installation, start the u -center from the Start menu (All Programs > u -blox > u-center > u -center). For more information on using u -center, refer to the u -center User guide [ 4]. The required Microsoft CDC -ACM driver for Windows 10 USB interface is available from the Microsoft Windows Update service. The Windows system driver se arch mechanism will download and install the USB driver automatically from the Microsoft Windows Update service. To evaluate with the Windows 7 and 8 operating systems, the u -blox GNSS standard driver (x64bit) is needed which can be found in the u -center p ackage. 3.2 Installing h ardware 4. Before connecting the interface cable to the EVK, select the interface that you are using for the connection by sliding the interface switch to the correct position: \u2022 USB -C: Connect via USB -C connector \u2022 UART: Connect via RS -232. Set the slide switch to I2C. \u2022 SPI / I2C compliant DDC: Connect the corresponding pins (see Table 5 for pin description). Set the slide switch accordingly to SPI or I2C. \u26a0 CAUTION Changing the inte rface switch position while the EVK is powered on may damage the GNSS receiver chip. Power off the EVK before changing the interface switch setting. 1. Power the device on, either via USB on the back or through the V5_IN input on the front of the EVK. 2. Connect the GNSS antenna to the RF IN SMA jack and place the antenna in a location with good sky view. 3. Start the u -center GNSS Evaluation Software and select the corresponding COM port and baud rate. \u261e Refer to the u-center User Guide [4] for more information."
+      },
+      {
+        "chunk_id": "S1P14C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 14,
+        "text": "NEO-F9P-15B - Data sheet 5 Communications interfaces The NEO-F9P-15B has several communications interfaces20, including UART, SPI, I2C and USB. All the inputs have internal pull-up resistors in normal operation and can be left open if not used. All the PIOs are supplied by VCC, therefore all the voltage levels of the PIO pins are related to VCC supply voltage. 5.1 UART The UART interfaces support con\ufb01gurable baud rates. For further information, see the Integration manual [ 1]. Hardware \ufb02ow control is not supported. The UART1 is enabled if D_SEL pin of the module is left open or \"high\". Symbol Parameter Min Max Unit Ru Baud rate 9600 921600 bit/s \u0394Tx Tx baud rate accuracy -1% +1% - \u0394Rx Rx baud rate tolerance -2.5% +2.5% - Table 16: NEO-F9P-15B UART speci\ufb01cations 5.2 SPI The SPI interface is disabled by default. The SPI interface shares pins with UART and I2C and can be selected by setting D_SEL = 0. The SPI interface can be operated in peripheral mode only. The maximum transfer rate using SPI is 125 kB/s and the maximum SPI clock frequency is 5.5 MHz. The SPI timing parameters for peripheral operation are de\ufb01ned in Figure 3. Default SPI con\ufb01guration is CPOL = 0 and CPHA = 0. Figure 3: NEO-F9P-15B SPI speci\ufb01cation mode 1: CPHA=0 SCK = 5.33 MHz 20 The signal names and related terms have been replaced with new terminology in this document. UBX-22021920 - R04 5 Communications interfaces Page 14 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P16C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 16,
+        "text": "NEO-F9P-15B - Data sheet Figure 4: NEO-F9P-15B I2C peripheral speci\ufb01cation I2C Fast-mode Symbol Parameter Min Max Unit fSCL SCL clock frequency 0 400 kHz tHD;STA Hold time (repeated) START condition 0.6 - \u00b5s tLOW Low period of the SCL clock 1.3 - \u00b5s tHIGH High period of the SCL clock 0.6 - \u00b5s tSU;STA Setup time for a repeated START condition 0.6 - \u00b5s tHD;DAT Data hold time0 21- 22 \u00b5s tSU;DAT Data setup time100 23 ns tr Rise time of both SDA and SCL signals - 300 (for C = 400pF) ns tf Fall time of both SDA and SCL signals - 300 (for C = 400pF) ns tSU;STO Setup time for STOP condition 0.6 - \u00b5s tBUF Bus-free time between a STOP and START condition1.3 - \u00b5s tVD;DAT Data valid time -0.9 22 \u00b5s tVD;ACK Data valid acknowledge time -0.9 22 \u00b5s VnL Noise margin at the low level 0.1 VCC - V 21 External device must provide a hold time of at least one transition time (max 300 ns) for the SDA signal (with respect to the min Vih of the SCL signal) to bridge the unde\ufb01ned region of the falling edge of SCL. 22The maximum t HD;DAT must be less than the maximum tVD;DAT or t VD;ACK with a maximum of 0.9 \u00b5s by a transition time. This maximum must only be met if the device does not stretch the LOW period (tLOW) of the SCL signal. If the clock stretches the SCL, the data must be valid by the set-up time before it releases the clock. 23 When the I2C peripheral is stretching the clock, the tSU;DAT of the \ufb01rst bit of the next byte is 62.5 ns. UBX-22021920 - R04 5 Communications interfaces Page 16 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P10C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 10,
+        "text": "NEO-F9P-15B - Data sheet 3 Pin de\ufb01nition 3.1 Pin assignment The pin assignment of the NEO-F9P-15B module is shown in Figure 2. The de\ufb01ned con\ufb01guration of the PIOs is listed in Table 11. Figure 2: NEO-F9P-15B pin assignment Pin no. Name I/O Description 1 SAFEBOOT_N I SAFEBOOT_N (used for FW updates and recon\ufb01guration, leave open) 2 D_SEL I Interface select (open or VCC = UART + I2C; GND = SPI) 3 TIMEPULSE O TIMEPULSE (1 PPS) 4 EXTINT I EXTINT (PIO 7) 5 USB_DM I/O USB data (DM) 6 USB_DP I/O USB data (DP) 7 V_USB I USB supply 8 RESET_N I RESET (active low) 9 VCC_RF O Voltage for external LNA 10 GND I Ground 11 RF_IN I GNSS signal input 12 GND I Ground 13 GND I Ground 14 LNA_EN O Antenna/LNA control UBX-22021920 - R04 3 Pin de\ufb01nition Page 10 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P13C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 13,
+        "text": "NEO-F9P-15B - Data sheet Parameter Symbol MinTypical MaxUnitsCondition DC current through any digital I/O pin (except supplies)Ipin 5 mA Pull-up resistance for SCL, SDA Rpu 7 15 30 k\u03a9 Pull-up resistance for D_SEL, RXD, TXD, SAFEBOOT_N, EXTINTRpu 30 75 130 k\u03a9 Pull-up resistance for RESET_N Rpu 7 10 13 k\u03a9 Voltage at USB pinsV_USBIO 0 V_USB V VCC_RF voltage VCC_RFVCC \u2013 0.1 V VCC_RF output currentICC_RF 50 mA Receiver chain noise \ufb01gure18NFtot 3 dB External gain (at RF_IN)Ext_gain 0 30 dB Operating temperatureTopr \u201340 +25 +85\u00b0C Table 14: Operating conditions 4.3 Indicative power requirements Table 15 provides examples of typical current requirements when using a cold start command. The given values are total system supply current for a possible application including RF and baseband sections. All values in Table 15 have been measured at 25 \u00b0C ambient temperature. The actual power requirements vary depending on the FW version used, external circuitry, number of satellites tracked, signal strength, type and time of start, duration, and conditions of test. Symbol Parameter Conditions GPS+GLO +GAL+BDSGPS Unit IPEAK Peak current Acquisition 135 125 mA IVCC19 VCC current Acquisition 98 80 mA IVCC19 VCC current Tracking 95 78 mA Table 15: Currents to calculate the indicative power requirements 18 Only valid for GPS 19 Simulated GNSS signal UBX-22021920 - R04 4 Electrical speci\ufb01cations Page 13 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P17C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 17,
+        "text": "NEO-F9P-15B - Data sheet I2C Fast-mode SymbolParameter Min Max Unit VnHNoise margin at the high level0.2 VCC - V Table 21: NEO-F9P-15B I2C peripheral timings and speci\ufb01cations The I2C interface is only available with the UART default mode. If the SPI interface is selected by using D_SEL = 0, the I2C interface is not available. 5.4 USB The USB 2.0 FS (full speed, 12 Mbit/s) interface can be used for host communication. Due to the hardware implementation, it may not be possible to certify the USB interface. The V_USB pin supplies the USB interface. 5.5 Default interface settings Interface Settings UART1 output 38400 baud, 8 bits, no parity bit, 1 stop bit. NMEA protocol with GGA, GLL, GSA, GSV, RMC, VTG, TXT messages are output by default. UBX and RTCM 3.3 protocols are enabled by default but no output messages are enabled by default. UART1 input 38400 baud, 8 bits, no parity bit, 1 stop bit. UBX, NMEA and RTCM 3.3 input protocols are enabled by default. SPARTN input protocol is enabled by default. UART2 output 38400 baud, 8 bits, no parity bit, 1 stop bit. UBX protocol is disabled by default. RTCM 3.3 protocol is enabled by default but no output messages are enabled by default. NMEA protocol is disabled by default. UART2 input 38400 baud, 8 bits, no parity bit, 1 stop bit. UBX protocol is enabled by default. RTCM 3.3 protocol is enabled by default. SPARTN protocol is enabled by default. NMEA protocol is disabled by default. USB Default messages activated as in UART1. Input/output protocols available as in UART1. I2C Available for communication in the Fast-mode with an external host CPU in peripheral mode only. Default messages activated as in UART1. Input/output protocols available as in UART1. Maximum bit rate 400 kb/s. SPI Allow communication to a host CPU, operated in peripheral mode only. Default messages activated as in UART1. Input/output protocols available as in UART1. SPI is not available unless D_SEL pin is set to low (see section D_SEL interface in Integration manual [1]). Table 22: Default interface settings Refer to the applicable Interface description [2] for information about further settings. By default, NEO-F9P-15B outputs NMEA messages that include satellite data for all GNSS bands being received. This results in a high NMEA output load for each navigation period. Make sure the UART baud rate used is su\ufb03cient for the selected navigation rate and the number of GNSS signals being received. Do not use UART2 as the only one interface to the host. Not all UBX functionality is available on UART2, such as \ufb01rmware upgrade, safeboot or backup modes functionalities. No start-up boot screen is sent out from UART2. UBX-22021920 - R04 5 Communications interfaces Page 17 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P12C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 12,
+        "text": "NEO-F9P-15B - Data sheet 4 Electrical speci\ufb01cations 4.1 Absolute maximum ratings CAUTION. Risk of device damage. Exceeding the absolute maximum ratings may a\ufb00ect the lifetime and reliability of the device or permanently damage it. Do not exceed the absolute maximum ratings. This product is not protected against overvoltage or reversed voltages. Use appropriate protection to avoid device damage from voltage spikes exceeding the speci\ufb01ed boundaries. Parameter Symbol Condition Min Max Units Power supply voltage VCC \u20130.5 3.6 V Voltage ramp on VCC14 20 8000 \u00b5s/V Backup battery voltage V_BCKP \u20130.5 3.6 V Voltage ramp on V_BCKP14 20 \u00b5s/V Input pin voltage Vin VCC \u2264 3.1 V \u20130.5 VCC + 0.5 V VCC > 3.1 V \u20130.5 3.6 V VCC_RF output current ICC_RF 300 mA Supply voltage USB V_USB \u20130.5 3.6 V USB signals USB_DM, USB_DP\u20130.5 V_USB + 0.5V Input power at RF_IN Pr\ufb01n source impedance = 50 \u2126, continuous wave10 dBm Storage temperature Tstg \u201340 +85 \u00b0C Table 13: Absolute maximum ratings 4.2 Operating conditions Extreme operating temperatures can signi\ufb01cantly impact the speci\ufb01ed values. If an application operates near the min or max temperature limits, ensure the speci\ufb01ed values are not exceeded. Parameter Symbol Min Typical Max Units Condition Power supply voltage VCC 2.7 3.0 3.6 V Backup battery voltage V_BCKP 1.65 3.6 V Backup battery current15, 16 I_BCKP 45 \u00b5A V_BCKP = 3 V, VCC = 0 V SW backup current16 I_SWBCKP 0.8 mA Input pin voltage range Vin 0 VCC V Digital IO pin low level input voltage Vil 0.4 V Digital IO pin high level input voltage Vih 0.8 * VCC V Digital IO pin low level output voltageVol 0.4 VIol = 2 mA17 Digital IO pin high level output voltageVoh VCC \u2013 0.4 VIoh = 2 mA17 14 Exceeding the ramp speed may permanently damage the device 15 To measure the I_BCKP the receiver should \ufb01rst be switched on, i.e. VCC and V_BCKP is available. Then set VCC to 0 V while the V_BCKP remains available. Afterward measure the current consumption at the V_BCKP. 16 The value has been characterized at 25 \u00b0C ambient temperature. 17 TIMEPULSE has 4 mA current drive/sink capability UBX-22021920 - R04 4 Electrical speci\ufb01cations Page 12 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P15C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 15,
+        "text": "NEO-F9P-15B - Data sheet SymbolParameter Min Max Unit 1 CS deassertion hold time 23 - ns 2Chip select time (CS to SCK) 20 - ns 3SCK rise/fall time - 7 ns 4SCK high time 24 - ns 5SCK low time 24 - ns 6Chip deselect time (SCK falling to CS) 30 - ns 7Chip deselect time (CS to SCK) 30 - ns 9CS high time 32 - ns 10SDI transition time - 7 ns 11 SDI setup time 16 - ns 12 SDI hold time 24 - ns Table 17: SPI peripheral input timing parameters 1 - 12 SymbolParameter Min Max Unit ASDO data valid time (CS) 12 40 ns BSDO data valid time (SCK), weak driver mode 15 40 ns CSDO data hold time 100 140 ns DSDO rise/fall time, weak driver mode 0 5 ns ESDO data disable lag time 15 35 ns Table 18: SPI peripheral timing parameters A - E, 2 pF load capacitance SymbolParameter Min Max Unit ASDO data valid time (CS) 16 55 ns BSDO data valid time (SCK), weak driver mode 20 55 ns CSDO data hold time 100 150 ns DSDO rise/fall time, weak driver mode 3 20 ns ESDO data disable lag time 15 35 ns Table 19: SPI peripheral timing parameters A - E, 20 pF load capacitance SymbolParameter Min Max Unit ASDO data valid time (CS) 26 85 ns BSDO data valid time (SCK), weak driver mode 30 85 ns CSDO data hold time 110 160 ns DSDO rise/fall time, weak driver mode 13 45 ns ESDO data disable lag time 15 35 ns Table 20: SPI peripheral timing parameters A - E, 60 pF load capacitance 5.3 I2C An I2C interface is available for communication with an external host CPU in I2C Fast-mode. Backwards compatibility with Standard-mode I2C bus operation is not supported. The interface can be operated only in peripheral mode with a maximum bit rate of 400 kbit/s. The interface can make use of clock stretching by holding the SCL line LOW to pause a transaction. In this case, the bit transfer rate is reduced. The maximum clock stretching time is 20 ms. UBX-22021920 - R04 5 Communications interfaces Page 15 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S8P24C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+        "title": "Linked reference from EVK-F9P evaluation kit",
+        "page": 24,
+        "text": "EVK -F9P -01 - User guide UBX -22038408 - R03 Troubleshooting Page 24 of 28 C1- Public 11 Troubleshooting The EVK -F9P loses RF input after a firmware update To prevent this issue, review the configuration keys listed below and change their status to \"true\" if they are not already set that way. \u2022 CFG -HW -ANT_CFG_VOLTCTRL \u2022 CFG -HW -ANT_CFG_SHORTDET \u2022 CFG -HW -ANT_CFG_OPENDET \u2022 CFG -HW -ANT_CFG_PWRDOWN \u2022 CFG -HW -ANT_CFG_RECOVER see the Interface description [2 ] for configura tion details. My application (e.g. , u-center) does not receive anything \u2022 Check that the EVK is in clear sky view or that the antenna cable is connected . \u2022 Check that the slide switch on the front panel of the EVK is set to the communication port that user is using . \u2022 Check the LED is on the front panel of the EVK. A solid blue LED indicates the EVK is powered on. If it is not on, connect the power source either via USB on the back or through the V5_IN input on the front of the EVK. My application (e.g. , u-center ) does not receive all messages When using UART, make sure the baud rate is sufficient. If the baud rate is insufficient, GNSS receivers based on u -blox F9 GNSS technology will skip excessive messages. Some serial port cards/adapters (i.e., USB to RS232 converter) frequently generate errors. If a communication error occurs while u -center receives a message, the message will be discarded. My application (e.g. , u-center) loses the connection to the GNSS receiver u-blox F9 positioning technolog y and u -center both have an autobauding feature. If frequent communication errors occur (e.g. , due to problems with the serial port), the connection may be lost. This happens because u -center and the GNSS receiver both autonomously try to adjust the baud r ate. Do not enable the u -center autobauding if the GNSS receiver has the autobauding flag enabled. The COM port does not send any messages Be sure that the slide switch at the front panel is set to I2C and not SPI. In the SPI mode , the RS232 pins on the DB9 connector are switched off and the RxD and TxD output at the front panel are used for SPI (MISO, MOSI). \u26a0 CAUTION Changing the interface sw itch position while the EVK is powered on may damage the GNSS receiver chip. Power off the EVK before changing the interface switch setting Some COM ports are not shown in the port list of my application (e.g. , u-center) Only the COM ports that are available on your computer will show up in the COM port drop -down list. If a COM Port is gray, another application running on the computer is using it. The position is off by a few dozen meters u-blox F9 GNSS technology starts up with the WGS84 standard GNSS datum. If your application expects a different datum, you will most likely find the positions to be off by a few dozen meters. Do not forget to check the calibration of u -center map files."
+      },
+      {
+        "chunk_id": "S1P4C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 4,
+        "text": "NEO-F9P-15B - Data sheet 1 Functional description 1.1 Overview The NEO-F9P-15B positioning module features the u-blox F9 receiver platform, which provides multi-band GNSS to high-volume industrial applications. NEO-F9P-15B has integrated u-blox multi- band RTK and PPP-RTK1 technologies for centimeter-level accuracy. The module enables precise navigation and automation of moving machinery in industrial and consumer-grade products in a compact surface-mounted form factor of only 16.0 x 12.2 x 3.4 mm. In this document, RTK refers to an OSR-based solution (using RTCM corrections), while PPP-RTK refers to an SSR-based solution (using SPARTN or CLAS corrections). At the time of writing, the GPS L5 signals remain pre-operational and are set as unhealthy until su\ufb03cient monitoring capability is established. This is an operational issue concerning the satellites / space segment and not a limitation of u-blox products. It is the responsibility of the designer to decide whether the application may use the GPS L5 signals and make the tradeo\ufb00 between performance and application suitability. Alternatively, the designer may assess the performance in the future when the L5 signals are deemed healthy. Both of these goals can be achieved by con\ufb01guring the receiver to apply the health status of L1 signals to L5 signals. For details on u-blox GPS L5 con\ufb01guration, see the Application note [5] for u-blox GPS L5 con\ufb01guration. 1.2 Performance Parameter Speci\ufb01cation Receiver type Multi-band GNSS high precision receiver Accuracy of time pulse signal RMS 99%30 ns 60 ns Frequency of time pulse signal 0.25 Hz to 10 MHz (con\ufb01gurable) Operational limits2 Dynamics Altitude Velocity\u2264 4 g 80,000 m 500 m/s Velocity accuracy3 0.05 m/s Dynamic heading accuracy3 0.3 deg Table 1: NEO-F9P-15B speci\ufb01cations GNSS4 GPS+GLO+GAL+BDSGPS+BDS+GALGPS+GALGPS+GLOGPS+BDSGPS Acquisition5Cold start Hot start Aided start627 s 3 s 4 s28 s 3 s 4 s29 s 3 s 4 s30 s 3 s 4 s27 s 3 s 4 s37 s 3 s 5 s 1PPP-RTK position accuracy depends on the quality of the SSR service used, high-quality SSR services can perform similarly to RTK 2Assuming Airborne 4 g platform 350% at 30 m/s for dynamic operation 4GPS used in combination with QZSS and SBAS 5Commanded starts. All satellites at -130 dBm. Measured at room temperature. 6Dependent on the speed and latency of the aiding data connection, commanded starts UBX-22021920 - R04 1 Functional description Page 4 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P2C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 2,
+        "text": "NEO-F9P-15B - Data sheet Document information Title NEO-F9P-15B Subtitle High precision GNSS module Document type Data sheet Document number UBX-22021920 Revision and date R04 06-Jun-2024 Disclosure restriction C1-Public Product statusCorresponding content statusFunctional sampleDraft For functional testing. Revised and supplementary data will be published later.In development / prototypeObjective speci\ufb01cation Target values. Revised and supplementary data will be published later. Engineering sampleAdvance information Data based on early testing. Revised and supplementary data will be published later.Initial productionEarly production information Data from product veri\ufb01cation. Revised and supplementary data may be published later.Mass production / End of lifeProduction information Document contains the \ufb01nal product speci\ufb01cation. This document applies to the following products: Product name Type number FW version IN/PCN reference Product status NEO-F9P NEO-F9P-15B-00 HPG L1L5 1.40 UBXDOC-963802114-12773 Mass production u-blox or third parties may hold intellectual property rights in the products, names, logos and designs included in this document. Copying, reproduction, or modi\ufb01cation of this document or any part thereof is only permitted with the express written permission of u-blox. Disclosure to third parties is permitted for clearly public documents only. The information contained herein is provided \"as is\" and u-blox assumes no liability for its use. No warranty, either express or implied, is given, including but not limited to, with respect to the accuracy, correctness, reliability and \ufb01tness for a particular purpose of the information. This document may be revised by u-blox at any time without notice. For the most recent documents, visit www.u-blox.com. Copyright \u00a9 2024, u-blox AG. UBX-22021920 - R04 Page 2 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P3C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 3,
+        "text": "NEO-F9P-15B - Data sheet Contents 1 Functional description.........................................................................................................4 1.1 Overview....................................................................................................................................................4 1.2 Performance.............................................................................................................................................4 1.3 Supported GNSS constellations..........................................................................................................6 1.4 Supported GNSS augmentation systems.........................................................................................6 1.4.1 Quasi-Zenith Satellite System (QZSS)......................................................................................6 1.4.2 Satellite-based augmentation system (SBAS)........................................................................6 1.4.3 Di\ufb00erential GNSS (DGNSS)..........................................................................................................6 1.4.4 Centimeter level augmentation service (CLAS).......................................................................8 1.5 Broadcast navigation data and satellite signal measurements...................................................8 1.5.1 Carrier-phase measurements......................................................................................................8 1.6 Supported protocols...............................................................................................................................8 2 System description...............................................................................................................9 2.1 Block diagram..........................................................................................................................................9 3 Pin de\ufb01nition.........................................................................................................................10 3.1 Pin assignment......................................................................................................................................10 3.2 Pin states................................................................................................................................................11 4 Electrical speci\ufb01cations....................................................................................................12 4.1 Absolute maximum ratings................................................................................................................12 4.2 Operating conditions............................................................................................................................12 4.3 Indicative power requirements...........................................................................................................13 5 Communications"
+      },
+      {
+        "chunk_id": "S1P7C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 7,
+        "text": "NEO-F9P-15B - Data sheet Operating as a rover, NEO-F9P-15B can decode the following RTCM 3.3 messages: Message type Description RTCM 1005 Stationary RTK reference station ARP RTCM 1006 Stationary RTK reference station ARP with antenna height RTCM 1007 Antenna descriptor RTCM 1033 Receiver and antenna description RTCM 1074 GPS MSM4 RTCM 1075 GPS MSM5 RTCM 1077 GPS MSM7 RTCM 1084 GLONASS MSM4 RTCM 1085 GLONASS MSM5 RTCM 1087 GLONASS MSM7 RTCM 1094 Galileo MSM4 RTCM 1095 Galileo MSM5 RTCM 1097 Galileo MSM7 RTCM 1124 BeiDou MSM4 RTCM 1125 BeiDou MSM5 RTCM 1127 BeiDou MSM7 RTCM 1230 GLONASS code-phase biases Table 7: Supported input RTCM 3.3 messages Operating as a base station, NEO-F9P-15B can generate the following RTCM 3.3 output messages: Message type Description RTCM 1005 Stationary RTK reference station ARP RTCM 1074 GPS MSM4 RTCM 1077 GPS MSM7 RTCM 1084 GLONASS MSM4 RTCM 1087 GLONASS MSM7 RTCM 1094 Galileo MSM4 RTCM 1097 Galileo MSM7 RTCM 1124 BeiDou MSM4 RTCM 1127 BeiDou MSM7 RTCM 1230 GLONASS code-phase biases Table 8: Supported output RTCM 3.3 messages Operating as a rover, NEO-F9P-15B can decode the following SPARTN 2.0.1 messages: Message type-subtype Description SM 0-0 GPS orbit, clock, bias (OCB) SM 0-1 GLONASS orbit, clock, bias (OCB) SM 0-2 Galileo orbit, clock, bias (OCB) SM 0-3 BeiDou orbit, clock, bias (OCB) SM 1-0 GPS high-precision atmosphere correction (HPAC) SM 1-1 GLONASS high-precision atmosphere correction (HPAC) SM 1-2 Galileo high-precision atmosphere correction (HPAC) SM 1-3 BeiDou high-precision atmosphere correction (HPAC) UBX-22021920 - R04 1 Functional description Page 7 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S8P6C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+        "title": "Linked reference from EVK-F9P evaluation kit",
+        "page": 6,
+        "text": "EVK -F9P -01 - User guide UBX -22038408 - R03 Specifications Page 6 of 28 C1- Public 2 Specifications Parameter Specification Serial interfaces 1 USB Type -C 1 RS232, max baud rate 230,400 Baud DB9 +/ - 12 V level 14 pin \u2013 3.3 V logic 1 DDC (I2C compatible) max 400 kHz 1 SPI \u2013 clock signal max 5,5 MHz \u2013 SPI DATA max 1 Mbit/s Timing interfaces 1 timepulse output through 14 -pin connector 1 timepulse LED 1 timepulse output through RS232 1 external interrupt input Dimensions 105 x 64 x 26 mm Power supply 5 V via USB or powered via external power supply pin 14 (V5_IN) and pin 13 (GND) Normal operating temperature -40 \u00b0C to + 65 \u00b0C Table 2: EVK -F9P specifications 2.1 Safety precautions EVK -F9P must be supplied by a PS1 class limited power source. See section 6.2.2.4 of IEC 62368- 1:2018 [ 5] for more information on the PS1 class. In addition to a limited power source, only ES1 class circuits are to be connected to the EVK -F9P , including interfaces and antennas. See section 5.2.1.1 of IEC 62368 -1:2018 [ 5] for more information on the ES1 class. 2.1.1 Certifications The EVK -F9P is designed to comply with the essential requirements and other relevant provisions of Radio Equipment Directive (RED) 2014/53/EU. The EVK -F9P complies with the Directive 2011/65/EU (EU RoHS 2) and its amendment Directive (EU) 2015/863 (EU RoHS 3). Declaration of Conformity (DoC) is available on the u-blox website ."
+      },
+      {
+        "chunk_id": "S9P1C1",
+        "source_url": "https://www.u-blox.com/sites/default/files/documents/EVK-F9P_ProductSummary_UBX-22021832.pdf",
+        "title": "Linked reference from EVK-F9P evaluation kit",
+        "page": 1,
+        "text": "EVK-F9P u-blox F9P high precision GNSS evaluation kit For evaluation of u-blox F9P module high precision features \u2022 USB (Type-C connector) available for power supply and data transfer \u2022 Coin battery (not included) for backup power supply \u2022 14-pin front connector to access all interfaces Kit includes \u2022 EVK-F9P unit \u2022 Type-C USB cable \u2022 Antenna ground plane \u2022 Breakout cable for 14-pin connector \u2022 Active GNSS antenna with 3 m cable \u2022 Promotional PointPerfect service trial Features \u2022 Type-C USB cable for easy connection to PC \u2022 14-pin connector for access to interface pins \u2022 9-pin D-SUB female connector for standard RS232 interface \u2022 Switch to select between the I2C (and RS232) and SPI communications interfaces \u2022 LED to indicate power supply and GNSS operation \u2022 Reset (RST) button to restart the unit \u2022 SMA connector for connection to antenna or simulator Documentation Visit www.u-blox.com/product/evk-f9p to find related documentation. Product variants EVK-F9P-01 For evaluation of ZED-F9P-0xB L1/L2 high precision GNSS module EVK-F9P-16 For evaluation of NEO-F9P-1xB or ZED-F9P-1xB L1/L5 high precision GNSS modulesProduct summary\ue002 Experience u-blox GNSS performance in 6 simple steps Step 1 On a PC with a USB interface, download and install the u-center evaluation software: www.u-blox.com/product/u-center Step 2 Connect the evaluation kit to the PC with the USB cable. Microsoft USB driver for Windows 10 installs automatically via Windows Update. Step 3 Connect the antenna with ground plane. Step 4 Start the u-center evaluation tool. Step 5 Follow instructions to get promo code for correction service. Step 6 Select Receiver > NTRIP or MQTT client and enter promo code for credentials. Product description The EVK-F9P evaluation kit allows efficient evaluation of ZED-F9P , the u-blox F9 high precision positioning module. The ZED-F9P module provides multi-band GNSS positioning and comes with built-in RTK technology providing centimeter level accuracy to users. Augmentation services may be formatted as SPARTN 2.0 or RTCM 3.3. The evaluation kit relies on the networking capability of the computer running u-center to deliver correction services to the ZED-F9P . Refer to the EVK-F9P User Guide for further details. u-center is a powerful platform for the evaluation of u-blox GNSS receivers, with which data can be logged as well as visualized in real time. The u-center desktop application contains an NTRIP server/client so that EVK-F9P may serve as a RTCM base or rover. Two evaluation kits are needed to perform both base and rover functions. Alternatively, an MQTT client can stream PPP-RTK corrections using the PointPerfect service. 105 \u00d7 64 \u00d7 26 mm UBX-22021832 - R04 Legal Notice: u-blox or third parties may hold intellectual property rights in the products, names, logos and designs included in this document. Copying, reproduction, or modification of this document or any part thereof is only permitted with the express written permission of u-blox. Disclosure to th"
+      },
+      {
+        "chunk_id": "S1P3C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 3,
+        "text": "ing conditions............................................................................................................................12 4.3 Indicative power requirements...........................................................................................................13 5 Communications interfaces.............................................................................................14 5.1 UART........................................................................................................................................................14 5.2 SPI............................................................................................................................................................14 5.3 I2C............................................................................................................................................................15 5.4 USB ..........................................................................................................................................................17 5.5 Default interface settings...................................................................................................................17 6 Mechanical speci\ufb01cations ................................................................................................18 7 Quali\ufb01cations and approvals...........................................................................................20 8 Labeling and ordering information................................................................................21 8.1 Product labeling....................................................................................................................................21 8.2 Explanation of product codes............................................................................................................21 8.3 Ordering codes......................................................................................................................................22 Related documents................................................................................................................23 Revision history.......................................................................................................................24 UBX-22021920 - R04 Contents Page 3 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P23C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 23,
+        "text": "NEO-F9P-15B - Data sheet Related documents [1] NEO-F9P Integration manual UBX-22028362 [2] HPG L1L5 1.40 Interface description UBX-23006991 [3] Product packaging reference guide UBX-14001652 [4] Radio Resource LCS Protocol (RRLP), (3GPP TS 44.031 version 11.0.0 Release 11) [5] GPS L5 con\ufb01guration, Application note, UBX-21038688 For regular updates to u-blox documentation and to receive product change noti\ufb01cations please register on our homepage https://www.u-blox.com. UBX-22021920 - R04 Related documents Page 23 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P1C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 1,
+        "text": "Note! GPS L5 signals are pre-operational and not used by default. Refer to the Overview section for more information.\ue002 NEO-F9P-15B High precision GNSS module Professional grade Data sheet Abstract This data sheet describes the NEO-F9P high precision module with multi- band GNSS receiver. The module provides multi-band RTK with fast convergence times, reliable performance and easy integration of RTK for fast time-to-market. It has a high update rate for highly dynamic applications and centimeter-level accuracy in a small and energy-e\ufb03cient module. www.u-blox.com UBX-22021920 - R04 C1-Public"
+      },
+      {
+        "chunk_id": "S1P5C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 5,
+        "text": "NEO-F9P-15B - Data sheet GNSS4 GPS+GLO+GAL+BDSGPS+BDS+GALGPS+GALGPS+GLOGPS+BDSGPS Max navigation update rate7RTK PVT RAW7 Hz 7 Hz 10 Hz8 Hz 8 Hz 10 Hz14 Hz 14 Hz 20 Hz15 Hz 20 Hz 25 Hz10 Hz 11 Hz 20 Hz25 Hz 25 Hz 25 Hz Convergence time8RTK < 12 s < 12 s < 12 s < 12 s < 12 s < 30 s Table 2: NEO-F9P-15B performance in di\ufb00erent GNSS modes GNSS GPS+GLO+GAL+BDSGPS+BDS+GALGPS+GALGPS+GLOGPS+BDSGPS Horizontal position accuracy (CEP)PVT9 SBAS9 RTK101.5 m 1.0 m 0.01 m + 1 ppm1.5 m 1.0 m 0.01 m + 1 ppm1.5 m 1.0 m 0.01 m + 1 ppm1.5 m 1.0 m 0.01 m + 1 ppm1.5 m 1.0 m 0.01 m + 1 ppm1.5 m 1.0 m 0.01 m + 1 ppm Vertical position accuracy (Median)PVT9 SBAS9 RTK102.0 m 1.5 m 0.01 m + 1 ppm2.0 m 1.5 m 0.01 m + 1 ppm2.0 m 1.5 m 0.01 m + 1 ppm2.0 m 1.5 m 0.01 m + 1 ppm2.0 m 1.5 m 0.01 m + 1 ppm2.0 m 1.5 m 0.01 m + 1 ppm Table 3: NEO-F9P-15B position accuracy in di\ufb00erent GNSS modes GNSS4 GPS+GLO+GAL+BDSGPS+BDS+GAL Horizontal position accuracy (CEP)SPARTN CLAS< 0.10 m 0.04 m< 0.10 m 0.04 m Vertical position accuracy (Median)SPARTN CLAS< 0.20 m 0.08 m< 0.20 m 0.08 m Convergence time8SPARTN11 CLAS< 65 s < 90 s< 65 s < 90 s Table 4: NEO-F9P-15B performance for PPP-RTK in di\ufb00erent GNSS modes GNSS4 GPS+GLO+GAL+BDS Sensitivity12Tracking and nav. Reacquisition Cold start Hot start-167 dBm -160 dBm -148 dBm -157 dBm Table 5: NEO-F9P-15B sensitivity Performance values include the use of GPS L5 signals. Refer to the Application Note UBX-21038688 for u-blox GPS L5 con\ufb01guration details. 4GPS used in combination with QZSS and SBAS 7Measured with primary output only, secondary output disabled (default) 8Depends on atmospheric conditions, baseline length, GNSS antenna, multipath conditions, satellite visibility and geometry 924 hours static 10 Measured using 1 km baseline and patch antennas with good ground planes. Does not account for possible antenna phase center o\ufb00set errors. ppm limited to baselines up to 20 km. 11 Measured for IP data stream only with low-latency communication link 12 Demonstrated with a good external LNA. Measured at room temperature. UBX-22021920 - R04 1 Functional description Page 5 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P18C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 18,
+        "text": "NEO-F9P-15B - Data sheet 6 Mechanical speci\ufb01cations Figure 5: NEO-F9P-15B mechanical drawing Symbol Min (mm) Typical (mm) Max (mm) A 15.9 16.0 16.1 B 12.1 12.2 12.4 C 3.40 3.58 3.76 D 0.9 1.0 1.1 E 1.0 1.1 1.2 F 2.9 3.0 3.1 G 0.9 1.0 1.1 H1 1.22 1.32 1.42 H2 0.6 0.7 0.8 K 0.7 0.8 0.9 M 0.8 0.9 1.0 N 0.4 0.5 0.6 P* 0.0 - 0.5 There are 2 de-paneling residual tabs on the left and 1 on the right, or vice versa. Weight 1.25 g Table 23: NEO-F9P-15B mechanical dimensions UBX-22021920 - R04 6 Mechanical speci\ufb01cations Page 18 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P20C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 20,
+        "text": "NEO-F9P-15B - Data sheet 7 Quali\ufb01cations and approvals Quality and reliabilityProduct quali\ufb01cation Quali\ufb01ed according to u-blox quali\ufb01cation policy, based on a subset of AEC- Q104 Chip quali\ufb01cation Modules are based on AEC-Q100 quali\ufb01ed GNSS chipsManufacturing Manufactured at ISO/TS 16949 certi\ufb01ed sitesEnvironmentalRoHS compliance Yes Moisture sensitivity level (MSL) 24 25 4 Type approvalsEuropean RED certi\ufb01cation (CE) Declaration of Conformity (DoC) is available on the u-blox website.UK conformity assessment (UKCA) YesTable 24: Quali\ufb01cations and approvals 24 For the MSL standard, see IPC/JEDEC J-STD-020 and J-STD-033, available on www.jedec.org 25 For more information regarding moisture sensitivity levels, labelling, storage and drying, see the Product packaging reference guide [3] UBX-22021920 - R04 7 Quali\ufb01cations and approvals Page 20 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P21C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 21,
+        "text": "NEO-F9P-15B - Data sheet 8 Labeling and ordering information This section provides information about product labeling and ordering. For information about product handling and soldering, see the Integration manual [1]. 8.1 Product labeling The labeling of the NEO-F9P-15B modules provides product information and revision information. For more information, contact u-blox sales. PPP-TGV-NNQ-XX Type number Pin 1 marking Figure 6: Example of NEO-F9P-15B label 8.2 Explanation of product codes Three product code formats are used in the NEO-F9P-15B labels. The Product name used in documentation such as this data sheet identi\ufb01es all u-blox products, independent of packaging and quality grade. The Ordering code includes options and quality, while the Type number includes the hardware and \ufb01rmware versions. Table 25 below details these three formats. Format Structure Product code Product name PPP-TGV NEO-F9P Ordering code PPP-TGV-NNQ NEO-F9P-15B Type number PPP-TGV-NNQ-XX NEO-F9P-15B-00 Table 25: Product code formats The parts of the product code are explained in Table 26. Code Meaning Example PPP Product family NEO TG Platform F9 = u-blox F9 V Variant P = High precision NNQ Option / Quality grade NN: Option [00...99] Q: Grade, A = Automotive, B = Professional XX Product detail Describes hardware and \ufb01rmware versions Table 26: Part identi\ufb01cation code UBX-22021920 - R04 8 Labeling and ordering information Page 21 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P6C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 6,
+        "text": "NEO-F9P-15B - Data sheet 1.3 Supported GNSS constellations The NEO-F9P-15B GNSS modules are concurrent GNSS receivers that can receive and track multiple GNSS constellations. Owing to the multi-band RF front-end architecture, all four major GNSS constellations (GPS, GLONASS, Galileo and BeiDou) plus SBAS and QZSS satellites can be received concurrently. All satellites in view can be processed to provide an RTK navigation solution when used with correction data. If power consumption is a key factor, the receiver can be con\ufb01gured for a subset of GNSS constellations. The QZSS system shares the same frequency bands with GPS and can only be processed in conjunction with GPS. To bene\ufb01t from multi-band signal reception, dedicated hardware preparation must be made during the design-in phase. See the Integration manual [1] for u-blox design recommendations. NEO-F9P-15B supports the GNSS and their signals as shown in Table 6. GPS / QZSS GLONASS Galileo BeiDou NavIC L1C/A (1575.420 MHz) L1OF (1602 MHz + k*562.5 kHz, k = \u20137,..,6)E1-B/C (1575.420 MHz)B1I (1561.098 MHz) - L5 (1176.450 MHz) - E5a (1176.450 MHz) B2a (1176.450 MHz) SPS-L5 (1176.450 MHz) Table 6: Supported GNSS signals on NEO-F9P-15B NEO-F9P-15B can use the u-blox AssistNow\u2122 Online service which provides GNSS assistance information. 1.4 Supported GNSS augmentation systems 1.4.1 Quasi-Zenith Satellite System (QZSS) The Quasi-Zenith Satellite System (QZSS) is a regional navigation satellite system that provides positioning services for the Paci\ufb01c region covering Japan and Australia. NEO-F9P-15B is able to receive and track QZSS L1 C/A and L5 signals concurrently with GPS signals, resulting in better availability especially under challenging signal conditions, e.g. in urban canyons. NEO-F9P-15B is also able to receive the QZSS L1S signal in order to use the SLAS (Sub-meter Level Augmentation Service) which is an augmentation technology that provides correction data for pseudoranges. Ground monitoring stations positioned in Japan calculate separate corrections for each visible satellite and broadcast this data to the user via QZSS satellites. The correction stream is transmitted on the L1 frequency (1575.42 MHz). QZSS can be enabled only if GPS operation is also con\ufb01gured. 1.4.2 Satellite-based augmentation system (SBAS) NEO-F9P-15B supports SBAS (including WAAS in the US, EGNOS in Europe, L1Sb(QZSS SBAS) in Japan and GAGAN in India) to deliver improved location accuracy within the regions covered. However, the additional inter-standard time calibration step used during SBAS reception results in degraded time accuracy overall. 1.4.3 Di\ufb00erential GNSS (DGNSS) When operating in the RTK mode, RTCM version 3 messages are required and the module supports DGNSS according to RTCM 10403.3. UBX-22021920 - R04 1 Functional description Page 6 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P6C2",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 6,
+        "text": "sages are required and the module supports DGNSS according to RTCM 10403.3. UBX-22021920 - R04 1 Functional description Page 6 of 25 C1-Public"
+      },
+      {
+        "chunk_id": "S1P8C1",
+        "source_url": "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+        "title": "NEO-F9P-15B Data Sheet",
+        "page": 8,
+        "text": "NEO-F9P-15B - Data sheet Message type-subtypeDescription SM 2-0 Geographic area de\ufb01nition (GAD) Table 9: Supported input SPARTN version 2.0.1 messages 1.4.4 Centimeter level augmentation service (CLAS) Operating as a rover, NEO-F9P-15B can receive UBX-RXM-QZSSL6 message from a NEO-D9C on any communication interface. The message contains QZSS CLAS (centimeter-level augmentation service) corrections. The CLAS protocol provides corrections for in-view GPS, Galileo, and QZSS satellites in Japan. 1.5 Broadcast navigation data and satellite signal measurements The NEO-F9P-15B can output all the GNSS broadcast data upon reception from tracked satellites. This includes all the supported GNSS signals as well as the QZSS and SBAS augmentation services. The UBX-RXM-SFRBX message provides this information. For the UBX-RXM-SFRBX message speci\ufb01cation, see the Interface description [2] for the UBX-RXM-SFRBX message speci\ufb01cation. The receiver can provide satellite signal information in a form compatible with the Radio Resource LCS Protocol (RRLP) [4]. 1.5.1 Carrier-phase measurements The NEO-F9P-15B modules provide raw carrier-phase data for all supported signals, along with pseudorange, Doppler and measurement quality information. The data contained in the UBX-RXM- RAWX message follows the conventions of a multi-GNSS RINEX 3 observation \ufb01le. For the UBX- RXM-RAWX message speci\ufb01cation, see Interface description [2]. Raw measurement data is available once the receiver has established data bit synchronization and time-of-week. 1.6 Supported protocols NEO-F9P-15B supports the following protocols: Protocol Type UBX Input/output, binary, u-blox proprietary NMEA 4.11 (default), 4.10, 4.0, 2.3, and 2.1 Input/output, ASCII RTCM 3.3 Input/output, binary SPARTN 2.0.1 Input, binary Table 10: Supported protocols For speci\ufb01cation of the protocols, see the Interface description [2]. UBX-22021920 - R04 1 Functional description Page 8 of 25 C1-Public"
+      }
+    ],
+    "source_urls": [
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/EVK-F9P-01_UserGuide_UBX-22038408.pdf",
+      "https://www.u-blox.com/sites/default/files/documents/EVK-F9P_ProductSummary_UBX-22021832.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf",
+      "https://content.u-blox.com/sites/default/files/documents/NEO-F9P-15B_DataSheet_UBX-22021920.pdf"
+    ],
+    "unanswered_questions": [
+      "No supplied chunk contains a NEO-F9P-15B reference/typical application schematic with decoupling capacitor values, bulk capacitor values, ferrites, ESD diodes, reset circuitry, or required pull-up/pull-down passives; therefore no support passives or diodes were extracted.",
+      "No supplied chunk gives an antenna bias/matching/filtering/ESD circuit for RF_IN, VCC_RF, or LNA_EN; select RF front-end from the integration manual or antenna design requirements before PCB release.",
+      "No supplied chunk gives a recommended KiCad footprint land pattern/pad geometry; only module body dimensions are available in the provided chunks.",
+      "Confirm whether this design should really use SPI. If UART/I2C mode is desired instead, D_SEL should be open or tied to VCC and pins 18\u201321 should be remapped to SDA/SCL/TXD/RXD."
+    ],
+    "validation_warnings": [
+      "SPI is not available unless D_SEL is set low; the extracted reference pins tie D_SEL to GND accordingly.",
+      "The supplied chunks state all PIO voltage levels are related to VCC; host logic connected to SPI/UART/I2C/control pins must be compatible with VCC.",
+      "The product is not protected against overvoltage or reversed voltages per the absolute maximum ratings text; protection components are likely needed in a real design, but no exact values/parts are provided in the supplied chunks.",
+      "USB interface may not be certifiable due to hardware implementation per datasheet; optional USB pins are listed but no USB connector/ESD/passive reference circuit was provided."
+    ],
+    "extraction_notes": [
+      "Extracted all 24 module pins from datasheet pin assignment tables.",
+      "Reference net mapping uses SPI because the candidate notes emphasize SPI and the datasheet provides the D_SEL=GND selection rule.",
+      "Support_requirements is intentionally empty: the supplied chunks do not cite any required module-level support passive/diode values for a NEO-F9P-15B application circuit.",
+      "Deterministic schematic-label extraction supplemented the AI extraction with 7 pin(s) and 2 support component(s).",
+      "Supplier CAD lookup will prefer DigiKey 672-NEO-F9P-15BCT-ND."
+    ],
+    "confidence": "medium"
+  }
+}

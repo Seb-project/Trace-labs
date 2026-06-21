@@ -2,7 +2,7 @@
 import:
   - "00_product_overview"
   - "04_circuit_block_schema"
-description: PCBStream future AI and datasheet service placeholders.
+description: Trace Labs future AI and datasheet service placeholders.
 ---
 
 ***definitions***
