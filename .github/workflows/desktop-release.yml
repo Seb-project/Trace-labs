@@ -2,6 +2,11 @@ name: Desktop Release
 
 on:
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "GitHub release tag to upload assets to (e.g. v0.1.0)"
+        required: true
+        default: "v0.1.0"
 
 jobs:
   mac:
@@ -30,13 +35,15 @@ jobs:
         env:
           TRACELABS_DEMO_OPENAI_API_KEY: ${{ secrets.TRACELABS_DEMO_OPENAI_API_KEY }}
         run: npm run dist:judge:mac
-      - uses: actions/upload-artifact@v4
-        with:
-          name: trace-labs-macos
-          path: |
-            frontend/release/*.dmg
-            frontend/release/*.zip
-            frontend/release/*.blockmap
+      - name: Upload to GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ inputs.release_tag }} \
+            frontend/release/*.dmg \
+            frontend/release/*.zip \
+            frontend/release/*.blockmap \
+            --clobber
 
   windows:
     name: Build Windows
@@ -65,10 +72,10 @@ jobs:
         env:
           TRACELABS_DEMO_OPENAI_API_KEY: ${{ secrets.TRACELABS_DEMO_OPENAI_API_KEY }}
         run: npm run dist:judge:win
-      - uses: actions/upload-artifact@v4
-        with:
-          name: trace-labs-windows
-          path: |
-            frontend/release/*.exe
-            frontend/release/*.zip
-            frontend/release/*.blockmap
+      - name: Upload to GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ inputs.release_tag }} `
+            (Get-ChildItem frontend/release/*.exe,frontend/release/*.zip,frontend/release/*.blockmap | Select-Object -ExpandProperty FullName) `
+            --clobber
