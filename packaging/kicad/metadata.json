@@ -6,12 +6,21 @@
   "identifier": "com-tracelabs-bridge",
   "type": "plugin",
   "author": {
-    "name": "Trace Labs"
+    "name": "Trace Labs",
+    "contact": {
+      "web": "https://tracelabs.io"
+    }
   },
   "maintainer": {
-    "name": "Trace Labs"
+    "name": "Trace Labs",
+    "contact": {
+      "web": "https://tracelabs.io"
+    }
   },
   "license": "unrestricted",
+  "resources": {
+    "homepage": "https://tracelabs.io"
+  },
   "versions": [
     {
       "version": "0.1.0",
